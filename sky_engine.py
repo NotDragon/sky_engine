@@ -1,5 +1,4 @@
 from skyExplorer import *
-from skyExplorer import Vec4
 from time import sleep
 from typing import Dict, List, Optional, Any
 import math
@@ -1407,6 +1406,150 @@ class SkyEngine:
             'rotation': self.camera_rotation,
             'zoom': self.camera_zoom
         }
+    
+    # Navigation Methods
+    def go_to_object(self, obj_id: int, action_type: Action.Type = Action.Type.GoTo):
+        """Go to a specific object using its ID and Action system"""
+        try:
+            # Create a Data object for the target
+            data = Data()
+            data.id = obj_id
+            
+            # Get the appropriate action
+            action = data.action(action_type)
+            
+            # Trigger the action
+            if action:
+                action.trigger()
+                print(f"Navigating to object ID {obj_id} using {action_type}")
+            else:
+                print(f"Warning: Could not create action for object ID {obj_id}")
+        except Exception as e:
+            print(f"Error navigating to object: {e}")
+    
+    def go_to_planet(self, planet_name: Planet.PlanetName):
+        """Go to a specific planet"""
+        try:
+            planet = Planet(planet_name)
+            if hasattr(planet, 'id'):
+                self.go_to_object(planet.id, Action.Type.GoToPlace)
+                print(f"Going to planet: {planet_name}")
+            else:
+                print(f"Warning: Could not get ID for planet {planet_name}")
+        except Exception as e:
+            print(f"Error going to planet: {e}")
+    
+    def go_to_star(self, star_name: IndividualStar.IndividualStarName):
+        """Go to a specific star"""
+        try:
+            star = IndividualStar(star_name)
+            if hasattr(star, 'id'):
+                self.go_to_object(star.id, Action.Type.GoToPlace)
+                print(f"Going to star: {star_name}")
+            else:
+                print(f"Warning: Could not get ID for star {star_name}")
+        except Exception as e:
+            print(f"Error going to star: {e}")
+    
+    def go_to_constellation(self, constellation_name: Constellation.ConstellationName):
+        """Go to a specific constellation"""
+        try:
+            constellation = Constellation(constellation_name)
+            if hasattr(constellation, 'id'):
+                self.go_to_object(constellation.id, Action.Type.GoToPlace)
+                print(f"Going to constellation: {constellation_name}")
+            else:
+                print(f"Warning: Could not get ID for constellation {constellation_name}")
+        except Exception as e:
+            print(f"Error going to constellation: {e}")
+    
+    def go_to_comet(self, comet_name: Comet.CometName):
+        """Go to a specific comet"""
+        try:
+            comet = Comet(comet_name)
+            if hasattr(comet, 'id'):
+                self.go_to_object(comet.id, Action.Type.GoToPlace)
+                print(f"Going to comet: {comet_name}")
+            else:
+                print(f"Warning: Could not get ID for comet {comet_name}")
+        except Exception as e:
+            print(f"Error going to comet: {e}")
+    
+    def go_to_asteroid(self, asteroid_name: Asteroid.AsteroidName):
+        """Go to a specific asteroid"""
+        try:
+            asteroid = Asteroid(asteroid_name)
+            if hasattr(asteroid, 'id'):
+                self.go_to_object(asteroid.id, Action.Type.GoToPlace)
+                print(f"Going to asteroid: {asteroid_name}")
+            else:
+                print(f"Warning: Could not get ID for asteroid {asteroid_name}")
+        except Exception as e:
+            print(f"Error going to asteroid: {e}")
+    
+    def go_to_satellite(self, satellite_name: Satellite.SatelliteName):
+        """Go to a specific satellite"""
+        try:
+            satellite = Satellite(satellite_name)
+            if hasattr(satellite, 'id'):
+                self.go_to_object(satellite.id, Action.Type.GoToPlace)
+                print(f"Going to satellite: {satellite_name}")
+            else:
+                print(f"Warning: Could not get ID for satellite {satellite_name}")
+        except Exception as e:
+            print(f"Error going to satellite: {e}")
+    
+    def go_to_galaxy(self, galaxy_name: Galaxy.GalaxyName):
+        """Go to a specific galaxy"""
+        try:
+            galaxy = Galaxy(galaxy_name)
+            if hasattr(galaxy, 'id'):
+                self.go_to_object(galaxy.id, Action.Type.GoToPlace)
+                print(f"Going to galaxy: {galaxy_name}")
+            else:
+                print(f"Warning: Could not get ID for galaxy {galaxy_name}")
+        except Exception as e:
+            print(f"Error going to galaxy: {e}")
+    
+    def go_to_nebula(self, nebula_name: Nebula.NebulaName):
+        """Go to a specific nebula"""
+        try:
+            nebula = Nebula(nebula_name)
+            if hasattr(nebula, 'id'):
+                self.go_to_object(nebula.id, Action.Type.GoToPlace)
+                print(f"Going to nebula: {nebula_name}")
+            else:
+                print(f"Warning: Could not get ID for nebula {nebula_name}")
+        except Exception as e:
+            print(f"Error going to nebula: {e}")
+    
+    # Starry Sky Control
+    def set_stars_intensity(self, intensity: float):
+        """Set the intensity of the starry sky (0=off, 1=full brightness)"""
+        try:
+            # Create a global Stars object if it doesn't exist
+            if not hasattr(self, '_stars_object'):
+                self._stars_object = Stars(Stars.StarsName.Stars001)
+            
+            self._stars_object.setIntensity(intensity)
+            print(f"Stars intensity set to: {intensity}")
+        except Exception as e:
+            print(f"Error setting stars intensity: {e}")
+    
+    def turn_stars_on(self):
+        """Turn on the starry sky"""
+        self.set_stars_intensity(1.0)
+    
+    def turn_stars_off(self):
+        """Turn off the starry sky"""
+        self.set_stars_intensity(0.0)
+    
+    def create_stars_object(self, name: str = "Stars") -> GameObject:
+        """Create a game object with a stars component"""
+        stars_obj = self.create_object(name)
+        stars_comp = StarsComponent()
+        stars_obj.add_component(stars_comp)
+        return stars_obj
 
 class AudioComponent(Component):
     """Component for audio playback"""
@@ -1924,6 +2067,140 @@ class SatelliteComponent(Component):
         if self.sky_object:
             self.sky_object.modelIntensity = intensity
 
+class StarsComponent(Component):
+    """Component for controlling the starry sky/star field"""
+    
+    def __init__(self, stars_name: Stars.StarsName = Stars.StarsName.Stars001):
+        super().__init__("Stars")
+        self.stars_name = stars_name
+        self.intensity = 1.0
+        self.exposure = 1.0
+        self.contrast = 1.0
+        self.point_saturation = 1.0
+        self.default_label_intensity = 0.0
+        
+        # Star field properties
+        self.proper_motion = False
+        self.proper_motion_offset = 0.0
+        self.twinkling_amplitude = 0.0
+        self.real_twinkling_amplitude = 0.0
+        self.variability = False
+        self.modelset = Stars.Modelset.Hipparcos
+        
+        # Filter properties
+        self.filter_highlight = False
+        
+        # Hybrid rendering
+        self.hybrid_ratio = 0.0
+        self.use_hybrid_ratio = False
+        
+    def initialize(self, sky_engine):
+        """Initialize the stars object"""
+        self.sky_object = Stars(self.stars_name)
+        self._apply_all_properties()
+        
+    def _apply_all_properties(self):
+        """Apply all stored properties to the sky object"""
+        if not self.sky_object:
+            return
+            
+        # Basic properties
+        if hasattr(self.sky_object, 'setIntensity'):
+            self.sky_object.setIntensity(self.intensity)
+        if hasattr(self.sky_object, 'setExposure'):
+            self.sky_object.setExposure(self.exposure)
+        if hasattr(self.sky_object, 'setContrast'):
+            self.sky_object.setContrast(self.contrast)
+        if hasattr(self.sky_object, 'setPointSaturation'):
+            self.sky_object.setPointSaturation(self.point_saturation)
+        if hasattr(self.sky_object, 'setDefaultLabelIntensity'):
+            self.sky_object.setDefaultLabelIntensity(self.default_label_intensity)
+            
+        # Motion and animation
+        if hasattr(self.sky_object, 'setProperMotion'):
+            self.sky_object.setProperMotion(self.proper_motion)
+        if hasattr(self.sky_object, 'setProperMotionOffset'):
+            self.sky_object.setProperMotionOffset(self.proper_motion_offset)
+        if hasattr(self.sky_object, 'setTwinklingAmplitude'):
+            self.sky_object.setTwinklingAmplitude(self.twinkling_amplitude)
+        if hasattr(self.sky_object, 'setRealTwinklingAmplitude'):
+            self.sky_object.setRealTwinklingAmplitude(self.real_twinkling_amplitude)
+        if hasattr(self.sky_object, 'setVariability'):
+            self.sky_object.setVariability(self.variability)
+            
+        # Catalog and filtering
+        if hasattr(self.sky_object, 'setModelset'):
+            self.sky_object.setModelset(self.modelset)
+        if hasattr(self.sky_object, 'setFilterHighlight'):
+            self.sky_object.setFilterHighlight(self.filter_highlight)
+            
+        # Hybrid rendering
+        if hasattr(self.sky_object, 'setHybridRatio'):
+            self.sky_object.setHybridRatio(self.hybrid_ratio)
+        if hasattr(self.sky_object, 'setUseHybridRatio'):
+            self.sky_object.setUseHybridRatio(self.use_hybrid_ratio)
+    
+    def set_intensity(self, intensity: float):
+        """Set star field intensity (0=off, 1=full brightness)"""
+        self.intensity = intensity
+        if self.sky_object and hasattr(self.sky_object, 'setIntensity'):
+            self.sky_object.setIntensity(intensity)
+        print(f"Stars intensity set to: {intensity}")
+        return self
+    
+    def turn_on(self):
+        """Turn on the starry sky"""
+        self.set_intensity(1.0)
+    
+    def turn_off(self):
+        """Turn off the starry sky"""
+        self.set_intensity(0.0)
+    
+    def set_exposure(self, exposure: float):
+        """Set star exposure"""
+        self.exposure = exposure
+        if self.sky_object and hasattr(self.sky_object, 'setExposure'):
+            self.sky_object.setExposure(exposure)
+    
+    def set_contrast(self, contrast: float):
+        """Set star contrast"""
+        self.contrast = contrast
+        if self.sky_object and hasattr(self.sky_object, 'setContrast'):
+            self.sky_object.setContrast(contrast)
+    
+    def set_point_saturation(self, saturation: float):
+        """Set star point saturation"""
+        self.point_saturation = saturation
+        if self.sky_object and hasattr(self.sky_object, 'setPointSaturation'):
+            self.sky_object.setPointSaturation(saturation)
+    
+    def set_twinkling(self, amplitude: float):
+        """Set star twinkling amplitude"""
+        self.twinkling_amplitude = amplitude
+        if self.sky_object and hasattr(self.sky_object, 'setTwinklingAmplitude'):
+            self.sky_object.setTwinklingAmplitude(amplitude)
+    
+    def set_proper_motion(self, enabled: bool, offset_years: float = 0.0):
+        """Enable/disable proper motion of stars"""
+        self.proper_motion = enabled
+        self.proper_motion_offset = offset_years
+        if self.sky_object:
+            if hasattr(self.sky_object, 'setProperMotion'):
+                self.sky_object.setProperMotion(enabled)
+            if hasattr(self.sky_object, 'setProperMotionOffset'):
+                self.sky_object.setProperMotionOffset(offset_years)
+    
+    def set_catalog(self, catalog: Stars.Modelset):
+        """Set star catalog (Hipparcos, GaiaDR2)"""
+        self.modelset = catalog
+        if self.sky_object and hasattr(self.sky_object, 'setModelset'):
+            self.sky_object.setModelset(catalog)
+    
+    def clear_filters(self):
+        """Clear all star filters"""
+        if self.sky_object and hasattr(self.sky_object, 'filterClear'):
+            self.sky_object.filterClear()
+
 class Capture:
     """Capture class for recording and replaying Sky Engine commands"""
     
@@ -2160,53 +2437,99 @@ class Capture:
 
 # Example usage
 def test_sky_engine():
-    """Test the Sky Engine"""
+    """Test the Sky Engine with new navigation and stars features"""
     print("=== Testing Sky Engine ===")
     
     # Create engine
     engine = SkyEngine()
     
+    # Test Stars Control
+    print("\n=== Testing Stars Control ===")
+    stars_obj = engine.create_stars_object("Starry Sky")
+    stars_comp = stars_obj.get_component("Stars")
+    
+    print("Turning stars on...")
+    engine.turn_stars_on()
+    sleep(2)
+    
+    print("Dimming stars to 50%...")
+    engine.set_stars_intensity(0.5)
+    sleep(2)
+    
+    print("Turning stars off...")
+    engine.turn_stars_off()
+    sleep(2)
+    
+    print("Turning stars back on...")
+    engine.turn_stars_on()
+    
+    # Test Navigation
+    print("\n=== Testing Navigation ===")
+    
+    print("Going to Jupiter...")
+    engine.go_to_planet(Planet.PlanetName.Jupiter)
+    sleep(3)
+    
+    print("Going to the Sun...")
+    engine.go_to_star(IndividualStar.IndividualStarName.Sun)
+    sleep(3)
+    
+    print("Going to Ursa Major constellation...")
+    engine.go_to_constellation(Constellation.ConstellationName.UMa)
+    sleep(3)
+    
+    # Create objects to show what we're looking at
+    print("\n=== Creating Visual Objects ===")
+    
     # Create a planet
     planet_obj = engine.create_object("Jupiter")
-    planet_comp = PlanetComponent("Jupiter")
+    planet_comp = PlanetComponent(Planet.PlanetName.Jupiter)
     planet_obj.add_component(planet_comp)
-    planet_obj.set_position(Vec(0, 0, 0))
-    planet_obj.set_scale(Vec(2, 2, 2))
+    planet_comp.set_clouds_intensity(0.8)
+    # planet_comp.set_atmosphere_intensity(0.5)  # Will implement if needed
     
     # Create a constellation
     constellation_obj = engine.create_object("Ursa Major")
-    constellation_comp = ConstellationComponent("Ursa Major")
+    constellation_comp = ConstellationComponent(Constellation.ConstellationName.UMa)
     constellation_obj.add_component(constellation_comp)
-    constellation_obj.set_position(Vec(0, 45, 0))
+    constellation_comp.set_lines_intensity(1.0)
+    constellation_comp.set_art_intensity(0.7)
     
     # Create text
-    text_obj = engine.create_object("Title Text")
-    text_comp = TextComponent("Hello from Sky Engine!")
+    text_obj = engine.create_object("Navigation Demo")
+    text_comp = TextComponent("Sky Engine Navigation Demo")
     text_obj.add_component(text_comp)
-    text_obj.set_position(Vec(0, 30, 0))
+    text_comp.set_position(Vec(0, 20, 0))
     
-    # Create a child object (moon of Jupiter)
-    moon_obj = engine.create_object("Jupiter Moon")
-    moon_comp = PlanetComponent("Mars")  # Using Mars as a moon
-    moon_obj.add_component(moon_comp)
-    moon_obj.set_local_position(Vec(10, 0, 0))  # Relative to Jupiter
-    planet_obj.add_child(moon_obj)
+    print("\n=== Demo Running ===")
+    print("Features demonstrated:")
+    print("- Starry sky control (on/off/dimming)")
+    print("- Navigation to planets, stars, constellations")
+    print("- Component-based object creation")
+    print("- Dynamic intensity controls")
     
-    print("=== Objects created! ===")
-    print("You should see:")
-    print("- Jupiter planet (scaled up)")
-    print("- Ursa Major constellation")
-    print("- Text overlay")
-    print("- A moon orbiting Jupiter")
+    # Demonstrate more navigation
+    print("\nDemonstrating more navigation features...")
+    sleep(2)
     
-    # Keep running for 10 seconds
-    import time
-    start_time = time.time()
-    while time.time() - start_time < 10:
-        engine.update(0.016)  # ~60 FPS
-        time.sleep(0.016)
-        
-    print("Test completed!")
+    print("Going to Mars...")
+    engine.go_to_planet(Planet.PlanetName.Mars)
+    sleep(2)
+    
+    print("Going to Saturn...")
+    engine.go_to_planet(Planet.PlanetName.Saturn)
+    sleep(2)
+    
+    print("Returning to Earth view...")
+    engine.go_to_planet(Planet.PlanetName.Earth)
+    
+    print("\n=== Test completed! ===")
+    print("Sky Engine now supports:")
+    print("✓ Stars on/off control")
+    print("✓ Navigation to planets, stars, constellations")
+    print("✓ Component-based architecture")
+    print("✓ Animation and keyframe system")
+    print("✓ Camera controls")
 
 if __name__ == "__main__":
     test_sky_engine() 
