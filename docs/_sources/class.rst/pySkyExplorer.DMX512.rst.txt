@@ -1,0 +1,10 @@
+pySkyExplorer.DMX512
+====================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: DMX512
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

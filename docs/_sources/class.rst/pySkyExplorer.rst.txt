@@ -1,0 +1,64 @@
+﻿pySkyExplorer
+=============
+
+.. automodule:: pySkyExplorer
+    
+    .. rubric:: Classes
+    .. autosummary::
+      :toctree:
+      :template: Class.rst
+        
+            Animator
+            Asteroid
+            Audio
+            AudioLayer
+            AudioLite
+            AudioPlayer
+            Body
+            Bolide
+            Camera
+            Chart2D
+            Clock
+            Comet
+            Comment
+            Constellation
+            DMX512
+            DateManager
+            DomePointer
+            DrawableInsert
+            DwarfPlanet
+            Ephemeris
+            Galaxy
+            GlobularCluster
+            IndividualStar
+            Insert2D
+            Insert3D
+            InsertText
+            Light
+            Line
+            Lut
+            Mark
+            Mat
+            Messier
+            NGC
+            Nebula
+            OrbitalPlace
+            ParameterizationLut
+            Patch
+            Place2D
+            Place3D
+            Planet
+            RemoteShow
+            Satellite
+            SceneGraph
+            ShootingStar
+            ShowEngineManager
+            SkySurvey
+            SlideShowHandler
+            Stars
+            Universe
+            Vec
+            Vec2
+            Vec4
+            VideoPlayer
+   

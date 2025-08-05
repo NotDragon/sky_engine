@@ -1,0 +1,10 @@
+studio.VotingDevice
+===================
+
+.. currentmodule:: studio
+    
+.. autoclass:: VotingDevice
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

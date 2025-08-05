@@ -1,0 +1,10 @@
+pySkyExplorer.Mat
+=================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Mat
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

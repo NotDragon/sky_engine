@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.Satellite &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.SceneGraph" href="pySkyExplorer.SceneGraph.html" />
+    <link rel="prev" title="pySkyExplorer.RemoteShow" href="pySkyExplorer.RemoteShow.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.Satellite</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.Satellite"><code class="docutils literal notranslate"><span class="pre">Satellite</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.PatchLayer"><code class="docutils literal notranslate"><span class="pre">Satellite.PatchLayer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.SatelliteName"><code class="docutils literal notranslate"><span class="pre">Satellite.SatelliteName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.SatellitePort"><code class="docutils literal notranslate"><span class="pre">Satellite.SatellitePort</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.ShadowConeArea"><code class="docutils literal notranslate"><span class="pre">Satellite.ShadowConeArea</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.ShadowConeLineDrawingMode"><code class="docutils literal notranslate"><span class="pre">Satellite.ShadowConeLineDrawingMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.ShadowConeRepresentation"><code class="docutils literal notranslate"><span class="pre">Satellite.ShadowConeRepresentation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.TerrainModel"><code class="docutils literal notranslate"><span class="pre">Satellite.TerrainModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.addChild"><code class="docutils literal notranslate"><span class="pre">Satellite.addChild()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.patchLayerAdd"><code class="docutils literal notranslate"><span class="pre">Satellite.patchLayerAdd()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.patchLayerClear"><code class="docutils literal notranslate"><span class="pre">Satellite.patchLayerClear()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.portId"><code class="docutils literal notranslate"><span class="pre">Satellite.portId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setAntumbraAreaColor"><code class="docutils literal notranslate"><span class="pre">Satellite.setAntumbraAreaColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setAntumbraAreaIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setAntumbraAreaIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setAntumbraLineIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setAntumbraLineIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setCloudsIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setCloudsIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setCollisionOffset"><code class="docutils literal notranslate"><span class="pre">Satellite.setCollisionOffset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setEclipseShapeIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setEclipseShapeIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setElevationScale"><code class="docutils literal notranslate"><span class="pre">Satellite.setElevationScale()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setFlatteningFactor"><code class="docutils literal notranslate"><span class="pre">Satellite.setFlatteningFactor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setHybridRatio"><code class="docutils literal notranslate"><span class="pre">Satellite.setHybridRatio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setLabelIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setLabelIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setLivePatchBottomLeft"><code class="docutils literal notranslate"><span class="pre">Satellite.setLivePatchBottomLeft()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setLivePatchGamma"><code class="docutils literal notranslate"><span class="pre">Satellite.setLivePatchGamma()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setLivePatchHsv"><code class="docutils literal notranslate"><span class="pre">Satellite.setLivePatchHsv()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setLivePatchIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setLivePatchIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setLivePatchKeyColor"><code class="docutils literal notranslate"><span class="pre">Satellite.setLivePatchKeyColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setLivePatchRotation"><code class="docutils literal notranslate"><span class="pre">Satellite.setLivePatchRotation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setLivePatchTexture"><code class="docutils literal notranslate"><span class="pre">Satellite.setLivePatchTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setLivePatchTopRight"><code class="docutils literal notranslate"><span class="pre">Satellite.setLivePatchTopRight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setLivePatchVibrance"><code class="docutils literal notranslate"><span class="pre">Satellite.setLivePatchVibrance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setManualMoonPhase"><code class="docutils literal notranslate"><span class="pre">Satellite.setManualMoonPhase()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setManualSurfaceColor"><code class="docutils literal notranslate"><span class="pre">Satellite.setManualSurfaceColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setMoonAge"><code class="docutils literal notranslate"><span class="pre">Satellite.setMoonAge()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setOrbitIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setOrbitIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setPatchLayerGamma"><code class="docutils literal notranslate"><span class="pre">Satellite.setPatchLayerGamma()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setPatchLayerHsv"><code class="docutils literal notranslate"><span class="pre">Satellite.setPatchLayerHsv()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setPatchLayerKeyColor"><code class="docutils literal notranslate"><span class="pre">Satellite.setPatchLayerKeyColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setPatchLayerOpacity"><code class="docutils literal notranslate"><span class="pre">Satellite.setPatchLayerOpacity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setPatchLayerVibrance"><code class="docutils literal notranslate"><span class="pre">Satellite.setPatchLayerVibrance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setPenumbraAfterAreaColor"><code class="docutils literal notranslate"><span class="pre">Satellite.setPenumbraAfterAreaColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setPenumbraAfterAreaIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setPenumbraAfterAreaIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setPenumbraAfterLineIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setPenumbraAfterLineIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setPenumbraBeforeAreaColor"><code class="docutils literal notranslate"><span class="pre">Satellite.setPenumbraBeforeAreaColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setPenumbraBeforeAreaIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setPenumbraBeforeAreaIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setPenumbraBeforeLineIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setPenumbraBeforeLineIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setPlanetShineStrength"><code class="docutils literal notranslate"><span class="pre">Satellite.setPlanetShineStrength()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setPointerIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setPointerIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setPointerType"><code class="docutils literal notranslate"><span class="pre">Satellite.setPointerType()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setScale"><code class="docutils literal notranslate"><span class="pre">Satellite.setScale()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setSeaLevel"><code class="docutils literal notranslate"><span class="pre">Satellite.setSeaLevel()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setSeaLevelRenderingMode"><code class="docutils literal notranslate"><span class="pre">Satellite.setSeaLevelRenderingMode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setShadowConeAntumbraAdvancement"><code class="docutils literal notranslate"><span class="pre">Satellite.setShadowConeAntumbraAdvancement()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setShadowConeAreaColor"><code class="docutils literal notranslate"><span class="pre">Satellite.setShadowConeAreaColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setShadowConeAreaIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setShadowConeAreaIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setShadowConeIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setShadowConeIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setShadowConeLineColor"><code class="docutils literal notranslate"><span class="pre">Satellite.setShadowConeLineColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setShadowConeLineDrawingMode"><code class="docutils literal notranslate"><span class="pre">Satellite.setShadowConeLineDrawingMode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setShadowConeLineIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setShadowConeLineIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setShadowConeLineThickness"><code class="docutils literal notranslate"><span class="pre">Satellite.setShadowConeLineThickness()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setShadowConePenumbraAdvancement"><code class="docutils literal notranslate"><span class="pre">Satellite.setShadowConePenumbraAdvancement()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setShadowConeRepresentationType"><code class="docutils literal notranslate"><span class="pre">Satellite.setShadowConeRepresentationType()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setShadowConeSectionDistance"><code class="docutils literal notranslate"><span class="pre">Satellite.setShadowConeSectionDistance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setShadowConeSectionIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setShadowConeSectionIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setShadowContrast"><code class="docutils literal notranslate"><span class="pre">Satellite.setShadowContrast()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setShadowStrength"><code class="docutils literal notranslate"><span class="pre">Satellite.setShadowStrength()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setSurfaceColor"><code class="docutils literal notranslate"><span class="pre">Satellite.setSurfaceColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setTerrainModel"><code class="docutils literal notranslate"><span class="pre">Satellite.setTerrainModel()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setTerrainRenderingMode"><code class="docutils literal notranslate"><span class="pre">Satellite.setTerrainRenderingMode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setTrajectoryIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setTrajectoryIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setUmbraAfterAreaColor"><code class="docutils literal notranslate"><span class="pre">Satellite.setUmbraAfterAreaColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setUmbraAfterAreaIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setUmbraAfterAreaIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setUmbraAfterLineIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setUmbraAfterLineIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setUmbraBeforeAreaColor"><code class="docutils literal notranslate"><span class="pre">Satellite.setUmbraBeforeAreaColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setUmbraBeforeAreaIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setUmbraBeforeAreaIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setUmbraBeforeLineIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.setUmbraBeforeLineIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.setUseHybridRatio"><code class="docutils literal notranslate"><span class="pre">Satellite.setUseHybridRatio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.antumbraAreaColor"><code class="docutils literal notranslate"><span class="pre">Satellite.antumbraAreaColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.antumbraAreaIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.antumbraAreaIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.antumbraLineIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.antumbraLineIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.cloudsIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.cloudsIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.collisionOffset"><code class="docutils literal notranslate"><span class="pre">Satellite.collisionOffset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.eclipseShapeIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.eclipseShapeIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.elevationScale"><code class="docutils literal notranslate"><span class="pre">Satellite.elevationScale</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.flatteningFactor"><code class="docutils literal notranslate"><span class="pre">Satellite.flatteningFactor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.flatteningOriginal"><code class="docutils literal notranslate"><span class="pre">Satellite.flatteningOriginal</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.hybridRatio"><code class="docutils literal notranslate"><span class="pre">Satellite.hybridRatio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.id"><code class="docutils literal notranslate"><span class="pre">Satellite.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.intensity"><code class="docutils literal notranslate"><span class="pre">Satellite.intensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.labelIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.labelIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.livePatchBottomLeft"><code class="docutils literal notranslate"><span class="pre">Satellite.livePatchBottomLeft</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.livePatchGamma"><code class="docutils literal notranslate"><span class="pre">Satellite.livePatchGamma</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.livePatchHsv"><code class="docutils literal notranslate"><span class="pre">Satellite.livePatchHsv</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.livePatchIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.livePatchIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.livePatchKeyColor"><code class="docutils literal notranslate"><span class="pre">Satellite.livePatchKeyColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.livePatchRotation"><code class="docutils literal notranslate"><span class="pre">Satellite.livePatchRotation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.livePatchTexture"><code class="docutils literal notranslate"><span class="pre">Satellite.livePatchTexture</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.livePatchTopRight"><code class="docutils literal notranslate"><span class="pre">Satellite.livePatchTopRight</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.livePatchVibrance"><code class="docutils literal notranslate"><span class="pre">Satellite.livePatchVibrance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.manualMoonPhase"><code class="docutils literal notranslate"><span class="pre">Satellite.manualMoonPhase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.manualSurfaceColor"><code class="docutils literal notranslate"><span class="pre">Satellite.manualSurfaceColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.moonAge"><code class="docutils literal notranslate"><span class="pre">Satellite.moonAge</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.name"><code class="docutils literal notranslate"><span class="pre">Satellite.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.orbitIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.orbitIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.osgId"><code class="docutils literal notranslate"><span class="pre">Satellite.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.penumbraAfterAreaColor"><code class="docutils literal notranslate"><span class="pre">Satellite.penumbraAfterAreaColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.penumbraAfterAreaIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.penumbraAfterAreaIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.penumbraAfterLineIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.penumbraAfterLineIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.penumbraBeforeAreaColor"><code class="docutils literal notranslate"><span class="pre">Satellite.penumbraBeforeAreaColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.penumbraBeforeAreaIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.penumbraBeforeAreaIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.penumbraBeforeLineIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.penumbraBeforeLineIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.planetShineStrength"><code class="docutils literal notranslate"><span class="pre">Satellite.planetShineStrength</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.pointerIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.pointerIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.pointerType"><code class="docutils literal notranslate"><span class="pre">Satellite.pointerType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.position"><code class="docutils literal notranslate"><span class="pre">Satellite.position</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.scale"><code class="docutils literal notranslate"><span class="pre">Satellite.scale</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.seaLevel"><code class="docutils literal notranslate"><span class="pre">Satellite.seaLevel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.seaLevelRenderingMode"><code class="docutils literal notranslate"><span class="pre">Satellite.seaLevelRenderingMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.shadowConeAntumbraAdvancement"><code class="docutils literal notranslate"><span class="pre">Satellite.shadowConeAntumbraAdvancement</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.shadowConeIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.shadowConeIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.shadowConePenumbraAdvancement"><code class="docutils literal notranslate"><span class="pre">Satellite.shadowConePenumbraAdvancement</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.shadowConeSectionDistance"><code class="docutils literal notranslate"><span class="pre">Satellite.shadowConeSectionDistance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.shadowConeSectionIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.shadowConeSectionIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.shadowContrast"><code class="docutils literal notranslate"><span class="pre">Satellite.shadowContrast</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.shadowStrength"><code class="docutils literal notranslate"><span class="pre">Satellite.shadowStrength</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.surfaceColor"><code class="docutils literal notranslate"><span class="pre">Satellite.surfaceColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.terrainModel"><code class="docutils literal notranslate"><span class="pre">Satellite.terrainModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.terrainRenderingMode"><code class="docutils literal notranslate"><span class="pre">Satellite.terrainRenderingMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.trajectoryIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.trajectoryIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.umbraAfterAreaColor"><code class="docutils literal notranslate"><span class="pre">Satellite.umbraAfterAreaColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.umbraAfterAreaIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.umbraAfterAreaIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.umbraAfterLineIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.umbraAfterLineIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.umbraBeforeAreaColor"><code class="docutils literal notranslate"><span class="pre">Satellite.umbraBeforeAreaColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.umbraBeforeAreaIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.umbraBeforeAreaIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.umbraBeforeLineIntensity"><code class="docutils literal notranslate"><span class="pre">Satellite.umbraBeforeLineIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Satellite.useHybridRatio"><code class="docutils literal notranslate"><span class="pre">Satellite.useHybridRatio</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.Satellite</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.Satellite.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-satellite">
+<h1>pySkyExplorer.Satellite<a class="headerlink" href="#pyskyexplorer-satellite" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">Satellite</span></span><a class="headerlink" href="#pySkyExplorer.Satellite" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.PatchLayer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PatchLayer</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.PatchLayer" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available satellite’s patch layer</p>
+<p><strong>InvalidPatchLayer</strong></p>
+<p><strong>Layer_01</strong></p>
+<p><strong>Layer_02</strong></p>
+<p><strong>PatchLayerCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.SatelliteName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SatelliteName</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.SatelliteName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available satellite name.</p>
+<p><strong>InvalidSatellite</strong></p>
+<p><strong>Moon</strong></p>
+<p><strong>Phobos</strong></p>
+<p><strong>Deimos</strong></p>
+<p><strong>Io</strong></p>
+<p><strong>Europa</strong></p>
+<p><strong>Ganymede</strong></p>
+<p><strong>Callisto</strong></p>
+<p><strong>Mimas</strong></p>
+<p><strong>Enceladus</strong></p>
+<p><strong>Tethys</strong></p>
+<p><strong>Dione</strong></p>
+<p><strong>Rhea</strong></p>
+<p><strong>Titan</strong></p>
+<p><strong>Hyperion</strong></p>
+<p><strong>Iapetus</strong></p>
+<p><strong>Atlas</strong></p>
+<p><strong>Pan</strong></p>
+<p><strong>Miranda</strong></p>
+<p><strong>Arial</strong></p>
+<p><strong>Umbriel</strong></p>
+<p><strong>Titania</strong></p>
+<p><strong>Oberon</strong></p>
+<p><strong>Triton</strong></p>
+<p><strong>Charon</strong></p>
+<p><strong>Nix</strong></p>
+<p><strong>Hydra</strong></p>
+<p><strong>SatelliteCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.SatellitePort">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SatellitePort</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.SatellitePort" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available ports on satellite.</p>
+<p><strong>InvalidSatellitePort</strong></p>
+<p><strong>EquatorialSynchronous</strong></p>
+<p><strong>Galactic</strong></p>
+<p><strong>EquatorialJ2000</strong></p>
+<p><strong>Equatorial</strong></p>
+<p><strong>NoonEcliptic</strong></p>
+<p><strong>NoonEquatorial</strong></p>
+<p><strong>OrbitalMeanEquinox</strong></p>
+<p><strong>SatellitePortCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.ShadowConeArea">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ShadowConeArea</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.ShadowConeArea" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidShadowConeArea</strong></p>
+<p><strong>UmbraBefore</strong></p>
+<p><strong>UmbraAfter</strong></p>
+<p><strong>PenumbraBefore</strong></p>
+<p><strong>PenumbraAfter</strong></p>
+<p><strong>Antumbra</strong></p>
+<p><strong>ShadowConeAreaCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.ShadowConeLineDrawingMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ShadowConeLineDrawingMode</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.ShadowConeLineDrawingMode" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidShadowConeLineDrawingMode</strong></p>
+<p><strong>Default</strong></p>
+<p><strong>DotsLine</strong></p>
+<p><strong>Line</strong></p>
+<p><strong>Dots</strong></p>
+<p><strong>Trail</strong></p>
+<p><strong>ShadowConeLineDrawingModeCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.ShadowConeRepresentation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ShadowConeRepresentation</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.ShadowConeRepresentation" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidShadowConeRepresentation</strong></p>
+<p><strong>COLOR_2D</strong></p>
+<p><strong>COLOR_3D</strong></p>
+<p><strong>OCCULTATION_2D</strong></p>
+<p><strong>ShadowConeRepresentationCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.TerrainModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TerrainModel</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.TerrainModel" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available satellite’s modelSet</p>
+<p><strong>InvalidTerrainModel</strong></p>
+<p><strong>DefaultTerrain</strong></p>
+<p><strong>Basic</strong></p>
+<p><strong>Cassini</strong></p>
+<p><strong>Clementine</strong></p>
+<p><strong>Did_Sliced</strong></p>
+<p><strong>Galileo</strong></p>
+<p><strong>LROC</strong></p>
+<p><strong>New_Horizons</strong></p>
+<p><strong>RAW</strong></p>
+<p><strong>Sliced</strong></p>
+<p><strong>Topography</strong></p>
+<p><strong>Voyager</strong></p>
+<p><strong>TerrainModelCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.addChild">
+<span class="sig-name descname"><span class="pre">addChild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)child</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(SatellitePort)port</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.addChild" title="Permalink to this definition"></a></dt>
+<dd><p>Add a child object to the satellite scene graph.
+PARAMETERS:
+child : int</p>
+<blockquote>
+<div><p>Id of the child object to add.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>port<span class="classifier">SatellitePort</span></dt><dd><p>Coordinate system to use for adding child. See SatellitePort documentation for more information.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.patchLayerAdd">
+<span class="sig-name descname"><span class="pre">patchLayerAdd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PatchLayer)layerId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)patchId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.patchLayerAdd" title="Permalink to this definition"></a></dt>
+<dd><p>Add a layer to planet patch
+PARAMETERS:
+layerId : PatchLayer</p>
+<p>patchId : int</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.patchLayerClear">
+<span class="sig-name descname"><span class="pre">patchLayerClear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PatchLayer)layerId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.patchLayerClear" title="Permalink to this definition"></a></dt>
+<dd><p>Remove all patch layer from planet
+PARAMETERS:
+layerId : PatchLayer</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.portId">
+<span class="sig-name descname"><span class="pre">portId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(SatellitePort)portName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.portId" title="Permalink to this definition"></a></dt>
+<dd><p>Return the id of the given port
+PARAMETERS:
+portName : SatellitePort</p>
+<blockquote>
+<div><p>Name of the port. See ‘SatellitePort’ documentation for more information.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setAntumbraAreaColor">
+<span class="sig-name descname"><span class="pre">setAntumbraAreaColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)antumbraAreaColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setAntumbraAreaColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+antumbraAreaColor : Vec</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setAntumbraAreaIntensity">
+<span class="sig-name descname"><span class="pre">setAntumbraAreaIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)antumbraAreaIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setAntumbraAreaIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+antumbraAreaIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setAntumbraLineIntensity">
+<span class="sig-name descname"><span class="pre">setAntumbraLineIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)antumbraLineIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setAntumbraLineIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+antumbraLineIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setCloudsIntensity">
+<span class="sig-name descname"><span class="pre">setCloudsIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)cloudsIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setCloudsIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+cloudsIntensity : double
+Intensity of the satelite’s clouds if available.
+Usually in range [0;1]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setCollisionOffset">
+<span class="sig-name descname"><span class="pre">setCollisionOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)collisionOffset</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setCollisionOffset" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+collisionOffset : double
+Minimun distance camera can approch to the satellite surface in meters.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setEclipseShapeIntensity">
+<span class="sig-name descname"><span class="pre">setEclipseShapeIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)eclipseShapeIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setEclipseShapeIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+eclipseShapeIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setElevationScale">
+<span class="sig-name descname"><span class="pre">setElevationScale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)elevationScale</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setElevationScale" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+elevationScale : double
+Modify elevation scale of satelite’s reliefs.
+In some modelsets of planets do not use this property.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setFlatteningFactor">
+<span class="sig-name descname"><span class="pre">setFlatteningFactor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)flatteningFactor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setFlatteningFactor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+flatteningFactor : double
+Flattening factor.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setHybridRatio">
+<span class="sig-name descname"><span class="pre">setHybridRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)hybridRatio</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setHybridRatio" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+hybridRatio : double
+Used to define which device will display the satellite.
+Set to 0 to use digital device or 1 to use optical device.
+This value musn’t be used on non hybrid system.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setIntensity">
+<span class="sig-name descname"><span class="pre">setIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+intensity : double
+Intensity of the satellite.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setLabelIntensity">
+<span class="sig-name descname"><span class="pre">setLabelIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)labelIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setLabelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+labelIntensity : double
+Intensity of the label of the satellite.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setLivePatchBottomLeft">
+<span class="sig-name descname"><span class="pre">setLivePatchBottomLeft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)livePatchBottomLeft</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setLivePatchBottomLeft" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchBottomLeft : Vec
+South west LBR point of the patch. Unit : degrees.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setLivePatchGamma">
+<span class="sig-name descname"><span class="pre">setLivePatchGamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)livePatchGamma</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setLivePatchGamma" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchGamma : Vec
+Gamma correction for the patch.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setLivePatchHsv">
+<span class="sig-name descname"><span class="pre">setLivePatchHsv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)livePatchHsv</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setLivePatchHsv" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchHsv : Vec
+Hue, Saturation and Lightness value used for the patch.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setLivePatchIntensity">
+<span class="sig-name descname"><span class="pre">setLivePatchIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)livePatchIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setLivePatchIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchIntensity : double
+Intensity of the live patch. Usually in range [0;1]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setLivePatchKeyColor">
+<span class="sig-name descname"><span class="pre">setLivePatchKeyColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec4)livePatchKeyColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setLivePatchKeyColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchKeyColor : Vec4
+Color to remove from patch texture (RGB + tolerance).</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setLivePatchRotation">
+<span class="sig-name descname"><span class="pre">setLivePatchRotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)livePatchRotation</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setLivePatchRotation" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchRotation : double
+Rotation of the patch around center point in degrees.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setLivePatchTexture">
+<span class="sig-name descname"><span class="pre">setLivePatchTexture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)livePatchTexture</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setLivePatchTexture" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchTexture : str
+Texture to apply on the live patch.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setLivePatchTopRight">
+<span class="sig-name descname"><span class="pre">setLivePatchTopRight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)livePatchTopRight</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setLivePatchTopRight" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchTopRight : Vec
+North east LBR point of the patch. Unit : degrees.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setLivePatchVibrance">
+<span class="sig-name descname"><span class="pre">setLivePatchVibrance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)livePatchVibrance</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setLivePatchVibrance" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchVibrance : double
+Vibrance value used in coordination with HSV value.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setManualMoonPhase">
+<span class="sig-name descname"><span class="pre">setManualMoonPhase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)manualMoonPhase</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setManualMoonPhase" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+manualMoonPhase : bool</p>
+<blockquote>
+<div><p>Enable or disable manual moon phase mode.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setManualSurfaceColor">
+<span class="sig-name descname"><span class="pre">setManualSurfaceColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)manualSurfaceColor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setManualSurfaceColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+manualSurfaceColor : bool
+Set the surface color. Need to use manual surface color mode</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setMoonAge">
+<span class="sig-name descname"><span class="pre">setMoonAge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)moonAge</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setMoonAge" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+moonAge : double</p>
+<blockquote>
+<div><p>Combined with manualMoonPhase. Setup moon age to display phase.
+In range [0;29.5]</p>
+</div></blockquote>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setOrbitIntensity">
+<span class="sig-name descname"><span class="pre">setOrbitIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)orbitIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setOrbitIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orbitIntensity : double
+Intensity of the orbit of the satellite.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setPatchLayerGamma">
+<span class="sig-name descname"><span class="pre">setPatchLayerGamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PatchLayer)layerId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setPatchLayerGamma" title="Permalink to this definition"></a></dt>
+<dd><p>Gamma correction for the patc layerh.
+PARAMETERS:
+layerId : PatchLayer</p>
+<p>gamma : Vec</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setPatchLayerHsv">
+<span class="sig-name descname"><span class="pre">setPatchLayerHsv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PatchLayer)layerId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)hsv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setPatchLayerHsv" title="Permalink to this definition"></a></dt>
+<dd><p>Hue, Saturation and Lightness value used for the patch layer.
+PARAMETERS:
+layerId : PatchLayer</p>
+<p>hsv : Vec</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setPatchLayerKeyColor">
+<span class="sig-name descname"><span class="pre">setPatchLayerKeyColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PatchLayer)layerId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec4)keColor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setPatchLayerKeyColor" title="Permalink to this definition"></a></dt>
+<dd><p>Color to remove from patch texture (RGB + tolerance).
+PARAMETERS:
+layerId : PatchLayer</p>
+<p>keColor : Vec4</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setPatchLayerOpacity">
+<span class="sig-name descname"><span class="pre">setPatchLayerOpacity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PatchLayer)layerId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)opacity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setPatchLayerOpacity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the patch layer. Usually in range [0;1]
+PARAMETERS:
+layerId : PatchLayer</p>
+<p>opacity : double</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setPatchLayerVibrance">
+<span class="sig-name descname"><span class="pre">setPatchLayerVibrance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PatchLayer)layerId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)vibrance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setPatchLayerVibrance" title="Permalink to this definition"></a></dt>
+<dd><p>Vibrance value used in coordination with HSV value of the patch layer.
+PARAMETERS:
+layerId : PatchLayer</p>
+<p>vibrance : double</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setPenumbraAfterAreaColor">
+<span class="sig-name descname"><span class="pre">setPenumbraAfterAreaColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)penumbraAfterAreaColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setPenumbraAfterAreaColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+penumbraAfterAreaColor : Vec</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setPenumbraAfterAreaIntensity">
+<span class="sig-name descname"><span class="pre">setPenumbraAfterAreaIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)penumbraAfterAreaIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setPenumbraAfterAreaIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+penumbraAfterAreaIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setPenumbraAfterLineIntensity">
+<span class="sig-name descname"><span class="pre">setPenumbraAfterLineIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)penumbraAfterLineIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setPenumbraAfterLineIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+penumbraAfterLineIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setPenumbraBeforeAreaColor">
+<span class="sig-name descname"><span class="pre">setPenumbraBeforeAreaColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)penumbraBeforeAreaColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setPenumbraBeforeAreaColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+penumbraBeforeAreaColor : Vec</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setPenumbraBeforeAreaIntensity">
+<span class="sig-name descname"><span class="pre">setPenumbraBeforeAreaIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)penumbraBeforeAreaIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setPenumbraBeforeAreaIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+penumbraBeforeAreaIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setPenumbraBeforeLineIntensity">
+<span class="sig-name descname"><span class="pre">setPenumbraBeforeLineIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)penumbraBeforeLineIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setPenumbraBeforeLineIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+penumbraBeforeLineIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setPlanetShineStrength">
+<span class="sig-name descname"><span class="pre">setPlanetShineStrength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)planetShineStrength</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setPlanetShineStrength" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+planetShineStrength : double
+Strength of the planet shine.
+Usually in range [0;1]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setPointerIntensity">
+<span class="sig-name descname"><span class="pre">setPointerIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)pointerIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setPointerIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+pointerIntensity : double
+Intensity of the pointer of the satellite.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setPointerType">
+<span class="sig-name descname"><span class="pre">setPointerType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PointerType)pointerType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setPointerType" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+pointerType : PointerType
+Current satellite pointer type. See ‘Body.PointerType’ documentation for vailable values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setScale">
+<span class="sig-name descname"><span class="pre">setScale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)scale</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setScale" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+scale : double
+Scale factor of the satellite. 
+It can be used to enlarge apparent size of the satellite.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setSeaLevel">
+<span class="sig-name descname"><span class="pre">setSeaLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)seaLevel</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setSeaLevel" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+seaLevel : double
+Sea level level of the sea level in meter.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setSeaLevelRenderingMode">
+<span class="sig-name descname"><span class="pre">setSeaLevelRenderingMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)seaLevelRenderingMode</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setSeaLevelRenderingMode" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+seaLevelRenderingMode : str
+Sea level rendering mode use ‘NONE’ for off.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setShadowConeAntumbraAdvancement">
+<span class="sig-name descname"><span class="pre">setShadowConeAntumbraAdvancement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)shadowConeAntumbraAdvancement</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setShadowConeAntumbraAdvancement" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+shadowConeAntumbraAdvancement : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setShadowConeAreaColor">
+<span class="sig-name descname"><span class="pre">setShadowConeAreaColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(ShadowConeArea)area</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setShadowConeAreaColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+area : ShadowConeArea</p>
+<p>color : Vec</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setShadowConeAreaIntensity">
+<span class="sig-name descname"><span class="pre">setShadowConeAreaIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(ShadowConeArea)area</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setShadowConeAreaIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+area : ShadowConeArea</p>
+<p>intensity : double</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setShadowConeIntensity">
+<span class="sig-name descname"><span class="pre">setShadowConeIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)shadowConeIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setShadowConeIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+shadowConeIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setShadowConeLineColor">
+<span class="sig-name descname"><span class="pre">setShadowConeLineColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(ShadowConeArea)area</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)intensity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setShadowConeLineColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+area : ShadowConeArea</p>
+<p>intensity : Vec</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setShadowConeLineDrawingMode">
+<span class="sig-name descname"><span class="pre">setShadowConeLineDrawingMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(ShadowConeArea)area</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(ShadowConeLineDrawingMode)representation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setShadowConeLineDrawingMode" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+area : ShadowConeArea</p>
+<p>representation : ShadowConeLineDrawingMode</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setShadowConeLineIntensity">
+<span class="sig-name descname"><span class="pre">setShadowConeLineIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(ShadowConeArea)area</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setShadowConeLineIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+area : ShadowConeArea</p>
+<p>color : double</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setShadowConeLineThickness">
+<span class="sig-name descname"><span class="pre">setShadowConeLineThickness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(ShadowConeArea)area</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)thickness</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setShadowConeLineThickness" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+area : ShadowConeArea</p>
+<p>thickness : double</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setShadowConePenumbraAdvancement">
+<span class="sig-name descname"><span class="pre">setShadowConePenumbraAdvancement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)shadowConePenumbraAdvancement</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setShadowConePenumbraAdvancement" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+shadowConePenumbraAdvancement : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setShadowConeRepresentationType">
+<span class="sig-name descname"><span class="pre">setShadowConeRepresentationType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(ShadowConeRepresentation)representation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setShadowConeRepresentationType" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+representation : ShadowConeRepresentation</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setShadowConeSectionDistance">
+<span class="sig-name descname"><span class="pre">setShadowConeSectionDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)shadowConeSectionDistance</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setShadowConeSectionDistance" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+shadowConeSectionDistance : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setShadowConeSectionIntensity">
+<span class="sig-name descname"><span class="pre">setShadowConeSectionIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)shadowConeSectionIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setShadowConeSectionIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+shadowConeSectionIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setShadowContrast">
+<span class="sig-name descname"><span class="pre">setShadowContrast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)shadowContrast</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setShadowContrast" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+shadowContrast : double
+Contrast of the planet’s shadow.
+Usually in range [0;1]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setShadowStrength">
+<span class="sig-name descname"><span class="pre">setShadowStrength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)shadowStrength</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setShadowStrength" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+shadowStrength : double
+Strength of the planet’s shadow.
+Usually in range [0;1]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setSurfaceColor">
+<span class="sig-name descname"><span class="pre">setSurfaceColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)surfaceColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setSurfaceColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+surfaceColor : Vec
+Set the surface color. Need to use manual surface color mode</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setTerrainModel">
+<span class="sig-name descname"><span class="pre">setTerrainModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(TerrainModel)terrainModel</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setTerrainModel" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+terrainModel : TerrainModel</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setTerrainRenderingMode">
+<span class="sig-name descname"><span class="pre">setTerrainRenderingMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)terrainRenderingMode</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setTerrainRenderingMode" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+terrainRenderingMode : str
+Terrain rendering mode use TOPOGRAPHY OR PHOTOGRAY.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setTrajectoryIntensity">
+<span class="sig-name descname"><span class="pre">setTrajectoryIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)trajectoryIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setTrajectoryIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+trajectoryIntensity : double
+Intensity of the trajectory of the satellite. 
+Usually in range [0;1].
+If set to positive value, the satellite will draw a line according to it’s movement on the dome.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setUmbraAfterAreaColor">
+<span class="sig-name descname"><span class="pre">setUmbraAfterAreaColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)umbraAfterAreaColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setUmbraAfterAreaColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+umbraAfterAreaColor : Vec</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setUmbraAfterAreaIntensity">
+<span class="sig-name descname"><span class="pre">setUmbraAfterAreaIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)umbraAfterAreaIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setUmbraAfterAreaIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+umbraAfterAreaIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setUmbraAfterLineIntensity">
+<span class="sig-name descname"><span class="pre">setUmbraAfterLineIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)umbraAfterLineIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setUmbraAfterLineIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+umbraAfterLineIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setUmbraBeforeAreaColor">
+<span class="sig-name descname"><span class="pre">setUmbraBeforeAreaColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)umbraBeforeAreaColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setUmbraBeforeAreaColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+umbraBeforeAreaColor : Vec</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setUmbraBeforeAreaIntensity">
+<span class="sig-name descname"><span class="pre">setUmbraBeforeAreaIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)umbraBeforeAreaIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setUmbraBeforeAreaIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+umbraBeforeAreaIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setUmbraBeforeLineIntensity">
+<span class="sig-name descname"><span class="pre">setUmbraBeforeLineIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)umbraBeforeLineIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setUmbraBeforeLineIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+umbraBeforeLineIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.setUseHybridRatio">
+<span class="sig-name descname"><span class="pre">setUseHybridRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Satellite)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)useHybridRatio</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Satellite.setUseHybridRatio" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+useHybridRatio : double
+Used to define how value will be handled.
+Set to 0 to let the system choose the device or to 1 to manually choose the device (using ‘hybrid ratio’ value).
+This value musn’t be used on non hybrid system.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.antumbraAreaColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">antumbraAreaColor</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.antumbraAreaColor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.antumbraAreaIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">antumbraAreaIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.antumbraAreaIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.antumbraLineIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">antumbraLineIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.antumbraLineIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.cloudsIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cloudsIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.cloudsIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the satelite’s clouds if available.
+Usually in range [0;1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.collisionOffset">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">collisionOffset</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.collisionOffset" title="Permalink to this definition"></a></dt>
+<dd><p>Minimun distance camera can approch to the satellite surface in meters.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.eclipseShapeIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eclipseShapeIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.eclipseShapeIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.elevationScale">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">elevationScale</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.elevationScale" title="Permalink to this definition"></a></dt>
+<dd><p>Modify elevation scale of satelite’s reliefs.
+In some modelsets of planets do not use this property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.flatteningFactor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">flatteningFactor</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.flatteningFactor" title="Permalink to this definition"></a></dt>
+<dd><p>Flattening factor.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.flatteningOriginal">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">flatteningOriginal</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.flatteningOriginal" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Read-only original flattening (0 means no flattening).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.hybridRatio">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hybridRatio</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.hybridRatio" title="Permalink to this definition"></a></dt>
+<dd><p>Used to define which device will display the satellite.
+Set to 0 to use digital device or 1 to use optical device.
+This value musn’t be used on non hybrid system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.intensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the satellite.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.labelIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">labelIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.labelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the label of the satellite.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.livePatchBottomLeft">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchBottomLeft</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.livePatchBottomLeft" title="Permalink to this definition"></a></dt>
+<dd><p>South west LBR point of the patch. Unit : degrees.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.livePatchGamma">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchGamma</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.livePatchGamma" title="Permalink to this definition"></a></dt>
+<dd><p>Gamma correction for the patch.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.livePatchHsv">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchHsv</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.livePatchHsv" title="Permalink to this definition"></a></dt>
+<dd><p>Hue, Saturation and Lightness value used for the patch.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.livePatchIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.livePatchIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the live patch. Usually in range [0;1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.livePatchKeyColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchKeyColor</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.livePatchKeyColor" title="Permalink to this definition"></a></dt>
+<dd><p>Color to remove from patch texture (RGB + tolerance).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.livePatchRotation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchRotation</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.livePatchRotation" title="Permalink to this definition"></a></dt>
+<dd><p>Rotation of the patch around center point in degrees.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.livePatchTexture">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchTexture</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.livePatchTexture" title="Permalink to this definition"></a></dt>
+<dd><p>Texture to apply on the live patch.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.livePatchTopRight">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchTopRight</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.livePatchTopRight" title="Permalink to this definition"></a></dt>
+<dd><p>North east LBR point of the patch. Unit : degrees.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.livePatchVibrance">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchVibrance</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.livePatchVibrance" title="Permalink to this definition"></a></dt>
+<dd><p>Vibrance value used in coordination with HSV value.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.manualMoonPhase">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">manualMoonPhase</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.manualMoonPhase" title="Permalink to this definition"></a></dt>
+<dd><p>Enable or disable manual moon phase mode.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.manualSurfaceColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">manualSurfaceColor</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.manualSurfaceColor" title="Permalink to this definition"></a></dt>
+<dd><p>Set the surface color. Need to use manual surface color mode</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.moonAge">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">moonAge</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.moonAge" title="Permalink to this definition"></a></dt>
+<dd><p>Combined with manualMoonPhase. Setup moon age to display phase.
+In range [0;29.5]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.orbitIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orbitIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.orbitIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the orbit of the satellite.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.penumbraAfterAreaColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penumbraAfterAreaColor</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.penumbraAfterAreaColor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.penumbraAfterAreaIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penumbraAfterAreaIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.penumbraAfterAreaIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.penumbraAfterLineIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penumbraAfterLineIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.penumbraAfterLineIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.penumbraBeforeAreaColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penumbraBeforeAreaColor</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.penumbraBeforeAreaColor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.penumbraBeforeAreaIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penumbraBeforeAreaIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.penumbraBeforeAreaIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.penumbraBeforeLineIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penumbraBeforeLineIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.penumbraBeforeLineIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.planetShineStrength">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">planetShineStrength</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.planetShineStrength" title="Permalink to this definition"></a></dt>
+<dd><p>Strength of the planet shine.
+Usually in range [0;1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.pointerIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pointerIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.pointerIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the pointer of the satellite.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.pointerType">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pointerType</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.pointerType" title="Permalink to this definition"></a></dt>
+<dd><p>Current satellite pointer type. See ‘Body.PointerType’ documentation for vailable values.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.position">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.position" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Position of the satellite in ICRF coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.scale">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scale</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.scale" title="Permalink to this definition"></a></dt>
+<dd><p>Scale factor of the satellite. 
+It can be used to enlarge apparent size of the satellite.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.seaLevel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">seaLevel</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.seaLevel" title="Permalink to this definition"></a></dt>
+<dd><p>Sea level level of the sea level in meter.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.seaLevelRenderingMode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">seaLevelRenderingMode</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.seaLevelRenderingMode" title="Permalink to this definition"></a></dt>
+<dd><p>Sea level rendering mode use ‘NONE’ for off.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.shadowConeAntumbraAdvancement">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shadowConeAntumbraAdvancement</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.shadowConeAntumbraAdvancement" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.shadowConeIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shadowConeIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.shadowConeIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.shadowConePenumbraAdvancement">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shadowConePenumbraAdvancement</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.shadowConePenumbraAdvancement" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.shadowConeSectionDistance">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shadowConeSectionDistance</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.shadowConeSectionDistance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.shadowConeSectionIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shadowConeSectionIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.shadowConeSectionIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.shadowContrast">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shadowContrast</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.shadowContrast" title="Permalink to this definition"></a></dt>
+<dd><p>Contrast of the planet’s shadow.
+Usually in range [0;1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.shadowStrength">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shadowStrength</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.shadowStrength" title="Permalink to this definition"></a></dt>
+<dd><p>Strength of the planet’s shadow.
+Usually in range [0;1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.surfaceColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">surfaceColor</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.surfaceColor" title="Permalink to this definition"></a></dt>
+<dd><p>Set the surface color. Need to use manual surface color mode</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.terrainModel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">terrainModel</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.terrainModel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.terrainRenderingMode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">terrainRenderingMode</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.terrainRenderingMode" title="Permalink to this definition"></a></dt>
+<dd><p>Terrain rendering mode use TOPOGRAPHY OR PHOTOGRAY.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.trajectoryIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trajectoryIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.trajectoryIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the trajectory of the satellite. 
+Usually in range [0;1].
+If set to positive value, the satellite will draw a line according to it’s movement on the dome.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.umbraAfterAreaColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">umbraAfterAreaColor</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.umbraAfterAreaColor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.umbraAfterAreaIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">umbraAfterAreaIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.umbraAfterAreaIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.umbraAfterLineIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">umbraAfterLineIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.umbraAfterLineIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.umbraBeforeAreaColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">umbraBeforeAreaColor</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.umbraBeforeAreaColor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.umbraBeforeAreaIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">umbraBeforeAreaIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.umbraBeforeAreaIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.umbraBeforeLineIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">umbraBeforeLineIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.umbraBeforeLineIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Satellite.useHybridRatio">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">useHybridRatio</span></span><a class="headerlink" href="#pySkyExplorer.Satellite.useHybridRatio" title="Permalink to this definition"></a></dt>
+<dd><p>Used to define how value will be handled.
+Set to 0 to let the system choose the device or to 1 to manually choose the device (using ‘hybrid ratio’ value).
+This value musn’t be used on non hybrid system.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.RemoteShow.html" class="btn btn-neutral float-left" title="pySkyExplorer.RemoteShow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.SceneGraph.html" class="btn btn-neutral float-right" title="pySkyExplorer.SceneGraph" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

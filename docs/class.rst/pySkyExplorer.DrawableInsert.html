@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.DrawableInsert &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.DwarfPlanet" href="pySkyExplorer.DwarfPlanet.html" />
+    <link rel="prev" title="pySkyExplorer.DomePointer" href="pySkyExplorer.DomePointer.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.DrawableInsert</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.DrawableInsert"><code class="docutils literal notranslate"><span class="pre">DrawableInsert</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.BrushType"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.BrushType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.DrawableInsertName"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.DrawableInsertName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.beginDraw"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.beginDraw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.clearAll"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.clearAll()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.endDraw"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.endDraw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.load"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.redo"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.redo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.remove"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.remove()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.save"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.save()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.setBrushColor"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.setBrushColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.setBrushPosition"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.setBrushPosition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.setBrushSize"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.setBrushSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.setBrushType"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.setBrushType()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.setIntensity"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.setIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.setParent"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.setParent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.undo"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.undo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.brushColor"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.brushColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.brushSize"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.brushSize</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.brushType"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.brushType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.id"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.intensity"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.intensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.name"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.osgId"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DrawableInsert.parent"><code class="docutils literal notranslate"><span class="pre">DrawableInsert.parent</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.DrawableInsert</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.DrawableInsert.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-drawableinsert">
+<h1>pySkyExplorer.DrawableInsert<a class="headerlink" href="#pyskyexplorer-drawableinsert" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">DrawableInsert</span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.BrushType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BrushType</span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.BrushType" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available brush type.</p>
+<p><strong>InvalidBrushType</strong></p>
+<p><strong>Eraser</strong></p>
+<p><strong>Pen</strong></p>
+<p><strong>BrushTypeCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.DrawableInsertName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DrawableInsertName</span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.DrawableInsertName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available drawable insert name.</p>
+<p><strong>InvalidDrawableInsert</strong></p>
+<p><strong>DrawableInsert2D001</strong></p>
+<p><strong>DrawableInsert2D002</strong></p>
+<p><strong>DrawableInsert2D003</strong></p>
+<p><strong>DrawableInsertCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.beginDraw">
+<span class="sig-name descname"><span class="pre">beginDraw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DrawableInsert)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.beginDraw" title="Permalink to this definition"></a></dt>
+<dd><p>Start a new draw. End drawing of the previous line.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.clearAll">
+<span class="sig-name descname"><span class="pre">clearAll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DrawableInsert)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.clearAll" title="Permalink to this definition"></a></dt>
+<dd><p>Clear all drawing on this insert.
+PARAMETERS:
+animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.endDraw">
+<span class="sig-name descname"><span class="pre">endDraw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DrawableInsert)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.endDraw" title="Permalink to this definition"></a></dt>
+<dd><p>End current drawing.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DrawableInsert)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.load" title="Permalink to this definition"></a></dt>
+<dd><p>Load drawing.
+PARAMETERS:
+file : str</p>
+<blockquote>
+<div><p>File to load</p>
+</div></blockquote>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.redo">
+<span class="sig-name descname"><span class="pre">redo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DrawableInsert)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.redo" title="Permalink to this definition"></a></dt>
+<dd><p>Redo the last actions previously reverted by ‘undo’.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DrawableInsert)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.remove" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the drawable insert from the scene graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DrawableInsert)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)file</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.save" title="Permalink to this definition"></a></dt>
+<dd><p>Save drawing.
+PARAMETERS:
+file : str</p>
+<blockquote>
+<div><p>File to save</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.setBrushColor">
+<span class="sig-name descname"><span class="pre">setBrushColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DrawableInsert)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)brushColor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.setBrushColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+brushColor : Vec
+Color of the pencil tool.
+Values are (red, green, blue).
+Each value must be in range [0;1]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.setBrushPosition">
+<span class="sig-name descname"><span class="pre">setBrushPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DrawableInsert)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)brushPosition</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.setBrushPosition" title="Permalink to this definition"></a></dt>
+<dd><p>Move the brush to the given position.
+If selected brush is ‘Pen’ straight line will be drawn from current position to targetPosition,
+else if Eraser is selected, erase a line from current position to targetPosition
+PARAMETERS:
+brushPosition : Vec</p>
+<blockquote>
+<div><p>Target brush position.</p>
+</div></blockquote>
+<p>Unit is degrees.
+Values are (azimut Usually in range [-180;180], height Usually in range[0;90], 0)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.setBrushSize">
+<span class="sig-name descname"><span class="pre">setBrushSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DrawableInsert)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)brushSize</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.setBrushSize" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+brushSize : double
+Size of drawing tools in degree.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.setBrushType">
+<span class="sig-name descname"><span class="pre">setBrushType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DrawableInsert)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(BrushType)brushType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.setBrushType" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+brushType : BrushType
+Current selected brush type. See ‘BrushType’ enumeration documentation for available values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.setIntensity">
+<span class="sig-name descname"><span class="pre">setIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DrawableInsert)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.setIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+intensity : double
+Intensity of the drawable insert.
+Usually in range [0;1]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.setParent">
+<span class="sig-name descname"><span class="pre">setParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DrawableInsert)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)parent</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.setParent" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+parent : int
+Id of drawable isert’s parent port.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.undo">
+<span class="sig-name descname"><span class="pre">undo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DrawableInsert)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.undo" title="Permalink to this definition"></a></dt>
+<dd><p>Undo the last actions (between the last calls to ‘beginDraw’).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.brushColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">brushColor</span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.brushColor" title="Permalink to this definition"></a></dt>
+<dd><p>Color of the pencil tool.
+Values are (red, green, blue).
+Each value must be in range [0;1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.brushSize">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">brushSize</span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.brushSize" title="Permalink to this definition"></a></dt>
+<dd><p>Size of drawing tools in degree.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.brushType">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">brushType</span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.brushType" title="Permalink to this definition"></a></dt>
+<dd><p>Current selected brush type. See ‘BrushType’ enumeration documentation for available values.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.intensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the drawable insert.
+Usually in range [0;1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DrawableInsert.parent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#pySkyExplorer.DrawableInsert.parent" title="Permalink to this definition"></a></dt>
+<dd><p>Id of drawable isert’s parent port.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.DomePointer.html" class="btn btn-neutral float-left" title="pySkyExplorer.DomePointer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.DwarfPlanet.html" class="btn btn-neutral float-right" title="pySkyExplorer.DwarfPlanet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

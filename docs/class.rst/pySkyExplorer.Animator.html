@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.Animator &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.Asteroid" href="pySkyExplorer.Asteroid.html" />
+    <link rel="prev" title="pySkyExplorer" href="pySkyExplorer.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.Animator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.Animator"><code class="docutils literal notranslate"><span class="pre">Animator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Animator.Interpolator"><code class="docutils literal notranslate"><span class="pre">Animator.Interpolator</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Animator.Modulator"><code class="docutils literal notranslate"><span class="pre">Animator.Modulator</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Animator.PostBehavior"><code class="docutils literal notranslate"><span class="pre">Animator.PostBehavior</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Animator.Relativity"><code class="docutils literal notranslate"><span class="pre">Animator.Relativity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Animator.acceleration"><code class="docutils literal notranslate"><span class="pre">Animator.acceleration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Animator.deceleration"><code class="docutils literal notranslate"><span class="pre">Animator.deceleration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Animator.duration"><code class="docutils literal notranslate"><span class="pre">Animator.duration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Animator.interpolator"><code class="docutils literal notranslate"><span class="pre">Animator.interpolator</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Animator.modulator"><code class="docutils literal notranslate"><span class="pre">Animator.modulator</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Animator.postBehavior"><code class="docutils literal notranslate"><span class="pre">Animator.postBehavior</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Animator.relativity"><code class="docutils literal notranslate"><span class="pre">Animator.relativity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Animator.timingOffset"><code class="docutils literal notranslate"><span class="pre">Animator.timingOffset</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.Animator</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.Animator.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-animator">
+<h1>pySkyExplorer.Animator<a class="headerlink" href="#pyskyexplorer-animator" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Animator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">Animator</span></span><a class="headerlink" href="#pySkyExplorer.Animator" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Animator.Interpolator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Interpolator</span></span><a class="headerlink" href="#pySkyExplorer.Animator.Interpolator" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidInterpolator</strong></p>
+<p><strong>InterpolatorLinear</strong></p>
+<p><strong>InterpolatorInertial</strong></p>
+<p><strong>InterpolatorPsc</strong></p>
+<p><strong>InterpolatorCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Animator.Modulator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Modulator</span></span><a class="headerlink" href="#pySkyExplorer.Animator.Modulator" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidModulator</strong></p>
+<p><strong>ModulatorLinear</strong></p>
+<p><strong>ModulatorCubic</strong></p>
+<p><strong>ModulatorSinusoidal</strong></p>
+<p><strong>ModulatorQuintic</strong></p>
+<p><strong>ModulatorCubicIn</strong></p>
+<p><strong>ModulatorCubicOut</strong></p>
+<p><strong>ModulatorExponentialIn</strong></p>
+<p><strong>ModulatorExponentialOut</strong></p>
+<p><strong>ModulatorExponentialInOut</strong></p>
+<p><strong>ModulatorCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Animator.PostBehavior">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PostBehavior</span></span><a class="headerlink" href="#pySkyExplorer.Animator.PostBehavior" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidPostBehavior</strong></p>
+<p><strong>PostBehaviorStop</strong></p>
+<p><strong>PostBehaviorContinue</strong></p>
+<p><strong>PostBehaviorCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Animator.Relativity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Relativity</span></span><a class="headerlink" href="#pySkyExplorer.Animator.Relativity" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidRelativity</strong></p>
+<p><strong>RelativityAbsolute</strong></p>
+<p><strong>RelativityAdd</strong></p>
+<p><strong>RelativityMultiply</strong></p>
+<p><strong>RelativityMultiplyDefaultValue</strong></p>
+<p><strong>RelativityAddDefaultValue</strong></p>
+<p><strong>RelativityCount</strong></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Animator.acceleration">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">acceleration</span></span><a class="headerlink" href="#pySkyExplorer.Animator.acceleration" title="Permalink to this definition"></a></dt>
+<dd><p>Duration of the acceleration in seconds at animation start.
+acceleration + deceleration must be lesser than duration value.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Animator.deceleration">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">deceleration</span></span><a class="headerlink" href="#pySkyExplorer.Animator.deceleration" title="Permalink to this definition"></a></dt>
+<dd><p>Duration of the deceleration in seconds at animation end.
+acceleration + deceleration must be lesser than duration value.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Animator.duration">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">duration</span></span><a class="headerlink" href="#pySkyExplorer.Animator.duration" title="Permalink to this definition"></a></dt>
+<dd><p>Duration of the animation in seconds.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Animator.interpolator">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interpolator</span></span><a class="headerlink" href="#pySkyExplorer.Animator.interpolator" title="Permalink to this definition"></a></dt>
+<dd><p>Interpolation model of the animation.
+See ‘Interpolator’ enumeration documentation for available values</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Animator.modulator">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">modulator</span></span><a class="headerlink" href="#pySkyExplorer.Animator.modulator" title="Permalink to this definition"></a></dt>
+<dd><p>Modulation model of the animation.
+See ‘Modulator’ enumeration documentation for available values</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Animator.postBehavior">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postBehavior</span></span><a class="headerlink" href="#pySkyExplorer.Animator.postBehavior" title="Permalink to this definition"></a></dt>
+<dd><p>Behavior of the animation after reaching target value.
+See ‘PostBehavior’ enumeration documentation for available values</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Animator.relativity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">relativity</span></span><a class="headerlink" href="#pySkyExplorer.Animator.relativity" title="Permalink to this definition"></a></dt>
+<dd><p>Relativity model of the animation.
+See ‘Relativity’ enumeration documentation for available values</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Animator.timingOffset">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timingOffset</span></span><a class="headerlink" href="#pySkyExplorer.Animator.timingOffset" title="Permalink to this definition"></a></dt>
+<dd><p>Offset in seconds use to delay the animation.
+Use 0 to start the animation directly.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.html" class="btn btn-neutral float-left" title="pySkyExplorer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.Asteroid.html" class="btn btn-neutral float-right" title="pySkyExplorer.Asteroid" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

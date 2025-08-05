@@ -1,0 +1,21 @@
+﻿studio
+======
+
+.. automodule:: studio
+    
+    .. rubric:: Classes
+    .. autosummary::
+      :toctree:
+      :template: Class.rst
+        
+            Action
+            AdvancedCamera
+            AudienceResponseSystem
+            Configuration
+            Data
+            DataManager
+            QObject
+            ShowMonitor
+            Vec2
+            VotingDevice
+   

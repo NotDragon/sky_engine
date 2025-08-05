@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>studio.ShowMonitor &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="studio.Vec2" href="studio.Vec2.html" />
+    <link rel="prev" title="studio.QObject" href="studio.QObject.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="studio.html">studio</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="studio.Action.html">studio.Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.AdvancedCamera.html">studio.AdvancedCamera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.AudienceResponseSystem.html">studio.AudienceResponseSystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.Configuration.html">studio.Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.Data.html">studio.Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.DataManager.html">studio.DataManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.QObject.html">studio.QObject</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">studio.ShowMonitor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#studio.ShowMonitor"><code class="docutils literal notranslate"><span class="pre">ShowMonitor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#studio.ShowMonitor.ErrorCode"><code class="docutils literal notranslate"><span class="pre">ShowMonitor.ErrorCode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#studio.ShowMonitor.State"><code class="docutils literal notranslate"><span class="pre">ShowMonitor.State</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#studio.ShowMonitor.error"><code class="docutils literal notranslate"><span class="pre">ShowMonitor.error()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#studio.ShowMonitor.instance"><code class="docutils literal notranslate"><span class="pre">ShowMonitor.instance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#studio.ShowMonitor.resumeScript"><code class="docutils literal notranslate"><span class="pre">ShowMonitor.resumeScript()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#studio.ShowMonitor.scriptState"><code class="docutils literal notranslate"><span class="pre">ShowMonitor.scriptState()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#studio.ShowMonitor.stopScript"><code class="docutils literal notranslate"><span class="pre">ShowMonitor.stopScript()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#studio.ShowMonitor.runningSriptCount"><code class="docutils literal notranslate"><span class="pre">ShowMonitor.runningSriptCount</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="studio.Vec2.html">studio.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.VotingDevice.html">studio.VotingDevice</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="studio.html">studio</a></li>
+      <li class="breadcrumb-item active">studio.ShowMonitor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/studio.ShowMonitor.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="studio-showmonitor">
+<h1>studio.ShowMonitor<a class="headerlink" href="#studio-showmonitor" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="studio.ShowMonitor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">studio.</span></span><span class="sig-name descname"><span class="pre">ShowMonitor</span></span><a class="headerlink" href="#studio.ShowMonitor" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="studio.ShowMonitor.ErrorCode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ErrorCode</span></span><a class="headerlink" href="#studio.ShowMonitor.ErrorCode" title="Permalink to this definition"></a></dt>
+<dd><p><strong>NoError</strong></p>
+<p><strong>CyclicInclusion</strong></p>
+<p><strong>FileNotFound</strong></p>
+<p><strong>LoadFailed</strong></p>
+<p><strong>InstantLoop</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="studio.ShowMonitor.State">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">State</span></span><a class="headerlink" href="#studio.ShowMonitor.State" title="Permalink to this definition"></a></dt>
+<dd><p><strong>Play</strong></p>
+<p><strong>Pause</strong></p>
+<p><strong>Stop</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="studio.ShowMonitor.error">
+<span class="sig-name descname"><span class="pre">error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ShowMonitor)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ErrorCode</span> <span class="pre">:</span></span></span><a class="headerlink" href="#studio.ShowMonitor.error" title="Permalink to this definition"></a></dt>
+<dd><p>Return error code associated with given script.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="studio.ShowMonitor.instance">
+<span class="sig-name descname"><span class="pre">instance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ShowMonitor</span> <span class="pre">:</span></span></span><a class="headerlink" href="#studio.ShowMonitor.instance" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-Only]
+Reference to the show monitor</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="studio.ShowMonitor.resumeScript">
+<span class="sig-name descname"><span class="pre">resumeScript</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ShowMonitor)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#studio.ShowMonitor.resumeScript" title="Permalink to this definition"></a></dt>
+<dd><p>Resume the paused script.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="studio.ShowMonitor.scriptState">
+<span class="sig-name descname"><span class="pre">scriptState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ShowMonitor)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">State</span> <span class="pre">:</span></span></span><a class="headerlink" href="#studio.ShowMonitor.scriptState" title="Permalink to this definition"></a></dt>
+<dd><p>Get the current state of a running script.
+PARAMETERS
+index : Integer
+Index of the script to query state.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="studio.ShowMonitor.stopScript">
+<span class="sig-name descname"><span class="pre">stopScript</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ShowMonitor)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#studio.ShowMonitor.stopScript" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the script from running script model.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="studio.ShowMonitor.runningSriptCount">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">runningSriptCount</span></span><a class="headerlink" href="#studio.ShowMonitor.runningSriptCount" title="Permalink to this definition"></a></dt>
+<dd><p>Return the number of currently running scripts</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="studio.QObject.html" class="btn btn-neutral float-left" title="studio.QObject" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="studio.Vec2.html" class="btn btn-neutral float-right" title="studio.Vec2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.Audio &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.AudioLayer" href="pySkyExplorer.AudioLayer.html" />
+    <link rel="prev" title="pySkyExplorer.Asteroid" href="pySkyExplorer.Asteroid.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.Audio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.Audio"><code class="docutils literal notranslate"><span class="pre">Audio</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Audio.clear"><code class="docutils literal notranslate"><span class="pre">Audio.clear()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Audio.clearStereo"><code class="docutils literal notranslate"><span class="pre">Audio.clearStereo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Audio.load"><code class="docutils literal notranslate"><span class="pre">Audio.load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Audio.loadStereo"><code class="docutils literal notranslate"><span class="pre">Audio.loadStereo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Audio.pause"><code class="docutils literal notranslate"><span class="pre">Audio.pause()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Audio.pauseStereo"><code class="docutils literal notranslate"><span class="pre">Audio.pauseStereo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Audio.play"><code class="docutils literal notranslate"><span class="pre">Audio.play()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Audio.playStereo"><code class="docutils literal notranslate"><span class="pre">Audio.playStereo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Audio.seek"><code class="docutils literal notranslate"><span class="pre">Audio.seek()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Audio.seekStereo"><code class="docutils literal notranslate"><span class="pre">Audio.seekStereo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Audio.setVolume"><code class="docutils literal notranslate"><span class="pre">Audio.setVolume()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Audio.setVolumeDb"><code class="docutils literal notranslate"><span class="pre">Audio.setVolumeDb()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Audio.stop"><code class="docutils literal notranslate"><span class="pre">Audio.stop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Audio.stopStereo"><code class="docutils literal notranslate"><span class="pre">Audio.stopStereo()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.Audio</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.Audio.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-audio">
+<h1>pySkyExplorer.Audio<a class="headerlink" href="#pyskyexplorer-audio" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Audio">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">Audio</span></span><a class="headerlink" href="#pySkyExplorer.Audio" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Audio.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Audio)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Audio.clear" title="Permalink to this definition"></a></dt>
+<dd><p>Clear association between mono audio files and channels.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Audio.clearStereo">
+<span class="sig-name descname"><span class="pre">clearStereo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Audio)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Audio.clearStereo" title="Permalink to this definition"></a></dt>
+<dd><p>Clear association between stereo audio files and channels.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Audio.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Audio)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)ouputId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)filename</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Audio.load" title="Permalink to this definition"></a></dt>
+<dd><p>Load a mono audio file associated with a channel.
+PARAMETERS:
+ouputId : int</p>
+<blockquote>
+<div><p>Id of the channel used to read audio file.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>filename<span class="classifier">str</span></dt><dd><p>Path to the audio file to read.</p>
+</dd>
+</dl>
+<p>Can be a relative path to audio folder or an absolute path.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Audio.loadStereo">
+<span class="sig-name descname"><span class="pre">loadStereo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Audio)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)channelId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)filename</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Audio.loadStereo" title="Permalink to this definition"></a></dt>
+<dd><p>Load a stereo audio file associated with a channel.
+PARAMETERS:
+channelId : int</p>
+<blockquote>
+<div><p>Id of the channel used to read audio file.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>filename<span class="classifier">str</span></dt><dd><p>Path to the audio file to read.</p>
+</dd>
+</dl>
+<p>Can be a relative path to audio folder or an absolute path.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Audio.pause">
+<span class="sig-name descname"><span class="pre">pause</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Audio)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)value</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Audio.pause" title="Permalink to this definition"></a></dt>
+<dd><dl>
+<dt>Toggle play and pause on current playing mono audio file.</dt><dd><p>PARAMETERS:
+value : bool</p>
+<blockquote>
+<div><p>Use True to pause audio file, or False to play audio file.</p>
+</div></blockquote>
+</dd>
+<dt>pause( (Audio)arg1, (int)association, (bool)value) -&gt; None :</dt><dd><p>Toggle play and pause on association.
+PARAMETERS:
+association : int</p>
+<blockquote>
+<div><p>Association to pause.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>value<span class="classifier">bool</span></dt><dd><p>Use True to pause audio file, or False to play audio file.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Audio.pauseStereo">
+<span class="sig-name descname"><span class="pre">pauseStereo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Audio)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)value</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Audio.pauseStereo" title="Permalink to this definition"></a></dt>
+<dd><p>Toggle play and pause on current playing stereo audio file.
+PARAMETERS:
+value : bool</p>
+<blockquote>
+<div><p>Use True to pause audio file, or False to play audio file.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Audio.play">
+<span class="sig-name descname"><span class="pre">play</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Audio)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Audio.play" title="Permalink to this definition"></a></dt>
+<dd><dl>
+<dt>Play current loaded mono sound. The load function must have been called before.</dt><dd><p>PARAMETERS:
+animator : Animator default value : Animator()</p>
+</dd>
+<dt>play( (Audio)arg1, (int)association, (Animator)animator) -&gt; None :</dt><dd><p>Play specified association. The load function must have been called before.
+PARAMETERS:
+association : int</p>
+<blockquote>
+<div><p>Association to start.</p>
+</div></blockquote>
+<p>animator : Animator default value : Animator()</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Audio.playStereo">
+<span class="sig-name descname"><span class="pre">playStereo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Audio)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Audio.playStereo" title="Permalink to this definition"></a></dt>
+<dd><p>Play current loaded mono sound. The loadStereo function must have been called before.
+PARAMETERS:
+animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Audio.seek">
+<span class="sig-name descname"><span class="pre">seek</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Audio)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)time</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Audio.seek" title="Permalink to this definition"></a></dt>
+<dd><dl>
+<dt>Change the current audio timing.</dt><dd><p>PARAMETERS:
+time : int</p>
+<blockquote>
+<div><p>Position to reach in the audio file (in seconds).</p>
+</div></blockquote>
+</dd>
+<dt>seek( (Audio)arg1, (int)association, (int)time) -&gt; None :</dt><dd><p>Change the current audio timing.
+PARAMETERS:
+association : int</p>
+<blockquote>
+<div><p>Association to start.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>time<span class="classifier">int</span></dt><dd><p>Position to reach in the audio file (in seconds).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Audio.seekStereo">
+<span class="sig-name descname"><span class="pre">seekStereo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Audio)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)time</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Audio.seekStereo" title="Permalink to this definition"></a></dt>
+<dd><p>Change the current audio timing.
+PARAMETERS:
+time : int</p>
+<blockquote>
+<div><p>Position to reach in the audio file (in seconds).</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Audio.setVolume">
+<span class="sig-name descname"><span class="pre">setVolume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Audio)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)volume</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Audio.setVolume" title="Permalink to this definition"></a></dt>
+<dd><dl>
+<dt>PARAMETERS:</dt><dd><p>volume : double
+Global current audio volume.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd>
+<dt>setVolume( (Audio)arg1, (int)channelId, (float)volume, (Animator)animator) -&gt; None :</dt><dd><p>Set the input volume of the given channel.
+PARAMETERS:
+channelId : int</p>
+<blockquote>
+<div><p>Id of the channel to modify volume.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>volume<span class="classifier">double</span></dt><dd><p>New audio volume of the channel.</p>
+</dd>
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animation used to change the volume.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Audio.setVolumeDb">
+<span class="sig-name descname"><span class="pre">setVolumeDb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Audio)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)volumeDb</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Audio.setVolumeDb" title="Permalink to this definition"></a></dt>
+<dd><dl>
+<dt>PARAMETERS:</dt><dd><p>volumeDb : double
+Global current audio volume id decibel.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd>
+<dt>setVolumeDb( (Audio)arg1, (int)channelId, (float)volumeDb, (Animator)animator) -&gt; None :</dt><dd><p>Set the input volume of the given channel. Same as setVolume but unit is decibel.
+PARAMETERS:
+channelId : int</p>
+<blockquote>
+<div><p>Id of the channel to modify volume.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>volumeDb<span class="classifier">double</span></dt><dd><p>New audio volume (in decibel) of the channel.</p>
+</dd>
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animation used to change the volume.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Audio.stop">
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Audio)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Audio.stop" title="Permalink to this definition"></a></dt>
+<dd><p>Stop current loaded mono audio files.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Audio.stopStereo">
+<span class="sig-name descname"><span class="pre">stopStereo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Audio)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Audio.stopStereo" title="Permalink to this definition"></a></dt>
+<dd><p>Stop current loaded stereo audio files.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.Asteroid.html" class="btn btn-neutral float-left" title="pySkyExplorer.Asteroid" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.AudioLayer.html" class="btn btn-neutral float-right" title="pySkyExplorer.AudioLayer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+pySkyExplorer.DrawableInsert
+============================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: DrawableInsert
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

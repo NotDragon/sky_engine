@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.InsertText &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.Light" href="pySkyExplorer.Light.html" />
+    <link rel="prev" title="pySkyExplorer.Insert3D" href="pySkyExplorer.Insert3D.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.InsertText</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.InsertText"><code class="docutils literal notranslate"><span class="pre">InsertText</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.GeometryType"><code class="docutils literal notranslate"><span class="pre">InsertText.GeometryType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.InsertTextName"><code class="docutils literal notranslate"><span class="pre">InsertText.InsertTextName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.InvertTextureType"><code class="docutils literal notranslate"><span class="pre">InsertText.InvertTextureType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.setColor"><code class="docutils literal notranslate"><span class="pre">InsertText.setColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.setDistance"><code class="docutils literal notranslate"><span class="pre">InsertText.setDistance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.setFontFilename"><code class="docutils literal notranslate"><span class="pre">InsertText.setFontFilename()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.setGeometryType"><code class="docutils literal notranslate"><span class="pre">InsertText.setGeometryType()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.setIntensity"><code class="docutils literal notranslate"><span class="pre">InsertText.setIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.setInvertTexture"><code class="docutils literal notranslate"><span class="pre">InsertText.setInvertTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.setParent"><code class="docutils literal notranslate"><span class="pre">InsertText.setParent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.setPosition"><code class="docutils literal notranslate"><span class="pre">InsertText.setPosition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.setSize"><code class="docutils literal notranslate"><span class="pre">InsertText.setSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.setText"><code class="docutils literal notranslate"><span class="pre">InsertText.setText()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.setTextOffset"><code class="docutils literal notranslate"><span class="pre">InsertText.setTextOffset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.color"><code class="docutils literal notranslate"><span class="pre">InsertText.color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.distance"><code class="docutils literal notranslate"><span class="pre">InsertText.distance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.fontFilename"><code class="docutils literal notranslate"><span class="pre">InsertText.fontFilename</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.geometryType"><code class="docutils literal notranslate"><span class="pre">InsertText.geometryType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.id"><code class="docutils literal notranslate"><span class="pre">InsertText.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.intensity"><code class="docutils literal notranslate"><span class="pre">InsertText.intensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.invertTexture"><code class="docutils literal notranslate"><span class="pre">InsertText.invertTexture</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.name"><code class="docutils literal notranslate"><span class="pre">InsertText.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.osgId"><code class="docutils literal notranslate"><span class="pre">InsertText.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.parent"><code class="docutils literal notranslate"><span class="pre">InsertText.parent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.position"><code class="docutils literal notranslate"><span class="pre">InsertText.position</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.size"><code class="docutils literal notranslate"><span class="pre">InsertText.size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.text"><code class="docutils literal notranslate"><span class="pre">InsertText.text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.InsertText.textOffset"><code class="docutils literal notranslate"><span class="pre">InsertText.textOffset</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.InsertText</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.InsertText.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-inserttext">
+<h1>pySkyExplorer.InsertText<a class="headerlink" href="#pyskyexplorer-inserttext" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">InsertText</span></span><a class="headerlink" href="#pySkyExplorer.InsertText" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.GeometryType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GeometryType</span></span><a class="headerlink" href="#pySkyExplorer.InsertText.GeometryType" title="Permalink to this definition"></a></dt>
+<dd><p>Type of the geometry representing text.</p>
+<p><strong>InvalidGeometryType</strong></p>
+<p><strong>Plane</strong></p>
+<p><strong>Cylinder</strong></p>
+<p><strong>Spheroid</strong></p>
+<p><strong>Fisheye</strong></p>
+<p><strong>GeometryTypeCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.InsertTextName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InsertTextName</span></span><a class="headerlink" href="#pySkyExplorer.InsertText.InsertTextName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available insert text name</p>
+<p><strong>InvalidInsertText</strong></p>
+<p><strong>InsertText001</strong></p>
+<p><strong>InsertText002</strong></p>
+<p><strong>InsertText003</strong></p>
+<p><strong>InsertText004</strong></p>
+<p><strong>InsertText005</strong></p>
+<p><strong>InsertText006</strong></p>
+<p><strong>InsertText007</strong></p>
+<p><strong>InsertText008</strong></p>
+<p><strong>InsertText009</strong></p>
+<p><strong>InsertText010</strong></p>
+<p><strong>InsertText011</strong></p>
+<p><strong>InsertText012</strong></p>
+<p><strong>InsertText013</strong></p>
+<p><strong>InsertText014</strong></p>
+<p><strong>InsertText015</strong></p>
+<p><strong>InsertText016</strong></p>
+<p><strong>InsertText017</strong></p>
+<p><strong>InsertText018</strong></p>
+<p><strong>InsertText019</strong></p>
+<p><strong>InsertText020</strong></p>
+<p><strong>InsertText021</strong></p>
+<p><strong>InsertText022</strong></p>
+<p><strong>InsertText023</strong></p>
+<p><strong>InsertText024</strong></p>
+<p><strong>InsertText025</strong></p>
+<p><strong>InsertText026</strong></p>
+<p><strong>InsertText027</strong></p>
+<p><strong>InsertText028</strong></p>
+<p><strong>InsertText029</strong></p>
+<p><strong>InsertText030</strong></p>
+<p><strong>InsertText031</strong></p>
+<p><strong>InsertText032</strong></p>
+<p><strong>InsertText033</strong></p>
+<p><strong>InsertText034</strong></p>
+<p><strong>InsertText035</strong></p>
+<p><strong>InsertText036</strong></p>
+<p><strong>InsertText037</strong></p>
+<p><strong>InsertText038</strong></p>
+<p><strong>InsertText039</strong></p>
+<p><strong>InsertText040</strong></p>
+<p><strong>InsertText041</strong></p>
+<p><strong>InsertText042</strong></p>
+<p><strong>InsertText043</strong></p>
+<p><strong>InsertText044</strong></p>
+<p><strong>InsertText045</strong></p>
+<p><strong>InsertText046</strong></p>
+<p><strong>InsertText047</strong></p>
+<p><strong>InsertText048</strong></p>
+<p><strong>InsertText049</strong></p>
+<p><strong>InsertText050</strong></p>
+<p><strong>InsertTextSubtitles</strong></p>
+<p><strong>InsertTextVote001</strong></p>
+<p><strong>InsertTextVote002</strong></p>
+<p><strong>InsertTextVote003</strong></p>
+<p><strong>InsertTextVote004</strong></p>
+<p><strong>InsertTextVote005</strong></p>
+<p><strong>InsertTextVote006</strong></p>
+<p><strong>InsertTextVote007</strong></p>
+<p><strong>InsertTextVote008</strong></p>
+<p><strong>InsertTextVote009</strong></p>
+<p><strong>InsertTextVote010</strong></p>
+<p><strong>InsertTextSidereal</strong></p>
+<p><strong>InsertText063</strong></p>
+<p><strong>InsertText064</strong></p>
+<p><strong>InsertText065</strong></p>
+<p><strong>InsertText066</strong></p>
+<p><strong>InsertText067</strong></p>
+<p><strong>InsertText068</strong></p>
+<p><strong>InsertText069</strong></p>
+<p><strong>InsertText070</strong></p>
+<p><strong>InsertText071</strong></p>
+<p><strong>InsertText072</strong></p>
+<p><strong>InsertText073</strong></p>
+<p><strong>InsertText074</strong></p>
+<p><strong>InsertText075</strong></p>
+<p><strong>InsertText076</strong></p>
+<p><strong>InsertText077</strong></p>
+<p><strong>InsertText078</strong></p>
+<p><strong>InsertText079</strong></p>
+<p><strong>InsertText080</strong></p>
+<p><strong>InsertText081</strong></p>
+<p><strong>InsertText082</strong></p>
+<p><strong>InsertText083</strong></p>
+<p><strong>InsertText084</strong></p>
+<p><strong>InsertText085</strong></p>
+<p><strong>InsertText086</strong></p>
+<p><strong>InsertText087</strong></p>
+<p><strong>InsertText088</strong></p>
+<p><strong>InsertText089</strong></p>
+<p><strong>InsertText090</strong></p>
+<p><strong>InsertText091</strong></p>
+<p><strong>InsertText092</strong></p>
+<p><strong>InsertText093</strong></p>
+<p><strong>InsertText094</strong></p>
+<p><strong>InsertText095</strong></p>
+<p><strong>InsertText096</strong></p>
+<p><strong>InsertText097</strong></p>
+<p><strong>InsertText098</strong></p>
+<p><strong>InsertText099</strong></p>
+<p><strong>InsertText100</strong></p>
+<p><strong>InsertText101</strong></p>
+<p><strong>InsertText102</strong></p>
+<p><strong>InsertText103</strong></p>
+<p><strong>InsertText104</strong></p>
+<p><strong>InsertText105</strong></p>
+<p><strong>InsertText106</strong></p>
+<p><strong>InsertText107</strong></p>
+<p><strong>InsertText108</strong></p>
+<p><strong>InsertText109</strong></p>
+<p><strong>InsertText110</strong></p>
+<p><strong>InsertText111</strong></p>
+<p><strong>InsertText112</strong></p>
+<p><strong>InsertText113</strong></p>
+<p><strong>InsertText114</strong></p>
+<p><strong>InsertText115</strong></p>
+<p><strong>InsertText116</strong></p>
+<p><strong>InsertText117</strong></p>
+<p><strong>InsertText118</strong></p>
+<p><strong>InsertText119</strong></p>
+<p><strong>InsertText120</strong></p>
+<p><strong>InsertText121</strong></p>
+<p><strong>InsertText122</strong></p>
+<p><strong>InsertText123</strong></p>
+<p><strong>InsertText124</strong></p>
+<p><strong>InsertText125</strong></p>
+<p><strong>InsertText126</strong></p>
+<p><strong>InsertText127</strong></p>
+<p><strong>InsertText128</strong></p>
+<p><strong>InsertText129</strong></p>
+<p><strong>InsertText130</strong></p>
+<p><strong>InsertText131</strong></p>
+<p><strong>InsertText132</strong></p>
+<p><strong>InsertText133</strong></p>
+<p><strong>InsertText134</strong></p>
+<p><strong>InsertText135</strong></p>
+<p><strong>InsertText136</strong></p>
+<p><strong>InsertText137</strong></p>
+<p><strong>InsertText138</strong></p>
+<p><strong>InsertText139</strong></p>
+<p><strong>InsertText140</strong></p>
+<p><strong>InsertText141</strong></p>
+<p><strong>InsertText142</strong></p>
+<p><strong>InsertText143</strong></p>
+<p><strong>InsertText144</strong></p>
+<p><strong>InsertText145</strong></p>
+<p><strong>InsertText146</strong></p>
+<p><strong>InsertText147</strong></p>
+<p><strong>InsertText148</strong></p>
+<p><strong>InsertText149</strong></p>
+<p><strong>InsertText150</strong></p>
+<p><strong>InsertText151</strong></p>
+<p><strong>InsertText152</strong></p>
+<p><strong>InsertText153</strong></p>
+<p><strong>InsertText154</strong></p>
+<p><strong>InsertText155</strong></p>
+<p><strong>InsertText156</strong></p>
+<p><strong>InsertText157</strong></p>
+<p><strong>InsertText158</strong></p>
+<p><strong>InsertText159</strong></p>
+<p><strong>InsertText160</strong></p>
+<p><strong>InsertText161</strong></p>
+<p><strong>InsertText162</strong></p>
+<p><strong>InsertText163</strong></p>
+<p><strong>InsertText164</strong></p>
+<p><strong>InsertText165</strong></p>
+<p><strong>InsertText166</strong></p>
+<p><strong>InsertText167</strong></p>
+<p><strong>InsertText168</strong></p>
+<p><strong>InsertText169</strong></p>
+<p><strong>InsertText170</strong></p>
+<p><strong>InsertText171</strong></p>
+<p><strong>InsertText172</strong></p>
+<p><strong>InsertText173</strong></p>
+<p><strong>InsertText174</strong></p>
+<p><strong>InsertText175</strong></p>
+<p><strong>InsertText176</strong></p>
+<p><strong>InsertText177</strong></p>
+<p><strong>InsertText178</strong></p>
+<p><strong>InsertText179</strong></p>
+<p><strong>InsertText180</strong></p>
+<p><strong>InsertText181</strong></p>
+<p><strong>InsertText182</strong></p>
+<p><strong>InsertText183</strong></p>
+<p><strong>InsertText184</strong></p>
+<p><strong>InsertText185</strong></p>
+<p><strong>InsertText186</strong></p>
+<p><strong>InsertText187</strong></p>
+<p><strong>InsertText188</strong></p>
+<p><strong>InsertText189</strong></p>
+<p><strong>InsertText190</strong></p>
+<p><strong>InsertText191</strong></p>
+<p><strong>InsertText192</strong></p>
+<p><strong>InsertText193</strong></p>
+<p><strong>InsertText194</strong></p>
+<p><strong>InsertText195</strong></p>
+<p><strong>InsertText196</strong></p>
+<p><strong>InsertText197</strong></p>
+<p><strong>InsertText198</strong></p>
+<p><strong>InsertText199</strong></p>
+<p><strong>InsertText200</strong></p>
+<p><strong>InsertText201</strong></p>
+<p><strong>InsertText202</strong></p>
+<p><strong>InsertText203</strong></p>
+<p><strong>InsertText204</strong></p>
+<p><strong>InsertText205</strong></p>
+<p><strong>InsertText206</strong></p>
+<p><strong>InsertText207</strong></p>
+<p><strong>InsertText208</strong></p>
+<p><strong>InsertText209</strong></p>
+<p><strong>InsertText210</strong></p>
+<p><strong>InsertText211</strong></p>
+<p><strong>InsertText212</strong></p>
+<p><strong>InsertText213</strong></p>
+<p><strong>InsertText214</strong></p>
+<p><strong>InsertText215</strong></p>
+<p><strong>InsertText216</strong></p>
+<p><strong>InsertText217</strong></p>
+<p><strong>InsertText218</strong></p>
+<p><strong>InsertText219</strong></p>
+<p><strong>InsertText220</strong></p>
+<p><strong>InsertText221</strong></p>
+<p><strong>InsertText222</strong></p>
+<p><strong>InsertText223</strong></p>
+<p><strong>InsertText224</strong></p>
+<p><strong>InsertText225</strong></p>
+<p><strong>InsertText226</strong></p>
+<p><strong>InsertText227</strong></p>
+<p><strong>InsertText228</strong></p>
+<p><strong>InsertText229</strong></p>
+<p><strong>InsertText230</strong></p>
+<p><strong>InsertText231</strong></p>
+<p><strong>InsertText232</strong></p>
+<p><strong>InsertText233</strong></p>
+<p><strong>InsertText234</strong></p>
+<p><strong>InsertText235</strong></p>
+<p><strong>InsertText236</strong></p>
+<p><strong>InsertText237</strong></p>
+<p><strong>InsertText238</strong></p>
+<p><strong>InsertText239</strong></p>
+<p><strong>InsertText240</strong></p>
+<p><strong>InsertText241</strong></p>
+<p><strong>InsertText242</strong></p>
+<p><strong>InsertText243</strong></p>
+<p><strong>InsertText244</strong></p>
+<p><strong>InsertText245</strong></p>
+<p><strong>InsertText246</strong></p>
+<p><strong>InsertText247</strong></p>
+<p><strong>InsertText248</strong></p>
+<p><strong>InsertText249</strong></p>
+<p><strong>InsertText250</strong></p>
+<p><strong>InsertText251</strong></p>
+<p><strong>InsertText252</strong></p>
+<p><strong>InsertText253</strong></p>
+<p><strong>InsertText254</strong></p>
+<p><strong>InsertText255</strong></p>
+<p><strong>InsertText256</strong></p>
+<p><strong>InsertText257</strong></p>
+<p><strong>InsertText258</strong></p>
+<p><strong>InsertText259</strong></p>
+<p><strong>InsertText260</strong></p>
+<p><strong>InsertText261</strong></p>
+<p><strong>InsertText262</strong></p>
+<p><strong>InsertText263</strong></p>
+<p><strong>InsertText264</strong></p>
+<p><strong>InsertText265</strong></p>
+<p><strong>InsertText266</strong></p>
+<p><strong>InsertText267</strong></p>
+<p><strong>InsertText268</strong></p>
+<p><strong>InsertText269</strong></p>
+<p><strong>InsertText270</strong></p>
+<p><strong>InsertText271</strong></p>
+<p><strong>InsertText272</strong></p>
+<p><strong>InsertText273</strong></p>
+<p><strong>InsertText274</strong></p>
+<p><strong>InsertText275</strong></p>
+<p><strong>InsertText276</strong></p>
+<p><strong>InsertText277</strong></p>
+<p><strong>InsertText278</strong></p>
+<p><strong>InsertText279</strong></p>
+<p><strong>InsertText280</strong></p>
+<p><strong>InsertText281</strong></p>
+<p><strong>InsertText282</strong></p>
+<p><strong>InsertText283</strong></p>
+<p><strong>InsertText284</strong></p>
+<p><strong>InsertText285</strong></p>
+<p><strong>InsertText286</strong></p>
+<p><strong>InsertText287</strong></p>
+<p><strong>InsertText288</strong></p>
+<p><strong>InsertText289</strong></p>
+<p><strong>InsertText290</strong></p>
+<p><strong>InsertText291</strong></p>
+<p><strong>InsertText292</strong></p>
+<p><strong>InsertText293</strong></p>
+<p><strong>InsertText294</strong></p>
+<p><strong>InsertText295</strong></p>
+<p><strong>InsertText296</strong></p>
+<p><strong>InsertText297</strong></p>
+<p><strong>InsertText298</strong></p>
+<p><strong>InsertText299</strong></p>
+<p><strong>InsertText300</strong></p>
+<p><strong>InsertText301</strong></p>
+<p><strong>InsertText302</strong></p>
+<p><strong>InsertText303</strong></p>
+<p><strong>InsertText304</strong></p>
+<p><strong>InsertText305</strong></p>
+<p><strong>InsertText306</strong></p>
+<p><strong>InsertText307</strong></p>
+<p><strong>InsertText308</strong></p>
+<p><strong>InsertText309</strong></p>
+<p><strong>InsertText310</strong></p>
+<p><strong>InsertText311</strong></p>
+<p><strong>InsertText312</strong></p>
+<p><strong>InsertText313</strong></p>
+<p><strong>InsertText314</strong></p>
+<p><strong>InsertText315</strong></p>
+<p><strong>InsertText316</strong></p>
+<p><strong>InsertText317</strong></p>
+<p><strong>InsertText318</strong></p>
+<p><strong>InsertText319</strong></p>
+<p><strong>InsertText320</strong></p>
+<p><strong>InsertText321</strong></p>
+<p><strong>InsertText322</strong></p>
+<p><strong>InsertText323</strong></p>
+<p><strong>InsertText324</strong></p>
+<p><strong>InsertText325</strong></p>
+<p><strong>InsertText326</strong></p>
+<p><strong>InsertText327</strong></p>
+<p><strong>InsertText328</strong></p>
+<p><strong>InsertText329</strong></p>
+<p><strong>InsertText330</strong></p>
+<p><strong>InsertText331</strong></p>
+<p><strong>InsertText332</strong></p>
+<p><strong>InsertText333</strong></p>
+<p><strong>InsertText334</strong></p>
+<p><strong>InsertText335</strong></p>
+<p><strong>InsertText336</strong></p>
+<p><strong>InsertText337</strong></p>
+<p><strong>InsertText338</strong></p>
+<p><strong>InsertText339</strong></p>
+<p><strong>InsertText340</strong></p>
+<p><strong>InsertText341</strong></p>
+<p><strong>InsertText342</strong></p>
+<p><strong>InsertText343</strong></p>
+<p><strong>InsertText344</strong></p>
+<p><strong>InsertText345</strong></p>
+<p><strong>InsertText346</strong></p>
+<p><strong>InsertText347</strong></p>
+<p><strong>InsertText348</strong></p>
+<p><strong>InsertText349</strong></p>
+<p><strong>InsertText350</strong></p>
+<p><strong>InsertText351</strong></p>
+<p><strong>InsertText352</strong></p>
+<p><strong>InsertText353</strong></p>
+<p><strong>InsertText354</strong></p>
+<p><strong>InsertText355</strong></p>
+<p><strong>InsertText356</strong></p>
+<p><strong>InsertText357</strong></p>
+<p><strong>InsertText358</strong></p>
+<p><strong>InsertText359</strong></p>
+<p><strong>InsertText360</strong></p>
+<p><strong>InsertText361</strong></p>
+<p><strong>InsertText362</strong></p>
+<p><strong>InsertText363</strong></p>
+<p><strong>InsertText364</strong></p>
+<p><strong>InsertText365</strong></p>
+<p><strong>InsertText366</strong></p>
+<p><strong>InsertText367</strong></p>
+<p><strong>InsertText368</strong></p>
+<p><strong>InsertText369</strong></p>
+<p><strong>InsertText370</strong></p>
+<p><strong>InsertText371</strong></p>
+<p><strong>InsertText372</strong></p>
+<p><strong>InsertText373</strong></p>
+<p><strong>InsertText374</strong></p>
+<p><strong>InsertText375</strong></p>
+<p><strong>InsertText376</strong></p>
+<p><strong>InsertText377</strong></p>
+<p><strong>InsertText378</strong></p>
+<p><strong>InsertText379</strong></p>
+<p><strong>InsertText380</strong></p>
+<p><strong>InsertText381</strong></p>
+<p><strong>InsertText382</strong></p>
+<p><strong>InsertText383</strong></p>
+<p><strong>InsertText384</strong></p>
+<p><strong>InsertText385</strong></p>
+<p><strong>InsertText386</strong></p>
+<p><strong>InsertText387</strong></p>
+<p><strong>InsertText388</strong></p>
+<p><strong>InsertText389</strong></p>
+<p><strong>InsertText390</strong></p>
+<p><strong>InsertText391</strong></p>
+<p><strong>InsertText392</strong></p>
+<p><strong>InsertText393</strong></p>
+<p><strong>InsertText394</strong></p>
+<p><strong>InsertText395</strong></p>
+<p><strong>InsertText396</strong></p>
+<p><strong>InsertText397</strong></p>
+<p><strong>InsertText398</strong></p>
+<p><strong>InsertText399</strong></p>
+<p><strong>InsertText400</strong></p>
+<p><strong>InsertText401</strong></p>
+<p><strong>InsertText402</strong></p>
+<p><strong>InsertText403</strong></p>
+<p><strong>InsertText404</strong></p>
+<p><strong>InsertText405</strong></p>
+<p><strong>InsertText406</strong></p>
+<p><strong>InsertText407</strong></p>
+<p><strong>InsertText408</strong></p>
+<p><strong>InsertText409</strong></p>
+<p><strong>InsertText410</strong></p>
+<p><strong>InsertText411</strong></p>
+<p><strong>InsertText412</strong></p>
+<p><strong>InsertText413</strong></p>
+<p><strong>InsertText414</strong></p>
+<p><strong>InsertText415</strong></p>
+<p><strong>InsertText416</strong></p>
+<p><strong>InsertText417</strong></p>
+<p><strong>InsertText418</strong></p>
+<p><strong>InsertText419</strong></p>
+<p><strong>InsertText420</strong></p>
+<p><strong>InsertText421</strong></p>
+<p><strong>InsertText422</strong></p>
+<p><strong>InsertText423</strong></p>
+<p><strong>InsertText424</strong></p>
+<p><strong>InsertText425</strong></p>
+<p><strong>InsertText426</strong></p>
+<p><strong>InsertText427</strong></p>
+<p><strong>InsertText428</strong></p>
+<p><strong>InsertText429</strong></p>
+<p><strong>InsertText430</strong></p>
+<p><strong>InsertText431</strong></p>
+<p><strong>InsertText432</strong></p>
+<p><strong>InsertText433</strong></p>
+<p><strong>InsertText434</strong></p>
+<p><strong>InsertText435</strong></p>
+<p><strong>InsertText436</strong></p>
+<p><strong>InsertText437</strong></p>
+<p><strong>InsertText438</strong></p>
+<p><strong>InsertText439</strong></p>
+<p><strong>InsertText440</strong></p>
+<p><strong>InsertText441</strong></p>
+<p><strong>InsertText442</strong></p>
+<p><strong>InsertText443</strong></p>
+<p><strong>InsertText444</strong></p>
+<p><strong>InsertText445</strong></p>
+<p><strong>InsertText446</strong></p>
+<p><strong>InsertText447</strong></p>
+<p><strong>InsertText448</strong></p>
+<p><strong>InsertText449</strong></p>
+<p><strong>InsertText450</strong></p>
+<p><strong>InsertText451</strong></p>
+<p><strong>InsertText452</strong></p>
+<p><strong>InsertText453</strong></p>
+<p><strong>InsertText454</strong></p>
+<p><strong>InsertText455</strong></p>
+<p><strong>InsertText456</strong></p>
+<p><strong>InsertText457</strong></p>
+<p><strong>InsertText458</strong></p>
+<p><strong>InsertText459</strong></p>
+<p><strong>InsertText460</strong></p>
+<p><strong>InsertText461</strong></p>
+<p><strong>InsertText462</strong></p>
+<p><strong>InsertText463</strong></p>
+<p><strong>InsertText464</strong></p>
+<p><strong>InsertText465</strong></p>
+<p><strong>InsertText466</strong></p>
+<p><strong>InsertText467</strong></p>
+<p><strong>InsertText468</strong></p>
+<p><strong>InsertText469</strong></p>
+<p><strong>InsertText470</strong></p>
+<p><strong>InsertText471</strong></p>
+<p><strong>InsertText472</strong></p>
+<p><strong>InsertText473</strong></p>
+<p><strong>InsertText474</strong></p>
+<p><strong>InsertText475</strong></p>
+<p><strong>InsertText476</strong></p>
+<p><strong>InsertText477</strong></p>
+<p><strong>InsertText478</strong></p>
+<p><strong>InsertText479</strong></p>
+<p><strong>InsertText480</strong></p>
+<p><strong>InsertText481</strong></p>
+<p><strong>InsertText482</strong></p>
+<p><strong>InsertText483</strong></p>
+<p><strong>InsertText484</strong></p>
+<p><strong>InsertText485</strong></p>
+<p><strong>InsertText486</strong></p>
+<p><strong>InsertText487</strong></p>
+<p><strong>InsertText488</strong></p>
+<p><strong>InsertText489</strong></p>
+<p><strong>InsertText490</strong></p>
+<p><strong>InsertText491</strong></p>
+<p><strong>InsertText492</strong></p>
+<p><strong>InsertText493</strong></p>
+<p><strong>InsertText494</strong></p>
+<p><strong>InsertText495</strong></p>
+<p><strong>InsertText496</strong></p>
+<p><strong>InsertText497</strong></p>
+<p><strong>InsertText498</strong></p>
+<p><strong>InsertText499</strong></p>
+<p><strong>InsertText500</strong></p>
+<p><strong>InsertTextCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.InvertTextureType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InvertTextureType</span></span><a class="headerlink" href="#pySkyExplorer.InsertText.InvertTextureType" title="Permalink to this definition"></a></dt>
+<dd><p>Mode of inversion of text’s texture on the text geometry.</p>
+<p><strong>InvalidInvertTextureType</strong></p>
+<p><strong>InvertAuto</strong></p>
+<p><strong>InvertOut</strong></p>
+<p><strong>InvertIn</strong></p>
+<p><strong>InvertTextureTypeCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.setColor">
+<span class="sig-name descname"><span class="pre">setColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(InsertText)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)color</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.InsertText.setColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+color : Vec
+Color of the text.
+Values are (red, green, blue).
+Each value must be in range [0;1]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.setDistance">
+<span class="sig-name descname"><span class="pre">setDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(InsertText)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)distance</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.InsertText.setDistance" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+distance : double
+Distance of the insert text from it’s parent.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.setFontFilename">
+<span class="sig-name descname"><span class="pre">setFontFilename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(InsertText)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)fontFilename</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.InsertText.setFontFilename" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+fontFilename : str
+Text font to display on insert.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.setGeometryType">
+<span class="sig-name descname"><span class="pre">setGeometryType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(InsertText)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(GeometryType)geometryType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.InsertText.setGeometryType" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+geometryType : GeometryType
+Type of the geometry used to render the text.
+See ‘GeometryType’ enumeration documentation for available values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.setIntensity">
+<span class="sig-name descname"><span class="pre">setIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(InsertText)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.InsertText.setIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+intensity : double
+Intensity of the insert text.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.setInvertTexture">
+<span class="sig-name descname"><span class="pre">setInvertTexture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(InsertText)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(InvertTextureType)invertTexture</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.InsertText.setInvertTexture" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+invertTexture : InvertTextureType
+Type of texture inversion used to render the text.
+See ‘InvertTextureType’ for available values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.setParent">
+<span class="sig-name descname"><span class="pre">setParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(InsertText)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)parent</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.InsertText.setParent" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+parent : int
+Id of the text’s current parent port.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.setPosition">
+<span class="sig-name descname"><span class="pre">setPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(InsertText)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)position</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.InsertText.setPosition" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+position : Vec
+LBR position of the insert text relative to it’s parent coordinate system.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.setSize">
+<span class="sig-name descname"><span class="pre">setSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(InsertText)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)size</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.InsertText.setSize" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+size : double
+Size of the insertText on the dome.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.setText">
+<span class="sig-name descname"><span class="pre">setText</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(InsertText)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)text</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.InsertText.setText" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+text : str
+Text value to display on insert.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.setTextOffset">
+<span class="sig-name descname"><span class="pre">setTextOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(InsertText)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)textOffset</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.InsertText.setTextOffset" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+textOffset : Vec
+Adds an offset to the text position.
+Unit is degrees.
+Values are (azimut, height, 0)</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.color">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#pySkyExplorer.InsertText.color" title="Permalink to this definition"></a></dt>
+<dd><p>Color of the text.
+Values are (red, green, blue).
+Each value must be in range [0;1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.distance">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distance</span></span><a class="headerlink" href="#pySkyExplorer.InsertText.distance" title="Permalink to this definition"></a></dt>
+<dd><p>Distance of the insert text from it’s parent.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.fontFilename">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fontFilename</span></span><a class="headerlink" href="#pySkyExplorer.InsertText.fontFilename" title="Permalink to this definition"></a></dt>
+<dd><p>Text font to display on insert.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.geometryType">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">geometryType</span></span><a class="headerlink" href="#pySkyExplorer.InsertText.geometryType" title="Permalink to this definition"></a></dt>
+<dd><p>Type of the geometry used to render the text.
+See ‘GeometryType’ enumeration documentation for available values.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.InsertText.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pySkyExplorer.InsertText.intensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the insert text.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.invertTexture">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">invertTexture</span></span><a class="headerlink" href="#pySkyExplorer.InsertText.invertTexture" title="Permalink to this definition"></a></dt>
+<dd><p>Type of texture inversion used to render the text.
+See ‘InvertTextureType’ for available values.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.InsertText.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.InsertText.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.parent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#pySkyExplorer.InsertText.parent" title="Permalink to this definition"></a></dt>
+<dd><p>Id of the text’s current parent port.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.position">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#pySkyExplorer.InsertText.position" title="Permalink to this definition"></a></dt>
+<dd><p>LBR position of the insert text relative to it’s parent coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#pySkyExplorer.InsertText.size" title="Permalink to this definition"></a></dt>
+<dd><p>Size of the insertText on the dome.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.text">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">text</span></span><a class="headerlink" href="#pySkyExplorer.InsertText.text" title="Permalink to this definition"></a></dt>
+<dd><p>Text value to display on insert.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.InsertText.textOffset">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">textOffset</span></span><a class="headerlink" href="#pySkyExplorer.InsertText.textOffset" title="Permalink to this definition"></a></dt>
+<dd><p>Adds an offset to the text position.
+Unit is degrees.
+Values are (azimut, height, 0)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.Insert3D.html" class="btn btn-neutral float-left" title="pySkyExplorer.Insert3D" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.Light.html" class="btn btn-neutral float-right" title="pySkyExplorer.Light" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

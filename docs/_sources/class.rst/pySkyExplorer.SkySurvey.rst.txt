@@ -1,0 +1,10 @@
+pySkyExplorer.SkySurvey
+=======================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: SkySurvey
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

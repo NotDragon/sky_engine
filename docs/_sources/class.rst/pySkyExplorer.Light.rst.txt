@@ -1,0 +1,10 @@
+pySkyExplorer.Light
+===================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Light
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

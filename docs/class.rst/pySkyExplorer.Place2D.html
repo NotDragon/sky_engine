@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.Place2D &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.Place3D" href="pySkyExplorer.Place3D.html" />
+    <link rel="prev" title="pySkyExplorer.Patch" href="pySkyExplorer.Patch.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.Place2D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.Place2D"><code class="docutils literal notranslate"><span class="pre">Place2D</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.CSMode"><code class="docutils literal notranslate"><span class="pre">Place2D.CSMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.CardinalPointRepresentation"><code class="docutils literal notranslate"><span class="pre">Place2D.CardinalPointRepresentation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.Place2DName"><code class="docutils literal notranslate"><span class="pre">Place2D.Place2DName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.Place2DPort"><code class="docutils literal notranslate"><span class="pre">Place2D.Place2DPort</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.addChild"><code class="docutils literal notranslate"><span class="pre">Place2D.addChild()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.portId"><code class="docutils literal notranslate"><span class="pre">Place2D.portId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.remove"><code class="docutils literal notranslate"><span class="pre">Place2D.remove()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.setAltitude"><code class="docutils literal notranslate"><span class="pre">Place2D.setAltitude()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.setAzimuthGridIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.setAzimuthGridIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.setAzimuthIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.setAzimuthIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.setCardinalPointsIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.setCardinalPointsIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.setCardinalPointsRepresentation"><code class="docutils literal notranslate"><span class="pre">Place2D.setCardinalPointsRepresentation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.setCircumpolarIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.setCircumpolarIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.setCsMode"><code class="docutils literal notranslate"><span class="pre">Place2D.setCsMode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.setHourAngleGridIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.setHourAngleGridIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.setHourAngleLineIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.setHourAngleLineIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.setHourAngleMeridianIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.setHourAngleMeridianIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.setLatitude"><code class="docutils literal notranslate"><span class="pre">Place2D.setLatitude()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.setLongitude"><code class="docutils literal notranslate"><span class="pre">Place2D.setLongitude()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.setMeridianIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.setMeridianIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.setParent"><code class="docutils literal notranslate"><span class="pre">Place2D.setParent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.setPosition"><code class="docutils literal notranslate"><span class="pre">Place2D.setPosition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.setPositionFromGeocentric"><code class="docutils literal notranslate"><span class="pre">Place2D.setPositionFromGeocentric()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.setZenithIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.setZenithIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.switchCSMode"><code class="docutils literal notranslate"><span class="pre">Place2D.switchCSMode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.switchParent"><code class="docutils literal notranslate"><span class="pre">Place2D.switchParent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.altitude"><code class="docutils literal notranslate"><span class="pre">Place2D.altitude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.azimuthGridIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.azimuthGridIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.azimuthIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.azimuthIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.cardinalPointsIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.cardinalPointsIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.cardinalPointsRepresentation"><code class="docutils literal notranslate"><span class="pre">Place2D.cardinalPointsRepresentation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.circumpolarIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.circumpolarIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.csMode"><code class="docutils literal notranslate"><span class="pre">Place2D.csMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.hourAngleGridIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.hourAngleGridIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.hourAngleLineIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.hourAngleLineIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.hourAngleMeridianIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.hourAngleMeridianIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.id"><code class="docutils literal notranslate"><span class="pre">Place2D.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.latitude"><code class="docutils literal notranslate"><span class="pre">Place2D.latitude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.longitude"><code class="docutils literal notranslate"><span class="pre">Place2D.longitude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.meridianIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.meridianIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.name"><code class="docutils literal notranslate"><span class="pre">Place2D.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.osgId"><code class="docutils literal notranslate"><span class="pre">Place2D.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.parent"><code class="docutils literal notranslate"><span class="pre">Place2D.parent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.parentFamily"><code class="docutils literal notranslate"><span class="pre">Place2D.parentFamily</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.parentIndex"><code class="docutils literal notranslate"><span class="pre">Place2D.parentIndex</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.position"><code class="docutils literal notranslate"><span class="pre">Place2D.position</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place2D.zenithIntensity"><code class="docutils literal notranslate"><span class="pre">Place2D.zenithIntensity</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.Place2D</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.Place2D.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-place2d">
+<h1>pySkyExplorer.Place2D<a class="headerlink" href="#pyskyexplorer-place2d" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">Place2D</span></span><a class="headerlink" href="#pySkyExplorer.Place2D" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.CSMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CSMode</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.CSMode" title="Permalink to this definition"></a></dt>
+<dd><p>Coordinate System Mode.</p>
+<p><strong>InvalidCSMode</strong></p>
+<p><strong>DefaultCSMode</strong></p>
+<p><strong>Spherical</strong></p>
+<p><strong>Planetocentric</strong></p>
+<p><strong>Planetographic</strong></p>
+<p><strong>CSModeCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.CardinalPointRepresentation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CardinalPointRepresentation</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.CardinalPointRepresentation" title="Permalink to this definition"></a></dt>
+<dd><p>Representation level of cardinal points texts.</p>
+<p><strong>InvalidCardinalPointRepresentation</strong></p>
+<p><strong>Level1</strong></p>
+<p><strong>Level2</strong></p>
+<p><strong>Level3</strong></p>
+<p><strong>CardinalPointRepresentationCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.Place2DName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Place2DName</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.Place2DName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available place2D name.</p>
+<p><strong>InvalidPlace2D</strong></p>
+<p><strong>Place2D001</strong></p>
+<p><strong>Place2D002</strong></p>
+<p><strong>Place2D003</strong></p>
+<p><strong>Place2D004</strong></p>
+<p><strong>Place2D005</strong></p>
+<p><strong>Place2D006</strong></p>
+<p><strong>Place2D007</strong></p>
+<p><strong>Place2D008</strong></p>
+<p><strong>Place2D009</strong></p>
+<p><strong>Place2D010</strong></p>
+<p><strong>Place2D011</strong></p>
+<p><strong>Place2D012</strong></p>
+<p><strong>Place2D013</strong></p>
+<p><strong>Place2D014</strong></p>
+<p><strong>Place2D015</strong></p>
+<p><strong>Place2D016</strong></p>
+<p><strong>Place2D017</strong></p>
+<p><strong>Place2D018</strong></p>
+<p><strong>Place2D019</strong></p>
+<p><strong>Place2D020</strong></p>
+<p><strong>Place2D021</strong></p>
+<p><strong>Place2D022</strong></p>
+<p><strong>Place2D023</strong></p>
+<p><strong>Place2D024</strong></p>
+<p><strong>Place2D025</strong></p>
+<p><strong>Place2D026</strong></p>
+<p><strong>Place2D027</strong></p>
+<p><strong>Place2D028</strong></p>
+<p><strong>Place2D029</strong></p>
+<p><strong>Place2D030</strong></p>
+<p><strong>Place2D031</strong></p>
+<p><strong>Place2D032</strong></p>
+<p><strong>Place2D033</strong></p>
+<p><strong>Place2D034</strong></p>
+<p><strong>Place2D035</strong></p>
+<p><strong>Place2D036</strong></p>
+<p><strong>Place2D037</strong></p>
+<p><strong>Place2D038</strong></p>
+<p><strong>Place2D039</strong></p>
+<p><strong>Place2D040</strong></p>
+<p><strong>Place2D041</strong></p>
+<p><strong>Place2D042</strong></p>
+<p><strong>Place2D043</strong></p>
+<p><strong>Place2D044</strong></p>
+<p><strong>Place2D045</strong></p>
+<p><strong>Place2D046</strong></p>
+<p><strong>Place2D047</strong></p>
+<p><strong>Place2D048</strong></p>
+<p><strong>Place2D049</strong></p>
+<p><strong>Place2D050</strong></p>
+<p><strong>Place2DCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.Place2DPort">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Place2DPort</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.Place2DPort" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available ports on place2D</p>
+<p><strong>InvalidPlace2DPort</strong></p>
+<p><strong>CenteredPort</strong></p>
+<p><strong>Place2DPortCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.addChild">
+<span class="sig-name descname"><span class="pre">addChild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)child</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Place2DPort)port</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.addChild" title="Permalink to this definition"></a></dt>
+<dd><p>Add a child object to the place2D scene graph.
+PARAMETERS:
+child : int</p>
+<blockquote>
+<div><p>Id of the child object to add.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>port<span class="classifier">Place2DPort</span></dt><dd><p>Coordinate system to use for adding child. See Place2DPort documentation for more information.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.portId">
+<span class="sig-name descname"><span class="pre">portId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Place2DPort)portName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.portId" title="Permalink to this definition"></a></dt>
+<dd><p>Return the id of the given port
+PARAMETERS:
+portName : Place2DPort</p>
+<blockquote>
+<div><p>Name of the port. See ‘Place2DPort’ documentation for more information.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.remove" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the place2D from the scene graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.setAltitude">
+<span class="sig-name descname"><span class="pre">setAltitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)altitude</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.setAltitude" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+altitude : double
+Altitude of the place2D relative to it’s parent.
+Same value as position(2).</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.setAzimuthGridIntensity">
+<span class="sig-name descname"><span class="pre">setAzimuthGridIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)azimuthGridIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.setAzimuthGridIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+azimuthGridIntensity : double
+Intensity of the meridian marks.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.setAzimuthIntensity">
+<span class="sig-name descname"><span class="pre">setAzimuthIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)azimuthIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.setAzimuthIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+azimuthIntensity : double
+Intensity of the meridian marks.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.setCardinalPointsIntensity">
+<span class="sig-name descname"><span class="pre">setCardinalPointsIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)cardinalPointsIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.setCardinalPointsIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+cardinalPointsIntensity : double
+Intensity of the cardinal points.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.setCardinalPointsRepresentation">
+<span class="sig-name descname"><span class="pre">setCardinalPointsRepresentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CardinalPointRepresentation)cardinalPointsRepresentation</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.setCardinalPointsRepresentation" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+cardinalPointsRepresentation : CardinalPointRepresentation
+Level used to display cardinal points (Level 1 will display four cardinal points, Level 2 eight…).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.setCircumpolarIntensity">
+<span class="sig-name descname"><span class="pre">setCircumpolarIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)circumpolarIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.setCircumpolarIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+circumpolarIntensity : double
+Intensity of the circumpolar marks.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.setCsMode">
+<span class="sig-name descname"><span class="pre">setCsMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CSMode)csMode</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.setCsMode" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+csMode : CSMode
+Coordinate system mode for interpreting latitude and altitude of the place2D.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.setHourAngleGridIntensity">
+<span class="sig-name descname"><span class="pre">setHourAngleGridIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)hourAngleGridIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.setHourAngleGridIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+hourAngleGridIntensity : double
+Intensity of the hour angle mark grid.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.setHourAngleLineIntensity">
+<span class="sig-name descname"><span class="pre">setHourAngleLineIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)hourAngleLineIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.setHourAngleLineIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+hourAngleLineIntensity : double
+Intensity of the hour angle mark line.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.setHourAngleMeridianIntensity">
+<span class="sig-name descname"><span class="pre">setHourAngleMeridianIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)hourAngleMeridianIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.setHourAngleMeridianIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+hourAngleMeridianIntensity : double
+Intensity of the hour angle mark meridian.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.setLatitude">
+<span class="sig-name descname"><span class="pre">setLatitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)latitude</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.setLatitude" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+latitude : double
+Latitude of the place2D relative to it’s parent.
+Same value as position(0).</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.setLongitude">
+<span class="sig-name descname"><span class="pre">setLongitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)longitude</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.setLongitude" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+longitude : double
+Longitude of the place2D relative to it’s parent.
+Same value as position(1).</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.setMeridianIntensity">
+<span class="sig-name descname"><span class="pre">setMeridianIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)meridianIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.setMeridianIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+meridianIntensity : double
+Intensity of the meridian marks.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.setParent">
+<span class="sig-name descname"><span class="pre">setParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)parent</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.setParent" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+parent : int
+Parent database Id+Port.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.setPosition">
+<span class="sig-name descname"><span class="pre">setPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)position</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.setPosition" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+position : Vec
+Position of the place2D relative to it’s parent.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.setPositionFromGeocentric">
+<span class="sig-name descname"><span class="pre">setPositionFromGeocentric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)geocentricPos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.setPositionFromGeocentric" title="Permalink to this definition"></a></dt>
+<dd><p>Position the Place2D on the surface of current ellipsoid, with coordinates in current mode matching input spherical coordinates.
+PARAMETERS:
+geocentricPos : Vec</p>
+<blockquote>
+<div><p>Spherical position (x=latitude, y=longitude, z=altitude). z is currently ignored.</p>
+</div></blockquote>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.setZenithIntensity">
+<span class="sig-name descname"><span class="pre">setZenithIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)zenithIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.setZenithIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+zenithIntensity : double
+Intensity of the zenith/nadir.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.switchCSMode">
+<span class="sig-name descname"><span class="pre">switchCSMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CSMode)targetMode</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.switchCSMode" title="Permalink to this definition"></a></dt>
+<dd><p>Change the mode of the Place2D without changing its XYZ position.
+PARAMETERS:
+targetMode : CSMode</p>
+<blockquote>
+<div><p>Destination coordinate system mode.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.switchParent">
+<span class="sig-name descname"><span class="pre">switchParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)parent</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place2D.switchParent" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+parent : int</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.altitude">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">altitude</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.altitude" title="Permalink to this definition"></a></dt>
+<dd><p>Altitude of the place2D relative to it’s parent.
+Same value as position(2).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.azimuthGridIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">azimuthGridIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.azimuthGridIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the meridian marks.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.azimuthIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">azimuthIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.azimuthIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the meridian marks.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.cardinalPointsIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cardinalPointsIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.cardinalPointsIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the cardinal points.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.cardinalPointsRepresentation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cardinalPointsRepresentation</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.cardinalPointsRepresentation" title="Permalink to this definition"></a></dt>
+<dd><p>Level used to display cardinal points (Level 1 will display four cardinal points, Level 2 eight…).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.circumpolarIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">circumpolarIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.circumpolarIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the circumpolar marks.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.csMode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">csMode</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.csMode" title="Permalink to this definition"></a></dt>
+<dd><p>Coordinate system mode for interpreting latitude and altitude of the place2D.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.hourAngleGridIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hourAngleGridIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.hourAngleGridIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the hour angle mark grid.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.hourAngleLineIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hourAngleLineIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.hourAngleLineIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the hour angle mark line.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.hourAngleMeridianIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hourAngleMeridianIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.hourAngleMeridianIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the hour angle mark meridian.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.latitude">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">latitude</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.latitude" title="Permalink to this definition"></a></dt>
+<dd><p>Latitude of the place2D relative to it’s parent.
+Same value as position(0).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.longitude">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">longitude</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.longitude" title="Permalink to this definition"></a></dt>
+<dd><p>Longitude of the place2D relative to it’s parent.
+Same value as position(1).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.meridianIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">meridianIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.meridianIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the meridian marks.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.parent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.parent" title="Permalink to this definition"></a></dt>
+<dd><p>Parent database Id+Port.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.parentFamily">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parentFamily</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.parentFamily" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Parent Family.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.parentIndex">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parentIndex</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.parentIndex" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Parent Index (in its family).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.position">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.position" title="Permalink to this definition"></a></dt>
+<dd><p>Position of the place2D relative to it’s parent.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place2D.zenithIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">zenithIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Place2D.zenithIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the zenith/nadir.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.Patch.html" class="btn btn-neutral float-left" title="pySkyExplorer.Patch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.Place3D.html" class="btn btn-neutral float-right" title="pySkyExplorer.Place3D" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

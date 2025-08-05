@@ -1,0 +1,10 @@
+pySkyExplorer.Stars
+===================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Stars
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

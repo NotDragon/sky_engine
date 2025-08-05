@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.NGC &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.Nebula" href="pySkyExplorer.Nebula.html" />
+    <link rel="prev" title="pySkyExplorer.Messier" href="pySkyExplorer.Messier.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.NGC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.NGC"><code class="docutils literal notranslate"><span class="pre">NGC</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.NGC.NGCName"><code class="docutils literal notranslate"><span class="pre">NGC.NGCName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.NGC.NGCPort"><code class="docutils literal notranslate"><span class="pre">NGC.NGCPort</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.NGC.addChild"><code class="docutils literal notranslate"><span class="pre">NGC.addChild()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.NGC.portId"><code class="docutils literal notranslate"><span class="pre">NGC.portId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.NGC.setIntensity"><code class="docutils literal notranslate"><span class="pre">NGC.setIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.NGC.setLabelIntensity"><code class="docutils literal notranslate"><span class="pre">NGC.setLabelIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.NGC.setScale"><code class="docutils literal notranslate"><span class="pre">NGC.setScale()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.NGC.setSize"><code class="docutils literal notranslate"><span class="pre">NGC.setSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.NGC.id"><code class="docutils literal notranslate"><span class="pre">NGC.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.NGC.intensity"><code class="docutils literal notranslate"><span class="pre">NGC.intensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.NGC.labelIntensity"><code class="docutils literal notranslate"><span class="pre">NGC.labelIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.NGC.name"><code class="docutils literal notranslate"><span class="pre">NGC.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.NGC.osgId"><code class="docutils literal notranslate"><span class="pre">NGC.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.NGC.position"><code class="docutils literal notranslate"><span class="pre">NGC.position</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.NGC.size"><code class="docutils literal notranslate"><span class="pre">NGC.size</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.NGC</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.NGC.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-ngc">
+<h1>pySkyExplorer.NGC<a class="headerlink" href="#pyskyexplorer-ngc" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.NGC">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">NGC</span></span><a class="headerlink" href="#pySkyExplorer.NGC" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.NGC.NGCName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NGCName</span></span><a class="headerlink" href="#pySkyExplorer.NGC.NGCName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available NGC object name.</p>
+<p><strong>InvalidNGC</strong></p>
+<p><strong>NGC40</strong></p>
+<p><strong>NGC185</strong></p>
+<p><strong>NGC246</strong></p>
+<p><strong>NGC253</strong></p>
+<p><strong>NGC281</strong></p>
+<p><strong>NGC457</strong></p>
+<p><strong>NGC663</strong></p>
+<p><strong>NGC772</strong></p>
+<p><strong>NGC869_NGC884</strong></p>
+<p><strong>NGC891</strong></p>
+<p><strong>NGC936</strong></p>
+<p><strong>NGC1023</strong></p>
+<p><strong>NGC1232</strong></p>
+<p><strong>NGC1501</strong></p>
+<p><strong>NGC1514</strong></p>
+<p><strong>NGC1535</strong></p>
+<p><strong>NGC1788</strong></p>
+<p><strong>NGC1931</strong></p>
+<p><strong>NGC2022</strong></p>
+<p><strong>NGC2024</strong></p>
+<p><strong>NGC2194</strong></p>
+<p><strong>NGC2237</strong></p>
+<p><strong>NGC2261</strong></p>
+<p><strong>NGC2359</strong></p>
+<p><strong>NGC2371_NGC2372</strong></p>
+<p><strong>NGC2392</strong></p>
+<p><strong>NGC2403</strong></p>
+<p><strong>NGC2438</strong></p>
+<p><strong>NGC2440</strong></p>
+<p><strong>NGC2539</strong></p>
+<p><strong>NGC2655</strong></p>
+<p><strong>NGC2683</strong></p>
+<p><strong>NGC2841</strong></p>
+<p><strong>NGC2903</strong></p>
+<p><strong>NGC3003</strong></p>
+<p><strong>NGC3079</strong></p>
+<p><strong>NGC3115</strong></p>
+<p><strong>NGC3184</strong></p>
+<p><strong>NGC3242</strong></p>
+<p><strong>NGC3344</strong></p>
+<p><strong>NGC3384</strong></p>
+<p><strong>NGC3432</strong></p>
+<p><strong>NGC3521</strong></p>
+<p><strong>NGC3607</strong></p>
+<p><strong>NGC3628</strong></p>
+<p><strong>NGC3675</strong></p>
+<p><strong>NGC3877</strong></p>
+<p><strong>NGC3941</strong></p>
+<p><strong>NGC4026</strong></p>
+<p><strong>NGC4038_NGC4039</strong></p>
+<p><strong>NGC4088</strong></p>
+<p><strong>NGC4111</strong></p>
+<p><strong>NGC4157</strong></p>
+<p><strong>NGC4214</strong></p>
+<p><strong>NGC4216</strong></p>
+<p><strong>NGC4244</strong></p>
+<p><strong>NGC4274</strong></p>
+<p><strong>NGC4361</strong></p>
+<p><strong>NGC4388</strong></p>
+<p><strong>NGC4414</strong></p>
+<p><strong>NGC4435_NGC4438</strong></p>
+<p><strong>NGC4449</strong></p>
+<p><strong>NGC4490</strong></p>
+<p><strong>NGC4494</strong></p>
+<p><strong>NGC4517</strong></p>
+<p><strong>NGC4526</strong></p>
+<p><strong>NGC4535</strong></p>
+<p><strong>NGC4559</strong></p>
+<p><strong>NGC4565</strong></p>
+<p><strong>NGC4567_NGC4568</strong></p>
+<p><strong>NGC4605</strong></p>
+<p><strong>NGC4631</strong></p>
+<p><strong>NGC4656_NGC4657</strong></p>
+<p><strong>NGC4699</strong></p>
+<p><strong>NGC4725</strong></p>
+<p><strong>NGC4762</strong></p>
+<p><strong>NGC5005</strong></p>
+<p><strong>NGC5033</strong></p>
+<p><strong>NGC5128</strong></p>
+<p><strong>NGC5139</strong></p>
+<p><strong>NGC5466</strong></p>
+<p><strong>NGC5746</strong></p>
+<p><strong>NGC5907</strong></p>
+<p><strong>NGC6207</strong></p>
+<p><strong>NGC6210</strong></p>
+<p><strong>NGC6369</strong></p>
+<p><strong>NGC6503</strong></p>
+<p><strong>NGC6520</strong></p>
+<p><strong>NGC6543</strong></p>
+<p><strong>NGC6572</strong></p>
+<p><strong>NGC6633</strong></p>
+<p><strong>NGC6712</strong></p>
+<p><strong>NGC6781</strong></p>
+<p><strong>NGC6802</strong></p>
+<p><strong>NGC6818</strong></p>
+<p><strong>NGC6826</strong></p>
+<p><strong>NGC6939</strong></p>
+<p><strong>NGC6940</strong></p>
+<p><strong>NGC6946</strong></p>
+<p><strong>NGC6960_NGC6992_NGC6995</strong></p>
+<p><strong>NGC7009</strong></p>
+<p><strong>NGC7027</strong></p>
+<p><strong>NGC7129</strong></p>
+<p><strong>NGC7243</strong></p>
+<p><strong>NGC7293</strong></p>
+<p><strong>NGC7317_NGC7318_NGC7320</strong></p>
+<p><strong>NGC7331</strong></p>
+<p><strong>NGC7635</strong></p>
+<p><strong>NGC7662</strong></p>
+<p><strong>NGC7789</strong></p>
+<p><strong>NGCCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.NGC.NGCPort">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NGCPort</span></span><a class="headerlink" href="#pySkyExplorer.NGC.NGCPort" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available ports on NGC object.</p>
+<p><strong>InvalidNGCPort</strong></p>
+<p><strong>Ecliptic</strong></p>
+<p><strong>LineOfSightLocal</strong></p>
+<p><strong>NGCPortCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.NGC.addChild">
+<span class="sig-name descname"><span class="pre">addChild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(NGC)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)child</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(NGCPort)port</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.NGC.addChild" title="Permalink to this definition"></a></dt>
+<dd><p>Add a child object to the NGC object scene graph.
+PARAMETERS:
+child : int</p>
+<blockquote>
+<div><p>Id of the child object to add.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>port<span class="classifier">NGCPort</span></dt><dd><p>Coordinate system to use for adding child. See NGCPort documentation for more information.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.NGC.portId">
+<span class="sig-name descname"><span class="pre">portId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(NGC)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(NGCPort)portName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.NGC.portId" title="Permalink to this definition"></a></dt>
+<dd><p>Return the id of the given port
+PARAMETERS:
+portName : NGCPort</p>
+<blockquote>
+<div><p>Name of the port. See ‘NGCPort’ documentation for more information.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.NGC.setIntensity">
+<span class="sig-name descname"><span class="pre">setIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(NGC)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.NGC.setIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+intensity : double
+Intensity of the NGC object.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.NGC.setLabelIntensity">
+<span class="sig-name descname"><span class="pre">setLabelIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(NGC)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)labelIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.NGC.setLabelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+labelIntensity : double
+Intensity of the default label of the NGC object.
+Usually in range [0;1]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.NGC.setScale">
+<span class="sig-name descname"><span class="pre">setScale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(NGC)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)scale</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.NGC.setScale" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+scale : double
+Scale factor of the NGC object. 
+It can be used to enlarge apparent size of the NGC object.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.NGC.setSize">
+<span class="sig-name descname"><span class="pre">setSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(NGC)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)size</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.NGC.setSize" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+size : double
+Scale factor of the NGC object. 
+It can be used to enlarge apparent size of the NGC object.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.NGC.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.NGC.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.NGC.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pySkyExplorer.NGC.intensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the NGC object.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.NGC.labelIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">labelIntensity</span></span><a class="headerlink" href="#pySkyExplorer.NGC.labelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the default label of the NGC object.
+Usually in range [0;1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.NGC.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.NGC.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.NGC.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.NGC.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.NGC.position">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#pySkyExplorer.NGC.position" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Position of the NGC object in the ICRF coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.NGC.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#pySkyExplorer.NGC.size" title="Permalink to this definition"></a></dt>
+<dd><p>Scale factor of the NGC object. 
+It can be used to enlarge apparent size of the NGC object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.Messier.html" class="btn btn-neutral float-left" title="pySkyExplorer.Messier" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.Nebula.html" class="btn btn-neutral float-right" title="pySkyExplorer.Nebula" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

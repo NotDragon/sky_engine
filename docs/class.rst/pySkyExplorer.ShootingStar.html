@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.ShootingStar &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.ShowEngineManager" href="pySkyExplorer.ShowEngineManager.html" />
+    <link rel="prev" title="pySkyExplorer.SceneGraph" href="pySkyExplorer.SceneGraph.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.ShootingStar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.ShootingStar"><code class="docutils literal notranslate"><span class="pre">ShootingStar</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.Model"><code class="docutils literal notranslate"><span class="pre">ShootingStar.Model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.Referential"><code class="docutils literal notranslate"><span class="pre">ShootingStar.Referential</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.ShootingStarName"><code class="docutils literal notranslate"><span class="pre">ShootingStar.ShootingStarName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.setAdvancing"><code class="docutils literal notranslate"><span class="pre">ShootingStar.setAdvancing()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.setArrivalPosition"><code class="docutils literal notranslate"><span class="pre">ShootingStar.setArrivalPosition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.setBrightness"><code class="docutils literal notranslate"><span class="pre">ShootingStar.setBrightness()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.setGradientPoint"><code class="docutils literal notranslate"><span class="pre">ShootingStar.setGradientPoint()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.setRainChaosGradientPoint"><code class="docutils literal notranslate"><span class="pre">ShootingStar.setRainChaosGradientPoint()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.setRainGradientPoint"><code class="docutils literal notranslate"><span class="pre">ShootingStar.setRainGradientPoint()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.setRainSeed"><code class="docutils literal notranslate"><span class="pre">ShootingStar.setRainSeed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.setRainSpeed"><code class="docutils literal notranslate"><span class="pre">ShootingStar.setRainSpeed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.setReferential"><code class="docutils literal notranslate"><span class="pre">ShootingStar.setReferential()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.setRepresentationType"><code class="docutils literal notranslate"><span class="pre">ShootingStar.setRepresentationType()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.setStartPosition"><code class="docutils literal notranslate"><span class="pre">ShootingStar.setStartPosition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.setTrailLength"><code class="docutils literal notranslate"><span class="pre">ShootingStar.setTrailLength()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.setZenithalHourlyRate"><code class="docutils literal notranslate"><span class="pre">ShootingStar.setZenithalHourlyRate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.advancing"><code class="docutils literal notranslate"><span class="pre">ShootingStar.advancing</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.arrivalPosition"><code class="docutils literal notranslate"><span class="pre">ShootingStar.arrivalPosition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.brightness"><code class="docutils literal notranslate"><span class="pre">ShootingStar.brightness</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.gradientPoint"><code class="docutils literal notranslate"><span class="pre">ShootingStar.gradientPoint</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.id"><code class="docutils literal notranslate"><span class="pre">ShootingStar.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.name"><code class="docutils literal notranslate"><span class="pre">ShootingStar.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.osgId"><code class="docutils literal notranslate"><span class="pre">ShootingStar.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.rainChaosGradientPoint"><code class="docutils literal notranslate"><span class="pre">ShootingStar.rainChaosGradientPoint</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.rainGradientPoint"><code class="docutils literal notranslate"><span class="pre">ShootingStar.rainGradientPoint</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.rainSeed"><code class="docutils literal notranslate"><span class="pre">ShootingStar.rainSeed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.rainSpeed"><code class="docutils literal notranslate"><span class="pre">ShootingStar.rainSpeed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.referential"><code class="docutils literal notranslate"><span class="pre">ShootingStar.referential</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.representationType"><code class="docutils literal notranslate"><span class="pre">ShootingStar.representationType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.startPosition"><code class="docutils literal notranslate"><span class="pre">ShootingStar.startPosition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.trailLength"><code class="docutils literal notranslate"><span class="pre">ShootingStar.trailLength</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ShootingStar.zenithalHourlyRate"><code class="docutils literal notranslate"><span class="pre">ShootingStar.zenithalHourlyRate</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.ShootingStar</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.ShootingStar.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-shootingstar">
+<h1>pySkyExplorer.ShootingStar<a class="headerlink" href="#pyskyexplorer-shootingstar" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">ShootingStar</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.Model">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Model</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.Model" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available shooting stars models</p>
+<p><strong>InvalidModel</strong></p>
+<p><strong>None</strong></p>
+<p><strong>Default</strong></p>
+<p><strong>Gradient</strong></p>
+<p><strong>ModelCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.Referential">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Referential</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.Referential" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available shooting stars referential</p>
+<p><strong>InvalidReferential</strong></p>
+<p><strong>TargetedForeground</strong></p>
+<p><strong>RaDec</strong></p>
+<p><strong>ReferentialCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.ShootingStarName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ShootingStarName</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.ShootingStarName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available shooting stars name.</p>
+<p><strong>InvalidShootingStar</strong></p>
+<p><strong>ShootingStar001</strong></p>
+<p><strong>ShootingStar002</strong></p>
+<p><strong>ShootingStar003</strong></p>
+<p><strong>ShootingStar004</strong></p>
+<p><strong>ShootingStar005</strong></p>
+<p><strong>ShootingStar006</strong></p>
+<p><strong>ShootingStar007</strong></p>
+<p><strong>ShootingStar008</strong></p>
+<p><strong>ShootingStar009</strong></p>
+<p><strong>ShootingStar010</strong></p>
+<p><strong>ShootingStar011</strong></p>
+<p><strong>ShootingStar012</strong></p>
+<p><strong>ShootingStar013</strong></p>
+<p><strong>ShootingStar014</strong></p>
+<p><strong>ShootingStar015</strong></p>
+<p><strong>ShootingStar016</strong></p>
+<p><strong>ShootingStar017</strong></p>
+<p><strong>ShootingStar018</strong></p>
+<p><strong>ShootingStar019</strong></p>
+<p><strong>ShootingStar020</strong></p>
+<p><strong>StudioShootingStar001</strong></p>
+<p><strong>StudioShootingStar002</strong></p>
+<p><strong>StudioShootingStar003</strong></p>
+<p><strong>StudioShootingStar004</strong></p>
+<p><strong>StudioShootingStar005</strong></p>
+<p><strong>ShootingStar026</strong></p>
+<p><strong>ShootingStar027</strong></p>
+<p><strong>ShootingStar028</strong></p>
+<p><strong>ShootingStar029</strong></p>
+<p><strong>ShootingStar030</strong></p>
+<p><strong>ShootingStar031</strong></p>
+<p><strong>ShootingStar032</strong></p>
+<p><strong>ShootingStar033</strong></p>
+<p><strong>ShootingStar034</strong></p>
+<p><strong>ShootingStar035</strong></p>
+<p><strong>ShootingStar036</strong></p>
+<p><strong>ShootingStar037</strong></p>
+<p><strong>ShootingStar038</strong></p>
+<p><strong>ShootingStar039</strong></p>
+<p><strong>ShootingStar040</strong></p>
+<p><strong>ShootingStar041</strong></p>
+<p><strong>ShootingStar042</strong></p>
+<p><strong>ShootingStar043</strong></p>
+<p><strong>ShootingStar044</strong></p>
+<p><strong>ShootingStar045</strong></p>
+<p><strong>ShootingStar046</strong></p>
+<p><strong>ShootingStar047</strong></p>
+<p><strong>ShootingStar048</strong></p>
+<p><strong>ShootingStar049</strong></p>
+<p><strong>ShootingStar050</strong></p>
+<p><strong>ShootingStar051</strong></p>
+<p><strong>ShootingStar052</strong></p>
+<p><strong>ShootingStar053</strong></p>
+<p><strong>ShootingStar054</strong></p>
+<p><strong>ShootingStar055</strong></p>
+<p><strong>ShootingStar056</strong></p>
+<p><strong>ShootingStar057</strong></p>
+<p><strong>ShootingStar058</strong></p>
+<p><strong>ShootingStar059</strong></p>
+<p><strong>ShootingStar060</strong></p>
+<p><strong>ShootingStar061</strong></p>
+<p><strong>ShootingStar062</strong></p>
+<p><strong>ShootingStar063</strong></p>
+<p><strong>ShootingStar064</strong></p>
+<p><strong>ShootingStar065</strong></p>
+<p><strong>ShootingStar066</strong></p>
+<p><strong>ShootingStar067</strong></p>
+<p><strong>ShootingStar068</strong></p>
+<p><strong>ShootingStar069</strong></p>
+<p><strong>ShootingStar070</strong></p>
+<p><strong>ShootingStar071</strong></p>
+<p><strong>ShootingStar072</strong></p>
+<p><strong>ShootingStar073</strong></p>
+<p><strong>ShootingStar074</strong></p>
+<p><strong>ShootingStar075</strong></p>
+<p><strong>ShootingStar076</strong></p>
+<p><strong>ShootingStar077</strong></p>
+<p><strong>ShootingStar078</strong></p>
+<p><strong>ShootingStar079</strong></p>
+<p><strong>ShootingStar080</strong></p>
+<p><strong>ShootingStar081</strong></p>
+<p><strong>ShootingStar082</strong></p>
+<p><strong>ShootingStar083</strong></p>
+<p><strong>ShootingStar084</strong></p>
+<p><strong>ShootingStar085</strong></p>
+<p><strong>ShootingStar086</strong></p>
+<p><strong>ShootingStar087</strong></p>
+<p><strong>ShootingStar088</strong></p>
+<p><strong>ShootingStar089</strong></p>
+<p><strong>ShootingStar090</strong></p>
+<p><strong>ShootingStar091</strong></p>
+<p><strong>ShootingStar092</strong></p>
+<p><strong>ShootingStar093</strong></p>
+<p><strong>ShootingStar094</strong></p>
+<p><strong>ShootingStar095</strong></p>
+<p><strong>ShootingStar096</strong></p>
+<p><strong>ShootingStar097</strong></p>
+<p><strong>ShootingStar098</strong></p>
+<p><strong>ShootingStar099</strong></p>
+<p><strong>ShootingStar100</strong></p>
+<p><strong>ShootingStarCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.setAdvancing">
+<span class="sig-name descname"><span class="pre">setAdvancing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ShootingStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)advancing</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.setAdvancing" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+advancing : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.setArrivalPosition">
+<span class="sig-name descname"><span class="pre">setArrivalPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ShootingStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec2)arrivalPosition</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.setArrivalPosition" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+arrivalPosition : Vec2
+Shooting star arrival position on screen.
+Azimuth / Height in degrees.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.setBrightness">
+<span class="sig-name descname"><span class="pre">setBrightness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ShootingStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)brightness</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.setBrightness" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+brightness : double
+Shooting stars brightness.
+It will affect the width of the line representing the shooting star.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.setGradientPoint">
+<span class="sig-name descname"><span class="pre">setGradientPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ShootingStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)gradientPoint</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.setGradientPoint" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+gradientPoint : double
+Position of the point where the gradient begins.</p>
+<blockquote>
+<div><p>usually in range [0;1].</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.setRainChaosGradientPoint">
+<span class="sig-name descname"><span class="pre">setRainChaosGradientPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ShootingStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)rainChaosGradientPoint</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.setRainChaosGradientPoint" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+rainChaosGradientPoint : double
+Radius of the circle (in degrees) from which the shooting stars are generated.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.setRainGradientPoint">
+<span class="sig-name descname"><span class="pre">setRainGradientPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ShootingStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec2)rainGradientPoint</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.setRainGradientPoint" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+rainGradientPoint : Vec2
+Position of the center of the circle from which the shooting stars are generated.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.setRainSeed">
+<span class="sig-name descname"><span class="pre">setRainSeed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ShootingStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)rainSeed</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.setRainSeed" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+rainSeed : int
+Seed used to generate random shooting star.
+Use 0 to stop shooting star.
+Other values will generate a new shooting star.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.setRainSpeed">
+<span class="sig-name descname"><span class="pre">setRainSpeed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ShootingStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)rainSpeed</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.setRainSpeed" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+rainSpeed : double
+Speed of the shooting star.
+Duration of the trail will be randomized between 0.5/rainSpeed and 2.5/rainSpeed.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.setReferential">
+<span class="sig-name descname"><span class="pre">setReferential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ShootingStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Referential)referential</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.setReferential" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+referential : Referential
+Referential of the shooting stars.
+Targeted foreground [default] : Shooting stars are generated from a circle in dome space.
+RaDec Shooting stars are generated from a Circle (in starry sky referential).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.setRepresentationType">
+<span class="sig-name descname"><span class="pre">setRepresentationType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ShootingStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Model)representationType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.setRepresentationType" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+representationType : Model
+Type of the shooting star’s trail.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.setStartPosition">
+<span class="sig-name descname"><span class="pre">setStartPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ShootingStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec2)startPosition</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.setStartPosition" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+startPosition : Vec2
+Shooting star start position on screen.
+Azimuth / Height in degrees.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.setTrailLength">
+<span class="sig-name descname"><span class="pre">setTrailLength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ShootingStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)trailLength</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.setTrailLength" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+trailLength : double
+Shooting stars tail length.
+Delay in seconds from the start point of the shooting star.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.setZenithalHourlyRate">
+<span class="sig-name descname"><span class="pre">setZenithalHourlyRate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ShootingStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)zenithalHourlyRate</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.setZenithalHourlyRate" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+zenithalHourlyRate : double
+Mean number of shooting stars to be drawn per hour</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.advancing">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">advancing</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.advancing" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.arrivalPosition">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">arrivalPosition</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.arrivalPosition" title="Permalink to this definition"></a></dt>
+<dd><p>Shooting star arrival position on screen.
+Azimuth / Height in degrees.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.brightness">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">brightness</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.brightness" title="Permalink to this definition"></a></dt>
+<dd><p>Shooting stars brightness.
+It will affect the width of the line representing the shooting star.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.gradientPoint">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gradientPoint</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.gradientPoint" title="Permalink to this definition"></a></dt>
+<dd><p>Position of the point where the gradient begins.
+usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.rainChaosGradientPoint">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rainChaosGradientPoint</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.rainChaosGradientPoint" title="Permalink to this definition"></a></dt>
+<dd><p>Radius of the circle (in degrees) from which the shooting stars are generated.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.rainGradientPoint">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rainGradientPoint</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.rainGradientPoint" title="Permalink to this definition"></a></dt>
+<dd><p>Position of the center of the circle from which the shooting stars are generated.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.rainSeed">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rainSeed</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.rainSeed" title="Permalink to this definition"></a></dt>
+<dd><p>Seed used to generate random shooting star.
+Use 0 to stop shooting star.
+Other values will generate a new shooting star.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.rainSpeed">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rainSpeed</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.rainSpeed" title="Permalink to this definition"></a></dt>
+<dd><p>Speed of the shooting star.
+Duration of the trail will be randomized between 0.5/rainSpeed and 2.5/rainSpeed.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.referential">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">referential</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.referential" title="Permalink to this definition"></a></dt>
+<dd><p>Referential of the shooting stars.
+Targeted foreground [default] : Shooting stars are generated from a circle in dome space.
+RaDec Shooting stars are generated from a Circle (in starry sky referential).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.representationType">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">representationType</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.representationType" title="Permalink to this definition"></a></dt>
+<dd><p>Type of the shooting star’s trail.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.startPosition">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">startPosition</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.startPosition" title="Permalink to this definition"></a></dt>
+<dd><p>Shooting star start position on screen.
+Azimuth / Height in degrees.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.trailLength">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trailLength</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.trailLength" title="Permalink to this definition"></a></dt>
+<dd><p>Shooting stars tail length.
+Delay in seconds from the start point of the shooting star.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ShootingStar.zenithalHourlyRate">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">zenithalHourlyRate</span></span><a class="headerlink" href="#pySkyExplorer.ShootingStar.zenithalHourlyRate" title="Permalink to this definition"></a></dt>
+<dd><p>Mean number of shooting stars to be drawn per hour</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.SceneGraph.html" class="btn btn-neutral float-left" title="pySkyExplorer.SceneGraph" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.ShowEngineManager.html" class="btn btn-neutral float-right" title="pySkyExplorer.ShowEngineManager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

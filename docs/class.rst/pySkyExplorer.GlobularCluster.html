@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.GlobularCluster &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.IndividualStar" href="pySkyExplorer.IndividualStar.html" />
+    <link rel="prev" title="pySkyExplorer.Galaxy" href="pySkyExplorer.Galaxy.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.GlobularCluster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.GlobularCluster"><code class="docutils literal notranslate"><span class="pre">GlobularCluster</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.GlobularClusterName"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.GlobularClusterName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.GlobularClusterPort"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.GlobularClusterPort</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.addChild"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.addChild()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.portId"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.portId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.setIntensity"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.setIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.setLabelIntensity"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.setLabelIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.setPointerIntensity"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.setPointerIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.setPointerType"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.setPointerType()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.setScale"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.setScale()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.id"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.intensity"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.intensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.labelIntensity"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.labelIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.name"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.osgId"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.pointerIntensity"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.pointerIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.pointerType"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.pointerType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.position"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.position</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.radiusRatio"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.radiusRatio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.GlobularCluster.scale"><code class="docutils literal notranslate"><span class="pre">GlobularCluster.scale</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.GlobularCluster</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.GlobularCluster.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-globularcluster">
+<h1>pySkyExplorer.GlobularCluster<a class="headerlink" href="#pyskyexplorer-globularcluster" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">GlobularCluster</span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.GlobularClusterName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GlobularClusterName</span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.GlobularClusterName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available globular cluster name.</p>
+<p><strong>InvalidGlobularCluster</strong></p>
+<p><strong>NGC104_47Tuc</strong></p>
+<p><strong>NGC288</strong></p>
+<p><strong>NGC362</strong></p>
+<p><strong>NGC1261</strong></p>
+<p><strong>Pal1</strong></p>
+<p><strong>AM1_E1</strong></p>
+<p><strong>Eridanus</strong></p>
+<p><strong>Pal2</strong></p>
+<p><strong>NGC1851</strong></p>
+<p><strong>NGC1904_M79</strong></p>
+<p><strong>NGC2298</strong></p>
+<p><strong>NGC2419</strong></p>
+<p><strong>Pyxis</strong></p>
+<p><strong>NGC2808</strong></p>
+<p><strong>E3</strong></p>
+<p><strong>Pal3</strong></p>
+<p><strong>NGC3201</strong></p>
+<p><strong>Pal4</strong></p>
+<p><strong>NGC4147</strong></p>
+<p><strong>NGC4372</strong></p>
+<p><strong>Rup106</strong></p>
+<p><strong>NGC4590_M68</strong></p>
+<p><strong>NGC4833</strong></p>
+<p><strong>NGC5024_M53</strong></p>
+<p><strong>NGC5053</strong></p>
+<p><strong>NGC5139_omegaCen</strong></p>
+<p><strong>NGC5272_M3</strong></p>
+<p><strong>NGC5286</strong></p>
+<p><strong>AM4</strong></p>
+<p><strong>NGC5466</strong></p>
+<p><strong>NGC5634</strong></p>
+<p><strong>NGC5694</strong></p>
+<p><strong>IC4499</strong></p>
+<p><strong>NGC5824</strong></p>
+<p><strong>Pal5</strong></p>
+<p><strong>NGC5897</strong></p>
+<p><strong>NGC5904_M5</strong></p>
+<p><strong>NGC5927</strong></p>
+<p><strong>NGC5946</strong></p>
+<p><strong>BH176</strong></p>
+<p><strong>NGC5986</strong></p>
+<p><strong>Lynga7</strong></p>
+<p><strong>Pal14_AvdB</strong></p>
+<p><strong>NGC6093_M80</strong></p>
+<p><strong>NGC6121_M4</strong></p>
+<p><strong>NGC6101</strong></p>
+<p><strong>NGC6144</strong></p>
+<p><strong>NGC6139</strong></p>
+<p><strong>Terzan3</strong></p>
+<p><strong>NGC6171_M107</strong></p>
+<p><strong>ESO452_SC11</strong></p>
+<p><strong>NGC6205_M13</strong></p>
+<p><strong>NGC6229</strong></p>
+<p><strong>NGC6218_M12</strong></p>
+<p><strong>NGC6235</strong></p>
+<p><strong>NGC6254_M10</strong></p>
+<p><strong>NGC6256</strong></p>
+<p><strong>Pal15</strong></p>
+<p><strong>NGC6266_M62</strong></p>
+<p><strong>NGC6273_M19</strong></p>
+<p><strong>NGC6284</strong></p>
+<p><strong>NGC6287</strong></p>
+<p><strong>NGC6293</strong></p>
+<p><strong>NGC6304</strong></p>
+<p><strong>NGC6316</strong></p>
+<p><strong>NGC6341_M92</strong></p>
+<p><strong>NGC6325</strong></p>
+<p><strong>NGC6333_M9</strong></p>
+<p><strong>NGC6342</strong></p>
+<p><strong>NGC6356</strong></p>
+<p><strong>NGC6355</strong></p>
+<p><strong>NGC6352</strong></p>
+<p><strong>IC1257</strong></p>
+<p><strong>Terzan2_HP3</strong></p>
+<p><strong>NGC6366</strong></p>
+<p><strong>Terzan4_HP4</strong></p>
+<p><strong>HP1_BH229</strong></p>
+<p><strong>NGC6362</strong></p>
+<p><strong>Liller1</strong></p>
+<p><strong>Terzan1_HP2</strong></p>
+<p><strong>Ton2_Pismis26</strong></p>
+<p><strong>NGC6388</strong></p>
+<p><strong>NGC6402_M14</strong></p>
+<p><strong>NGC6401</strong></p>
+<p><strong>NGC6397</strong></p>
+<p><strong>Pal6</strong></p>
+<p><strong>NGC6426</strong></p>
+<p><strong>Djorg1</strong></p>
+<p><strong>Terzan5_Terzan11</strong></p>
+<p><strong>NGC6440</strong></p>
+<p><strong>NGC6441</strong></p>
+<p><strong>Terzan6_HP5</strong></p>
+<p><strong>NGC6453</strong></p>
+<p><strong>UKS1</strong></p>
+<p><strong>NGC6496</strong></p>
+<p><strong>Terzan9</strong></p>
+<p><strong>Djorg2_E456_SC38</strong></p>
+<p><strong>NGC6517</strong></p>
+<p><strong>Terzan10</strong></p>
+<p><strong>NGC6522</strong></p>
+<p><strong>NGC6535</strong></p>
+<p><strong>NGC6528</strong></p>
+<p><strong>NGC6539</strong></p>
+<p><strong>NGC6540_Djorg3</strong></p>
+<p><strong>NGC6544</strong></p>
+<p><strong>NGC6541</strong></p>
+<p><strong>NGC6553</strong></p>
+<p><strong>NGC6558</strong></p>
+<p><strong>IC1276_Pal7</strong></p>
+<p><strong>NGC6569</strong></p>
+<p><strong>NGC6584</strong></p>
+<p><strong>NGC6624</strong></p>
+<p><strong>NGC6626_M28</strong></p>
+<p><strong>NGC6638</strong></p>
+<p><strong>NGC6637_M69</strong></p>
+<p><strong>NGC6642</strong></p>
+<p><strong>NGC6652</strong></p>
+<p><strong>NGC6656_M22</strong></p>
+<p><strong>Pal8</strong></p>
+<p><strong>NGC6681_M70</strong></p>
+<p><strong>NGC6712</strong></p>
+<p><strong>NGC6715_M54</strong></p>
+<p><strong>NGC6717_Pal9</strong></p>
+<p><strong>NGC6723</strong></p>
+<p><strong>NGC6749</strong></p>
+<p><strong>NGC6752</strong></p>
+<p><strong>NGC6760</strong></p>
+<p><strong>NGC6779_M56</strong></p>
+<p><strong>Terzan7</strong></p>
+<p><strong>Pal10</strong></p>
+<p><strong>Arp2</strong></p>
+<p><strong>NGC6809_M55</strong></p>
+<p><strong>Terzan8</strong></p>
+<p><strong>Pal11</strong></p>
+<p><strong>NGC6838_M71</strong></p>
+<p><strong>NGC6864_M75</strong></p>
+<p><strong>NGC6934</strong></p>
+<p><strong>NGC6981_M72</strong></p>
+<p><strong>NGC7006</strong></p>
+<p><strong>NGC7078_M15</strong></p>
+<p><strong>NGC7089_M2</strong></p>
+<p><strong>NGC7099_M30</strong></p>
+<p><strong>Pal12</strong></p>
+<p><strong>Pal13</strong></p>
+<p><strong>NGC7492</strong></p>
+<p><strong>Whiting1</strong></p>
+<p><strong>Crater</strong></p>
+<p><strong>BH140</strong></p>
+<p><strong>FSR1716</strong></p>
+<p><strong>FSR1735</strong></p>
+<p><strong>FSR1758</strong></p>
+<p><strong>NGC6380</strong></p>
+<p><strong>VVV_CL001</strong></p>
+<p><strong>_2MASS_GC01</strong></p>
+<p><strong>ESO280_SC06</strong></p>
+<p><strong>_2MASS_GC02</strong></p>
+<p><strong>Terzan12</strong></p>
+<p><strong>BH261</strong></p>
+<p><strong>Laevens3</strong></p>
+<p><strong>FSR1767</strong></p>
+<p><strong>Kosopov1</strong></p>
+<p><strong>Kosopov2</strong></p>
+<p><strong>GlobularClusterCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.GlobularClusterPort">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GlobularClusterPort</span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.GlobularClusterPort" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available ports on globular cluster</p>
+<p><strong>InvalidGlobularClusterPort</strong></p>
+<p><strong>Ecliptic</strong></p>
+<p><strong>Galactic</strong></p>
+<p><strong>GlobularClusterPortCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.addChild">
+<span class="sig-name descname"><span class="pre">addChild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(GlobularCluster)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)child</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(GlobularClusterPort)port</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.addChild" title="Permalink to this definition"></a></dt>
+<dd><p>Add a child object to the globular cluster scene graph.
+PARAMETERS:
+child : int</p>
+<blockquote>
+<div><p>Id of the child object to add.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>port<span class="classifier">GlobularClusterPort</span></dt><dd><p>Coordinate system to use for adding child. See GlobularClusterPort documentation for more information.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.portId">
+<span class="sig-name descname"><span class="pre">portId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(GlobularCluster)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(GlobularClusterPort)portName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.portId" title="Permalink to this definition"></a></dt>
+<dd><p>Return the id of the given port
+PARAMETERS:
+portName : GlobularClusterPort</p>
+<blockquote>
+<div><p>Name of the port. See ‘GlobularClusterPort’ documentation for more information.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.setIntensity">
+<span class="sig-name descname"><span class="pre">setIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(GlobularCluster)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.setIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+intensity : double
+Intensity of the globular cluster.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.setLabelIntensity">
+<span class="sig-name descname"><span class="pre">setLabelIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(GlobularCluster)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)labelIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.setLabelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+labelIntensity : double
+Intensity of the label of the globular cluster.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.setPointerIntensity">
+<span class="sig-name descname"><span class="pre">setPointerIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(GlobularCluster)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)pointerIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.setPointerIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+pointerIntensity : double
+Intensity of the pointer of the globular cluster.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.setPointerType">
+<span class="sig-name descname"><span class="pre">setPointerType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(GlobularCluster)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PointerType)pointerType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.setPointerType" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+pointerType : PointerType
+Current globular cluster pointer type. See ‘Body.PointerType’ documentation for vailable values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.setScale">
+<span class="sig-name descname"><span class="pre">setScale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(GlobularCluster)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)scale</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.setScale" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+scale : double
+Scale factor of the globular cluster. 
+It can be used to enlarge apparent size of the globular cluster.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.intensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the globular cluster.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.labelIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">labelIntensity</span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.labelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the label of the globular cluster.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.pointerIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pointerIntensity</span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.pointerIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the pointer of the globular cluster.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.pointerType">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pointerType</span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.pointerType" title="Permalink to this definition"></a></dt>
+<dd><p>Current globular cluster pointer type. See ‘Body.PointerType’ documentation for vailable values.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.position">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.position" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Position of the globular cluster in the ICRF coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.radiusRatio">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">radiusRatio</span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.radiusRatio" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Radius ratio of the globular cluster according to the unit of it’s coordinate system. 
+In most case, value is globular cluster radius in kilometers.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.GlobularCluster.scale">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scale</span></span><a class="headerlink" href="#pySkyExplorer.GlobularCluster.scale" title="Permalink to this definition"></a></dt>
+<dd><p>Scale factor of the globular cluster. 
+It can be used to enlarge apparent size of the globular cluster.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.Galaxy.html" class="btn btn-neutral float-left" title="pySkyExplorer.Galaxy" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.IndividualStar.html" class="btn btn-neutral float-right" title="pySkyExplorer.IndividualStar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

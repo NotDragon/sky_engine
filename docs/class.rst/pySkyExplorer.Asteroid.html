@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.Asteroid &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.Audio" href="pySkyExplorer.Audio.html" />
+    <link rel="prev" title="pySkyExplorer.Animator" href="pySkyExplorer.Animator.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.Asteroid</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.Asteroid"><code class="docutils literal notranslate"><span class="pre">Asteroid</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.AsteroidName"><code class="docutils literal notranslate"><span class="pre">Asteroid.AsteroidName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.AsteroidPort"><code class="docutils literal notranslate"><span class="pre">Asteroid.AsteroidPort</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.portId"><code class="docutils literal notranslate"><span class="pre">Asteroid.portId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.setArgumentOfPeriapsis"><code class="docutils literal notranslate"><span class="pre">Asteroid.setArgumentOfPeriapsis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.setEccentricity"><code class="docutils literal notranslate"><span class="pre">Asteroid.setEccentricity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.setEpoch"><code class="docutils literal notranslate"><span class="pre">Asteroid.setEpoch()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.setInclination"><code class="docutils literal notranslate"><span class="pre">Asteroid.setInclination()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.setIntensity"><code class="docutils literal notranslate"><span class="pre">Asteroid.setIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.setLabelIntensity"><code class="docutils literal notranslate"><span class="pre">Asteroid.setLabelIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.setLabelNameOverride"><code class="docutils literal notranslate"><span class="pre">Asteroid.setLabelNameOverride()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.setLongitudeOfAscendingNode"><code class="docutils literal notranslate"><span class="pre">Asteroid.setLongitudeOfAscendingNode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.setMeanAnomaly"><code class="docutils literal notranslate"><span class="pre">Asteroid.setMeanAnomaly()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.setOrbitColor"><code class="docutils literal notranslate"><span class="pre">Asteroid.setOrbitColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.setOrbitIntensity"><code class="docutils literal notranslate"><span class="pre">Asteroid.setOrbitIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.setOrbitThickness"><code class="docutils literal notranslate"><span class="pre">Asteroid.setOrbitThickness()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.setParent"><code class="docutils literal notranslate"><span class="pre">Asteroid.setParent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.setPointerIntensity"><code class="docutils literal notranslate"><span class="pre">Asteroid.setPointerIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.setPointerType"><code class="docutils literal notranslate"><span class="pre">Asteroid.setPointerType()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.setSemiMajorAxis"><code class="docutils literal notranslate"><span class="pre">Asteroid.setSemiMajorAxis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.setTerrainUserModelFilename"><code class="docutils literal notranslate"><span class="pre">Asteroid.setTerrainUserModelFilename()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.argumentOfPeriapsis"><code class="docutils literal notranslate"><span class="pre">Asteroid.argumentOfPeriapsis</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.eccentricity"><code class="docutils literal notranslate"><span class="pre">Asteroid.eccentricity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.epoch"><code class="docutils literal notranslate"><span class="pre">Asteroid.epoch</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.id"><code class="docutils literal notranslate"><span class="pre">Asteroid.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.inclination"><code class="docutils literal notranslate"><span class="pre">Asteroid.inclination</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.intensity"><code class="docutils literal notranslate"><span class="pre">Asteroid.intensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.labelIntensity"><code class="docutils literal notranslate"><span class="pre">Asteroid.labelIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.labelNameOverride"><code class="docutils literal notranslate"><span class="pre">Asteroid.labelNameOverride</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.longitudeOfAscendingNode"><code class="docutils literal notranslate"><span class="pre">Asteroid.longitudeOfAscendingNode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.meanAnomaly"><code class="docutils literal notranslate"><span class="pre">Asteroid.meanAnomaly</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.name"><code class="docutils literal notranslate"><span class="pre">Asteroid.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.orbitColor"><code class="docutils literal notranslate"><span class="pre">Asteroid.orbitColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.orbitIntensity"><code class="docutils literal notranslate"><span class="pre">Asteroid.orbitIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.orbitThickness"><code class="docutils literal notranslate"><span class="pre">Asteroid.orbitThickness</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.osgId"><code class="docutils literal notranslate"><span class="pre">Asteroid.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.parent"><code class="docutils literal notranslate"><span class="pre">Asteroid.parent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.pointerIntensity"><code class="docutils literal notranslate"><span class="pre">Asteroid.pointerIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.pointerType"><code class="docutils literal notranslate"><span class="pre">Asteroid.pointerType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.semiMajorAxis"><code class="docutils literal notranslate"><span class="pre">Asteroid.semiMajorAxis</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Asteroid.terrainUserModelFilename"><code class="docutils literal notranslate"><span class="pre">Asteroid.terrainUserModelFilename</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.Asteroid</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.Asteroid.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-asteroid">
+<h1>pySkyExplorer.Asteroid<a class="headerlink" href="#pyskyexplorer-asteroid" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">Asteroid</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.AsteroidName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AsteroidName</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.AsteroidName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available Asteroid name.</p>
+<p><strong>InvalidAsteroid</strong></p>
+<p><strong>Asteroid001</strong></p>
+<p><strong>Asteroid002</strong></p>
+<p><strong>Asteroid003</strong></p>
+<p><strong>Asteroid004</strong></p>
+<p><strong>Asteroid005</strong></p>
+<p><strong>Asteroid006</strong></p>
+<p><strong>Asteroid007</strong></p>
+<p><strong>Asteroid008</strong></p>
+<p><strong>Asteroid009</strong></p>
+<p><strong>Asteroid010</strong></p>
+<p><strong>Asteroid011</strong></p>
+<p><strong>Asteroid012</strong></p>
+<p><strong>Asteroid013</strong></p>
+<p><strong>Asteroid014</strong></p>
+<p><strong>Asteroid015</strong></p>
+<p><strong>Asteroid016</strong></p>
+<p><strong>Asteroid017</strong></p>
+<p><strong>Asteroid018</strong></p>
+<p><strong>Asteroid019</strong></p>
+<p><strong>Asteroid020</strong></p>
+<p><strong>Asteroid021</strong></p>
+<p><strong>Asteroid022</strong></p>
+<p><strong>Asteroid023</strong></p>
+<p><strong>Asteroid024</strong></p>
+<p><strong>Asteroid025</strong></p>
+<p><strong>Asteroid026</strong></p>
+<p><strong>Asteroid027</strong></p>
+<p><strong>Asteroid028</strong></p>
+<p><strong>Asteroid029</strong></p>
+<p><strong>Asteroid030</strong></p>
+<p><strong>Asteroid031</strong></p>
+<p><strong>Asteroid032</strong></p>
+<p><strong>Asteroid033</strong></p>
+<p><strong>Asteroid034</strong></p>
+<p><strong>Asteroid035</strong></p>
+<p><strong>Asteroid036</strong></p>
+<p><strong>Asteroid037</strong></p>
+<p><strong>Asteroid038</strong></p>
+<p><strong>Asteroid039</strong></p>
+<p><strong>Asteroid040</strong></p>
+<p><strong>Asteroid041</strong></p>
+<p><strong>Asteroid042</strong></p>
+<p><strong>Asteroid043</strong></p>
+<p><strong>Asteroid044</strong></p>
+<p><strong>Asteroid045</strong></p>
+<p><strong>Asteroid046</strong></p>
+<p><strong>Asteroid047</strong></p>
+<p><strong>Asteroid048</strong></p>
+<p><strong>Asteroid049</strong></p>
+<p><strong>Asteroid050</strong></p>
+<p><strong>Asteroid051</strong></p>
+<p><strong>Asteroid052</strong></p>
+<p><strong>Asteroid053</strong></p>
+<p><strong>Asteroid054</strong></p>
+<p><strong>Asteroid055</strong></p>
+<p><strong>Asteroid056</strong></p>
+<p><strong>Asteroid057</strong></p>
+<p><strong>Asteroid058</strong></p>
+<p><strong>Asteroid059</strong></p>
+<p><strong>Asteroid060</strong></p>
+<p><strong>Asteroid061</strong></p>
+<p><strong>Asteroid062</strong></p>
+<p><strong>Asteroid063</strong></p>
+<p><strong>Asteroid064</strong></p>
+<p><strong>Asteroid065</strong></p>
+<p><strong>Asteroid066</strong></p>
+<p><strong>Asteroid067</strong></p>
+<p><strong>Asteroid068</strong></p>
+<p><strong>Asteroid069</strong></p>
+<p><strong>Asteroid070</strong></p>
+<p><strong>Asteroid071</strong></p>
+<p><strong>Asteroid072</strong></p>
+<p><strong>Asteroid073</strong></p>
+<p><strong>Asteroid074</strong></p>
+<p><strong>Asteroid075</strong></p>
+<p><strong>Asteroid076</strong></p>
+<p><strong>Asteroid077</strong></p>
+<p><strong>Asteroid078</strong></p>
+<p><strong>Asteroid079</strong></p>
+<p><strong>Asteroid080</strong></p>
+<p><strong>Asteroid081</strong></p>
+<p><strong>Asteroid082</strong></p>
+<p><strong>Asteroid083</strong></p>
+<p><strong>Asteroid084</strong></p>
+<p><strong>Asteroid085</strong></p>
+<p><strong>Asteroid086</strong></p>
+<p><strong>Asteroid087</strong></p>
+<p><strong>Asteroid088</strong></p>
+<p><strong>Asteroid089</strong></p>
+<p><strong>Asteroid090</strong></p>
+<p><strong>Asteroid091</strong></p>
+<p><strong>Asteroid092</strong></p>
+<p><strong>Asteroid093</strong></p>
+<p><strong>Asteroid094</strong></p>
+<p><strong>Asteroid095</strong></p>
+<p><strong>Asteroid096</strong></p>
+<p><strong>Asteroid097</strong></p>
+<p><strong>Asteroid098</strong></p>
+<p><strong>Asteroid099</strong></p>
+<p><strong>Asteroid100</strong></p>
+<p><strong>AsteroidCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.AsteroidPort">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AsteroidPort</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.AsteroidPort" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available ports on Asteroid</p>
+<p><strong>InvalidAsteroidPort</strong></p>
+<p><strong>TerrestrialEquatorialJ2000</strong></p>
+<p><strong>EclipticJ2000</strong></p>
+<p><strong>OribitalMeanEquinox</strong></p>
+<p><strong>Synchronous</strong></p>
+<p><strong>Galactic</strong></p>
+<p><strong>AsteroidPortCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.portId">
+<span class="sig-name descname"><span class="pre">portId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(AsteroidPort)portName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.portId" title="Permalink to this definition"></a></dt>
+<dd><p>Return the id of the given port
+PARAMETERS:
+portName : AsteroidPort</p>
+<blockquote>
+<div><p>Name of the port. See ‘AsteroidPort’ documentation for more information.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.setArgumentOfPeriapsis">
+<span class="sig-name descname"><span class="pre">setArgumentOfPeriapsis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)argumentOfPeriapsis</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.setArgumentOfPeriapsis" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+argumentOfPeriapsis : double
+Periapsis</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.setEccentricity">
+<span class="sig-name descname"><span class="pre">setEccentricity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)eccentricity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.setEccentricity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+eccentricity : double
+Eccentricity</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.setEpoch">
+<span class="sig-name descname"><span class="pre">setEpoch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)epoch</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.setEpoch" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+epoch : double
+Epoch</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.setInclination">
+<span class="sig-name descname"><span class="pre">setInclination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)inclination</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.setInclination" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+inclination : double
+Inclination</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.setIntensity">
+<span class="sig-name descname"><span class="pre">setIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.setIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+intensity : double
+Intensity</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.setLabelIntensity">
+<span class="sig-name descname"><span class="pre">setLabelIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)labelIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.setLabelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+labelIntensity : double
+Label intensity</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.setLabelNameOverride">
+<span class="sig-name descname"><span class="pre">setLabelNameOverride</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)labelNameOverride</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.setLabelNameOverride" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+labelNameOverride : str
+Label Text</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.setLongitudeOfAscendingNode">
+<span class="sig-name descname"><span class="pre">setLongitudeOfAscendingNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)longitudeOfAscendingNode</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.setLongitudeOfAscendingNode" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+longitudeOfAscendingNode : double
+Ascending node</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.setMeanAnomaly">
+<span class="sig-name descname"><span class="pre">setMeanAnomaly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)meanAnomaly</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.setMeanAnomaly" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+meanAnomaly : double
+Mean anomaly</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.setOrbitColor">
+<span class="sig-name descname"><span class="pre">setOrbitColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)orbitColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.setOrbitColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orbitColor : Vec</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.setOrbitIntensity">
+<span class="sig-name descname"><span class="pre">setOrbitIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)orbitIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.setOrbitIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orbitIntensity : double
+Orbit intensity</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.setOrbitThickness">
+<span class="sig-name descname"><span class="pre">setOrbitThickness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)orbitThickness</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.setOrbitThickness" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orbitThickness : double
+Orbit thickness</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.setParent">
+<span class="sig-name descname"><span class="pre">setParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)parent</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.setParent" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+parent : int
+Id of the Asteroid parent port in database.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.setPointerIntensity">
+<span class="sig-name descname"><span class="pre">setPointerIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)pointerIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.setPointerIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+pointerIntensity : double
+Pointer intensity</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.setPointerType">
+<span class="sig-name descname"><span class="pre">setPointerType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PointerType)pointerType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.setPointerType" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+pointerType : PointerType
+Pointer type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.setSemiMajorAxis">
+<span class="sig-name descname"><span class="pre">setSemiMajorAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)semiMajorAxis</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.setSemiMajorAxis" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+semiMajorAxis : double
+Semi major axis</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.setTerrainUserModelFilename">
+<span class="sig-name descname"><span class="pre">setTerrainUserModelFilename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Asteroid)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)terrainUserModelFilename</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.setTerrainUserModelFilename" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+terrainUserModelFilename : str
+Model Path</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.argumentOfPeriapsis">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">argumentOfPeriapsis</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.argumentOfPeriapsis" title="Permalink to this definition"></a></dt>
+<dd><p>Periapsis</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.eccentricity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eccentricity</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.eccentricity" title="Permalink to this definition"></a></dt>
+<dd><p>Eccentricity</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.epoch">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">epoch</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.epoch" title="Permalink to this definition"></a></dt>
+<dd><p>Epoch</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.inclination">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">inclination</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.inclination" title="Permalink to this definition"></a></dt>
+<dd><p>Inclination</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.intensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.labelIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">labelIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.labelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Label intensity</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.labelNameOverride">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">labelNameOverride</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.labelNameOverride" title="Permalink to this definition"></a></dt>
+<dd><p>Label Text</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.longitudeOfAscendingNode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">longitudeOfAscendingNode</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.longitudeOfAscendingNode" title="Permalink to this definition"></a></dt>
+<dd><p>Ascending node</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.meanAnomaly">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">meanAnomaly</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.meanAnomaly" title="Permalink to this definition"></a></dt>
+<dd><p>Mean anomaly</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.orbitColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orbitColor</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.orbitColor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.orbitIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orbitIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.orbitIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Orbit intensity</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.orbitThickness">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orbitThickness</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.orbitThickness" title="Permalink to this definition"></a></dt>
+<dd><p>Orbit thickness</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.parent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.parent" title="Permalink to this definition"></a></dt>
+<dd><p>Id of the Asteroid parent port in database.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.pointerIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pointerIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.pointerIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Pointer intensity</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.pointerType">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pointerType</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.pointerType" title="Permalink to this definition"></a></dt>
+<dd><p>Pointer type</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.semiMajorAxis">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">semiMajorAxis</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.semiMajorAxis" title="Permalink to this definition"></a></dt>
+<dd><p>Semi major axis</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Asteroid.terrainUserModelFilename">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">terrainUserModelFilename</span></span><a class="headerlink" href="#pySkyExplorer.Asteroid.terrainUserModelFilename" title="Permalink to this definition"></a></dt>
+<dd><p>Model Path</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.Animator.html" class="btn btn-neutral float-left" title="pySkyExplorer.Animator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.Audio.html" class="btn btn-neutral float-right" title="pySkyExplorer.Audio" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

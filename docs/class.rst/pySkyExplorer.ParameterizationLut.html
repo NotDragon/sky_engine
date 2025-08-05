@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.ParameterizationLut &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.Patch" href="pySkyExplorer.Patch.html" />
+    <link rel="prev" title="pySkyExplorer.OrbitalPlace" href="pySkyExplorer.OrbitalPlace.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.ParameterizationLut</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.AttributeName"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.AttributeName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.AuxiliaryProjector"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.AuxiliaryProjector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.KeyType"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.KeyType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.ParameterizationLutName"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.ParameterizationLutName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.PostBehavior"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.PostBehavior</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.Sn88ProjectorIndex"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.Sn88ProjectorIndex</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.addKey"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.addKey()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.addTargetAttribute"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.addTargetAttribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.addTargetAuxiliaryProjectorAttribute"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.addTargetAuxiliaryProjectorAttribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.addTargetSn88Attribute"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.addTargetSn88Attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.clearKey"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.clearKey()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.clearTargetAttributes"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.clearTargetAttributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.removeKey"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.removeKey()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.removeTargetAttribute"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.removeTargetAttribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.removeTargetAuxiliaryProjectorAttribute"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.removeTargetAuxiliaryProjectorAttribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.removeTargetSn88Attribute"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.removeTargetSn88Attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.restore"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.restore()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.setEnabled"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.setEnabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.setInternalValue"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.setInternalValue()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.setPostBehavior"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.setPostBehavior()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.setSourceAttributeId"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.setSourceAttributeId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.setSourceSunHeight"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.setSourceSunHeight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.attributeList"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.attributeList</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.enabled"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.enabled</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.id"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.internalValue"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.internalValue</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.name"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.osgId"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.pilotedAttributeList"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.pilotedAttributeList</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.postBehavior"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.postBehavior</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.postValue"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.postValue</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.srcAttributID"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.srcAttributID</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.srcComponentIndex"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.srcComponentIndex</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.ParameterizationLut.srcHandlerID"><code class="docutils literal notranslate"><span class="pre">ParameterizationLut.srcHandlerID</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.ParameterizationLut</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.ParameterizationLut.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-parameterizationlut">
+<h1>pySkyExplorer.ParameterizationLut<a class="headerlink" href="#pyskyexplorer-parameterizationlut" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">ParameterizationLut</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.AttributeName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AttributeName</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.AttributeName" title="Permalink to this definition"></a></dt>
+<dd><p>List of avilable attributes for parameterization</p>
+<p><strong>InvalidAttributeName</strong></p>
+<p><strong>AzimuthHeight</strong></p>
+<p><strong>Color</strong></p>
+<p><strong>Intensity</strong></p>
+<p><strong>Opacity</strong></p>
+<p><strong>Position</strong></p>
+<p><strong>LinesColor</strong></p>
+<p><strong>ManualIntensity</strong></p>
+<p><strong>TrackingIntensity</strong></p>
+<p><strong>ParameterizationSunHeight</strong></p>
+<p><strong>ParameterizationOpacity</strong></p>
+<p><strong>AttributeNameCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.AuxiliaryProjector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AuxiliaryProjector</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.AuxiliaryProjector" title="Permalink to this definition"></a></dt>
+<dd><p>List of available starball auxiliary projectors.</p>
+<p><strong>InvalidAuxiliaryProjector</strong></p>
+<p><strong>CardinalPoints</strong></p>
+<p><strong>EclipticCoordinates</strong></p>
+<p><strong>EquatorialCoordinates</strong></p>
+<p><strong>MeridianCoordinates</strong></p>
+<p><strong>Azimuth</strong></p>
+<p><strong>PrecessionCircle</strong></p>
+<p><strong>CelestialPole</strong></p>
+<p><strong>LightPollution</strong></p>
+<p><strong>MoonLight</strong></p>
+<p><strong>StarballIntensity</strong></p>
+<p><strong>AuxiliaryProjectorCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.KeyType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">KeyType</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.KeyType" title="Permalink to this definition"></a></dt>
+<dd><p>List of key types for LUT.</p>
+<p><strong>InvalidKeyType</strong></p>
+<p><strong>Double</strong></p>
+<p><strong>Vec2</strong></p>
+<p><strong>Vec3</strong></p>
+<p><strong>Vec4</strong></p>
+<p><strong>KeyTypeCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.ParameterizationLutName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ParameterizationLutName</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.ParameterizationLutName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available parameterization LUT name.</p>
+<p><strong>InvalidParameterizationLut</strong></p>
+<p><strong>ParameterizationLut001</strong></p>
+<p><strong>ParameterizationLut002</strong></p>
+<p><strong>ParameterizationLut003</strong></p>
+<p><strong>ParameterizationLut004</strong></p>
+<p><strong>ParameterizationLut005</strong></p>
+<p><strong>ParameterizationLut006</strong></p>
+<p><strong>ParameterizationLut007</strong></p>
+<p><strong>ParameterizationLut008</strong></p>
+<p><strong>ParameterizationLut009</strong></p>
+<p><strong>ParameterizationLut010</strong></p>
+<p><strong>ParameterizationLut011</strong></p>
+<p><strong>ParameterizationLut012</strong></p>
+<p><strong>ParameterizationLut013</strong></p>
+<p><strong>ParameterizationLut014</strong></p>
+<p><strong>ParameterizationLut015</strong></p>
+<p><strong>ParameterizationLut016</strong></p>
+<p><strong>ParameterizationLut017</strong></p>
+<p><strong>ParameterizationLut018</strong></p>
+<p><strong>ParameterizationLut019</strong></p>
+<p><strong>ParameterizationLut020</strong></p>
+<p><strong>ParameterizationLut021</strong></p>
+<p><strong>ParameterizationLut022</strong></p>
+<p><strong>ParameterizationLut023</strong></p>
+<p><strong>ParameterizationLut024</strong></p>
+<p><strong>ParameterizationLut025</strong></p>
+<p><strong>ParameterizationLut026</strong></p>
+<p><strong>ParameterizationLut027</strong></p>
+<p><strong>ParameterizationLut028</strong></p>
+<p><strong>ParameterizationLut029</strong></p>
+<p><strong>ParameterizationLut030</strong></p>
+<p><strong>ParameterizationLut031</strong></p>
+<p><strong>ParameterizationLut032</strong></p>
+<p><strong>ParameterizationLut033</strong></p>
+<p><strong>ParameterizationLut034</strong></p>
+<p><strong>ParameterizationLut035</strong></p>
+<p><strong>ParameterizationLut036</strong></p>
+<p><strong>ParameterizationLut037</strong></p>
+<p><strong>ParameterizationLut038</strong></p>
+<p><strong>ParameterizationLut039</strong></p>
+<p><strong>ParameterizationLut040</strong></p>
+<p><strong>ParameterizationLut041</strong></p>
+<p><strong>ParameterizationLut042</strong></p>
+<p><strong>ParameterizationLut043</strong></p>
+<p><strong>ParameterizationLut044</strong></p>
+<p><strong>ParameterizationLut045</strong></p>
+<p><strong>ParameterizationLut046</strong></p>
+<p><strong>ParameterizationLut047</strong></p>
+<p><strong>ParameterizationLut048</strong></p>
+<p><strong>ParameterizationLut049</strong></p>
+<p><strong>ParameterizationLut050</strong></p>
+<p><strong>AllConstellationLines</strong></p>
+<p><strong>AllConstellationPictures</strong></p>
+<p><strong>AllConstellationLabels</strong></p>
+<p><strong>AllConstellationBoundaries</strong></p>
+<p><strong>SliderConstellationLines</strong></p>
+<p><strong>SliderConstellationPictures</strong></p>
+<p><strong>SliderConstellationLabels</strong></p>
+<p><strong>SliderStarsLabels</strong></p>
+<p><strong>WeatherEffectRain</strong></p>
+<p><strong>WeatherEffectSnow</strong></p>
+<p><strong>ParameterizationLutCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.PostBehavior">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PostBehavior</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.PostBehavior" title="Permalink to this definition"></a></dt>
+<dd><p>List of post behavior for parameterization</p>
+<p><strong>InvalidPostBehavior</strong></p>
+<p><strong>DoNothing</strong></p>
+<p><strong>SetOriginValue</strong></p>
+<p><strong>SetGivenValue</strong></p>
+<p><strong>PostBehaviorCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.Sn88ProjectorIndex">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Sn88ProjectorIndex</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.Sn88ProjectorIndex" title="Permalink to this definition"></a></dt>
+<dd><p>List of available sn88 projectors index</p>
+<p><strong>InvalidSn88ProjectorIndex</strong></p>
+<p><strong>AllProjectors</strong></p>
+<p><strong>Sunrise</strong></p>
+<p><strong>Sunset</strong></p>
+<p><strong>MorningTwilight</strong></p>
+<p><strong>EveningTwilight</strong></p>
+<p><strong>Sn88ProjectorIndexCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.addKey">
+<span class="sig-name descname"><span class="pre">addKey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ParameterizationLut)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)keyPosition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec4)key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(KeyType)keyType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.addKey" title="Permalink to this definition"></a></dt>
+<dd><p>Add a key to the LUT.
+PARAMETERS:
+keyPosition : double</p>
+<blockquote>
+<div><p>Position of the key in the LUT</p>
+</div></blockquote>
+<dl class="simple">
+<dt>key<span class="classifier">Vec4</span></dt><dd><p>Source attribute value key to add to the LUT.</p>
+</dd>
+<dt>keyType<span class="classifier">KeyType</span></dt><dd><p>Type of key to Add.</p>
+</dd>
+</dl>
+<p>See ‘KeyType’ enumeration for list of available values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.addTargetAttribute">
+<span class="sig-name descname"><span class="pre">addTargetAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ParameterizationLut)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)targetHandler</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(AttributeName)targetAttribute</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.addTargetAttribute" title="Permalink to this definition"></a></dt>
+<dd><dl>
+<dt>Add an attribute to pilot with the LUT.</dt><dd><p>PARAMETERS:
+targetHandler : int</p>
+<blockquote>
+<div><p>ID of the target attribute’s handler.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>targetAttribute<span class="classifier">AttributeName</span></dt><dd><p>Name of the target attribute to pilot.</p>
+</dd>
+</dl>
+<p>See ‘AttributeName’ enumeration for list of available values.</p>
+</dd>
+<dt>addTargetAttribute( (ParameterizationLut)arg1, (int)targetHandler, (object)targetAttribute, (bool)automatic) -&gt; None :</dt><dd><p>Add an attribute to pilot with the LUT (advanced use).
+PARAMETERS:
+targetHandler : int</p>
+<blockquote>
+<div><p>ID of the target attribute’s handler.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>targetAttribute<span class="classifier">str</span></dt><dd><p>Name of the target attribute to pilot.</p>
+</dd>
+<dt>automatic<span class="classifier">bool default value</span><span class="classifier">false</span></dt><dd><p>Set to ON to manage automaticaly this attribute.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.addTargetAuxiliaryProjectorAttribute">
+<span class="sig-name descname"><span class="pre">addTargetAuxiliaryProjectorAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ParameterizationLut)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(AuxiliaryProjector)targetProjector</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.addTargetAuxiliaryProjectorAttribute" title="Permalink to this definition"></a></dt>
+<dd><p>Add an auxiliary projector attribute (using starball handler) to pilot with the LUT.
+PARAMETERS:
+targetProjector : AuxiliaryProjector</p>
+<blockquote>
+<div><p>Id of the target auxiliary projector.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.addTargetSn88Attribute">
+<span class="sig-name descname"><span class="pre">addTargetSn88Attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ParameterizationLut)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Sn88ProjectorIndex)targetHandler</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(AttributeName)targetAttribute</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.addTargetSn88Attribute" title="Permalink to this definition"></a></dt>
+<dd><p>Add an attribute (using starball handler) to pilot with the LUT.
+PARAMETERS:
+targetHandler : Sn88ProjectorIndex</p>
+<blockquote>
+<div><p>starball handler to use.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>targetAttribute<span class="classifier">AttributeName</span></dt><dd><p>Name of the target attribute to pilot.</p>
+</dd>
+</dl>
+<p>See ‘AttributeName’ enumeration for list of available values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.clearKey">
+<span class="sig-name descname"><span class="pre">clearKey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ParameterizationLut)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.clearKey" title="Permalink to this definition"></a></dt>
+<dd><p>Remove all keys of the parameterization LUT.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.clearTargetAttributes">
+<span class="sig-name descname"><span class="pre">clearTargetAttributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ParameterizationLut)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.clearTargetAttributes" title="Permalink to this definition"></a></dt>
+<dd><p>Remove all target attributes of the parameterization LUT.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.removeKey">
+<span class="sig-name descname"><span class="pre">removeKey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ParameterizationLut)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)keyPosition</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.removeKey" title="Permalink to this definition"></a></dt>
+<dd><p>Remove a key from the LUT.
+PARAMETERS:
+keyPosition : double</p>
+<blockquote>
+<div><p>Position of the key to remove from the LUT</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.removeTargetAttribute">
+<span class="sig-name descname"><span class="pre">removeTargetAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ParameterizationLut)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)targetHandler</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(AttributeName)targetAttribute</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.removeTargetAttribute" title="Permalink to this definition"></a></dt>
+<dd><dl>
+<dt>Remove given attribute of the parameterization LUT.</dt><dd><p>PARAMETERS:
+targetHandler : int</p>
+<blockquote>
+<div><p>ID of the target attribute’s handler.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>targetAttribute<span class="classifier">AttributeName</span></dt><dd><p>Name of the target attribute to remove from LUT.</p>
+</dd>
+</dl>
+<p>See ‘AttributeName’ enumeration for list of available values.</p>
+</dd>
+<dt>removeTargetAttribute( (ParameterizationLut)arg1, (int)targetHandler, (object)targetAttribute) -&gt; None :</dt><dd><p>Remove given attribute of the parameterization LUT (advanced use).
+PARAMETERS:
+targetHandler : int</p>
+<blockquote>
+<div><p>ID of the target attribute’s handler.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>targetAttribute<span class="classifier">str</span></dt><dd><p>Name of the target attribute to remove from LUT.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.removeTargetAuxiliaryProjectorAttribute">
+<span class="sig-name descname"><span class="pre">removeTargetAuxiliaryProjectorAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ParameterizationLut)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(AuxiliaryProjector)targetHandler</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.removeTargetAuxiliaryProjectorAttribute" title="Permalink to this definition"></a></dt>
+<dd><p>Remove given ausiliary projector attribute of the parameterization LUT (using starball handler).
+PARAMETERS:
+targetHandler : AuxiliaryProjector</p>
+<blockquote>
+<div><p>Id of the target auxiliary projector.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.removeTargetSn88Attribute">
+<span class="sig-name descname"><span class="pre">removeTargetSn88Attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ParameterizationLut)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Sn88ProjectorIndex)targetHandler</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(AttributeName)targetAttribute</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.removeTargetSn88Attribute" title="Permalink to this definition"></a></dt>
+<dd><p>Remove given attribute of the parameterization LUT (using starball handler).
+PARAMETERS:
+targetHandler : Sn88ProjectorIndex</p>
+<blockquote>
+<div><p>starball target handler.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>targetAttribute<span class="classifier">AttributeName</span></dt><dd><p>Name of the target attribute to remove from LUT.</p>
+</dd>
+</dl>
+<p>See ‘AttributeName’ enumeration for list of available values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.restore">
+<span class="sig-name descname"><span class="pre">restore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ParameterizationLut)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.restore" title="Permalink to this definition"></a></dt>
+<dd><p>Restore control on all target attributes of the parameterization lut.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.setEnabled">
+<span class="sig-name descname"><span class="pre">setEnabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ParameterizationLut)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)enabled</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.setEnabled" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+enabled : bool
+Flag use to enable or disable the LUT parameterization</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.setInternalValue">
+<span class="sig-name descname"><span class="pre">setInternalValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ParameterizationLut)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)internalValue</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.setInternalValue" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+internalValue : double
+Input value to use for basic parameterization</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.setPostBehavior">
+<span class="sig-name descname"><span class="pre">setPostBehavior</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ParameterizationLut)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PostBehavior)postBehaviorType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec4)postBehavior</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.setPostBehavior" title="Permalink to this definition"></a></dt>
+<dd><p>Change post behavior of the LUT.
+PARAMETERS:
+postBehaviorType : PostBehavior</p>
+<blockquote>
+<div><p>Type of post behavior to use.</p>
+</div></blockquote>
+<p>See ‘PostBehavior’ enumeration for list of available values.</p>
+<dl class="simple">
+<dt>postBehavior<span class="classifier">Vec4</span></dt><dd><p>Post behavior value to use.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.setSourceAttributeId">
+<span class="sig-name descname"><span class="pre">setSourceAttributeId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ParameterizationLut)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)sourceHandler</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(AttributeName)sourceAttribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)componentIndex</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.setSourceAttributeId" title="Permalink to this definition"></a></dt>
+<dd><dl>
+<dt>Change the source attribute of the LUT.</dt><dd><p>PARAMETERS:
+sourceHandler : int</p>
+<blockquote>
+<div><p>Source attribute’s handler.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>sourceAttribute<span class="classifier">AttributeName</span></dt><dd><p>Name of the source attribute of LUT.</p>
+</dd>
+</dl>
+<p>See ‘AttributeName’ enumeration for list of available values.</p>
+<dl class="simple">
+<dt>componentIndex<span class="classifier">int</span></dt><dd><p>Component index of the source attribute.</p>
+</dd>
+</dl>
+</dd>
+<dt>setSourceAttributeId( (ParameterizationLut)arg1, (int)sourceHandler, (object)sourceAttribute, (int)componentIndex) -&gt; None :</dt><dd><p>Change the source attribute of the LUT (advanced use).
+PARAMETERS:
+sourceHandler : int</p>
+<blockquote>
+<div><p>Source attribute’s handler.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>sourceAttribute<span class="classifier">str</span></dt><dd><p>Name of the source attribute of LUT.</p>
+</dd>
+<dt>componentIndex<span class="classifier">int</span></dt><dd><p>Component index of the source attribute.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.setSourceSunHeight">
+<span class="sig-name descname"><span class="pre">setSourceSunHeight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(ParameterizationLut)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.setSourceSunHeight" title="Permalink to this definition"></a></dt>
+<dd><p>Set the source attribute of the LUT to ‘ParameterizationSunHeight’.
+Equivalent to setSourceAttributeId(SunId, ParameterizationLut.ParameterizationSunHeight)</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.attributeList">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">attributeList</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.attributeList" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+List of all attributes currently contained by the parameterization LUT.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.enabled">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">enabled</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.enabled" title="Permalink to this definition"></a></dt>
+<dd><p>Flag use to enable or disable the LUT parameterization</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.internalValue">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">internalValue</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.internalValue" title="Permalink to this definition"></a></dt>
+<dd><p>Input value to use for basic parameterization</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.pilotedAttributeList">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pilotedAttributeList</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.pilotedAttributeList" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+List of all attributes currently piloted by the parameterization LUT.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.postBehavior">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postBehavior</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.postBehavior" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Behavior of the attribute at end of parameterization</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.postValue">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postValue</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.postValue" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Value of the attribute at end of parameterization.
+When using a SetGivenValue post behavior</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.srcAttributID">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">srcAttributID</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.srcAttributID" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Name of the source attribute of the LUT parameterization</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.srcComponentIndex">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">srcComponentIndex</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.srcComponentIndex" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.ParameterizationLut.srcHandlerID">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">srcHandlerID</span></span><a class="headerlink" href="#pySkyExplorer.ParameterizationLut.srcHandlerID" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+ID of the source handler of the LUT parameterization</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.OrbitalPlace.html" class="btn btn-neutral float-left" title="pySkyExplorer.OrbitalPlace" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.Patch.html" class="btn btn-neutral float-right" title="pySkyExplorer.Patch" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

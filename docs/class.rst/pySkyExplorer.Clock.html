@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.Clock &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.Comet" href="pySkyExplorer.Comet.html" />
+    <link rel="prev" title="pySkyExplorer.Chart2D" href="pySkyExplorer.Chart2D.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.Clock</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.Clock"><code class="docutils literal notranslate"><span class="pre">Clock</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.ClockName"><code class="docutils literal notranslate"><span class="pre">Clock.ClockName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.Modelset"><code class="docutils literal notranslate"><span class="pre">Clock.Modelset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setBackgroundColor"><code class="docutils literal notranslate"><span class="pre">Clock.setBackgroundColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setBackgroundTexture"><code class="docutils literal notranslate"><span class="pre">Clock.setBackgroundTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setDisplaySecondsHand"><code class="docutils literal notranslate"><span class="pre">Clock.setDisplaySecondsHand()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setDistance"><code class="docutils literal notranslate"><span class="pre">Clock.setDistance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setForegroundColor"><code class="docutils literal notranslate"><span class="pre">Clock.setForegroundColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setForegroundTexture"><code class="docutils literal notranslate"><span class="pre">Clock.setForegroundTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setHoursHandColor"><code class="docutils literal notranslate"><span class="pre">Clock.setHoursHandColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setHoursHandTexture"><code class="docutils literal notranslate"><span class="pre">Clock.setHoursHandTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setIntensity"><code class="docutils literal notranslate"><span class="pre">Clock.setIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setMinutesHandColor"><code class="docutils literal notranslate"><span class="pre">Clock.setMinutesHandColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setMinutesHandTexture"><code class="docutils literal notranslate"><span class="pre">Clock.setMinutesHandTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setModelset"><code class="docutils literal notranslate"><span class="pre">Clock.setModelset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setParent"><code class="docutils literal notranslate"><span class="pre">Clock.setParent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setPosition"><code class="docutils literal notranslate"><span class="pre">Clock.setPosition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setSecondsHandColor"><code class="docutils literal notranslate"><span class="pre">Clock.setSecondsHandColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setSecondsHandTexture"><code class="docutils literal notranslate"><span class="pre">Clock.setSecondsHandTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setSize"><code class="docutils literal notranslate"><span class="pre">Clock.setSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.setTimezoneName"><code class="docutils literal notranslate"><span class="pre">Clock.setTimezoneName()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.backgroundColor"><code class="docutils literal notranslate"><span class="pre">Clock.backgroundColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.backgroundTexture"><code class="docutils literal notranslate"><span class="pre">Clock.backgroundTexture</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.displaySecondsHand"><code class="docutils literal notranslate"><span class="pre">Clock.displaySecondsHand</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.distance"><code class="docutils literal notranslate"><span class="pre">Clock.distance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.foregroundColor"><code class="docutils literal notranslate"><span class="pre">Clock.foregroundColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.foregroundTexture"><code class="docutils literal notranslate"><span class="pre">Clock.foregroundTexture</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.hoursHandColor"><code class="docutils literal notranslate"><span class="pre">Clock.hoursHandColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.hoursHandTexture"><code class="docutils literal notranslate"><span class="pre">Clock.hoursHandTexture</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.id"><code class="docutils literal notranslate"><span class="pre">Clock.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.intensity"><code class="docutils literal notranslate"><span class="pre">Clock.intensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.minutesHandColor"><code class="docutils literal notranslate"><span class="pre">Clock.minutesHandColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.minutesHandTexture"><code class="docutils literal notranslate"><span class="pre">Clock.minutesHandTexture</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.name"><code class="docutils literal notranslate"><span class="pre">Clock.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.osgId"><code class="docutils literal notranslate"><span class="pre">Clock.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.parent"><code class="docutils literal notranslate"><span class="pre">Clock.parent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.position"><code class="docutils literal notranslate"><span class="pre">Clock.position</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.secondsHandColor"><code class="docutils literal notranslate"><span class="pre">Clock.secondsHandColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.secondsHandTexture"><code class="docutils literal notranslate"><span class="pre">Clock.secondsHandTexture</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.size"><code class="docutils literal notranslate"><span class="pre">Clock.size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Clock.timezoneName"><code class="docutils literal notranslate"><span class="pre">Clock.timezoneName</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.Clock</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.Clock.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-clock">
+<h1>pySkyExplorer.Clock<a class="headerlink" href="#pyskyexplorer-clock" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">Clock</span></span><a class="headerlink" href="#pySkyExplorer.Clock" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.ClockName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ClockName</span></span><a class="headerlink" href="#pySkyExplorer.Clock.ClockName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available clock name.</p>
+<p><strong>InvalidClock</strong></p>
+<p><strong>Clock001</strong></p>
+<p><strong>Clock002</strong></p>
+<p><strong>Clock003</strong></p>
+<p><strong>Clock004</strong></p>
+<p><strong>Clock005</strong></p>
+<p><strong>Clock006</strong></p>
+<p><strong>Clock007</strong></p>
+<p><strong>Clock008</strong></p>
+<p><strong>Clock009</strong></p>
+<p><strong>Clock010</strong></p>
+<p><strong>StudioReservedClock</strong></p>
+<p><strong>ClockCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.Modelset">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Modelset</span></span><a class="headerlink" href="#pySkyExplorer.Clock.Modelset" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available modelset for clock.</p>
+<p><strong>InvalidModelset</strong></p>
+<p><strong>SystemClock001</strong></p>
+<p><strong>ModelsetCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setBackgroundColor">
+<span class="sig-name descname"><span class="pre">setBackgroundColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)backgroundColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setBackgroundColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+backgroundColor : Vec
+Color of the background of the clock.
+Color will be multiplied by the background texture color.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setBackgroundTexture">
+<span class="sig-name descname"><span class="pre">setBackgroundTexture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)backgroundTexture</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setBackgroundTexture" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+backgroundTexture : str
+Path to the background texture.
+Relative to user folder.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setDisplaySecondsHand">
+<span class="sig-name descname"><span class="pre">setDisplaySecondsHand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)displaySecondsHand</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setDisplaySecondsHand" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+displaySecondsHand : bool
+Displays, respectively hides the seconds hand.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setDistance">
+<span class="sig-name descname"><span class="pre">setDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)distance</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setDistance" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+distance : double
+Distance of the clock from it’s parent center. Default is 1.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setForegroundColor">
+<span class="sig-name descname"><span class="pre">setForegroundColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)foregroundColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setForegroundColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+foregroundColor : Vec
+Color of the foreground of the clock.
+Color will be multiplied by the foreground texture color.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setForegroundTexture">
+<span class="sig-name descname"><span class="pre">setForegroundTexture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)foregroundTexture</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setForegroundTexture" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+foregroundTexture : str
+Path to the foreground texture.
+Relative to user folder.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setHoursHandColor">
+<span class="sig-name descname"><span class="pre">setHoursHandColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)hoursHandColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setHoursHandColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+hoursHandColor : Vec
+Color of the hours hand of the clock.
+Color will be multiplied by the hours hand texture color.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setHoursHandTexture">
+<span class="sig-name descname"><span class="pre">setHoursHandTexture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)hoursHandTexture</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setHoursHandTexture" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+hoursHandTexture : str
+Path to the hours hand texture.
+Relative to user folder.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setIntensity">
+<span class="sig-name descname"><span class="pre">setIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+intensity : double
+Intensity of the clock.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setMinutesHandColor">
+<span class="sig-name descname"><span class="pre">setMinutesHandColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)minutesHandColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setMinutesHandColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+minutesHandColor : Vec
+Color of the minutes hand of the clock.
+Color will be multiplied by the minutes hand texture color.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setMinutesHandTexture">
+<span class="sig-name descname"><span class="pre">setMinutesHandTexture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)minutesHandTexture</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setMinutesHandTexture" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+minutesHandTexture : str
+Path to the minutes hand texture.
+Relative to user folder.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setModelset">
+<span class="sig-name descname"><span class="pre">setModelset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Modelset)modelset</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setModelset" title="Permalink to this definition"></a></dt>
+<dd><p>Change the modelset of the clock.
+PARAMETERS:
+modelset : Modelset</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setParent">
+<span class="sig-name descname"><span class="pre">setParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)parent</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setParent" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+parent : int
+Id of the clock’s parent port in database.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setPosition">
+<span class="sig-name descname"><span class="pre">setPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)position</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setPosition" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+position : Vec
+Position of the clock relative to it’s parent coordinate system.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setSecondsHandColor">
+<span class="sig-name descname"><span class="pre">setSecondsHandColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)secondsHandColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setSecondsHandColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+secondsHandColor : Vec
+Color of the seconds hand of the clock.
+Color will be multiplied by the seconds hand texture color.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setSecondsHandTexture">
+<span class="sig-name descname"><span class="pre">setSecondsHandTexture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)secondsHandTexture</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setSecondsHandTexture" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+secondsHandTexture : str
+Path to the seconds hand texture.
+Relative to user folder.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setSize">
+<span class="sig-name descname"><span class="pre">setSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)size</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setSize" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+size : double
+Size of the clock. Default is 1.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.setTimezoneName">
+<span class="sig-name descname"><span class="pre">setTimezoneName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Clock)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)timezoneName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Clock.setTimezoneName" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+timezoneName : str
+Timezone used to convert time displayed by the clock.
+Timezone strings are the same as Insert text.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.backgroundColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">backgroundColor</span></span><a class="headerlink" href="#pySkyExplorer.Clock.backgroundColor" title="Permalink to this definition"></a></dt>
+<dd><p>Color of the background of the clock.
+Color will be multiplied by the background texture color.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.backgroundTexture">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">backgroundTexture</span></span><a class="headerlink" href="#pySkyExplorer.Clock.backgroundTexture" title="Permalink to this definition"></a></dt>
+<dd><p>Path to the background texture.
+Relative to user folder.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.displaySecondsHand">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">displaySecondsHand</span></span><a class="headerlink" href="#pySkyExplorer.Clock.displaySecondsHand" title="Permalink to this definition"></a></dt>
+<dd><p>Displays, respectively hides the seconds hand.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.distance">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distance</span></span><a class="headerlink" href="#pySkyExplorer.Clock.distance" title="Permalink to this definition"></a></dt>
+<dd><p>Distance of the clock from it’s parent center. Default is 1.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.foregroundColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">foregroundColor</span></span><a class="headerlink" href="#pySkyExplorer.Clock.foregroundColor" title="Permalink to this definition"></a></dt>
+<dd><p>Color of the foreground of the clock.
+Color will be multiplied by the foreground texture color.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.foregroundTexture">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">foregroundTexture</span></span><a class="headerlink" href="#pySkyExplorer.Clock.foregroundTexture" title="Permalink to this definition"></a></dt>
+<dd><p>Path to the foreground texture.
+Relative to user folder.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.hoursHandColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hoursHandColor</span></span><a class="headerlink" href="#pySkyExplorer.Clock.hoursHandColor" title="Permalink to this definition"></a></dt>
+<dd><p>Color of the hours hand of the clock.
+Color will be multiplied by the hours hand texture color.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.hoursHandTexture">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hoursHandTexture</span></span><a class="headerlink" href="#pySkyExplorer.Clock.hoursHandTexture" title="Permalink to this definition"></a></dt>
+<dd><p>Path to the hours hand texture.
+Relative to user folder.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.Clock.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pySkyExplorer.Clock.intensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the clock.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.minutesHandColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">minutesHandColor</span></span><a class="headerlink" href="#pySkyExplorer.Clock.minutesHandColor" title="Permalink to this definition"></a></dt>
+<dd><p>Color of the minutes hand of the clock.
+Color will be multiplied by the minutes hand texture color.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.minutesHandTexture">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">minutesHandTexture</span></span><a class="headerlink" href="#pySkyExplorer.Clock.minutesHandTexture" title="Permalink to this definition"></a></dt>
+<dd><p>Path to the minutes hand texture.
+Relative to user folder.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.Clock.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.Clock.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.parent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#pySkyExplorer.Clock.parent" title="Permalink to this definition"></a></dt>
+<dd><p>Id of the clock’s parent port in database.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.position">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#pySkyExplorer.Clock.position" title="Permalink to this definition"></a></dt>
+<dd><p>Position of the clock relative to it’s parent coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.secondsHandColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">secondsHandColor</span></span><a class="headerlink" href="#pySkyExplorer.Clock.secondsHandColor" title="Permalink to this definition"></a></dt>
+<dd><p>Color of the seconds hand of the clock.
+Color will be multiplied by the seconds hand texture color.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.secondsHandTexture">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">secondsHandTexture</span></span><a class="headerlink" href="#pySkyExplorer.Clock.secondsHandTexture" title="Permalink to this definition"></a></dt>
+<dd><p>Path to the seconds hand texture.
+Relative to user folder.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#pySkyExplorer.Clock.size" title="Permalink to this definition"></a></dt>
+<dd><p>Size of the clock. Default is 1.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Clock.timezoneName">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timezoneName</span></span><a class="headerlink" href="#pySkyExplorer.Clock.timezoneName" title="Permalink to this definition"></a></dt>
+<dd><p>Timezone used to convert time displayed by the clock.
+Timezone strings are the same as Insert text.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.Chart2D.html" class="btn btn-neutral float-left" title="pySkyExplorer.Chart2D" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.Comet.html" class="btn btn-neutral float-right" title="pySkyExplorer.Comet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

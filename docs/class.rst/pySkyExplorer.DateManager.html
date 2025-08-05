@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.DateManager &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.DomePointer" href="pySkyExplorer.DomePointer.html" />
+    <link rel="prev" title="pySkyExplorer.DMX512" href="pySkyExplorer.DMX512.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.DateManager</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.DateManager"><code class="docutils literal notranslate"><span class="pre">DateManager</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.MotionType"><code class="docutils literal notranslate"><span class="pre">DateManager.MotionType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.SiderealTimeDirection"><code class="docutils literal notranslate"><span class="pre">DateManager.SiderealTimeDirection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.SiderealTimeType"><code class="docutils literal notranslate"><span class="pre">DateManager.SiderealTimeType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.TimeZone"><code class="docutils literal notranslate"><span class="pre">DateManager.TimeZone</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.localDate"><code class="docutils literal notranslate"><span class="pre">DateManager.localDate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.reachSiderealTime"><code class="docutils literal notranslate"><span class="pre">DateManager.reachSiderealTime()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.setCurrentDate"><code class="docutils literal notranslate"><span class="pre">DateManager.setCurrentDate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.setCurrentDateTime"><code class="docutils literal notranslate"><span class="pre">DateManager.setCurrentDateTime()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.setDateTime"><code class="docutils literal notranslate"><span class="pre">DateManager.setDateTime()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.setJulianDate"><code class="docutils literal notranslate"><span class="pre">DateManager.setJulianDate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.setLocalDate"><code class="docutils literal notranslate"><span class="pre">DateManager.setLocalDate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.setMotionType"><code class="docutils literal notranslate"><span class="pre">DateManager.setMotionType()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.setTimeDaemonEnabled"><code class="docutils literal notranslate"><span class="pre">DateManager.setTimeDaemonEnabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.siderealTimeDelta"><code class="docutils literal notranslate"><span class="pre">DateManager.siderealTimeDelta()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.stop"><code class="docutils literal notranslate"><span class="pre">DateManager.stop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.systemDate"><code class="docutils literal notranslate"><span class="pre">DateManager.systemDate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.julianDate"><code class="docutils literal notranslate"><span class="pre">DateManager.julianDate</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.motionType"><code class="docutils literal notranslate"><span class="pre">DateManager.motionType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.siderealTime"><code class="docutils literal notranslate"><span class="pre">DateManager.siderealTime</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.timeDaemonEnabled"><code class="docutils literal notranslate"><span class="pre">DateManager.timeDaemonEnabled</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DateManager.timeSpeed"><code class="docutils literal notranslate"><span class="pre">DateManager.timeSpeed</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.DateManager</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.DateManager.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-datemanager">
+<h1>pySkyExplorer.DateManager<a class="headerlink" href="#pyskyexplorer-datemanager" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">DateManager</span></span><a class="headerlink" href="#pySkyExplorer.DateManager" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.MotionType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MotionType</span></span><a class="headerlink" href="#pySkyExplorer.DateManager.MotionType" title="Permalink to this definition"></a></dt>
+<dd><p>Type of time motion use to reach a date.</p>
+<p><strong>InvalidMotionType</strong></p>
+<p><strong>MotionDiurnal</strong></p>
+<p><strong>MotionAnnual</strong></p>
+<p><strong>MotionAnalemma</strong></p>
+<p><strong>MotionPrecession</strong></p>
+<p><strong>MotionTypeCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.SiderealTimeDirection">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SiderealTimeDirection</span></span><a class="headerlink" href="#pySkyExplorer.DateManager.SiderealTimeDirection" title="Permalink to this definition"></a></dt>
+<dd><p>Direction in witch to reach a sidereal time</p>
+<p><strong>InvalidSiderealTimeDirection</strong></p>
+<p><strong>Forward</strong></p>
+<p><strong>Back</strong></p>
+<p><strong>Nearest</strong></p>
+<p><strong>SiderealTimeDirectionCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.SiderealTimeType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SiderealTimeType</span></span><a class="headerlink" href="#pySkyExplorer.DateManager.SiderealTimeType" title="Permalink to this definition"></a></dt>
+<dd><p>Type of movement to reach a sidereal time</p>
+<p><strong>InvalidSiderealTimeType</strong></p>
+<p><strong>Duration</strong></p>
+<p><strong>Speed</strong></p>
+<p><strong>SiderealTimeTypeCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.TimeZone">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TimeZone</span></span><a class="headerlink" href="#pySkyExplorer.DateManager.TimeZone" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidTimeZone</strong></p>
+<p><strong>DefaultTimeZone</strong></p>
+<p><strong>UTC_M_12_00_IDL</strong></p>
+<p><strong>UTC_M_11_00_COO</strong></p>
+<p><strong>UTC_M_10_00_HAW</strong></p>
+<p><strong>UTC_M_09_00_ALA</strong></p>
+<p><strong>UTC_M_08_00_BAJ</strong></p>
+<p><strong>UTC_M_08_00_PAC</strong></p>
+<p><strong>UTC_M_07_00_ARI</strong></p>
+<p><strong>UTC_M_07_00_CHI</strong></p>
+<p><strong>UTC_M_07_00_MOU</strong></p>
+<p><strong>UTC_M_06_00_CENTRALA</strong></p>
+<p><strong>UTC_M_06_00_CENTRALT</strong></p>
+<p><strong>UTC_M_06_00_GUA</strong></p>
+<p><strong>UTC_M_06_00_SAS</strong></p>
+<p><strong>UTC_M_05_00_BOG</strong></p>
+<p><strong>UTC_M_05_00_EAS</strong></p>
+<p><strong>UTC_M_05_00_IND</strong></p>
+<p><strong>UTC_M_04_30_CAR</strong></p>
+<p><strong>UTC_M_04_00_ASU</strong></p>
+<p><strong>UTC_M_04_00_ATL</strong></p>
+<p><strong>UTC_M_04_00_CUI</strong></p>
+<p><strong>UTC_M_04_00_GEO</strong></p>
+<p><strong>UTC_M_04_00_SAN</strong></p>
+<p><strong>UTC_M_03_30_NEW</strong></p>
+<p><strong>UTC_M_03_00_BRA</strong></p>
+<p><strong>UTC_M_03_00_BUE</strong></p>
+<p><strong>UTC_M_03_00_CAY</strong></p>
+<p><strong>UTC_M_03_00_GRE</strong></p>
+<p><strong>UTC_M_03_00_MON</strong></p>
+<p><strong>UTC_M_03_00_SAL</strong></p>
+<p><strong>UTC_M_02_00_COO</strong></p>
+<p><strong>UTC_M_02_00_MID</strong></p>
+<p><strong>UTC_M_01_00_AZO</strong></p>
+<p><strong>UTC_M_01_00_CAP</strong></p>
+<p><strong>UTC_P_00_00_CAS</strong></p>
+<p><strong>UTC_P_00_00_COO</strong></p>
+<p><strong>UTC_P_00_00_DUB</strong></p>
+<p><strong>UTC_P_00_00_MON</strong></p>
+<p><strong>UTC_P_01_00_AMS</strong></p>
+<p><strong>UTC_P_01_00_BEL</strong></p>
+<p><strong>UTC_P_01_00_BRU</strong></p>
+<p><strong>UTC_P_01_00_SAR</strong></p>
+<p><strong>UTC_P_01_00_WES</strong></p>
+<p><strong>UTC_P_01_00_WIN</strong></p>
+<p><strong>UTC_P_02_00_ATH</strong></p>
+<p><strong>UTC_P_02_00_BEI</strong></p>
+<p><strong>UTC_P_02_00_CAI</strong></p>
+<p><strong>UTC_P_02_00_DAM</strong></p>
+<p><strong>UTC_P_02_00_EEU</strong></p>
+<p><strong>UTC_P_02_00_HAR</strong></p>
+<p><strong>UTC_P_02_00_HEL</strong></p>
+<p><strong>UTC_P_02_00_IST</strong></p>
+<p><strong>UTC_P_02_00_JER</strong></p>
+<p><strong>UTC_P_03_00_AMM</strong></p>
+<p><strong>UTC_P_03_00_BAG</strong></p>
+<p><strong>UTC_P_03_00_KAL</strong></p>
+<p><strong>UTC_P_03_00_KUW</strong></p>
+<p><strong>UTC_P_03_00_NAI</strong></p>
+<p><strong>UTC_P_03_30_TEH</strong></p>
+<p><strong>UTC_P_04_00_ABU</strong></p>
+<p><strong>UTC_P_04_00_BAK</strong></p>
+<p><strong>UTC_P_04_00_MOS</strong></p>
+<p><strong>UTC_P_04_00_POR</strong></p>
+<p><strong>UTC_P_04_00_TSI</strong></p>
+<p><strong>UTC_P_04_00_YER</strong></p>
+<p><strong>UTC_P_04_30_KAB</strong></p>
+<p><strong>UTC_P_05_00_ISL</strong></p>
+<p><strong>UTC_P_05_00_TAS</strong></p>
+<p><strong>UTC_P_05_30_CHE</strong></p>
+<p><strong>UTC_P_05_30_SRI</strong></p>
+<p><strong>UTC_P_05_45_KAT</strong></p>
+<p><strong>UTC_P_06_00_AST</strong></p>
+<p><strong>UTC_P_06_00_DHA</strong></p>
+<p><strong>UTC_P_06_00_EKA</strong></p>
+<p><strong>UTC_P_06_30_YAN</strong></p>
+<p><strong>UTC_P_07_00_BAN</strong></p>
+<p><strong>UTC_P_07_00_NOV</strong></p>
+<p><strong>UTC_P_08_00_BEI</strong></p>
+<p><strong>UTC_P_08_00_KRA</strong></p>
+<p><strong>UTC_P_08_00_KUA</strong></p>
+<p><strong>UTC_P_08_00_PER</strong></p>
+<p><strong>UTC_P_08_00_TAI</strong></p>
+<p><strong>UTC_P_08_00_ULA</strong></p>
+<p><strong>UTC_P_09_00_IRK</strong></p>
+<p><strong>UTC_P_09_00_OSA</strong></p>
+<p><strong>UTC_P_09_00_SEO</strong></p>
+<p><strong>UTC_P_09_30_ADE</strong></p>
+<p><strong>UTC_P_09_30_DAR</strong></p>
+<p><strong>UTC_P_10_00_BRI</strong></p>
+<p><strong>UTC_P_10_00_CAN</strong></p>
+<p><strong>UTC_P_10_00_GUA</strong></p>
+<p><strong>UTC_P_10_00_HOB</strong></p>
+<p><strong>UTC_P_10_00_YAK</strong></p>
+<p><strong>UTC_P_11_00_SOL</strong></p>
+<p><strong>UTC_P_11_00_VLA</strong></p>
+<p><strong>UTC_P_12_00_AUC</strong></p>
+<p><strong>UTC_P_12_00_COO</strong></p>
+<p><strong>UTC_P_12_00_FIJ</strong></p>
+<p><strong>UTC_P_12_00_MAG</strong></p>
+<p><strong>UTC_P_13_00_NUK</strong></p>
+<p><strong>UTC_P_13_00_SAM</strong></p>
+<p><strong>TimeZoneCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.localDate">
+<span class="sig-name descname"><span class="pre">localDate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DateManager)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)timezone</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DateManager.localDate" title="Permalink to this definition"></a></dt>
+<dd><p>Get the current julian date of the simulation according to given time zone.
+PARAMETERS:
+timezone : str default value :</p>
+<blockquote>
+<div><p>Name of the time zone used to convert date.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.reachSiderealTime">
+<span class="sig-name descname"><span class="pre">reachSiderealTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DateManager)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)targetSidTime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(SiderealTimeDirection)direction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(SiderealTimeType)type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)speed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DateManager.reachSiderealTime" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+targetSidTime : double</p>
+<p>direction : SiderealTimeDirection default value : Forward</p>
+<p>type : SiderealTimeType default value : Duration</p>
+<p>speed : double default value : 0</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animation used for the time motion.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.setCurrentDate">
+<span class="sig-name descname"><span class="pre">setCurrentDate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DateManager)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)hour</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)minute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)second</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(TimeZone)tz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DateManager.setCurrentDate" title="Permalink to this definition"></a></dt>
+<dd><p>Set simulation date to current date with a given time
+PARAMETERS:
+hour : int</p>
+<p>minute : int</p>
+<p>second : int</p>
+<p>tz : TimeZone</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.setCurrentDateTime">
+<span class="sig-name descname"><span class="pre">setCurrentDateTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DateManager)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DateManager.setCurrentDateTime" title="Permalink to this definition"></a></dt>
+<dd><p>Set simulation date and time to current date and time
+PARAMETERS:
+animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.setDateTime">
+<span class="sig-name descname"><span class="pre">setDateTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DateManager)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)year</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)month</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)day</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)hour</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)minute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)second</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(TimeZone)tz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DateManager.setDateTime" title="Permalink to this definition"></a></dt>
+<dd><p>Set simulation date and time
+PARAMETERS:
+year : int</p>
+<p>month : int</p>
+<p>day : int</p>
+<p>hour : int</p>
+<p>minute : int</p>
+<p>second : int</p>
+<p>tz : TimeZone</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.setJulianDate">
+<span class="sig-name descname"><span class="pre">setJulianDate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DateManager)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)julianDate</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DateManager.setJulianDate" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+julianDate : double
+Current julian date of the simulation.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.setLocalDate">
+<span class="sig-name descname"><span class="pre">setLocalDate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DateManager)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)timezone</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DateManager.setLocalDate" title="Permalink to this definition"></a></dt>
+<dd><p>Change simulation date according to a timezone
+PARAMETERS:
+value : double</p>
+<blockquote>
+<div><p>Date to reach (julian date in timezone system).</p>
+</div></blockquote>
+<dl class="simple">
+<dt>timezone<span class="classifier">str default value</span><span class="classifier"></span></dt><dd><p>Time zone of the given date value.</p>
+</dd>
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animation used for the time motion.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.setMotionType">
+<span class="sig-name descname"><span class="pre">setMotionType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DateManager)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(MotionType)motionType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DateManager.setMotionType" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+motionType : MotionType
+Current type of time motion.
+See ‘MotionType’ enumeration documentation for available values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.setTimeDaemonEnabled">
+<span class="sig-name descname"><span class="pre">setTimeDaemonEnabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DateManager)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)timeDaemonEnabled</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DateManager.setTimeDaemonEnabled" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+timeDaemonEnabled : bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.siderealTimeDelta">
+<span class="sig-name descname"><span class="pre">siderealTimeDelta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DateManager)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)targetSidTime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(SiderealTimeDirection)direction</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DateManager.siderealTimeDelta" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+targetSidTime : double</p>
+<p>direction : SiderealTimeDirection default value : Forward</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.stop">
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DateManager)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DateManager.stop" title="Permalink to this definition"></a></dt>
+<dd><p>Stop the current time motion. If no time motion in progress, it has no effect.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.systemDate">
+<span class="sig-name descname"><span class="pre">systemDate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DateManager)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DateManager.systemDate" title="Permalink to this definition"></a></dt>
+<dd><p>Get the system julian date according to the system time zone.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.julianDate">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">julianDate</span></span><a class="headerlink" href="#pySkyExplorer.DateManager.julianDate" title="Permalink to this definition"></a></dt>
+<dd><p>Current julian date of the simulation.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.motionType">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">motionType</span></span><a class="headerlink" href="#pySkyExplorer.DateManager.motionType" title="Permalink to this definition"></a></dt>
+<dd><p>Current type of time motion.
+See ‘MotionType’ enumeration documentation for available values.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.siderealTime">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">siderealTime</span></span><a class="headerlink" href="#pySkyExplorer.DateManager.siderealTime" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Current sidereal time of the simulation at the greenwitch meridian</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.timeDaemonEnabled">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timeDaemonEnabled</span></span><a class="headerlink" href="#pySkyExplorer.DateManager.timeDaemonEnabled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DateManager.timeSpeed">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timeSpeed</span></span><a class="headerlink" href="#pySkyExplorer.DateManager.timeSpeed" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Current simulation time speed in day(s) per second.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.DMX512.html" class="btn btn-neutral float-left" title="pySkyExplorer.DMX512" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.DomePointer.html" class="btn btn-neutral float-right" title="pySkyExplorer.DomePointer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

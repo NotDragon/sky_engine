@@ -1,0 +1,10 @@
+pySkyExplorer.Planet
+====================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Planet
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

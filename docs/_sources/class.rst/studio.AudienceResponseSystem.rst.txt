@@ -1,0 +1,10 @@
+studio.AudienceResponseSystem
+=============================
+
+.. currentmodule:: studio
+    
+.. autoclass:: AudienceResponseSystem
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

@@ -1,0 +1,10 @@
+pySkyExplorer.Messier
+=====================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Messier
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

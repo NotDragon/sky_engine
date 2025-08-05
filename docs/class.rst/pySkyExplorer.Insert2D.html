@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.Insert2D &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.Insert3D" href="pySkyExplorer.Insert3D.html" />
+    <link rel="prev" title="pySkyExplorer.IndividualStar" href="pySkyExplorer.IndividualStar.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.Insert2D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.Insert2D"><code class="docutils literal notranslate"><span class="pre">Insert2D</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.Insert2DName"><code class="docutils literal notranslate"><span class="pre">Insert2D.Insert2DName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.Insert2DPort"><code class="docutils literal notranslate"><span class="pre">Insert2D.Insert2DPort</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.Orientation"><code class="docutils literal notranslate"><span class="pre">Insert2D.Orientation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.TransitionType"><code class="docutils literal notranslate"><span class="pre">Insert2D.TransitionType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.Type"><code class="docutils literal notranslate"><span class="pre">Insert2D.Type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.VideoState"><code class="docutils literal notranslate"><span class="pre">Insert2D.VideoState</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.portId"><code class="docutils literal notranslate"><span class="pre">Insert2D.portId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.remove"><code class="docutils literal notranslate"><span class="pre">Insert2D.remove()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.setChromaKey"><code class="docutils literal notranslate"><span class="pre">Insert2D.setChromaKey()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.setColor"><code class="docutils literal notranslate"><span class="pre">Insert2D.setColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.setDistance"><code class="docutils literal notranslate"><span class="pre">Insert2D.setDistance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.setFisheyeFOV"><code class="docutils literal notranslate"><span class="pre">Insert2D.setFisheyeFOV()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.setIntensity"><code class="docutils literal notranslate"><span class="pre">Insert2D.setIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.setOrientation"><code class="docutils literal notranslate"><span class="pre">Insert2D.setOrientation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.setParent"><code class="docutils literal notranslate"><span class="pre">Insert2D.setParent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.setPosition"><code class="docutils literal notranslate"><span class="pre">Insert2D.setPosition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.setSize"><code class="docutils literal notranslate"><span class="pre">Insert2D.setSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.setSphericalBottomAngle"><code class="docutils literal notranslate"><span class="pre">Insert2D.setSphericalBottomAngle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.setSphericalLeftAngle"><code class="docutils literal notranslate"><span class="pre">Insert2D.setSphericalLeftAngle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.setSphericalRightAngle"><code class="docutils literal notranslate"><span class="pre">Insert2D.setSphericalRightAngle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.setSphericalTopAngle"><code class="docutils literal notranslate"><span class="pre">Insert2D.setSphericalTopAngle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.setTexture"><code class="docutils literal notranslate"><span class="pre">Insert2D.setTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.setType"><code class="docutils literal notranslate"><span class="pre">Insert2D.setType()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.setVideoState"><code class="docutils literal notranslate"><span class="pre">Insert2D.setVideoState()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.setVolume"><code class="docutils literal notranslate"><span class="pre">Insert2D.setVolume()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.chromaKey"><code class="docutils literal notranslate"><span class="pre">Insert2D.chromaKey</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.color"><code class="docutils literal notranslate"><span class="pre">Insert2D.color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.fisheyeFOV"><code class="docutils literal notranslate"><span class="pre">Insert2D.fisheyeFOV</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.id"><code class="docutils literal notranslate"><span class="pre">Insert2D.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.intensity"><code class="docutils literal notranslate"><span class="pre">Insert2D.intensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.name"><code class="docutils literal notranslate"><span class="pre">Insert2D.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.orientation"><code class="docutils literal notranslate"><span class="pre">Insert2D.orientation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.osgId"><code class="docutils literal notranslate"><span class="pre">Insert2D.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.parent"><code class="docutils literal notranslate"><span class="pre">Insert2D.parent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.position"><code class="docutils literal notranslate"><span class="pre">Insert2D.position</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.size"><code class="docutils literal notranslate"><span class="pre">Insert2D.size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.sphericalBottomAngle"><code class="docutils literal notranslate"><span class="pre">Insert2D.sphericalBottomAngle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.sphericalLeftAngle"><code class="docutils literal notranslate"><span class="pre">Insert2D.sphericalLeftAngle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.sphericalRightAngle"><code class="docutils literal notranslate"><span class="pre">Insert2D.sphericalRightAngle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.sphericalTopAngle"><code class="docutils literal notranslate"><span class="pre">Insert2D.sphericalTopAngle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.texture"><code class="docutils literal notranslate"><span class="pre">Insert2D.texture</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.type"><code class="docutils literal notranslate"><span class="pre">Insert2D.type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.videoDuration"><code class="docutils literal notranslate"><span class="pre">Insert2D.videoDuration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.videoPosition"><code class="docutils literal notranslate"><span class="pre">Insert2D.videoPosition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.videoStartTime"><code class="docutils literal notranslate"><span class="pre">Insert2D.videoStartTime</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.videoState"><code class="docutils literal notranslate"><span class="pre">Insert2D.videoState</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert2D.volume"><code class="docutils literal notranslate"><span class="pre">Insert2D.volume</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.Insert2D</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.Insert2D.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-insert2d">
+<h1>pySkyExplorer.Insert2D<a class="headerlink" href="#pyskyexplorer-insert2d" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">Insert2D</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.Insert2DName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Insert2DName</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.Insert2DName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available insert 2D name.</p>
+<p><strong>InvalidInsert2D</strong></p>
+<p><strong>Insert2D001</strong></p>
+<p><strong>Insert2D002</strong></p>
+<p><strong>Insert2D003</strong></p>
+<p><strong>Insert2D004</strong></p>
+<p><strong>Insert2D005</strong></p>
+<p><strong>Insert2D006</strong></p>
+<p><strong>Insert2D007</strong></p>
+<p><strong>Insert2D008</strong></p>
+<p><strong>Insert2D009</strong></p>
+<p><strong>Insert2D010</strong></p>
+<p><strong>Insert2D011</strong></p>
+<p><strong>Insert2D012</strong></p>
+<p><strong>Insert2D013</strong></p>
+<p><strong>Insert2D014</strong></p>
+<p><strong>Insert2D015</strong></p>
+<p><strong>Insert2D016</strong></p>
+<p><strong>Insert2D017</strong></p>
+<p><strong>Insert2D018</strong></p>
+<p><strong>Insert2D019</strong></p>
+<p><strong>Insert2D020</strong></p>
+<p><strong>Insert2D021</strong></p>
+<p><strong>Insert2D022</strong></p>
+<p><strong>Insert2D023</strong></p>
+<p><strong>Insert2D024</strong></p>
+<p><strong>Insert2D025</strong></p>
+<p><strong>Insert2D026</strong></p>
+<p><strong>Insert2D027</strong></p>
+<p><strong>Insert2D028</strong></p>
+<p><strong>Insert2D029</strong></p>
+<p><strong>Insert2D030</strong></p>
+<p><strong>Insert2D031</strong></p>
+<p><strong>Insert2D032</strong></p>
+<p><strong>Insert2D033</strong></p>
+<p><strong>Insert2D034</strong></p>
+<p><strong>Insert2D035</strong></p>
+<p><strong>Insert2D036</strong></p>
+<p><strong>Insert2D037</strong></p>
+<p><strong>Insert2D038</strong></p>
+<p><strong>Insert2D039</strong></p>
+<p><strong>Insert2D040</strong></p>
+<p><strong>Insert2D041</strong></p>
+<p><strong>Insert2D042</strong></p>
+<p><strong>Insert2D043</strong></p>
+<p><strong>Insert2D044</strong></p>
+<p><strong>Insert2D045</strong></p>
+<p><strong>Insert2D046</strong></p>
+<p><strong>Insert2D047</strong></p>
+<p><strong>Insert2D048</strong></p>
+<p><strong>Insert2D049</strong></p>
+<p><strong>Insert2D050</strong></p>
+<p><strong>Insert2D_Goto001</strong></p>
+<p><strong>Insert2D_Goto002</strong></p>
+<p><strong>Insert2D_Goto003</strong></p>
+<p><strong>Insert2D_Goto004</strong></p>
+<p><strong>Insert2D_Goto005</strong></p>
+<p><strong>Insert2D_AV001</strong></p>
+<p><strong>Insert2D_AV002</strong></p>
+<p><strong>Insert2D_AV003</strong></p>
+<p><strong>Insert2D_AV004</strong></p>
+<p><strong>Insert2D_AV005</strong></p>
+<p><strong>Insert2D_AV006</strong></p>
+<p><strong>Insert2D_AV007</strong></p>
+<p><strong>Insert2D_AV008</strong></p>
+<p><strong>Insert2D_AV009</strong></p>
+<p><strong>Insert2D_AV010</strong></p>
+<p><strong>Insert2D_AV011</strong></p>
+<p><strong>Insert2D_AV012</strong></p>
+<p><strong>Insert2D_AV013</strong></p>
+<p><strong>Insert2D_AV014</strong></p>
+<p><strong>Insert2D_AV015</strong></p>
+<p><strong>Insert2D_AV016</strong></p>
+<p><strong>Insert2D_AV017</strong></p>
+<p><strong>Insert2D_AV018</strong></p>
+<p><strong>Insert2D_AV019</strong></p>
+<p><strong>Insert2D_AV020</strong></p>
+<p><strong>Insert2D_LightPollution</strong></p>
+<p><strong>Insert2D_PreloadImage</strong></p>
+<p><strong>Insert2D_Dynamic001</strong></p>
+<p><strong>Insert2D_Dynamic002</strong></p>
+<p><strong>Insert2D_Dynamic003</strong></p>
+<p><strong>Insert2D_Dynamic004</strong></p>
+<p><strong>Insert2D_Dynamic005</strong></p>
+<p><strong>Insert2D_Dynamic006</strong></p>
+<p><strong>Insert2D_Dynamic007</strong></p>
+<p><strong>Insert2D_Dynamic008</strong></p>
+<p><strong>Insert2D_Dynamic009</strong></p>
+<p><strong>Insert2D_Dynamic010</strong></p>
+<p><strong>Insert2D_Dynamic011</strong></p>
+<p><strong>Insert2D_Dynamic012</strong></p>
+<p><strong>Insert2D_Dynamic013</strong></p>
+<p><strong>Insert2D_Dynamic014</strong></p>
+<p><strong>Insert2D_Dynamic015</strong></p>
+<p><strong>Insert2D_Dynamic016</strong></p>
+<p><strong>Insert2D_Dynamic017</strong></p>
+<p><strong>Insert2D_Dynamic018</strong></p>
+<p><strong>Insert2D_Dynamic019</strong></p>
+<p><strong>Insert2D_Dynamic020</strong></p>
+<p><strong>Insert2D_Dynamic021</strong></p>
+<p><strong>Insert2D_Dynamic022</strong></p>
+<p><strong>Insert2D_Dynamic023</strong></p>
+<p><strong>Insert2D_Dynamic024</strong></p>
+<p><strong>Insert2D_Dynamic025</strong></p>
+<p><strong>Insert2D_Dynamic026</strong></p>
+<p><strong>Insert2D_Dynamic027</strong></p>
+<p><strong>Insert2D_Dynamic028</strong></p>
+<p><strong>Insert2D_Dynamic029</strong></p>
+<p><strong>Insert2D_Dynamic030</strong></p>
+<p><strong>Insert2D_Dynamic031</strong></p>
+<p><strong>Insert2D_Dynamic032</strong></p>
+<p><strong>Insert2D_Dynamic033</strong></p>
+<p><strong>Insert2D_Dynamic034</strong></p>
+<p><strong>Insert2D_Dynamic035</strong></p>
+<p><strong>Insert2D_Dynamic036</strong></p>
+<p><strong>Insert2D_Dynamic037</strong></p>
+<p><strong>Insert2D_Dynamic038</strong></p>
+<p><strong>Insert2D_Dynamic039</strong></p>
+<p><strong>Insert2D_Dynamic040</strong></p>
+<p><strong>Insert2D_Dynamic041</strong></p>
+<p><strong>Insert2D_Dynamic042</strong></p>
+<p><strong>Insert2D_Dynamic043</strong></p>
+<p><strong>Insert2D_Dynamic044</strong></p>
+<p><strong>Insert2D_Dynamic045</strong></p>
+<p><strong>Insert2D_Dynamic046</strong></p>
+<p><strong>Insert2D_Dynamic047</strong></p>
+<p><strong>Insert2D_Dynamic048</strong></p>
+<p><strong>Insert2D_Dynamic049</strong></p>
+<p><strong>Insert2D_Dynamic050</strong></p>
+<p><strong>Insert2D_Dynamic051</strong></p>
+<p><strong>Insert2D_Dynamic052</strong></p>
+<p><strong>Insert2D_Dynamic053</strong></p>
+<p><strong>Insert2D_Dynamic054</strong></p>
+<p><strong>Insert2D_Dynamic055</strong></p>
+<p><strong>Insert2D_Dynamic056</strong></p>
+<p><strong>Insert2D_Dynamic057</strong></p>
+<p><strong>Insert2D_Dynamic058</strong></p>
+<p><strong>Insert2D_Dynamic059</strong></p>
+<p><strong>Insert2D_Dynamic060</strong></p>
+<p><strong>Insert2D_Dynamic061</strong></p>
+<p><strong>Insert2D_Dynamic062</strong></p>
+<p><strong>Insert2D_Dynamic063</strong></p>
+<p><strong>Insert2D_Dynamic064</strong></p>
+<p><strong>Insert2D_Dynamic065</strong></p>
+<p><strong>Insert2D_Dynamic066</strong></p>
+<p><strong>Insert2D_Dynamic067</strong></p>
+<p><strong>Insert2D_Dynamic068</strong></p>
+<p><strong>Insert2D_Dynamic069</strong></p>
+<p><strong>Insert2D_Dynamic070</strong></p>
+<p><strong>Insert2D_Dynamic071</strong></p>
+<p><strong>Insert2D_Dynamic072</strong></p>
+<p><strong>Insert2D_Dynamic073</strong></p>
+<p><strong>Insert2D_Dynamic074</strong></p>
+<p><strong>Insert2D_Dynamic075</strong></p>
+<p><strong>Insert2D_Dynamic076</strong></p>
+<p><strong>Insert2D_Dynamic077</strong></p>
+<p><strong>Insert2D_Dynamic078</strong></p>
+<p><strong>Insert2D_Dynamic079</strong></p>
+<p><strong>Insert2D_Dynamic080</strong></p>
+<p><strong>Insert2D_Dynamic081</strong></p>
+<p><strong>Insert2D_Dynamic082</strong></p>
+<p><strong>Insert2D_Dynamic083</strong></p>
+<p><strong>Insert2D_Dynamic084</strong></p>
+<p><strong>Insert2D_Dynamic085</strong></p>
+<p><strong>Insert2D_Dynamic086</strong></p>
+<p><strong>Insert2D_Dynamic087</strong></p>
+<p><strong>Insert2D_Dynamic088</strong></p>
+<p><strong>Insert2D_Dynamic089</strong></p>
+<p><strong>Insert2D_Dynamic090</strong></p>
+<p><strong>Insert2D_Dynamic091</strong></p>
+<p><strong>Insert2D_Dynamic092</strong></p>
+<p><strong>Insert2D_Dynamic093</strong></p>
+<p><strong>Insert2D_Dynamic094</strong></p>
+<p><strong>Insert2D_Dynamic095</strong></p>
+<p><strong>Insert2D_Dynamic096</strong></p>
+<p><strong>Insert2D_Dynamic097</strong></p>
+<p><strong>Insert2D_Dynamic098</strong></p>
+<p><strong>Insert2D_Dynamic099</strong></p>
+<p><strong>Insert2D_Dynamic100</strong></p>
+<p><strong>Insert2D_Target</strong></p>
+<p><strong>Insert2D_SkyExplorerLogo</strong></p>
+<p><strong>Insert2D_Weather01</strong></p>
+<p><strong>Insert2D_Weather02</strong></p>
+<p><strong>Insert2D_Weather03</strong></p>
+<p><strong>Insert2D_Weather04</strong></p>
+<p><strong>Insert2D_Weather05</strong></p>
+<p><strong>Insert2D185</strong></p>
+<p><strong>Insert2D186</strong></p>
+<p><strong>Insert2D187</strong></p>
+<p><strong>Insert2D188</strong></p>
+<p><strong>Insert2D189</strong></p>
+<p><strong>Insert2D190</strong></p>
+<p><strong>Insert2D191</strong></p>
+<p><strong>Insert2D192</strong></p>
+<p><strong>Insert2D193</strong></p>
+<p><strong>Insert2D194</strong></p>
+<p><strong>Insert2D195</strong></p>
+<p><strong>Insert2D196</strong></p>
+<p><strong>Insert2D197</strong></p>
+<p><strong>Insert2D198</strong></p>
+<p><strong>Insert2D199</strong></p>
+<p><strong>Insert2D200</strong></p>
+<p><strong>Insert2D201</strong></p>
+<p><strong>Insert2D202</strong></p>
+<p><strong>Insert2D203</strong></p>
+<p><strong>Insert2D204</strong></p>
+<p><strong>Insert2D205</strong></p>
+<p><strong>Insert2D206</strong></p>
+<p><strong>Insert2D207</strong></p>
+<p><strong>Insert2D208</strong></p>
+<p><strong>Insert2D209</strong></p>
+<p><strong>Insert2D210</strong></p>
+<p><strong>Insert2D211</strong></p>
+<p><strong>Insert2D212</strong></p>
+<p><strong>Insert2D213</strong></p>
+<p><strong>Insert2D214</strong></p>
+<p><strong>Insert2D215</strong></p>
+<p><strong>Insert2D216</strong></p>
+<p><strong>Insert2D217</strong></p>
+<p><strong>Insert2D218</strong></p>
+<p><strong>Insert2D219</strong></p>
+<p><strong>Insert2D220</strong></p>
+<p><strong>Insert2D_SOS001</strong></p>
+<p><strong>Insert2D_SOS002</strong></p>
+<p><strong>Insert2D_SOS003</strong></p>
+<p><strong>Insert2D_SOS004</strong></p>
+<p><strong>Insert2D_SOS005</strong></p>
+<p><strong>Insert2D_SOS006</strong></p>
+<p><strong>Insert2D_SOS007</strong></p>
+<p><strong>Insert2D_SOS008</strong></p>
+<p><strong>Insert2D_SOS009</strong></p>
+<p><strong>Insert2D_SOS010</strong></p>
+<p><strong>Insert2D_SOS011</strong></p>
+<p><strong>Insert2D_SOS012</strong></p>
+<p><strong>Insert2D_SOS013</strong></p>
+<p><strong>Insert2D_SOS014</strong></p>
+<p><strong>Insert2D_SOS015</strong></p>
+<p><strong>Insert2D_SOS016</strong></p>
+<p><strong>Insert2D_SOS017</strong></p>
+<p><strong>Insert2D_SOS018</strong></p>
+<p><strong>Insert2D_SOS019</strong></p>
+<p><strong>Insert2D_SOS020</strong></p>
+<p><strong>Insert2D_NDI001</strong></p>
+<p><strong>Insert2D_NDI002</strong></p>
+<p><strong>Insert2D_NDI003</strong></p>
+<p><strong>Insert2D_NDI004</strong></p>
+<p><strong>Insert2D_NDI005</strong></p>
+<p><strong>Insert2D_NDI006</strong></p>
+<p><strong>Insert2D_NDI007</strong></p>
+<p><strong>Insert2D_NDI008</strong></p>
+<p><strong>Insert2D_NDI009</strong></p>
+<p><strong>Insert2D_NDI010</strong></p>
+<p><strong>Insert2DCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.Insert2DPort">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Insert2DPort</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.Insert2DPort" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available ports on insert2D</p>
+<p><strong>InvalidInsert2DPort</strong></p>
+<p><strong>CenteredPort</strong></p>
+<p><strong>Insert2DPortCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.Orientation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Orientation</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.Orientation" title="Permalink to this definition"></a></dt>
+<dd><p>Orientation mode of standard insert.</p>
+<p><strong>InvalidOrientation</strong></p>
+<p><strong>Out</strong></p>
+<p><strong>In</strong></p>
+<p><strong>OrientationCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.TransitionType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TransitionType</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.TransitionType" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available texture transition type.</p>
+<p><strong>InvalidTransitionType</strong></p>
+<p><strong>Fade</strong></p>
+<p><strong>CenterOutWipe</strong></p>
+<p><strong>CenterInWipe</strong></p>
+<p><strong>VerticalOutWipe</strong></p>
+<p><strong>VerticalInWipe</strong></p>
+<p><strong>HorizontalOutWipe</strong></p>
+<p><strong>HorizontalInWipe</strong></p>
+<p><strong>PushUp</strong></p>
+<p><strong>PushDown</strong></p>
+<p><strong>PushLeft</strong></p>
+<p><strong>PushRight</strong></p>
+<p><strong>SlideUp</strong></p>
+<p><strong>SlideDown</strong></p>
+<p><strong>SlideLeft</strong></p>
+<p><strong>SlideRight</strong></p>
+<p><strong>SlideUpLeft</strong></p>
+<p><strong>SlideUpRight</strong></p>
+<p><strong>SlideDownLeft</strong></p>
+<p><strong>SlideDownRight</strong></p>
+<p><strong>TransitionTypeCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.Type">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.Type" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available insert type.</p>
+<p><strong>InvalidType</strong></p>
+<p><strong>Conic</strong></p>
+<p><strong>FakeTypeDoNotUse</strong></p>
+<p><strong>Spherical</strong></p>
+<p><strong>Fisheye</strong></p>
+<p><strong>Avm</strong></p>
+<p><strong>TypeCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.VideoState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">VideoState</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.VideoState" title="Permalink to this definition"></a></dt>
+<dd><p>Available states for video playing.</p>
+<p><strong>InvalidVideoState</strong></p>
+<p><strong>VideoStateStop</strong></p>
+<p><strong>VideoStatePlay</strong></p>
+<p><strong>VideoStatePause</strong></p>
+<p><strong>VideoStatePlayLoop</strong></p>
+<p><strong>VideoStateCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.portId">
+<span class="sig-name descname"><span class="pre">portId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Insert2DPort)portName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.portId" title="Permalink to this definition"></a></dt>
+<dd><p>Return the id of the given port
+PARAMETERS:
+portName : Insert2DPort</p>
+<blockquote>
+<div><p>Name of the port. See ‘Insert2DPort’ documentation for more information.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.remove" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the insert2D from the scene graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.setChromaKey">
+<span class="sig-name descname"><span class="pre">setChromaKey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)chromaKey</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)tolerance</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.setChromaKey" title="Permalink to this definition"></a></dt>
+<dd><p>Change the chroma key used for transparency
+PARAMETERS:
+chromaKey : Vec</p>
+<blockquote>
+<div><p>Color that will become transparent. (red, green, blue) in range [0;1].</p>
+</div></blockquote>
+<dl class="simple">
+<dt>tolerance<span class="classifier">double</span></dt><dd><p>Tolerance value. Must be in range[0;1]. Greyscale tolerance used to match chroma key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.setColor">
+<span class="sig-name descname"><span class="pre">setColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)color</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.setColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+color : Vec
+Color of the insert2d. If insert is textured, texture color will be multiplied by color value.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.setDistance">
+<span class="sig-name descname"><span class="pre">setDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)distance</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.setDistance" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+distance : double
+Distance of the insert from it’s parent.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.setFisheyeFOV">
+<span class="sig-name descname"><span class="pre">setFisheyeFOV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)fisheyeFOV</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.setFisheyeFOV" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+fisheyeFOV : double
+Fish eye field of view of the insert. Used only with ‘Fisheye’ geometry type.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.setIntensity">
+<span class="sig-name descname"><span class="pre">setIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.setIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+intensity : double
+Intensity of the insert 2D.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.setOrientation">
+<span class="sig-name descname"><span class="pre">setOrientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Orientation)orientation</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.setOrientation" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orientation : Orientation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.setParent">
+<span class="sig-name descname"><span class="pre">setParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)parent</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.setParent" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+parent : int
+Id of the insert’s parent port in database.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.setPosition">
+<span class="sig-name descname"><span class="pre">setPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)position</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.setPosition" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+position : Vec
+Position of the insert relative to it’s parent coordinate system.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.setSize">
+<span class="sig-name descname"><span class="pre">setSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)size</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.setSize" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+size : double
+Size factor of the insert. Used only with ‘Conic’ geometry type</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.setSphericalBottomAngle">
+<span class="sig-name descname"><span class="pre">setSphericalBottomAngle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)sphericalBottomAngle</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.setSphericalBottomAngle" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+sphericalBottomAngle : double
+Minimum height to display panorama image. Unit is degrees, usually in range [0;90]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.setSphericalLeftAngle">
+<span class="sig-name descname"><span class="pre">setSphericalLeftAngle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)sphericalLeftAngle</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.setSphericalLeftAngle" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+sphericalLeftAngle : double
+Minimum azimut to display panorama image. Unit is degrees, usually in range [-180;180]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.setSphericalRightAngle">
+<span class="sig-name descname"><span class="pre">setSphericalRightAngle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)sphericalRightAngle</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.setSphericalRightAngle" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+sphericalRightAngle : double
+Maximum azimut to display panorama image. Unit is degrees, usually in range [-180;180]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.setSphericalTopAngle">
+<span class="sig-name descname"><span class="pre">setSphericalTopAngle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)sphericalTopAngle</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.setSphericalTopAngle" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+sphericalTopAngle : double
+Maximum height to display panorama image. Unit is degrees, usually in range [0;90]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.setTexture">
+<span class="sig-name descname"><span class="pre">setTexture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)texture</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.setTexture" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+texture : str
+Filepath of the texture to display on the insert. Path must be relative to user folder.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.setType">
+<span class="sig-name descname"><span class="pre">setType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Type)type</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.setType" title="Permalink to this definition"></a></dt>
+<dd><dl>
+<dt>PARAMETERS:</dt><dd><p>type : Type</p>
+</dd>
+<dt>setType( (Insert2D)arg1, (Type)key, (Orientation)value) -&gt; None :</dt><dd><p>Change the type of insert’s geometry.
+PARAMETERS:
+key : Type</p>
+<blockquote>
+<div><p>New geometry type of insert. See ‘Type’ documentation for available values.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>value<span class="classifier">Orientation</span></dt><dd><p>New texture orientation type. Used only with ‘Conic’ geometry type. See ‘Orientation’ documentation for available values.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.setVideoState">
+<span class="sig-name descname"><span class="pre">setVideoState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(VideoState)videoState</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.setVideoState" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+videoState : VideoState
+Current state of the video. See ‘VideoState’ documentation for available values.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.setVolume">
+<span class="sig-name descname"><span class="pre">setVolume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert2D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)volume</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.setVolume" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+volume : double
+Audio volume when playing video file with audio tracks 0 by default.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.chromaKey">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">chromaKey</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.chromaKey" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Chroma key of the insert. Values are (red, green, blue, tolerance). Each values are in range [0;1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.color">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.color" title="Permalink to this definition"></a></dt>
+<dd><p>Color of the insert2d. If insert is textured, texture color will be multiplied by color value.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.fisheyeFOV">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fisheyeFOV</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.fisheyeFOV" title="Permalink to this definition"></a></dt>
+<dd><p>Fish eye field of view of the insert. Used only with ‘Fisheye’ geometry type.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.intensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the insert 2D.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.orientation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orientation</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.orientation" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.parent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.parent" title="Permalink to this definition"></a></dt>
+<dd><p>Id of the insert’s parent port in database.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.position">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.position" title="Permalink to this definition"></a></dt>
+<dd><p>Position of the insert relative to it’s parent coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.size" title="Permalink to this definition"></a></dt>
+<dd><p>Size factor of the insert. Used only with ‘Conic’ geometry type</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.sphericalBottomAngle">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sphericalBottomAngle</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.sphericalBottomAngle" title="Permalink to this definition"></a></dt>
+<dd><p>Minimum height to display panorama image. Unit is degrees, usually in range [0;90]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.sphericalLeftAngle">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sphericalLeftAngle</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.sphericalLeftAngle" title="Permalink to this definition"></a></dt>
+<dd><p>Minimum azimut to display panorama image. Unit is degrees, usually in range [-180;180]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.sphericalRightAngle">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sphericalRightAngle</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.sphericalRightAngle" title="Permalink to this definition"></a></dt>
+<dd><p>Maximum azimut to display panorama image. Unit is degrees, usually in range [-180;180]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.sphericalTopAngle">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sphericalTopAngle</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.sphericalTopAngle" title="Permalink to this definition"></a></dt>
+<dd><p>Maximum height to display panorama image. Unit is degrees, usually in range [0;90]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.texture">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">texture</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.texture" title="Permalink to this definition"></a></dt>
+<dd><p>Filepath of the texture to display on the insert. Path must be relative to user folder.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.videoDuration">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">videoDuration</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.videoDuration" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Duration of the video in seconds, in case of video file have been loaded on insert.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.videoPosition">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">videoPosition</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.videoPosition" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Position in seconds inside video. It have no effect if no video is loaded.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.videoStartTime">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">videoStartTime</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.videoStartTime" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Time at which the video starts to play.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.videoState">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">videoState</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.videoState" title="Permalink to this definition"></a></dt>
+<dd><p>Current state of the video. See ‘VideoState’ documentation for available values.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert2D.volume">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">volume</span></span><a class="headerlink" href="#pySkyExplorer.Insert2D.volume" title="Permalink to this definition"></a></dt>
+<dd><p>Audio volume when playing video file with audio tracks 0 by default.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.IndividualStar.html" class="btn btn-neutral float-left" title="pySkyExplorer.IndividualStar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.Insert3D.html" class="btn btn-neutral float-right" title="pySkyExplorer.Insert3D" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

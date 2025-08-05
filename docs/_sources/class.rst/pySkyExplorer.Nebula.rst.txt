@@ -1,0 +1,10 @@
+pySkyExplorer.Nebula
+====================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Nebula
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

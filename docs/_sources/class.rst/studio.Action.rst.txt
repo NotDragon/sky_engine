@@ -1,0 +1,10 @@
+studio.Action
+=============
+
+.. currentmodule:: studio
+    
+.. autoclass:: Action
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

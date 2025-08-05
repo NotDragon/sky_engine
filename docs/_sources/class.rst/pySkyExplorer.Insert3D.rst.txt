@@ -1,0 +1,10 @@
+pySkyExplorer.Insert3D
+======================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Insert3D
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

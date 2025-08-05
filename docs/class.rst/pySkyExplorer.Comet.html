@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.Comet &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.Comment" href="pySkyExplorer.Comment.html" />
+    <link rel="prev" title="pySkyExplorer.Clock" href="pySkyExplorer.Clock.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.Comet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.Comet"><code class="docutils literal notranslate"><span class="pre">Comet</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.CometModelSet"><code class="docutils literal notranslate"><span class="pre">Comet.CometModelSet</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.CometName"><code class="docutils literal notranslate"><span class="pre">Comet.CometName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.CometPort"><code class="docutils literal notranslate"><span class="pre">Comet.CometPort</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.portId"><code class="docutils literal notranslate"><span class="pre">Comet.portId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.setArgumentOfPeriapsis"><code class="docutils literal notranslate"><span class="pre">Comet.setArgumentOfPeriapsis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.setDistanceToPeriapsis"><code class="docutils literal notranslate"><span class="pre">Comet.setDistanceToPeriapsis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.setEccentricity"><code class="docutils literal notranslate"><span class="pre">Comet.setEccentricity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.setInclination"><code class="docutils literal notranslate"><span class="pre">Comet.setInclination()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.setIntensity"><code class="docutils literal notranslate"><span class="pre">Comet.setIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.setLabelIntensity"><code class="docutils literal notranslate"><span class="pre">Comet.setLabelIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.setLabelNameOverride"><code class="docutils literal notranslate"><span class="pre">Comet.setLabelNameOverride()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.setLongitudeOfAscendingNode"><code class="docutils literal notranslate"><span class="pre">Comet.setLongitudeOfAscendingNode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.setModelScale"><code class="docutils literal notranslate"><span class="pre">Comet.setModelScale()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.setOrbitIntensity"><code class="docutils literal notranslate"><span class="pre">Comet.setOrbitIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.setOrbitThickness"><code class="docutils literal notranslate"><span class="pre">Comet.setOrbitThickness()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.setPointerIntensity"><code class="docutils literal notranslate"><span class="pre">Comet.setPointerIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.setPointerType"><code class="docutils literal notranslate"><span class="pre">Comet.setPointerType()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.setStandardModelName"><code class="docutils literal notranslate"><span class="pre">Comet.setStandardModelName()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.setTimeOfLastPeriapsis"><code class="docutils literal notranslate"><span class="pre">Comet.setTimeOfLastPeriapsis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.setUserModelFilename"><code class="docutils literal notranslate"><span class="pre">Comet.setUserModelFilename()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.argumentOfPeriapsis"><code class="docutils literal notranslate"><span class="pre">Comet.argumentOfPeriapsis</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.distanceToPeriapsis"><code class="docutils literal notranslate"><span class="pre">Comet.distanceToPeriapsis</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.eccentricity"><code class="docutils literal notranslate"><span class="pre">Comet.eccentricity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.id"><code class="docutils literal notranslate"><span class="pre">Comet.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.inclination"><code class="docutils literal notranslate"><span class="pre">Comet.inclination</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.intensity"><code class="docutils literal notranslate"><span class="pre">Comet.intensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.labelIntensity"><code class="docutils literal notranslate"><span class="pre">Comet.labelIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.labelNameOverride"><code class="docutils literal notranslate"><span class="pre">Comet.labelNameOverride</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.longitudeOfAscendingNode"><code class="docutils literal notranslate"><span class="pre">Comet.longitudeOfAscendingNode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.modelScale"><code class="docutils literal notranslate"><span class="pre">Comet.modelScale</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.name"><code class="docutils literal notranslate"><span class="pre">Comet.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.orbitIntensity"><code class="docutils literal notranslate"><span class="pre">Comet.orbitIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.orbitThickness"><code class="docutils literal notranslate"><span class="pre">Comet.orbitThickness</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.osgId"><code class="docutils literal notranslate"><span class="pre">Comet.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.pointerIntensity"><code class="docutils literal notranslate"><span class="pre">Comet.pointerIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.pointerType"><code class="docutils literal notranslate"><span class="pre">Comet.pointerType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.standardModelName"><code class="docutils literal notranslate"><span class="pre">Comet.standardModelName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.timeOfLastPeriapsis"><code class="docutils literal notranslate"><span class="pre">Comet.timeOfLastPeriapsis</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Comet.userModelFilename"><code class="docutils literal notranslate"><span class="pre">Comet.userModelFilename</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.Comet</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.Comet.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-comet">
+<h1>pySkyExplorer.Comet<a class="headerlink" href="#pyskyexplorer-comet" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">Comet</span></span><a class="headerlink" href="#pySkyExplorer.Comet" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.CometModelSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CometModelSet</span></span><a class="headerlink" href="#pySkyExplorer.Comet.CometModelSet" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidCometModelSet</strong></p>
+<p><strong>Basic</strong></p>
+<p><strong>Generic3D</strong></p>
+<p><strong>Halley3D</strong></p>
+<p><strong>UserModel</strong></p>
+<p><strong>HaleBopp3D</strong></p>
+<p><strong>Bradfield3D</strong></p>
+<p><strong>Hyakutake3D</strong></p>
+<p><strong>McNaught3D</strong></p>
+<p><strong>CometModelSetCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.CometName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CometName</span></span><a class="headerlink" href="#pySkyExplorer.Comet.CometName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available Comet name.</p>
+<p><strong>InvalidComet</strong></p>
+<p><strong>Comet001</strong></p>
+<p><strong>Comet002</strong></p>
+<p><strong>Comet003</strong></p>
+<p><strong>Comet004</strong></p>
+<p><strong>Comet005</strong></p>
+<p><strong>Comet006</strong></p>
+<p><strong>Comet007</strong></p>
+<p><strong>Comet008</strong></p>
+<p><strong>Comet009</strong></p>
+<p><strong>Comet010</strong></p>
+<p><strong>Comet011</strong></p>
+<p><strong>Comet012</strong></p>
+<p><strong>Comet013</strong></p>
+<p><strong>Comet014</strong></p>
+<p><strong>Comet015</strong></p>
+<p><strong>Comet016</strong></p>
+<p><strong>Comet017</strong></p>
+<p><strong>Comet018</strong></p>
+<p><strong>Comet019</strong></p>
+<p><strong>Comet020</strong></p>
+<p><strong>Comet021</strong></p>
+<p><strong>Comet022</strong></p>
+<p><strong>Comet023</strong></p>
+<p><strong>Comet024</strong></p>
+<p><strong>Comet025</strong></p>
+<p><strong>Comet026</strong></p>
+<p><strong>Comet027</strong></p>
+<p><strong>Comet028</strong></p>
+<p><strong>Comet029</strong></p>
+<p><strong>Comet030</strong></p>
+<p><strong>Comet031</strong></p>
+<p><strong>Comet032</strong></p>
+<p><strong>Comet033</strong></p>
+<p><strong>Comet034</strong></p>
+<p><strong>Comet035</strong></p>
+<p><strong>Comet036</strong></p>
+<p><strong>Comet037</strong></p>
+<p><strong>Comet038</strong></p>
+<p><strong>Comet039</strong></p>
+<p><strong>Comet040</strong></p>
+<p><strong>Comet041</strong></p>
+<p><strong>Comet042</strong></p>
+<p><strong>Comet043</strong></p>
+<p><strong>Comet044</strong></p>
+<p><strong>Comet045</strong></p>
+<p><strong>Comet046</strong></p>
+<p><strong>Comet047</strong></p>
+<p><strong>Comet048</strong></p>
+<p><strong>Comet049</strong></p>
+<p><strong>Comet050</strong></p>
+<p><strong>Comet051</strong></p>
+<p><strong>Comet052</strong></p>
+<p><strong>Comet053</strong></p>
+<p><strong>Comet054</strong></p>
+<p><strong>Comet055</strong></p>
+<p><strong>Comet056</strong></p>
+<p><strong>Comet057</strong></p>
+<p><strong>Comet058</strong></p>
+<p><strong>Comet059</strong></p>
+<p><strong>Comet060</strong></p>
+<p><strong>Comet061</strong></p>
+<p><strong>Comet062</strong></p>
+<p><strong>Comet063</strong></p>
+<p><strong>Comet064</strong></p>
+<p><strong>Comet065</strong></p>
+<p><strong>Comet066</strong></p>
+<p><strong>Comet067</strong></p>
+<p><strong>Comet068</strong></p>
+<p><strong>Comet069</strong></p>
+<p><strong>Comet070</strong></p>
+<p><strong>Comet071</strong></p>
+<p><strong>Comet072</strong></p>
+<p><strong>Comet073</strong></p>
+<p><strong>Comet074</strong></p>
+<p><strong>Comet075</strong></p>
+<p><strong>Comet076</strong></p>
+<p><strong>Comet077</strong></p>
+<p><strong>Comet078</strong></p>
+<p><strong>Comet079</strong></p>
+<p><strong>Comet080</strong></p>
+<p><strong>Comet081</strong></p>
+<p><strong>Comet082</strong></p>
+<p><strong>Comet083</strong></p>
+<p><strong>Comet084</strong></p>
+<p><strong>Comet085</strong></p>
+<p><strong>Comet086</strong></p>
+<p><strong>Comet087</strong></p>
+<p><strong>Comet088</strong></p>
+<p><strong>Comet089</strong></p>
+<p><strong>Comet090</strong></p>
+<p><strong>Comet091</strong></p>
+<p><strong>Comet092</strong></p>
+<p><strong>Comet093</strong></p>
+<p><strong>Comet094</strong></p>
+<p><strong>Comet095</strong></p>
+<p><strong>Comet096</strong></p>
+<p><strong>Comet097</strong></p>
+<p><strong>Comet098</strong></p>
+<p><strong>Comet099</strong></p>
+<p><strong>Comet100</strong></p>
+<p><strong>CometCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.CometPort">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CometPort</span></span><a class="headerlink" href="#pySkyExplorer.Comet.CometPort" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available ports on Comet</p>
+<p><strong>InvalidCometPort</strong></p>
+<p><strong>TerrestrialEquatorialJ2000</strong></p>
+<p><strong>EclipticJ2000</strong></p>
+<p><strong>OribitalMeanEquinox</strong></p>
+<p><strong>Synchronous</strong></p>
+<p><strong>Galactic</strong></p>
+<p><strong>CometPortCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.portId">
+<span class="sig-name descname"><span class="pre">portId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Comet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CometPort)portName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Comet.portId" title="Permalink to this definition"></a></dt>
+<dd><p>Return the id of the given port
+PARAMETERS:
+portName : CometPort</p>
+<blockquote>
+<div><p>Name of the port. See ‘CometPort’ documentation for more information.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.setArgumentOfPeriapsis">
+<span class="sig-name descname"><span class="pre">setArgumentOfPeriapsis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Comet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)argumentOfPeriapsis</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Comet.setArgumentOfPeriapsis" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+argumentOfPeriapsis : double
+Periapsis</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.setDistanceToPeriapsis">
+<span class="sig-name descname"><span class="pre">setDistanceToPeriapsis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Comet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)distanceToPeriapsis</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Comet.setDistanceToPeriapsis" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+distanceToPeriapsis : double
+Distance to periapsis</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.setEccentricity">
+<span class="sig-name descname"><span class="pre">setEccentricity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Comet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)eccentricity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Comet.setEccentricity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+eccentricity : double
+Eccentricity</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.setInclination">
+<span class="sig-name descname"><span class="pre">setInclination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Comet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)inclination</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Comet.setInclination" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+inclination : double
+Inclination</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.setIntensity">
+<span class="sig-name descname"><span class="pre">setIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Comet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Comet.setIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+intensity : double
+Intensity</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.setLabelIntensity">
+<span class="sig-name descname"><span class="pre">setLabelIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Comet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)labelIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Comet.setLabelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+labelIntensity : double
+Intensity</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.setLabelNameOverride">
+<span class="sig-name descname"><span class="pre">setLabelNameOverride</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Comet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)labelNameOverride</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Comet.setLabelNameOverride" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+labelNameOverride : str
+Label Text</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.setLongitudeOfAscendingNode">
+<span class="sig-name descname"><span class="pre">setLongitudeOfAscendingNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Comet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)longitudeOfAscendingNode</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Comet.setLongitudeOfAscendingNode" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+longitudeOfAscendingNode : double
+Ascending node</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.setModelScale">
+<span class="sig-name descname"><span class="pre">setModelScale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Comet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)modelScale</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Comet.setModelScale" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+modelScale : double
+Model Scale</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.setOrbitIntensity">
+<span class="sig-name descname"><span class="pre">setOrbitIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Comet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)orbitIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Comet.setOrbitIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orbitIntensity : double
+Orbit intensity</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.setOrbitThickness">
+<span class="sig-name descname"><span class="pre">setOrbitThickness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Comet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)orbitThickness</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Comet.setOrbitThickness" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orbitThickness : double
+Orbit thickness</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.setPointerIntensity">
+<span class="sig-name descname"><span class="pre">setPointerIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Comet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)pointerIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Comet.setPointerIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+pointerIntensity : double
+Pointer intensity</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.setPointerType">
+<span class="sig-name descname"><span class="pre">setPointerType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Comet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PointerType)pointerType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Comet.setPointerType" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+pointerType : PointerType
+Pointer type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.setStandardModelName">
+<span class="sig-name descname"><span class="pre">setStandardModelName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Comet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CometModelSet)standardModelName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Comet.setStandardModelName" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+standardModelName : CometModelSet
+Model Path</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.setTimeOfLastPeriapsis">
+<span class="sig-name descname"><span class="pre">setTimeOfLastPeriapsis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Comet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)timeOfLastPeriapsis</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Comet.setTimeOfLastPeriapsis" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+timeOfLastPeriapsis : double
+Date and time of the last periapsis.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.setUserModelFilename">
+<span class="sig-name descname"><span class="pre">setUserModelFilename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Comet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)userModelFilename</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Comet.setUserModelFilename" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+userModelFilename : str</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.argumentOfPeriapsis">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">argumentOfPeriapsis</span></span><a class="headerlink" href="#pySkyExplorer.Comet.argumentOfPeriapsis" title="Permalink to this definition"></a></dt>
+<dd><p>Periapsis</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.distanceToPeriapsis">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distanceToPeriapsis</span></span><a class="headerlink" href="#pySkyExplorer.Comet.distanceToPeriapsis" title="Permalink to this definition"></a></dt>
+<dd><p>Distance to periapsis</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.eccentricity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eccentricity</span></span><a class="headerlink" href="#pySkyExplorer.Comet.eccentricity" title="Permalink to this definition"></a></dt>
+<dd><p>Eccentricity</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.Comet.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.inclination">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">inclination</span></span><a class="headerlink" href="#pySkyExplorer.Comet.inclination" title="Permalink to this definition"></a></dt>
+<dd><p>Inclination</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pySkyExplorer.Comet.intensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.labelIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">labelIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Comet.labelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.labelNameOverride">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">labelNameOverride</span></span><a class="headerlink" href="#pySkyExplorer.Comet.labelNameOverride" title="Permalink to this definition"></a></dt>
+<dd><p>Label Text</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.longitudeOfAscendingNode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">longitudeOfAscendingNode</span></span><a class="headerlink" href="#pySkyExplorer.Comet.longitudeOfAscendingNode" title="Permalink to this definition"></a></dt>
+<dd><p>Ascending node</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.modelScale">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">modelScale</span></span><a class="headerlink" href="#pySkyExplorer.Comet.modelScale" title="Permalink to this definition"></a></dt>
+<dd><p>Model Scale</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.Comet.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.orbitIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orbitIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Comet.orbitIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Orbit intensity</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.orbitThickness">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orbitThickness</span></span><a class="headerlink" href="#pySkyExplorer.Comet.orbitThickness" title="Permalink to this definition"></a></dt>
+<dd><p>Orbit thickness</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.Comet.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.pointerIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pointerIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Comet.pointerIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Pointer intensity</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.pointerType">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pointerType</span></span><a class="headerlink" href="#pySkyExplorer.Comet.pointerType" title="Permalink to this definition"></a></dt>
+<dd><p>Pointer type</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.standardModelName">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">standardModelName</span></span><a class="headerlink" href="#pySkyExplorer.Comet.standardModelName" title="Permalink to this definition"></a></dt>
+<dd><p>Model Path</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.timeOfLastPeriapsis">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timeOfLastPeriapsis</span></span><a class="headerlink" href="#pySkyExplorer.Comet.timeOfLastPeriapsis" title="Permalink to this definition"></a></dt>
+<dd><p>Date and time of the last periapsis.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Comet.userModelFilename">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">userModelFilename</span></span><a class="headerlink" href="#pySkyExplorer.Comet.userModelFilename" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.Clock.html" class="btn btn-neutral float-left" title="pySkyExplorer.Clock" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.Comment.html" class="btn btn-neutral float-right" title="pySkyExplorer.Comment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

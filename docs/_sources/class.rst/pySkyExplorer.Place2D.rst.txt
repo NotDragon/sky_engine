@@ -1,0 +1,10 @@
+pySkyExplorer.Place2D
+=====================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Place2D
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

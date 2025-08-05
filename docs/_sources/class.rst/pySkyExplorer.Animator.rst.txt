@@ -1,0 +1,10 @@
+pySkyExplorer.Animator
+======================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Animator
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

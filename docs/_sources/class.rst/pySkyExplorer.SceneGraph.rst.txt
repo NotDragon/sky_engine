@@ -1,0 +1,10 @@
+pySkyExplorer.SceneGraph
+========================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: SceneGraph
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

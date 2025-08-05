@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.OrbitalPlace &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.ParameterizationLut" href="pySkyExplorer.ParameterizationLut.html" />
+    <link rel="prev" title="pySkyExplorer.Nebula" href="pySkyExplorer.Nebula.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.OrbitalPlace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.OrbitalPlaceName"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.OrbitalPlaceName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setArgumentOfPeriapsis"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setArgumentOfPeriapsis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setAscendingNodeLongitude"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setAscendingNodeLongitude()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setBstar"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setBstar()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setDistanceToPeriapsis"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setDistanceToPeriapsis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setEccentricity"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setEccentricity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setEpoch"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setEpoch()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setEpochDays"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setEpochDays()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setEpochYears"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setEpochYears()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setInclination"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setInclination()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setLastPeriapsisTime"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setLastPeriapsisTime()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setMeanAnomaly"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setMeanAnomaly()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setMeanLongitude"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setMeanLongitude()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setMeanMotion"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setMeanMotion()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setMeanMotionDt"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setMeanMotionDt()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setOrbitColor"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setOrbitColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setOrbitIntensity"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setOrbitIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setOrbitThickness"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setOrbitThickness()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setParent"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setParent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setPeriapsisLongitude"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setPeriapsisLongitude()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.setSemiMajorAxis"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.setSemiMajorAxis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.argumentOfPeriapsis"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.argumentOfPeriapsis</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.ascendingNodeLongitude"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.ascendingNodeLongitude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.bstar"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.bstar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.distanceToPeriapsis"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.distanceToPeriapsis</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.eccentricity"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.eccentricity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.epoch"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.epoch</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.epochDays"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.epochDays</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.epochYears"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.epochYears</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.id"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.inclination"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.inclination</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.lastPeriapsisTime"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.lastPeriapsisTime</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.meanAnomaly"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.meanAnomaly</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.meanLongitude"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.meanLongitude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.meanMotion"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.meanMotion</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.meanMotionDt"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.meanMotionDt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.name"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.orbitColor"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.orbitColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.orbitIntensity"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.orbitIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.orbitThickness"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.orbitThickness</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.osgId"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.parent"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.parent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.parentFamily"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.parentFamily</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.parentIndex"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.parentIndex</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.periapsisLongitude"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.periapsisLongitude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.OrbitalPlace.semiMajorAxis"><code class="docutils literal notranslate"><span class="pre">OrbitalPlace.semiMajorAxis</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.OrbitalPlace</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.OrbitalPlace.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-orbitalplace">
+<h1>pySkyExplorer.OrbitalPlace<a class="headerlink" href="#pyskyexplorer-orbitalplace" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">OrbitalPlace</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.OrbitalPlaceName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OrbitalPlaceName</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.OrbitalPlaceName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available OrbitalPlace name.</p>
+<p><strong>InvalidOrbitalPlace</strong></p>
+<p><strong>OrbitalPlace001</strong></p>
+<p><strong>OrbitalPlace002</strong></p>
+<p><strong>OrbitalPlace003</strong></p>
+<p><strong>OrbitalPlace004</strong></p>
+<p><strong>OrbitalPlace005</strong></p>
+<p><strong>OrbitalPlace006</strong></p>
+<p><strong>OrbitalPlace007</strong></p>
+<p><strong>OrbitalPlace008</strong></p>
+<p><strong>OrbitalPlace009</strong></p>
+<p><strong>OrbitalPlace010</strong></p>
+<p><strong>OrbitalPlace011</strong></p>
+<p><strong>OrbitalPlace012</strong></p>
+<p><strong>OrbitalPlace013</strong></p>
+<p><strong>OrbitalPlace014</strong></p>
+<p><strong>OrbitalPlace015</strong></p>
+<p><strong>OrbitalPlace016</strong></p>
+<p><strong>OrbitalPlace017</strong></p>
+<p><strong>OrbitalPlace018</strong></p>
+<p><strong>OrbitalPlace019</strong></p>
+<p><strong>OrbitalPlace020</strong></p>
+<p><strong>OrbitalPlace021</strong></p>
+<p><strong>OrbitalPlace022</strong></p>
+<p><strong>OrbitalPlace023</strong></p>
+<p><strong>OrbitalPlace024</strong></p>
+<p><strong>OrbitalPlace025</strong></p>
+<p><strong>OrbitalPlace026</strong></p>
+<p><strong>OrbitalPlace027</strong></p>
+<p><strong>OrbitalPlace028</strong></p>
+<p><strong>OrbitalPlace029</strong></p>
+<p><strong>OrbitalPlace030</strong></p>
+<p><strong>OrbitalPlace031</strong></p>
+<p><strong>OrbitalPlace032</strong></p>
+<p><strong>OrbitalPlace033</strong></p>
+<p><strong>OrbitalPlace034</strong></p>
+<p><strong>OrbitalPlace035</strong></p>
+<p><strong>OrbitalPlace036</strong></p>
+<p><strong>OrbitalPlace037</strong></p>
+<p><strong>OrbitalPlace038</strong></p>
+<p><strong>OrbitalPlace039</strong></p>
+<p><strong>OrbitalPlace040</strong></p>
+<p><strong>OrbitalPlace041</strong></p>
+<p><strong>OrbitalPlace042</strong></p>
+<p><strong>OrbitalPlace043</strong></p>
+<p><strong>OrbitalPlace044</strong></p>
+<p><strong>OrbitalPlace045</strong></p>
+<p><strong>OrbitalPlace046</strong></p>
+<p><strong>OrbitalPlace047</strong></p>
+<p><strong>OrbitalPlace048</strong></p>
+<p><strong>OrbitalPlace049</strong></p>
+<p><strong>OrbitalPlace050</strong></p>
+<p><strong>OrbitalPlaceCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setArgumentOfPeriapsis">
+<span class="sig-name descname"><span class="pre">setArgumentOfPeriapsis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)argumentOfPeriapsis</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setArgumentOfPeriapsis" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+argumentOfPeriapsis : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setAscendingNodeLongitude">
+<span class="sig-name descname"><span class="pre">setAscendingNodeLongitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)ascendingNodeLongitude</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setAscendingNodeLongitude" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+ascendingNodeLongitude : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setBstar">
+<span class="sig-name descname"><span class="pre">setBstar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)bstar</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setBstar" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+bstar : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setDistanceToPeriapsis">
+<span class="sig-name descname"><span class="pre">setDistanceToPeriapsis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)distanceToPeriapsis</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setDistanceToPeriapsis" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+distanceToPeriapsis : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setEccentricity">
+<span class="sig-name descname"><span class="pre">setEccentricity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)eccentricity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setEccentricity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+eccentricity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setEpoch">
+<span class="sig-name descname"><span class="pre">setEpoch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)epoch</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setEpoch" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+epoch : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setEpochDays">
+<span class="sig-name descname"><span class="pre">setEpochDays</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)epochDays</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setEpochDays" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+epochDays : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setEpochYears">
+<span class="sig-name descname"><span class="pre">setEpochYears</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)epochYears</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setEpochYears" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+epochYears : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setInclination">
+<span class="sig-name descname"><span class="pre">setInclination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)inclination</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setInclination" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+inclination : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setLastPeriapsisTime">
+<span class="sig-name descname"><span class="pre">setLastPeriapsisTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)lastPeriapsisTime</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setLastPeriapsisTime" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+lastPeriapsisTime : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setMeanAnomaly">
+<span class="sig-name descname"><span class="pre">setMeanAnomaly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)meanAnomaly</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setMeanAnomaly" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+meanAnomaly : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setMeanLongitude">
+<span class="sig-name descname"><span class="pre">setMeanLongitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)meanLongitude</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setMeanLongitude" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+meanLongitude : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setMeanMotion">
+<span class="sig-name descname"><span class="pre">setMeanMotion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)meanMotion</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setMeanMotion" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+meanMotion : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setMeanMotionDt">
+<span class="sig-name descname"><span class="pre">setMeanMotionDt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)meanMotionDt</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setMeanMotionDt" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+meanMotionDt : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setOrbitColor">
+<span class="sig-name descname"><span class="pre">setOrbitColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)orbitColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setOrbitColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orbitColor : Vec</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setOrbitIntensity">
+<span class="sig-name descname"><span class="pre">setOrbitIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)orbitIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setOrbitIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orbitIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setOrbitThickness">
+<span class="sig-name descname"><span class="pre">setOrbitThickness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)orbitThickness</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setOrbitThickness" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orbitThickness : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setParent">
+<span class="sig-name descname"><span class="pre">setParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)parent</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setParent" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+parent : int
+Parent database Id+Port.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setPeriapsisLongitude">
+<span class="sig-name descname"><span class="pre">setPeriapsisLongitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)periapsisLongitude</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setPeriapsisLongitude" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+periapsisLongitude : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.setSemiMajorAxis">
+<span class="sig-name descname"><span class="pre">setSemiMajorAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(OrbitalPlace)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)semiMajorAxis</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.setSemiMajorAxis" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+semiMajorAxis : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.argumentOfPeriapsis">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">argumentOfPeriapsis</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.argumentOfPeriapsis" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.ascendingNodeLongitude">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ascendingNodeLongitude</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.ascendingNodeLongitude" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.bstar">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bstar</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.bstar" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.distanceToPeriapsis">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distanceToPeriapsis</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.distanceToPeriapsis" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.eccentricity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eccentricity</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.eccentricity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.epoch">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">epoch</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.epoch" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.epochDays">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">epochDays</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.epochDays" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.epochYears">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">epochYears</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.epochYears" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.inclination">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">inclination</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.inclination" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.lastPeriapsisTime">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lastPeriapsisTime</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.lastPeriapsisTime" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.meanAnomaly">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">meanAnomaly</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.meanAnomaly" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.meanLongitude">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">meanLongitude</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.meanLongitude" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.meanMotion">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">meanMotion</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.meanMotion" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.meanMotionDt">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">meanMotionDt</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.meanMotionDt" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.orbitColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orbitColor</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.orbitColor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.orbitIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orbitIntensity</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.orbitIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.orbitThickness">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orbitThickness</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.orbitThickness" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.parent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.parent" title="Permalink to this definition"></a></dt>
+<dd><p>Parent database Id+Port.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.parentFamily">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parentFamily</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.parentFamily" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Parent Family.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.parentIndex">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parentIndex</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.parentIndex" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Parent Index (in its family).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.periapsisLongitude">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">periapsisLongitude</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.periapsisLongitude" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.OrbitalPlace.semiMajorAxis">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">semiMajorAxis</span></span><a class="headerlink" href="#pySkyExplorer.OrbitalPlace.semiMajorAxis" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.Nebula.html" class="btn btn-neutral float-left" title="pySkyExplorer.Nebula" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.ParameterizationLut.html" class="btn btn-neutral float-right" title="pySkyExplorer.ParameterizationLut" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

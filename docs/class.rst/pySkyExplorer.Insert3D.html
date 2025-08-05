@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.Insert3D &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.InsertText" href="pySkyExplorer.InsertText.html" />
+    <link rel="prev" title="pySkyExplorer.Insert2D" href="pySkyExplorer.Insert2D.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.Insert3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.Insert3D"><code class="docutils literal notranslate"><span class="pre">Insert3D</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.Insert3DName"><code class="docutils literal notranslate"><span class="pre">Insert3D.Insert3DName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.LoadingStatus"><code class="docutils literal notranslate"><span class="pre">Insert3D.LoadingStatus</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.TextureFace"><code class="docutils literal notranslate"><span class="pre">Insert3D.TextureFace</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.VideoState"><code class="docutils literal notranslate"><span class="pre">Insert3D.VideoState</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.getIntrospection"><code class="docutils literal notranslate"><span class="pre">Insert3D.getIntrospection()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.modifyUniform"><code class="docutils literal notranslate"><span class="pre">Insert3D.modifyUniform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.remove"><code class="docutils literal notranslate"><span class="pre">Insert3D.remove()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.rotateMatrix"><code class="docutils literal notranslate"><span class="pre">Insert3D.rotateMatrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.scaleMatrix"><code class="docutils literal notranslate"><span class="pre">Insert3D.scaleMatrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setAnimationEvolution"><code class="docutils literal notranslate"><span class="pre">Insert3D.setAnimationEvolution()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setAnimationStartTime"><code class="docutils literal notranslate"><span class="pre">Insert3D.setAnimationStartTime()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setExposure"><code class="docutils literal notranslate"><span class="pre">Insert3D.setExposure()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setIntensity"><code class="docutils literal notranslate"><span class="pre">Insert3D.setIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setIntensityIDV"><code class="docutils literal notranslate"><span class="pre">Insert3D.setIntensityIDV()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setModelFilename"><code class="docutils literal notranslate"><span class="pre">Insert3D.setModelFilename()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setOrientationHPR"><code class="docutils literal notranslate"><span class="pre">Insert3D.setOrientationHPR()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setParent"><code class="docutils literal notranslate"><span class="pre">Insert3D.setParent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setPointExposure"><code class="docutils literal notranslate"><span class="pre">Insert3D.setPointExposure()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setPointSize"><code class="docutils literal notranslate"><span class="pre">Insert3D.setPointSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setPointSizeFactor"><code class="docutils literal notranslate"><span class="pre">Insert3D.setPointSizeFactor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setPositionLBR"><code class="docutils literal notranslate"><span class="pre">Insert3D.setPositionLBR()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setPositionXYZ"><code class="docutils literal notranslate"><span class="pre">Insert3D.setPositionXYZ()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setScale"><code class="docutils literal notranslate"><span class="pre">Insert3D.setScale()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setShadowStrength"><code class="docutils literal notranslate"><span class="pre">Insert3D.setShadowStrength()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setUniform"><code class="docutils literal notranslate"><span class="pre">Insert3D.setUniform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setVideoSpeed"><code class="docutils literal notranslate"><span class="pre">Insert3D.setVideoSpeed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.setVideoState"><code class="docutils literal notranslate"><span class="pre">Insert3D.setVideoState()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.translateMatrix"><code class="docutils literal notranslate"><span class="pre">Insert3D.translateMatrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.updateTexture"><code class="docutils literal notranslate"><span class="pre">Insert3D.updateTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.exposure"><code class="docutils literal notranslate"><span class="pre">Insert3D.exposure</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.id"><code class="docutils literal notranslate"><span class="pre">Insert3D.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.instrospectionOutput"><code class="docutils literal notranslate"><span class="pre">Insert3D.instrospectionOutput</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.intensity"><code class="docutils literal notranslate"><span class="pre">Insert3D.intensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.intensityIDV"><code class="docutils literal notranslate"><span class="pre">Insert3D.intensityIDV</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.loadingStatus"><code class="docutils literal notranslate"><span class="pre">Insert3D.loadingStatus</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.modelFilename"><code class="docutils literal notranslate"><span class="pre">Insert3D.modelFilename</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.modelRadius"><code class="docutils literal notranslate"><span class="pre">Insert3D.modelRadius</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.name"><code class="docutils literal notranslate"><span class="pre">Insert3D.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.orientationHPR"><code class="docutils literal notranslate"><span class="pre">Insert3D.orientationHPR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.osgId"><code class="docutils literal notranslate"><span class="pre">Insert3D.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.parent"><code class="docutils literal notranslate"><span class="pre">Insert3D.parent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.parentRadius"><code class="docutils literal notranslate"><span class="pre">Insert3D.parentRadius</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.pointExposure"><code class="docutils literal notranslate"><span class="pre">Insert3D.pointExposure</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.pointSize"><code class="docutils literal notranslate"><span class="pre">Insert3D.pointSize</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.pointSizeFactor"><code class="docutils literal notranslate"><span class="pre">Insert3D.pointSizeFactor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.positionLBR"><code class="docutils literal notranslate"><span class="pre">Insert3D.positionLBR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.scale"><code class="docutils literal notranslate"><span class="pre">Insert3D.scale</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.shadowStrength"><code class="docutils literal notranslate"><span class="pre">Insert3D.shadowStrength</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Insert3D.videoSpeed"><code class="docutils literal notranslate"><span class="pre">Insert3D.videoSpeed</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.Insert3D</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.Insert3D.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-insert3d">
+<h1>pySkyExplorer.Insert3D<a class="headerlink" href="#pyskyexplorer-insert3d" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">Insert3D</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.Insert3DName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Insert3DName</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.Insert3DName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available insert3D name.</p>
+<p><strong>InvalidInsert3D</strong></p>
+<p><strong>Insert3D001</strong></p>
+<p><strong>Insert3D002</strong></p>
+<p><strong>Insert3D003</strong></p>
+<p><strong>Insert3D004</strong></p>
+<p><strong>Insert3D005</strong></p>
+<p><strong>Insert3D006</strong></p>
+<p><strong>Insert3D007</strong></p>
+<p><strong>Insert3D008</strong></p>
+<p><strong>Insert3D009</strong></p>
+<p><strong>Insert3D010</strong></p>
+<p><strong>Insert3D011</strong></p>
+<p><strong>Insert3D012</strong></p>
+<p><strong>Insert3D013</strong></p>
+<p><strong>Insert3D014</strong></p>
+<p><strong>Insert3D015</strong></p>
+<p><strong>Insert3D016</strong></p>
+<p><strong>Insert3D017</strong></p>
+<p><strong>Insert3D018</strong></p>
+<p><strong>Insert3D019</strong></p>
+<p><strong>Insert3D020</strong></p>
+<p><strong>Insert3D021</strong></p>
+<p><strong>Insert3D022</strong></p>
+<p><strong>Insert3D023</strong></p>
+<p><strong>Insert3D024</strong></p>
+<p><strong>Insert3D025</strong></p>
+<p><strong>Insert3D026</strong></p>
+<p><strong>Insert3D027</strong></p>
+<p><strong>Insert3D028</strong></p>
+<p><strong>Insert3D029</strong></p>
+<p><strong>Insert3D030</strong></p>
+<p><strong>Insert3D031</strong></p>
+<p><strong>Insert3D032</strong></p>
+<p><strong>Insert3D033</strong></p>
+<p><strong>Insert3D034</strong></p>
+<p><strong>Insert3D035</strong></p>
+<p><strong>Insert3D036</strong></p>
+<p><strong>Insert3D037</strong></p>
+<p><strong>Insert3D038</strong></p>
+<p><strong>Insert3D039</strong></p>
+<p><strong>Insert3D040</strong></p>
+<p><strong>Insert3D041</strong></p>
+<p><strong>Insert3D042</strong></p>
+<p><strong>Insert3D043</strong></p>
+<p><strong>Insert3D044</strong></p>
+<p><strong>Insert3D045</strong></p>
+<p><strong>Insert3D046</strong></p>
+<p><strong>Insert3D047</strong></p>
+<p><strong>Insert3D048</strong></p>
+<p><strong>Insert3D049</strong></p>
+<p><strong>Insert3D050</strong></p>
+<p><strong>Insert3D051Reserved</strong></p>
+<p><strong>Insert3D052Reserved</strong></p>
+<p><strong>LivePatchGizmoBottomLeft</strong></p>
+<p><strong>LivePatchGizmoTopRight</strong></p>
+<p><strong>LivePatchGizmoRotation</strong></p>
+<p><strong>LivePatchGizmoDisplacement</strong></p>
+<p><strong>LivePatchGizmoBottomRight</strong></p>
+<p><strong>LivePatchGizmoTopLeft</strong></p>
+<p><strong>Insert3D059Reserved</strong></p>
+<p><strong>Insert3D060Reserved</strong></p>
+<p><strong>Insert3D061Reserved</strong></p>
+<p><strong>Insert3D062Reserved</strong></p>
+<p><strong>Insert3D063Reserved</strong></p>
+<p><strong>Insert3D064Reserved</strong></p>
+<p><strong>Insert3D065Reserved</strong></p>
+<p><strong>Insert3D066Reserved</strong></p>
+<p><strong>Insert3D067Reserved</strong></p>
+<p><strong>Insert3D068Reserved</strong></p>
+<p><strong>ZoomFovTarget</strong></p>
+<p><strong>Insert3D070Reserved</strong></p>
+<p><strong>Insert3D071Reserved</strong></p>
+<p><strong>Insert3D072Reserved</strong></p>
+<p><strong>Insert3D073Reserved</strong></p>
+<p><strong>Insert3D074Reserved</strong></p>
+<p><strong>Insert3D075Reserved</strong></p>
+<p><strong>Insert3D076Reserved</strong></p>
+<p><strong>Insert3D077Reserved</strong></p>
+<p><strong>Insert3D078Reserved</strong></p>
+<p><strong>Insert3D079Reserved</strong></p>
+<p><strong>Insert3D080Reserved</strong></p>
+<p><strong>Insert3D081Reserved</strong></p>
+<p><strong>Insert3D082Reserved</strong></p>
+<p><strong>Insert3D083Reserved</strong></p>
+<p><strong>Insert3D084Reserved</strong></p>
+<p><strong>Insert3D085Reserved</strong></p>
+<p><strong>Insert3D086Reserved</strong></p>
+<p><strong>Insert3D087Reserved</strong></p>
+<p><strong>Insert3D088Reserved</strong></p>
+<p><strong>Insert3D089Reserved</strong></p>
+<p><strong>Insert3D090Reserved</strong></p>
+<p><strong>Insert3D091Reserved</strong></p>
+<p><strong>Insert3D092Reserved</strong></p>
+<p><strong>Insert3D093Reserved</strong></p>
+<p><strong>Insert3D094Reserved</strong></p>
+<p><strong>Insert3D095Reserved</strong></p>
+<p><strong>Insert3D096Reserved</strong></p>
+<p><strong>Insert3D097Reserved</strong></p>
+<p><strong>Insert3D098Reserved</strong></p>
+<p><strong>Insert3D099Reserved</strong></p>
+<p><strong>Insert3D100Reserved</strong></p>
+<p><strong>Insert3D101Reserved</strong></p>
+<p><strong>Insert3D102Reserved</strong></p>
+<p><strong>Insert3D103Reserved</strong></p>
+<p><strong>Insert3D104Reserved</strong></p>
+<p><strong>Insert3D105Reserved</strong></p>
+<p><strong>Insert3D106Reserved</strong></p>
+<p><strong>Insert3D107Reserved</strong></p>
+<p><strong>Insert3D108Reserved</strong></p>
+<p><strong>Insert3D109Reserved</strong></p>
+<p><strong>Insert3D110Reserved</strong></p>
+<p><strong>Insert3D111Reserved</strong></p>
+<p><strong>Insert3D112Reserved</strong></p>
+<p><strong>Insert3D113Reserved</strong></p>
+<p><strong>Insert3D114Reserved</strong></p>
+<p><strong>Insert3D115Reserved</strong></p>
+<p><strong>Insert3D116Reserved</strong></p>
+<p><strong>Insert3D117Reserved</strong></p>
+<p><strong>Insert3D118Reserved</strong></p>
+<p><strong>Insert3D119Reserved</strong></p>
+<p><strong>Insert3D120Reserved</strong></p>
+<p><strong>Insert3D121Reserved</strong></p>
+<p><strong>Insert3D122Reserved</strong></p>
+<p><strong>Insert3D123Reserved</strong></p>
+<p><strong>Insert3D124Reserved</strong></p>
+<p><strong>Insert3D125Reserved</strong></p>
+<p><strong>Insert3D126Reserved</strong></p>
+<p><strong>Insert3D127Reserved</strong></p>
+<p><strong>Insert3D128Reserved</strong></p>
+<p><strong>Insert3D129Reserved</strong></p>
+<p><strong>Insert3D130Reserved</strong></p>
+<p><strong>Insert3D131Reserved</strong></p>
+<p><strong>Insert3D132Reserved</strong></p>
+<p><strong>Insert3D133Reserved</strong></p>
+<p><strong>Insert3D134Reserved</strong></p>
+<p><strong>Insert3D135Reserved</strong></p>
+<p><strong>Insert3D136Reserved</strong></p>
+<p><strong>Insert3D137Reserved</strong></p>
+<p><strong>Insert3D138Reserved</strong></p>
+<p><strong>Insert3D139Reserved</strong></p>
+<p><strong>Insert3D140Reserved</strong></p>
+<p><strong>Insert3D141Reserved</strong></p>
+<p><strong>Insert3D142Reserved</strong></p>
+<p><strong>Insert3D143Reserved</strong></p>
+<p><strong>Insert3D144Reserved</strong></p>
+<p><strong>Insert3D145Reserved</strong></p>
+<p><strong>Insert3D146Reserved</strong></p>
+<p><strong>Insert3D147Reserved</strong></p>
+<p><strong>Insert3D148Reserved</strong></p>
+<p><strong>Insert3D149Reserved</strong></p>
+<p><strong>Insert3D150Reserved</strong></p>
+<p><strong>Insert3D151Reserved</strong></p>
+<p><strong>Insert3D152Reserved</strong></p>
+<p><strong>Insert3D153Reserved</strong></p>
+<p><strong>Insert3D154Reserved</strong></p>
+<p><strong>Insert3D155Reserved</strong></p>
+<p><strong>Insert3D156Reserved</strong></p>
+<p><strong>Insert3D157Reserved</strong></p>
+<p><strong>Insert3D158Reserved</strong></p>
+<p><strong>Insert3D159Reserved</strong></p>
+<p><strong>Insert3D160Reserved</strong></p>
+<p><strong>Insert3D161Reserved</strong></p>
+<p><strong>Insert3D162Reserved</strong></p>
+<p><strong>Insert3D163Reserved</strong></p>
+<p><strong>Insert3D164Reserved</strong></p>
+<p><strong>Insert3D165Reserved</strong></p>
+<p><strong>Insert3D166Reserved</strong></p>
+<p><strong>Insert3D167Reserved</strong></p>
+<p><strong>Insert3D168Reserved</strong></p>
+<p><strong>Insert3D169Reserved</strong></p>
+<p><strong>HudGrid</strong></p>
+<p><strong>HudAxis</strong></p>
+<p><strong>Insert3D172Reserved</strong></p>
+<p><strong>Insert3D173Reserved</strong></p>
+<p><strong>Insert3D174Reserved</strong></p>
+<p><strong>Insert3D175Reserved</strong></p>
+<p><strong>Insert3D176Reserved</strong></p>
+<p><strong>Insert3D177Reserved</strong></p>
+<p><strong>Insert3D178Reserved</strong></p>
+<p><strong>Insert3D179Reserved</strong></p>
+<p><strong>Insert3D180Reserved</strong></p>
+<p><strong>Insert3D181Reserved</strong></p>
+<p><strong>Insert3D182Reserved</strong></p>
+<p><strong>Insert3D183Reserved</strong></p>
+<p><strong>Insert3D184Reserved</strong></p>
+<p><strong>Insert3D185Reserved</strong></p>
+<p><strong>Insert3D186Reserved</strong></p>
+<p><strong>Insert3D187Reserved</strong></p>
+<p><strong>Insert3D188Reserved</strong></p>
+<p><strong>Insert3D189Reserved</strong></p>
+<p><strong>Insert3D190Reserved</strong></p>
+<p><strong>Insert3D191Reserved</strong></p>
+<p><strong>Insert3D192Reserved</strong></p>
+<p><strong>Insert3D193Reserved</strong></p>
+<p><strong>Insert3D194Reserved</strong></p>
+<p><strong>Insert3D195Reserved</strong></p>
+<p><strong>Insert3D196Reserved</strong></p>
+<p><strong>Insert3D197Reserved</strong></p>
+<p><strong>Insert3D198Reserved</strong></p>
+<p><strong>Insert3D199Reserved</strong></p>
+<p><strong>Insert3D200Reserved</strong></p>
+<p><strong>Insert3D201Reserved</strong></p>
+<p><strong>Insert3D202Reserved</strong></p>
+<p><strong>Insert3D203Reserved</strong></p>
+<p><strong>Insert3D204Reserved</strong></p>
+<p><strong>Insert3D205Reserved</strong></p>
+<p><strong>Insert3D206Reserved</strong></p>
+<p><strong>Insert3D207Reserved</strong></p>
+<p><strong>Insert3D208Reserved</strong></p>
+<p><strong>Insert3D209Reserved</strong></p>
+<p><strong>Insert3D210Reserved</strong></p>
+<p><strong>Insert3D211Reserved</strong></p>
+<p><strong>Insert3D212Reserved</strong></p>
+<p><strong>Insert3D213Reserved</strong></p>
+<p><strong>Insert3D214Reserved</strong></p>
+<p><strong>Insert3D215Reserved</strong></p>
+<p><strong>Insert3D216Reserved</strong></p>
+<p><strong>Insert3D217Reserved</strong></p>
+<p><strong>Insert3D218Reserved</strong></p>
+<p><strong>Insert3D219Reserved</strong></p>
+<p><strong>Insert3D220Reserved</strong></p>
+<p><strong>Insert3D221Reserved</strong></p>
+<p><strong>Insert3D222Reserved</strong></p>
+<p><strong>Insert3D223Reserved</strong></p>
+<p><strong>Insert3D224Reserved</strong></p>
+<p><strong>Insert3D225Reserved</strong></p>
+<p><strong>Insert3D226Reserved</strong></p>
+<p><strong>Insert3D227Reserved</strong></p>
+<p><strong>Insert3D228Reserved</strong></p>
+<p><strong>Insert3D229Reserved</strong></p>
+<p><strong>Insert3D230Reserved</strong></p>
+<p><strong>Insert3D231Reserved</strong></p>
+<p><strong>Insert3D232Reserved</strong></p>
+<p><strong>Insert3D233Reserved</strong></p>
+<p><strong>Insert3D234Reserved</strong></p>
+<p><strong>Insert3D235Reserved</strong></p>
+<p><strong>Insert3D236Reserved</strong></p>
+<p><strong>Insert3D237Reserved</strong></p>
+<p><strong>Insert3D238Reserved</strong></p>
+<p><strong>Insert3D239Reserved</strong></p>
+<p><strong>Insert3D240Reserved</strong></p>
+<p><strong>Insert3D241Reserved</strong></p>
+<p><strong>Insert3D242Reserved</strong></p>
+<p><strong>Insert3D243Reserved</strong></p>
+<p><strong>Insert3D244Reserved</strong></p>
+<p><strong>Insert3D245Reserved</strong></p>
+<p><strong>Insert3D246Reserved</strong></p>
+<p><strong>Insert3D247Reserved</strong></p>
+<p><strong>Insert3D248Reserved</strong></p>
+<p><strong>Insert3D249Reserved</strong></p>
+<p><strong>Insert3D250Reserved</strong></p>
+<p><strong>Insert3D251Reserved</strong></p>
+<p><strong>Insert3D252Reserved</strong></p>
+<p><strong>Insert3D253Reserved</strong></p>
+<p><strong>Insert3D254Reserved</strong></p>
+<p><strong>Insert3D255Reserved</strong></p>
+<p><strong>Insert3D256Reserved</strong></p>
+<p><strong>Insert3D257Reserved</strong></p>
+<p><strong>Insert3D258Reserved</strong></p>
+<p><strong>Insert3D259Reserved</strong></p>
+<p><strong>Insert3D260Reserved</strong></p>
+<p><strong>Insert3D261Reserved</strong></p>
+<p><strong>Insert3D262Reserved</strong></p>
+<p><strong>Insert3D263Reserved</strong></p>
+<p><strong>Insert3D264Reserved</strong></p>
+<p><strong>Insert3D265Reserved</strong></p>
+<p><strong>Insert3D266Reserved</strong></p>
+<p><strong>Insert3D267Reserved</strong></p>
+<p><strong>Insert3D268Reserved</strong></p>
+<p><strong>Insert3D269Reserved</strong></p>
+<p><strong>Insert3DCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.LoadingStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LoadingStatus</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.LoadingStatus" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidLoadingStatus</strong></p>
+<p><strong>Loaded</strong></p>
+<p><strong>LoadedPendingDependencies</strong></p>
+<p><strong>Loading</strong></p>
+<p><strong>Empty</strong></p>
+<p><strong>Error</strong></p>
+<p><strong>LoadingStatusCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.TextureFace">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TextureFace</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.TextureFace" title="Permalink to this definition"></a></dt>
+<dd><p>Face of a cubempa texture. Used with introspection</p>
+<p><strong>InvalidTextureFace</strong></p>
+<p><strong>PositiveX</strong></p>
+<p><strong>NegativeX</strong></p>
+<p><strong>PositiveY</strong></p>
+<p><strong>NegativeY</strong></p>
+<p><strong>PositiveZ</strong></p>
+<p><strong>NegativeZ</strong></p>
+<p><strong>TextureFaceCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.VideoState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">VideoState</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.VideoState" title="Permalink to this definition"></a></dt>
+<dd><p>Available states for video playing.</p>
+<p><strong>InvalidVideoState</strong></p>
+<p><strong>VideoStateStop</strong></p>
+<p><strong>VideoStatePlay</strong></p>
+<p><strong>VideoStatePause</strong></p>
+<p><strong>VideoStatePlayLoop</strong></p>
+<p><strong>VideoStateCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.getIntrospection">
+<span class="sig-name descname"><span class="pre">getIntrospection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.getIntrospection" title="Permalink to this definition"></a></dt>
+<dd><p>Introspect current 3d model to find uniform and animation node result available in instrospectionOutput property.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.modifyUniform">
+<span class="sig-name descname"><span class="pre">modifyUniform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)uniformName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec4)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)anim</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.modifyUniform" title="Permalink to this definition"></a></dt>
+<dd><p>Change insert3d uniform value, get uniform name and value by introspection
+PARAMETERS:
+uniformName : str</p>
+<blockquote>
+<div><p>Name of the uniform.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>value<span class="classifier">Vec4</span></dt><dd><p>New uniform value</p>
+</dd>
+<dt>anim<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator to animate uniform change</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.remove" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the insert3d from the scene graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.rotateMatrix">
+<span class="sig-name descname"><span class="pre">rotateMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)matrixName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)anim</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.rotateMatrix" title="Permalink to this definition"></a></dt>
+<dd><p>Rotate insert3d matrix, get matrix name by introspection
+PARAMETERS:
+matrixName : str</p>
+<blockquote>
+<div><p>Name of the matrix.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>value<span class="classifier">Vec</span></dt><dd><p>Rotation value of the matrix</p>
+</dd>
+</dl>
+<p>anim : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.scaleMatrix">
+<span class="sig-name descname"><span class="pre">scaleMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)matrixName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)anim</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.scaleMatrix" title="Permalink to this definition"></a></dt>
+<dd><p>Scale insert3d matrix, get matrix name by introspection
+PARAMETERS:
+matrixName : str</p>
+<blockquote>
+<div><p>Name of the matrix.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>value<span class="classifier">Vec</span></dt><dd><p>Scale value of the matrix</p>
+</dd>
+</dl>
+<p>anim : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setAnimationEvolution">
+<span class="sig-name descname"><span class="pre">setAnimationEvolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)animationEvolution</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setAnimationEvolution" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+animationEvolution : double
+Current position in animation.
+Must be in range[0:1].
+It has no effect if the insert doesn’t have any animation.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setAnimationStartTime">
+<span class="sig-name descname"><span class="pre">setAnimationStartTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)animationStartTime</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setAnimationStartTime" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+animationStartTime : double
+Julian date use to automatically start the insert’s animation.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setExposure">
+<span class="sig-name descname"><span class="pre">setExposure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)exposure</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setExposure" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+exposure : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setIntensity">
+<span class="sig-name descname"><span class="pre">setIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+intensity : double
+Intensity of the insert3D.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setIntensityIDV">
+<span class="sig-name descname"><span class="pre">setIntensityIDV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensityIDV</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setIntensityIDV" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+intensityIDV : double
+Intensity of the insert3D on interactive dome view layer.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setModelFilename">
+<span class="sig-name descname"><span class="pre">setModelFilename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)modelFilename</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setModelFilename" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+modelFilename : str
+3D model file path. Must be a relative file path to user.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setOrientationHPR">
+<span class="sig-name descname"><span class="pre">setOrientationHPR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)orientationHPR</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setOrientationHPR" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orientationHPR : Vec
+HPR orientation of the 3d model relative to it’s parent coordinate system.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setParent">
+<span class="sig-name descname"><span class="pre">setParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)parent</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setParent" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+parent : int
+Id of the insert3D parent port in database.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setPointExposure">
+<span class="sig-name descname"><span class="pre">setPointExposure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)pointExposure</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setPointExposure" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+pointExposure : double
+Point exposure of the model (when model is a point cloud).</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setPointSize">
+<span class="sig-name descname"><span class="pre">setPointSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)pointSize</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setPointSize" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+pointSize : double
+Point size of the model (when model is a point cloud).</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setPointSizeFactor">
+<span class="sig-name descname"><span class="pre">setPointSizeFactor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)pointSizeFactor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setPointSizeFactor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+pointSizeFactor : double
+Point size factor of the model (when model is a point cloud).</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setPositionLBR">
+<span class="sig-name descname"><span class="pre">setPositionLBR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)positionLBR</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setPositionLBR" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+positionLBR : Vec
+LBR position of the 3d model relative to it’s parent coordinate system.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setPositionXYZ">
+<span class="sig-name descname"><span class="pre">setPositionXYZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)positionXYZ</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setPositionXYZ" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+positionXYZ : Vec
+XYZ position of the 3d model relative to it’s parent coordinate system.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setScale">
+<span class="sig-name descname"><span class="pre">setScale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)scale</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setScale" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+scale : double
+Scale factor of the insert3D.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setShadowStrength">
+<span class="sig-name descname"><span class="pre">setShadowStrength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)shadowStrength</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setShadowStrength" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+shadowStrength : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setUniform">
+<span class="sig-name descname"><span class="pre">setUniform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)uniformName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec4)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)anim</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setUniform" title="Permalink to this definition"></a></dt>
+<dd><p>Scale insert3d matrix, get matrix name by introspection
+PARAMETERS:
+uniformName : str</p>
+<blockquote>
+<div><p>Name of the uniform.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>value<span class="classifier">Vec4</span></dt><dd><p>New value of the uniform</p>
+</dd>
+</dl>
+<p>anim : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setVideoSpeed">
+<span class="sig-name descname"><span class="pre">setVideoSpeed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)videoSpeed</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setVideoSpeed" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+videoSpeed : double
+Speed factor of the video (2 means 2 times faster).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.setVideoState">
+<span class="sig-name descname"><span class="pre">setVideoState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(VideoState)state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)anim</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.setVideoState" title="Permalink to this definition"></a></dt>
+<dd><p>Current state of the video. See ‘VideoState’ documentation for available values.
+PARAMETERS:
+state : VideoState</p>
+<p>anim : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.translateMatrix">
+<span class="sig-name descname"><span class="pre">translateMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)matrixName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)anim</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.translateMatrix" title="Permalink to this definition"></a></dt>
+<dd><p>Translate insert3d matrix, get matrix name by introspection
+PARAMETERS:
+matrixName : str</p>
+<blockquote>
+<div><p>Name of the matrix.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>value<span class="classifier">Vec</span></dt><dd><p>Translation value of the matrix</p>
+</dd>
+</dl>
+<p>anim : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.updateTexture">
+<span class="sig-name descname"><span class="pre">updateTexture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Insert3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)nodeName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)texture</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)unit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(TextureFace)face</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.updateTexture" title="Permalink to this definition"></a></dt>
+<dd><p>Update a texture associated with a node, get node name by introspection
+PARAMETERS:
+nodeName : str</p>
+<blockquote>
+<div><p>Name of the node to change the texture</p>
+</div></blockquote>
+<dl class="simple">
+<dt>texture<span class="classifier">str</span></dt><dd><p>Path to the new texture</p>
+</dd>
+<dt>unit<span class="classifier">int</span></dt><dd><p>Unit of the texture to update</p>
+</dd>
+<dt>face<span class="classifier">TextureFace default value</span><span class="classifier">PositiveX</span></dt><dd><p>Face of the cubemap texture (if necessary)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.exposure">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">exposure</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.exposure" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.instrospectionOutput">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instrospectionOutput</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.instrospectionOutput" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+3D model introspection result.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.intensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the insert3D.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.intensityIDV">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensityIDV</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.intensityIDV" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the insert3D on interactive dome view layer.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.loadingStatus">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">loadingStatus</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.loadingStatus" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.modelFilename">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">modelFilename</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.modelFilename" title="Permalink to this definition"></a></dt>
+<dd><p>3D model file path. Must be a relative file path to user.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.modelRadius">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">modelRadius</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.modelRadius" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Radius of the insert3D.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.orientationHPR">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orientationHPR</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.orientationHPR" title="Permalink to this definition"></a></dt>
+<dd><p>HPR orientation of the 3d model relative to it’s parent coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.parent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.parent" title="Permalink to this definition"></a></dt>
+<dd><p>Id of the insert3D parent port in database.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.parentRadius">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parentRadius</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.parentRadius" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Radius of the parent.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.pointExposure">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pointExposure</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.pointExposure" title="Permalink to this definition"></a></dt>
+<dd><p>Point exposure of the model (when model is a point cloud).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.pointSize">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pointSize</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.pointSize" title="Permalink to this definition"></a></dt>
+<dd><p>Point size of the model (when model is a point cloud).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.pointSizeFactor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pointSizeFactor</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.pointSizeFactor" title="Permalink to this definition"></a></dt>
+<dd><p>Point size factor of the model (when model is a point cloud).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.positionLBR">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positionLBR</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.positionLBR" title="Permalink to this definition"></a></dt>
+<dd><p>LBR position of the 3d model relative to it’s parent coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.scale">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scale</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.scale" title="Permalink to this definition"></a></dt>
+<dd><p>Scale factor of the insert3D.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.shadowStrength">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shadowStrength</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.shadowStrength" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Insert3D.videoSpeed">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">videoSpeed</span></span><a class="headerlink" href="#pySkyExplorer.Insert3D.videoSpeed" title="Permalink to this definition"></a></dt>
+<dd><p>Speed factor of the video (2 means 2 times faster).</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.Insert2D.html" class="btn btn-neutral float-left" title="pySkyExplorer.Insert2D" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.InsertText.html" class="btn btn-neutral float-right" title="pySkyExplorer.InsertText" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

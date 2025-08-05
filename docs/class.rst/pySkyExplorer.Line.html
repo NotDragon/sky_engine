@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.Line &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.Lut" href="pySkyExplorer.Lut.html" />
+    <link rel="prev" title="pySkyExplorer.Light" href="pySkyExplorer.Light.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.Line</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.Line"><code class="docutils literal notranslate"><span class="pre">Line</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.LineName"><code class="docutils literal notranslate"><span class="pre">Line.LineName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.setAdvancement"><code class="docutils literal notranslate"><span class="pre">Line.setAdvancement()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.setAdvancementDivisor"><code class="docutils literal notranslate"><span class="pre">Line.setAdvancementDivisor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.setContinuousMode"><code class="docutils literal notranslate"><span class="pre">Line.setContinuousMode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.setEndPoint"><code class="docutils literal notranslate"><span class="pre">Line.setEndPoint()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.setGraduationSize"><code class="docutils literal notranslate"><span class="pre">Line.setGraduationSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.setIntensity"><code class="docutils literal notranslate"><span class="pre">Line.setIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.setLabel"><code class="docutils literal notranslate"><span class="pre">Line.setLabel()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.setLabelColor"><code class="docutils literal notranslate"><span class="pre">Line.setLabelColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.setLabelIntensity"><code class="docutils literal notranslate"><span class="pre">Line.setLabelIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.setLineColor"><code class="docutils literal notranslate"><span class="pre">Line.setLineColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.setLineMode"><code class="docutils literal notranslate"><span class="pre">Line.setLineMode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.setLineThickness"><code class="docutils literal notranslate"><span class="pre">Line.setLineThickness()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.setStartPoint"><code class="docutils literal notranslate"><span class="pre">Line.setStartPoint()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.advancement"><code class="docutils literal notranslate"><span class="pre">Line.advancement</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.advancementDivisor"><code class="docutils literal notranslate"><span class="pre">Line.advancementDivisor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.continuousMode"><code class="docutils literal notranslate"><span class="pre">Line.continuousMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.endPoint"><code class="docutils literal notranslate"><span class="pre">Line.endPoint</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.graduationSize"><code class="docutils literal notranslate"><span class="pre">Line.graduationSize</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.id"><code class="docutils literal notranslate"><span class="pre">Line.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.intensity"><code class="docutils literal notranslate"><span class="pre">Line.intensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.label"><code class="docutils literal notranslate"><span class="pre">Line.label</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.labelColor"><code class="docutils literal notranslate"><span class="pre">Line.labelColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.labelIntensity"><code class="docutils literal notranslate"><span class="pre">Line.labelIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.lineColor"><code class="docutils literal notranslate"><span class="pre">Line.lineColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.lineMode"><code class="docutils literal notranslate"><span class="pre">Line.lineMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.lineThickness"><code class="docutils literal notranslate"><span class="pre">Line.lineThickness</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.name"><code class="docutils literal notranslate"><span class="pre">Line.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.osgId"><code class="docutils literal notranslate"><span class="pre">Line.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Line.startPoint"><code class="docutils literal notranslate"><span class="pre">Line.startPoint</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.Line</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.Line.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-line">
+<h1>pySkyExplorer.Line<a class="headerlink" href="#pyskyexplorer-line" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Line">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">Line</span></span><a class="headerlink" href="#pySkyExplorer.Line" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.LineName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LineName</span></span><a class="headerlink" href="#pySkyExplorer.Line.LineName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available insert text name</p>
+<p><strong>InvalidLine</strong></p>
+<p><strong>Line001</strong></p>
+<p><strong>Line002</strong></p>
+<p><strong>Line003</strong></p>
+<p><strong>Line004</strong></p>
+<p><strong>Line005</strong></p>
+<p><strong>Line006</strong></p>
+<p><strong>Line007</strong></p>
+<p><strong>Line008</strong></p>
+<p><strong>Line009</strong></p>
+<p><strong>Line010</strong></p>
+<p><strong>Line011</strong></p>
+<p><strong>Line012</strong></p>
+<p><strong>Line013</strong></p>
+<p><strong>Line014</strong></p>
+<p><strong>Line015</strong></p>
+<p><strong>Line016</strong></p>
+<p><strong>Line017</strong></p>
+<p><strong>Line018</strong></p>
+<p><strong>Line019</strong></p>
+<p><strong>Line020</strong></p>
+<p><strong>Line021</strong></p>
+<p><strong>Line022</strong></p>
+<p><strong>Line023</strong></p>
+<p><strong>Line024</strong></p>
+<p><strong>Line025</strong></p>
+<p><strong>Line026</strong></p>
+<p><strong>Line027</strong></p>
+<p><strong>Line028</strong></p>
+<p><strong>Line029</strong></p>
+<p><strong>Line030</strong></p>
+<p><strong>Line031</strong></p>
+<p><strong>Line032</strong></p>
+<p><strong>Line033</strong></p>
+<p><strong>Line034</strong></p>
+<p><strong>Line035</strong></p>
+<p><strong>Line036</strong></p>
+<p><strong>Line037</strong></p>
+<p><strong>Line038</strong></p>
+<p><strong>Line039</strong></p>
+<p><strong>Line040</strong></p>
+<p><strong>Line041</strong></p>
+<p><strong>Line042</strong></p>
+<p><strong>Line043</strong></p>
+<p><strong>Line044</strong></p>
+<p><strong>Line045</strong></p>
+<p><strong>Line046</strong></p>
+<p><strong>Line047</strong></p>
+<p><strong>Line048</strong></p>
+<p><strong>Line049</strong></p>
+<p><strong>Line050</strong></p>
+<p><strong>Line051</strong></p>
+<p><strong>Line052</strong></p>
+<p><strong>Line053</strong></p>
+<p><strong>Line054</strong></p>
+<p><strong>Line055</strong></p>
+<p><strong>Line056</strong></p>
+<p><strong>Line057</strong></p>
+<p><strong>Line058</strong></p>
+<p><strong>Line059</strong></p>
+<p><strong>Line060</strong></p>
+<p><strong>Line061</strong></p>
+<p><strong>Line062</strong></p>
+<p><strong>Line063</strong></p>
+<p><strong>Line064</strong></p>
+<p><strong>Line065</strong></p>
+<p><strong>Line066</strong></p>
+<p><strong>Line067</strong></p>
+<p><strong>Line068</strong></p>
+<p><strong>Line069</strong></p>
+<p><strong>Line070</strong></p>
+<p><strong>Line071</strong></p>
+<p><strong>Line072</strong></p>
+<p><strong>Line073</strong></p>
+<p><strong>Line074</strong></p>
+<p><strong>Line075</strong></p>
+<p><strong>Line076</strong></p>
+<p><strong>Line077</strong></p>
+<p><strong>Line078</strong></p>
+<p><strong>Line079</strong></p>
+<p><strong>Line080</strong></p>
+<p><strong>Line081</strong></p>
+<p><strong>Line082</strong></p>
+<p><strong>Line083</strong></p>
+<p><strong>Line084</strong></p>
+<p><strong>Line085</strong></p>
+<p><strong>Line086</strong></p>
+<p><strong>Line087</strong></p>
+<p><strong>Line088</strong></p>
+<p><strong>Line089</strong></p>
+<p><strong>Line090</strong></p>
+<p><strong>Line091</strong></p>
+<p><strong>Line092</strong></p>
+<p><strong>Line093</strong></p>
+<p><strong>Line094</strong></p>
+<p><strong>Line095</strong></p>
+<p><strong>Line096</strong></p>
+<p><strong>Line097</strong></p>
+<p><strong>Line098</strong></p>
+<p><strong>Line099</strong></p>
+<p><strong>Line100</strong></p>
+<p><strong>Line101</strong></p>
+<p><strong>Line102</strong></p>
+<p><strong>Line103</strong></p>
+<p><strong>Line104</strong></p>
+<p><strong>Line105</strong></p>
+<p><strong>Line106</strong></p>
+<p><strong>Line107</strong></p>
+<p><strong>Line108</strong></p>
+<p><strong>Line109</strong></p>
+<p><strong>Line110</strong></p>
+<p><strong>Line111</strong></p>
+<p><strong>Line112</strong></p>
+<p><strong>Line113</strong></p>
+<p><strong>Line114</strong></p>
+<p><strong>Line115</strong></p>
+<p><strong>Line116</strong></p>
+<p><strong>Line117</strong></p>
+<p><strong>Line118</strong></p>
+<p><strong>Line119</strong></p>
+<p><strong>Line120</strong></p>
+<p><strong>Line121</strong></p>
+<p><strong>Line122</strong></p>
+<p><strong>Line123</strong></p>
+<p><strong>Line124</strong></p>
+<p><strong>Line125</strong></p>
+<p><strong>Line126</strong></p>
+<p><strong>Line127</strong></p>
+<p><strong>Line128</strong></p>
+<p><strong>Line129</strong></p>
+<p><strong>Line130</strong></p>
+<p><strong>Line131</strong></p>
+<p><strong>Line132</strong></p>
+<p><strong>Line133</strong></p>
+<p><strong>Line134</strong></p>
+<p><strong>Line135</strong></p>
+<p><strong>Line136</strong></p>
+<p><strong>Line137</strong></p>
+<p><strong>Line138</strong></p>
+<p><strong>Line139</strong></p>
+<p><strong>Line140</strong></p>
+<p><strong>Line141</strong></p>
+<p><strong>Line142</strong></p>
+<p><strong>Line143</strong></p>
+<p><strong>Line144</strong></p>
+<p><strong>Line145</strong></p>
+<p><strong>Line146</strong></p>
+<p><strong>Line147</strong></p>
+<p><strong>Line148</strong></p>
+<p><strong>Line149</strong></p>
+<p><strong>Line150</strong></p>
+<p><strong>Line151</strong></p>
+<p><strong>Line152</strong></p>
+<p><strong>Line153</strong></p>
+<p><strong>Line154</strong></p>
+<p><strong>Line155</strong></p>
+<p><strong>Line156</strong></p>
+<p><strong>Line157</strong></p>
+<p><strong>Line158</strong></p>
+<p><strong>Line159</strong></p>
+<p><strong>Line160</strong></p>
+<p><strong>Line161</strong></p>
+<p><strong>Line162</strong></p>
+<p><strong>Line163</strong></p>
+<p><strong>Line164</strong></p>
+<p><strong>Line165</strong></p>
+<p><strong>Line166</strong></p>
+<p><strong>Line167</strong></p>
+<p><strong>Line168</strong></p>
+<p><strong>Line169</strong></p>
+<p><strong>Line170</strong></p>
+<p><strong>Line171</strong></p>
+<p><strong>Line172</strong></p>
+<p><strong>Line173</strong></p>
+<p><strong>Line174</strong></p>
+<p><strong>Line175</strong></p>
+<p><strong>Line176</strong></p>
+<p><strong>Line177</strong></p>
+<p><strong>Line178</strong></p>
+<p><strong>Line179</strong></p>
+<p><strong>Line180</strong></p>
+<p><strong>Line181</strong></p>
+<p><strong>Line182</strong></p>
+<p><strong>Line183</strong></p>
+<p><strong>Line184</strong></p>
+<p><strong>Line185</strong></p>
+<p><strong>Line186</strong></p>
+<p><strong>Line187</strong></p>
+<p><strong>Line188</strong></p>
+<p><strong>Line189</strong></p>
+<p><strong>Line190</strong></p>
+<p><strong>Line191</strong></p>
+<p><strong>Line192</strong></p>
+<p><strong>Line193</strong></p>
+<p><strong>Line194</strong></p>
+<p><strong>Line195</strong></p>
+<p><strong>Line196</strong></p>
+<p><strong>Line197</strong></p>
+<p><strong>Line198</strong></p>
+<p><strong>Line199</strong></p>
+<p><strong>Line200</strong></p>
+<p><strong>LineCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.setAdvancement">
+<span class="sig-name descname"><span class="pre">setAdvancement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Line)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)advancement</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Line.setAdvancement" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+advancement : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.setAdvancementDivisor">
+<span class="sig-name descname"><span class="pre">setAdvancementDivisor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Line)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)advancementDivisor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Line.setAdvancementDivisor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+advancementDivisor : double</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.setContinuousMode">
+<span class="sig-name descname"><span class="pre">setContinuousMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Line)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)continuousMode</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Line.setContinuousMode" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+continuousMode : bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.setEndPoint">
+<span class="sig-name descname"><span class="pre">setEndPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Line)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)endPoint</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Line.setEndPoint" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+endPoint : int
+Id of the body representing the ending point</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.setGraduationSize">
+<span class="sig-name descname"><span class="pre">setGraduationSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Line)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)graduationSize</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Line.setGraduationSize" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+graduationSize : double
+Size of the line graduation (when using 3D line)</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.setIntensity">
+<span class="sig-name descname"><span class="pre">setIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Line)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Line.setIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+intensity : double
+Intensity of the line.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.setLabel">
+<span class="sig-name descname"><span class="pre">setLabel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Line)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)label</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Line.setLabel" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+label : str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.setLabelColor">
+<span class="sig-name descname"><span class="pre">setLabelColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Line)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)labelColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Line.setLabelColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+labelColor : Vec</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.setLabelIntensity">
+<span class="sig-name descname"><span class="pre">setLabelIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Line)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)labelIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Line.setLabelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+labelIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.setLineColor">
+<span class="sig-name descname"><span class="pre">setLineColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Line)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)lineColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Line.setLineColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+lineColor : Vec</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.setLineMode">
+<span class="sig-name descname"><span class="pre">setLineMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Line)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)lineMode</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Line.setLineMode" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+lineMode : LineMode
+True when line is used in 2D mode, false for 3D mode</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.setLineThickness">
+<span class="sig-name descname"><span class="pre">setLineThickness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Line)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)lineThickness</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Line.setLineThickness" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+lineThickness : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.setStartPoint">
+<span class="sig-name descname"><span class="pre">setStartPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Line)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)startPoint</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Line.setStartPoint" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+startPoint : int
+Id of the body representing the starting point</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.advancement">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">advancement</span></span><a class="headerlink" href="#pySkyExplorer.Line.advancement" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.advancementDivisor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">advancementDivisor</span></span><a class="headerlink" href="#pySkyExplorer.Line.advancementDivisor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.continuousMode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">continuousMode</span></span><a class="headerlink" href="#pySkyExplorer.Line.continuousMode" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.endPoint">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">endPoint</span></span><a class="headerlink" href="#pySkyExplorer.Line.endPoint" title="Permalink to this definition"></a></dt>
+<dd><p>Id of the body representing the ending point</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.graduationSize">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">graduationSize</span></span><a class="headerlink" href="#pySkyExplorer.Line.graduationSize" title="Permalink to this definition"></a></dt>
+<dd><p>Size of the line graduation (when using 3D line)</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.Line.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pySkyExplorer.Line.intensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the line.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.label">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><a class="headerlink" href="#pySkyExplorer.Line.label" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.labelColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">labelColor</span></span><a class="headerlink" href="#pySkyExplorer.Line.labelColor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.labelIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">labelIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Line.labelIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.lineColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lineColor</span></span><a class="headerlink" href="#pySkyExplorer.Line.lineColor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.lineMode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lineMode</span></span><a class="headerlink" href="#pySkyExplorer.Line.lineMode" title="Permalink to this definition"></a></dt>
+<dd><p>True when line is used in 2D mode, false for 3D mode</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.lineThickness">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lineThickness</span></span><a class="headerlink" href="#pySkyExplorer.Line.lineThickness" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.Line.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.Line.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Line.startPoint">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">startPoint</span></span><a class="headerlink" href="#pySkyExplorer.Line.startPoint" title="Permalink to this definition"></a></dt>
+<dd><p>Id of the body representing the starting point</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.Light.html" class="btn btn-neutral float-left" title="pySkyExplorer.Light" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.Lut.html" class="btn btn-neutral float-right" title="pySkyExplorer.Lut" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

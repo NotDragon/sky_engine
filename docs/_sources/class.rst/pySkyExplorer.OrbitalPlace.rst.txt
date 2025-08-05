@@ -1,0 +1,10 @@
+pySkyExplorer.OrbitalPlace
+==========================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: OrbitalPlace
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

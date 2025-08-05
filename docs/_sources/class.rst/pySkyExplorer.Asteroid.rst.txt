@@ -1,0 +1,10 @@
+pySkyExplorer.Asteroid
+======================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Asteroid
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

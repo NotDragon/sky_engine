@@ -1,0 +1,10 @@
+pySkyExplorer.Chart2D
+=====================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Chart2D
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

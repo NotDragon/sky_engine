@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.Camera &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.Chart2D" href="pySkyExplorer.Chart2D.html" />
+    <link rel="prev" title="pySkyExplorer.Bolide" href="pySkyExplorer.Bolide.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.Camera</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.Camera"><code class="docutils literal notranslate"><span class="pre">Camera</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.CameraName"><code class="docutils literal notranslate"><span class="pre">Camera.CameraName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.CameraPort"><code class="docutils literal notranslate"><span class="pre">Camera.CameraPort</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.OrientationMode"><code class="docutils literal notranslate"><span class="pre">Camera.OrientationMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.PositionMode"><code class="docutils literal notranslate"><span class="pre">Camera.PositionMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.ZoomFormula"><code class="docutils literal notranslate"><span class="pre">Camera.ZoomFormula</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.addChild"><code class="docutils literal notranslate"><span class="pre">Camera.addChild()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.defaultResolutionRatioStrength"><code class="docutils literal notranslate"><span class="pre">Camera.defaultResolutionRatioStrength()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.portId"><code class="docutils literal notranslate"><span class="pre">Camera.portId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setActiveTarget"><code class="docutils literal notranslate"><span class="pre">Camera.setActiveTarget()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setActiveTrackStereo"><code class="docutils literal notranslate"><span class="pre">Camera.setActiveTrackStereo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setDomeMeanPixelRatio"><code class="docutils literal notranslate"><span class="pre">Camera.setDomeMeanPixelRatio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setEyeDistance"><code class="docutils literal notranslate"><span class="pre">Camera.setEyeDistance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setFocusDegree"><code class="docutils literal notranslate"><span class="pre">Camera.setFocusDegree()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setOrientationD"><code class="docutils literal notranslate"><span class="pre">Camera.setOrientationD()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setOrientationH"><code class="docutils literal notranslate"><span class="pre">Camera.setOrientationH()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setOrientationHPR"><code class="docutils literal notranslate"><span class="pre">Camera.setOrientationHPR()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setOrientationHPRD"><code class="docutils literal notranslate"><span class="pre">Camera.setOrientationHPRD()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setOrientationP"><code class="docutils literal notranslate"><span class="pre">Camera.setOrientationP()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setOrientationR"><code class="docutils literal notranslate"><span class="pre">Camera.setOrientationR()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setOrientationSmoothXYZR"><code class="docutils literal notranslate"><span class="pre">Camera.setOrientationSmoothXYZR()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setOrientationXYZ"><code class="docutils literal notranslate"><span class="pre">Camera.setOrientationXYZ()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setOrientationXYZR"><code class="docutils literal notranslate"><span class="pre">Camera.setOrientationXYZR()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setPositionB"><code class="docutils literal notranslate"><span class="pre">Camera.setPositionB()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setPositionL"><code class="docutils literal notranslate"><span class="pre">Camera.setPositionL()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setPositionLBR"><code class="docutils literal notranslate"><span class="pre">Camera.setPositionLBR()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setPositionR"><code class="docutils literal notranslate"><span class="pre">Camera.setPositionR()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setPositionX"><code class="docutils literal notranslate"><span class="pre">Camera.setPositionX()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setPositionXYZ"><code class="docutils literal notranslate"><span class="pre">Camera.setPositionXYZ()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setPositionY"><code class="docutils literal notranslate"><span class="pre">Camera.setPositionY()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setPositionZ"><code class="docutils literal notranslate"><span class="pre">Camera.setPositionZ()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setResolutionRatioStrength"><code class="docutils literal notranslate"><span class="pre">Camera.setResolutionRatioStrength()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setStereoPosition"><code class="docutils literal notranslate"><span class="pre">Camera.setStereoPosition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setStereoRatio"><code class="docutils literal notranslate"><span class="pre">Camera.setStereoRatio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setTarget"><code class="docutils literal notranslate"><span class="pre">Camera.setTarget()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setTargetAzimuth"><code class="docutils literal notranslate"><span class="pre">Camera.setTargetAzimuth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setTargetHeight"><code class="docutils literal notranslate"><span class="pre">Camera.setTargetHeight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setTraceMode"><code class="docutils literal notranslate"><span class="pre">Camera.setTraceMode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setZoomFormula"><code class="docutils literal notranslate"><span class="pre">Camera.setZoomFormula()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setZoomFov"><code class="docutils literal notranslate"><span class="pre">Camera.setZoomFov()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.setZoomPosition"><code class="docutils literal notranslate"><span class="pre">Camera.setZoomPosition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.takeScreenshot"><code class="docutils literal notranslate"><span class="pre">Camera.takeScreenshot()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.activeTarget"><code class="docutils literal notranslate"><span class="pre">Camera.activeTarget</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.activeTrackStereo"><code class="docutils literal notranslate"><span class="pre">Camera.activeTrackStereo</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.domeMeanPixelRatio"><code class="docutils literal notranslate"><span class="pre">Camera.domeMeanPixelRatio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.eyeDistance"><code class="docutils literal notranslate"><span class="pre">Camera.eyeDistance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.focusDegree"><code class="docutils literal notranslate"><span class="pre">Camera.focusDegree</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.icrfToTrack"><code class="docutils literal notranslate"><span class="pre">Camera.icrfToTrack</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.id"><code class="docutils literal notranslate"><span class="pre">Camera.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.name"><code class="docutils literal notranslate"><span class="pre">Camera.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.orientationHPR"><code class="docutils literal notranslate"><span class="pre">Camera.orientationHPR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.orientationHPRD"><code class="docutils literal notranslate"><span class="pre">Camera.orientationHPRD</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.orientationMode"><code class="docutils literal notranslate"><span class="pre">Camera.orientationMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.orientationTrack"><code class="docutils literal notranslate"><span class="pre">Camera.orientationTrack</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.orientationXYZR"><code class="docutils literal notranslate"><span class="pre">Camera.orientationXYZR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.osgId"><code class="docutils literal notranslate"><span class="pre">Camera.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.parent"><code class="docutils literal notranslate"><span class="pre">Camera.parent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.parentFamily"><code class="docutils literal notranslate"><span class="pre">Camera.parentFamily</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.parentIndex"><code class="docutils literal notranslate"><span class="pre">Camera.parentIndex</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.parentOri"><code class="docutils literal notranslate"><span class="pre">Camera.parentOri</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.parentOriFamily"><code class="docutils literal notranslate"><span class="pre">Camera.parentOriFamily</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.parentOriIndex"><code class="docutils literal notranslate"><span class="pre">Camera.parentOriIndex</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.port"><code class="docutils literal notranslate"><span class="pre">Camera.port</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.portOri"><code class="docutils literal notranslate"><span class="pre">Camera.portOri</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.position"><code class="docutils literal notranslate"><span class="pre">Camera.position</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.positionB"><code class="docutils literal notranslate"><span class="pre">Camera.positionB</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.positionL"><code class="docutils literal notranslate"><span class="pre">Camera.positionL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.positionLBR"><code class="docutils literal notranslate"><span class="pre">Camera.positionLBR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.positionMode"><code class="docutils literal notranslate"><span class="pre">Camera.positionMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.positionR"><code class="docutils literal notranslate"><span class="pre">Camera.positionR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.positionTrack"><code class="docutils literal notranslate"><span class="pre">Camera.positionTrack</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.positionX"><code class="docutils literal notranslate"><span class="pre">Camera.positionX</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.positionXYZ"><code class="docutils literal notranslate"><span class="pre">Camera.positionXYZ</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.positionY"><code class="docutils literal notranslate"><span class="pre">Camera.positionY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.positionZ"><code class="docutils literal notranslate"><span class="pre">Camera.positionZ</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.resolutionRatioStrength"><code class="docutils literal notranslate"><span class="pre">Camera.resolutionRatioStrength</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.stereoPosition"><code class="docutils literal notranslate"><span class="pre">Camera.stereoPosition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.stereoRatio"><code class="docutils literal notranslate"><span class="pre">Camera.stereoRatio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.target"><code class="docutils literal notranslate"><span class="pre">Camera.target</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.targetAzimuth"><code class="docutils literal notranslate"><span class="pre">Camera.targetAzimuth</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.targetHeight"><code class="docutils literal notranslate"><span class="pre">Camera.targetHeight</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.traceMode"><code class="docutils literal notranslate"><span class="pre">Camera.traceMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.trackToDome"><code class="docutils literal notranslate"><span class="pre">Camera.trackToDome</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.zoomFormula"><code class="docutils literal notranslate"><span class="pre">Camera.zoomFormula</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.zoomFov"><code class="docutils literal notranslate"><span class="pre">Camera.zoomFov</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.zoomPosition"><code class="docutils literal notranslate"><span class="pre">Camera.zoomPosition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Camera.zoomPositionTrack"><code class="docutils literal notranslate"><span class="pre">Camera.zoomPositionTrack</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.Camera</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.Camera.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-camera">
+<h1>pySkyExplorer.Camera<a class="headerlink" href="#pyskyexplorer-camera" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">Camera</span></span><a class="headerlink" href="#pySkyExplorer.Camera" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.CameraName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CameraName</span></span><a class="headerlink" href="#pySkyExplorer.Camera.CameraName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available camera name.</p>
+<p><strong>InvalidCamera</strong></p>
+<p><strong>MainCamera</strong></p>
+<p><strong>CameraCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.CameraPort">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CameraPort</span></span><a class="headerlink" href="#pySkyExplorer.Camera.CameraPort" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available ports on the camera.</p>
+<p><strong>InvalidCameraPort</strong></p>
+<p><strong>FixedBackground</strong></p>
+<p><strong>Background</strong></p>
+<p><strong>FixedForeground</strong></p>
+<p><strong>Foreground</strong></p>
+<p><strong>CameraPortCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.OrientationMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OrientationMode</span></span><a class="headerlink" href="#pySkyExplorer.Camera.OrientationMode" title="Permalink to this definition"></a></dt>
+<dd><p>Orientation mode</p>
+<p><strong>InvalidOrientationMode</strong></p>
+<p><strong>SmoothXYZR</strong></p>
+<p><strong>XYZR</strong></p>
+<p><strong>HPRD</strong></p>
+<p><strong>OrientationModeCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.PositionMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PositionMode</span></span><a class="headerlink" href="#pySkyExplorer.Camera.PositionMode" title="Permalink to this definition"></a></dt>
+<dd><p>Mode used to change the camera position.</p>
+<p><strong>InvalidPositionMode</strong></p>
+<p><strong>XYZ</strong></p>
+<p><strong>LBR</strong></p>
+<p><strong>PositionModeCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.ZoomFormula">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ZoomFormula</span></span><a class="headerlink" href="#pySkyExplorer.Camera.ZoomFormula" title="Permalink to this definition"></a></dt>
+<dd><p>Zoom formula</p>
+<p><strong>InvalidZoomFormula</strong></p>
+<p><strong>GreatCircleHPR</strong></p>
+<p><strong>GreatCircle</strong></p>
+<p><strong>FisheyePlane</strong></p>
+<p><strong>VerticalCircle</strong></p>
+<p><strong>ZoomFormulaCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.addChild">
+<span class="sig-name descname"><span class="pre">addChild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)child</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CameraPort)port</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.addChild" title="Permalink to this definition"></a></dt>
+<dd><p>Add a child object to the camera scene graph.
+PARAMETERS:
+child : int</p>
+<blockquote>
+<div><p>Id of the child object to add.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>port<span class="classifier">CameraPort</span></dt><dd><p>Coordinate system to use for adding child. See CameraPort documentation for more information.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.defaultResolutionRatioStrength">
+<span class="sig-name descname"><span class="pre">defaultResolutionRatioStrength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.defaultResolutionRatioStrength" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.portId">
+<span class="sig-name descname"><span class="pre">portId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CameraPort)portName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.portId" title="Permalink to this definition"></a></dt>
+<dd><p>Return the id of the given port
+PARAMETERS:
+portName : CameraPort</p>
+<blockquote>
+<div><p>Name of the port. See ‘CameraPort’ documentation for more information.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setActiveTarget">
+<span class="sig-name descname"><span class="pre">setActiveTarget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)activeTarget</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setActiveTarget" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+activeTarget : bool
+Stereo active On Off</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setActiveTrackStereo">
+<span class="sig-name descname"><span class="pre">setActiveTrackStereo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)activeTrackStereo</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setActiveTrackStereo" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+activeTrackStereo : bool
+False by defaut</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setDomeMeanPixelRatio">
+<span class="sig-name descname"><span class="pre">setDomeMeanPixelRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)domeMeanPixelRatio</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setDomeMeanPixelRatio" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+domeMeanPixelRatio : double
+Mean pixel ratio of the dome where the stars are displayed</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setEyeDistance">
+<span class="sig-name descname"><span class="pre">setEyeDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)eyeDistance</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setEyeDistance" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+eyeDistance : double
+Stereo eye separation value</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setFocusDegree">
+<span class="sig-name descname"><span class="pre">setFocusDegree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)focusDegree</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setFocusDegree" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+focusDegree : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setOrientationD">
+<span class="sig-name descname"><span class="pre">setOrientationD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)orientationD</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setOrientationD" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orientationD : double
+Set the distance value of camera orientation.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setOrientationH">
+<span class="sig-name descname"><span class="pre">setOrientationH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)orientationH</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setOrientationH" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orientationH : double
+Set the heading value of camera orientation.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setOrientationHPR">
+<span class="sig-name descname"><span class="pre">setOrientationHPR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)orientationHPR</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setOrientationHPR" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orientationHPR : Vec
+HPR orientation of the camera relative to it’s parent coordinate system.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setOrientationHPRD">
+<span class="sig-name descname"><span class="pre">setOrientationHPRD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec4)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)track</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setOrientationHPRD" title="Permalink to this definition"></a></dt>
+<dd><p>Change the HPRD orientation of the camera, relative to given coordinate system.
+PARAMETERS:
+value : Vec4</p>
+<blockquote>
+<div><p>Target HPRD orientation value.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for HPRD orientation interpolation.</p>
+</dd>
+<dt>track<span class="classifier">int default value</span><span class="classifier">-1</span></dt><dd><p>Database id of the referencial (For example, celestial body port).</p>
+</dd>
+</dl>
+<p>Set -1 to use current coordinate system.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setOrientationP">
+<span class="sig-name descname"><span class="pre">setOrientationP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)orientationP</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setOrientationP" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orientationP : double
+Set the pitch value of camera orientation.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setOrientationR">
+<span class="sig-name descname"><span class="pre">setOrientationR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)orientationR</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setOrientationR" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orientationR : double
+Set the roll value of camera orientation.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setOrientationSmoothXYZR">
+<span class="sig-name descname"><span class="pre">setOrientationSmoothXYZR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec4)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)track</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setOrientationSmoothXYZR" title="Permalink to this definition"></a></dt>
+<dd><p>Smoothly change the XYZR orientation of the camera, relative to given coordinate system.
+PARAMETERS:
+value : Vec4</p>
+<blockquote>
+<div><p>Target XYZR orientation value.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for XYZR orientation interpolation.</p>
+</dd>
+<dt>track<span class="classifier">int default value</span><span class="classifier">-1</span></dt><dd><p>Database id of the referencial (For example, celestial body port).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setOrientationXYZ">
+<span class="sig-name descname"><span class="pre">setOrientationXYZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)orientationXYZ</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setOrientationXYZ" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orientationXYZ : Vec
+XYZ orientation of the camera relative to it’s parent coordinate system.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setOrientationXYZR">
+<span class="sig-name descname"><span class="pre">setOrientationXYZR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec4)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)track</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setOrientationXYZR" title="Permalink to this definition"></a></dt>
+<dd><p>Change the XYZR orientation of the camera, relative to given coordinate system.
+PARAMETERS:
+value : Vec4</p>
+<blockquote>
+<div><p>Target XYZR orientation value.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for XYZR orientation interpolation.</p>
+</dd>
+<dt>track<span class="classifier">int default value</span><span class="classifier">-1</span></dt><dd><p>Database id of the referencial (For example, celestial body port).</p>
+</dd>
+</dl>
+<p>Set -1 to use current coordinate system.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setPositionB">
+<span class="sig-name descname"><span class="pre">setPositionB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)track</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setPositionB" title="Permalink to this definition"></a></dt>
+<dd><p>Change the camera longitude position, relative to given coordinate system.
+PARAMETERS:
+value : double</p>
+<blockquote>
+<div><p>Target longitude position value.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for longitude position interpolation.</p>
+</dd>
+<dt>track<span class="classifier">int default value</span><span class="classifier">-1</span></dt><dd><p>Database id of the referencial (For example, celestial body port).</p>
+</dd>
+</dl>
+<p>Set -1 to use current coordinate system.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setPositionL">
+<span class="sig-name descname"><span class="pre">setPositionL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)track</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setPositionL" title="Permalink to this definition"></a></dt>
+<dd><p>Change the camera latitude position, relative to given coordinate system.
+PARAMETERS:
+value : double</p>
+<blockquote>
+<div><p>Target latitude position value.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for latitude position interpolation.</p>
+</dd>
+<dt>track<span class="classifier">int default value</span><span class="classifier">-1</span></dt><dd><p>Database id of the referencial (For example, celestial body port).</p>
+</dd>
+</dl>
+<p>Set -1 to use current coordinate system.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setPositionLBR">
+<span class="sig-name descname"><span class="pre">setPositionLBR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)track</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setPositionLBR" title="Permalink to this definition"></a></dt>
+<dd><p>Change the LBR position of the camera, relative to given coordinate system.
+PARAMETERS:
+value : Vec</p>
+<blockquote>
+<div><p>Target LBR position value.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for LBR position interpolation.</p>
+</dd>
+<dt>track<span class="classifier">int default value</span><span class="classifier">-1</span></dt><dd><p>Database id of the referencial (For example, celestial body port).</p>
+</dd>
+</dl>
+<p>Set -1 to use current coordinate system.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setPositionR">
+<span class="sig-name descname"><span class="pre">setPositionR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)track</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setPositionR" title="Permalink to this definition"></a></dt>
+<dd><p>Change the camera distance to body, relative to given coordinate system.
+PARAMETERS:
+value : double</p>
+<blockquote>
+<div><p>Target distance value.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for distance value interpolation.</p>
+</dd>
+<dt>track<span class="classifier">int default value</span><span class="classifier">-1</span></dt><dd><p>Database id of the referencial (For example, celestial body port).</p>
+</dd>
+</dl>
+<p>Set -1 to use current coordinate system.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setPositionX">
+<span class="sig-name descname"><span class="pre">setPositionX</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)track</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setPositionX" title="Permalink to this definition"></a></dt>
+<dd><p>Change the camera X coordinate around body, relative to given coordinate system.
+PARAMETERS:
+value : double</p>
+<blockquote>
+<div><p>Target X value.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for latitude position interpolation.</p>
+</dd>
+<dt>track<span class="classifier">int default value</span><span class="classifier">-1</span></dt><dd><p>Database id of the referencial (For example, celestial body port).</p>
+</dd>
+</dl>
+<p>Set -1 to use current coordinate system.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setPositionXYZ">
+<span class="sig-name descname"><span class="pre">setPositionXYZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)track</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setPositionXYZ" title="Permalink to this definition"></a></dt>
+<dd><p>Change the camera XYZ position, relative to given coordinate system.
+PARAMETERS:
+value : Vec</p>
+<blockquote>
+<div><p>Target XYZ position.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for distance value interpolation.</p>
+</dd>
+<dt>track<span class="classifier">int default value</span><span class="classifier">-1</span></dt><dd><p>Database id of the referencial (For example, celestial body port).</p>
+</dd>
+</dl>
+<p>Set -1 to use current coordinate system.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setPositionY">
+<span class="sig-name descname"><span class="pre">setPositionY</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)track</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setPositionY" title="Permalink to this definition"></a></dt>
+<dd><p>Change the camera Y coordinate around body, relative to given coordinate system.
+PARAMETERS:
+value : double</p>
+<blockquote>
+<div><p>Target Y value.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for longitude position interpolation.</p>
+</dd>
+<dt>track<span class="classifier">int default value</span><span class="classifier">-1</span></dt><dd><p>Database id of the referencial (For example, celestial body port).</p>
+</dd>
+</dl>
+<p>Set -1 to use current coordinate system.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setPositionZ">
+<span class="sig-name descname"><span class="pre">setPositionZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)track</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setPositionZ" title="Permalink to this definition"></a></dt>
+<dd><p>Change the camera Z coordinate around body, relative to given coordinate system.
+PARAMETERS:
+value : double</p>
+<blockquote>
+<div><p>Target Z value.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for distance value interpolation.</p>
+</dd>
+<dt>track<span class="classifier">int default value</span><span class="classifier">-1</span></dt><dd><p>Database id of the referencial (For example, celestial body port).</p>
+</dd>
+</dl>
+<p>Set -1 to use current coordinate system.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setResolutionRatioStrength">
+<span class="sig-name descname"><span class="pre">setResolutionRatioStrength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)resolutionRatioStrength</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setResolutionRatioStrength" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+resolutionRatioStrength : double
+Strength of the effect of the ratio between the dome and skyEx mean pixel ratio</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setStereoPosition">
+<span class="sig-name descname"><span class="pre">setStereoPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)stereoPosition</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setStereoPosition" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+stereoPosition : int</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setStereoRatio">
+<span class="sig-name descname"><span class="pre">setStereoRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)stereoRatio</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setStereoRatio" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+stereoRatio : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setTarget">
+<span class="sig-name descname"><span class="pre">setTarget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)target</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setTarget" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+target : Vec
+Camera target value : (Target azimut, targetHeight, 0).</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setTargetAzimuth">
+<span class="sig-name descname"><span class="pre">setTargetAzimuth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)targetAzimuth</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setTargetAzimuth" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+targetAzimuth : double
+Camera target azimuth.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setTargetHeight">
+<span class="sig-name descname"><span class="pre">setTargetHeight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)targetHeight</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setTargetHeight" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+targetHeight : double
+Camera target height.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setTraceMode">
+<span class="sig-name descname"><span class="pre">setTraceMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)traceMode</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setTraceMode" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+traceMode : bool
+Flag used to know if trace mode is enabled.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setZoomFormula">
+<span class="sig-name descname"><span class="pre">setZoomFormula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(ZoomFormula)zoomFormula</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setZoomFormula" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+zoomFormula : ZoomFormula
+Zoom formula.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setZoomFov">
+<span class="sig-name descname"><span class="pre">setZoomFov</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)zoomFov</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setZoomFov" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+zoomFov : double
+Fov angle in degrees after zooming.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.setZoomPosition">
+<span class="sig-name descname"><span class="pre">setZoomPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)track</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PositionMode)mode</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.setZoomPosition" title="Permalink to this definition"></a></dt>
+<dd><p>Zoom on a body.
+PARAMETERS:
+position : Vec</p>
+<blockquote>
+<div><p>Position to zoom in track referencial.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>track<span class="classifier">int</span></dt><dd><p>Database id of the referencial (For example, celestial body port).</p>
+</dd>
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for position value interpolation.</p>
+</dd>
+<dt>mode<span class="classifier">PositionMode default value</span><span class="classifier">PositionMode::XYZ</span></dt><dd><p>Mode used for zooming. See PositionMode documentation for more information</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.takeScreenshot">
+<span class="sig-name descname"><span class="pre">takeScreenshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Camera)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)value</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Camera.takeScreenshot" title="Permalink to this definition"></a></dt>
+<dd><p>Save the image from every channel in specified file.
+PARAMETERS:
+value : str</p>
+<blockquote>
+<div><p>Output file name.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.activeTarget">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">activeTarget</span></span><a class="headerlink" href="#pySkyExplorer.Camera.activeTarget" title="Permalink to this definition"></a></dt>
+<dd><p>Stereo active On Off</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.activeTrackStereo">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">activeTrackStereo</span></span><a class="headerlink" href="#pySkyExplorer.Camera.activeTrackStereo" title="Permalink to this definition"></a></dt>
+<dd><p>False by defaut</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.domeMeanPixelRatio">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">domeMeanPixelRatio</span></span><a class="headerlink" href="#pySkyExplorer.Camera.domeMeanPixelRatio" title="Permalink to this definition"></a></dt>
+<dd><p>Mean pixel ratio of the dome where the stars are displayed</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.eyeDistance">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eyeDistance</span></span><a class="headerlink" href="#pySkyExplorer.Camera.eyeDistance" title="Permalink to this definition"></a></dt>
+<dd><p>Stereo eye separation value</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.focusDegree">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">focusDegree</span></span><a class="headerlink" href="#pySkyExplorer.Camera.focusDegree" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.icrfToTrack">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">icrfToTrack</span></span><a class="headerlink" href="#pySkyExplorer.Camera.icrfToTrack" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Matrix transformation between ICRF coordinate system and current coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.Camera.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.Camera.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.orientationHPR">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orientationHPR</span></span><a class="headerlink" href="#pySkyExplorer.Camera.orientationHPR" title="Permalink to this definition"></a></dt>
+<dd><p>HPR orientation of the camera relative to it’s parent coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.orientationHPRD">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orientationHPRD</span></span><a class="headerlink" href="#pySkyExplorer.Camera.orientationHPRD" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+HPRD orientation of the camera relative to it’s parent coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.orientationMode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orientationMode</span></span><a class="headerlink" href="#pySkyExplorer.Camera.orientationMode" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Get the orientation mode.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.orientationTrack">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orientationTrack</span></span><a class="headerlink" href="#pySkyExplorer.Camera.orientationTrack" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Parent port used to compute the orientation of the camera.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.orientationXYZR">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orientationXYZR</span></span><a class="headerlink" href="#pySkyExplorer.Camera.orientationXYZR" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+XYZR orientation of the camera relative to it’s parent coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.Camera.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.parent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#pySkyExplorer.Camera.parent" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Position parent database (id + port).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.parentFamily">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parentFamily</span></span><a class="headerlink" href="#pySkyExplorer.Camera.parentFamily" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Position parent family.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.parentIndex">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parentIndex</span></span><a class="headerlink" href="#pySkyExplorer.Camera.parentIndex" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Position parent index (in its family).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.parentOri">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parentOri</span></span><a class="headerlink" href="#pySkyExplorer.Camera.parentOri" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Orientation parent database (id + port).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.parentOriFamily">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parentOriFamily</span></span><a class="headerlink" href="#pySkyExplorer.Camera.parentOriFamily" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Orientation parent family.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.parentOriIndex">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parentOriIndex</span></span><a class="headerlink" href="#pySkyExplorer.Camera.parentOriIndex" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Orientation parent index (in its family).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.port">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">port</span></span><a class="headerlink" href="#pySkyExplorer.Camera.port" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Position port.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.portOri">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">portOri</span></span><a class="headerlink" href="#pySkyExplorer.Camera.portOri" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Orientation port.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.position">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#pySkyExplorer.Camera.position" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+XYZ position of the camera in ICRF coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.positionB">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positionB</span></span><a class="headerlink" href="#pySkyExplorer.Camera.positionB" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+B position coordinate of the camera, relative to it’s parent coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.positionL">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positionL</span></span><a class="headerlink" href="#pySkyExplorer.Camera.positionL" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+L position coordinate of the camera, relative to it’s parent coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.positionLBR">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positionLBR</span></span><a class="headerlink" href="#pySkyExplorer.Camera.positionLBR" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+LBR position of the camera, relative to it’s parent coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.positionMode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positionMode</span></span><a class="headerlink" href="#pySkyExplorer.Camera.positionMode" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Get the position mode.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.positionR">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positionR</span></span><a class="headerlink" href="#pySkyExplorer.Camera.positionR" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+R position coordinate of the camera, relative to it’s parent coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.positionTrack">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positionTrack</span></span><a class="headerlink" href="#pySkyExplorer.Camera.positionTrack" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Parent port used to compute the position of the camera.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.positionX">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positionX</span></span><a class="headerlink" href="#pySkyExplorer.Camera.positionX" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+X position coordinate of the camera, relative to it’s parent coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.positionXYZ">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positionXYZ</span></span><a class="headerlink" href="#pySkyExplorer.Camera.positionXYZ" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+XYZ position of the camera, relative to it’s parent coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.positionY">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positionY</span></span><a class="headerlink" href="#pySkyExplorer.Camera.positionY" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Y position coordinate of the camera, relative to it’s parent coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.positionZ">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positionZ</span></span><a class="headerlink" href="#pySkyExplorer.Camera.positionZ" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Z position coordinate of the camera, relative to it’s parent coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.resolutionRatioStrength">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resolutionRatioStrength</span></span><a class="headerlink" href="#pySkyExplorer.Camera.resolutionRatioStrength" title="Permalink to this definition"></a></dt>
+<dd><p>Strength of the effect of the ratio between the dome and skyEx mean pixel ratio</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.stereoPosition">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stereoPosition</span></span><a class="headerlink" href="#pySkyExplorer.Camera.stereoPosition" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.stereoRatio">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stereoRatio</span></span><a class="headerlink" href="#pySkyExplorer.Camera.stereoRatio" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.target">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">target</span></span><a class="headerlink" href="#pySkyExplorer.Camera.target" title="Permalink to this definition"></a></dt>
+<dd><p>Camera target value : (Target azimut, targetHeight, 0).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.targetAzimuth">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">targetAzimuth</span></span><a class="headerlink" href="#pySkyExplorer.Camera.targetAzimuth" title="Permalink to this definition"></a></dt>
+<dd><p>Camera target azimuth.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.targetHeight">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">targetHeight</span></span><a class="headerlink" href="#pySkyExplorer.Camera.targetHeight" title="Permalink to this definition"></a></dt>
+<dd><p>Camera target height.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.traceMode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">traceMode</span></span><a class="headerlink" href="#pySkyExplorer.Camera.traceMode" title="Permalink to this definition"></a></dt>
+<dd><p>Flag used to know if trace mode is enabled.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.trackToDome">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trackToDome</span></span><a class="headerlink" href="#pySkyExplorer.Camera.trackToDome" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Matrix transformation between current coordinate system to dome one’s.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.zoomFormula">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">zoomFormula</span></span><a class="headerlink" href="#pySkyExplorer.Camera.zoomFormula" title="Permalink to this definition"></a></dt>
+<dd><p>Zoom formula.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.zoomFov">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">zoomFov</span></span><a class="headerlink" href="#pySkyExplorer.Camera.zoomFov" title="Permalink to this definition"></a></dt>
+<dd><p>Fov angle in degrees after zooming.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.zoomPosition">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">zoomPosition</span></span><a class="headerlink" href="#pySkyExplorer.Camera.zoomPosition" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Return the position of the zoom.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Camera.zoomPositionTrack">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">zoomPositionTrack</span></span><a class="headerlink" href="#pySkyExplorer.Camera.zoomPositionTrack" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Return the zoom target body id.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.Bolide.html" class="btn btn-neutral float-left" title="pySkyExplorer.Bolide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.Chart2D.html" class="btn btn-neutral float-right" title="pySkyExplorer.Chart2D" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

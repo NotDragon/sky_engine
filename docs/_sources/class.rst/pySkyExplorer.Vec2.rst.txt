@@ -1,0 +1,10 @@
+pySkyExplorer.Vec2
+==================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Vec2
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

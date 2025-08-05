@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.Place3D &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.Planet" href="pySkyExplorer.Planet.html" />
+    <link rel="prev" title="pySkyExplorer.Place2D" href="pySkyExplorer.Place2D.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.Place3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.Place3D"><code class="docutils literal notranslate"><span class="pre">Place3D</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.DrawingMode"><code class="docutils literal notranslate"><span class="pre">Place3D.DrawingMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.Place3DName"><code class="docutils literal notranslate"><span class="pre">Place3D.Place3DName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.PlayMode"><code class="docutils literal notranslate"><span class="pre">Place3D.PlayMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.load"><code class="docutils literal notranslate"><span class="pre">Place3D.load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.setEvolution"><code class="docutils literal notranslate"><span class="pre">Place3D.setEvolution()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.setIntensity"><code class="docutils literal notranslate"><span class="pre">Place3D.setIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.setLineColor"><code class="docutils literal notranslate"><span class="pre">Place3D.setLineColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.setLineDrawingMode"><code class="docutils literal notranslate"><span class="pre">Place3D.setLineDrawingMode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.setLineThickness"><code class="docutils literal notranslate"><span class="pre">Place3D.setLineThickness()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.setPlayMode"><code class="docutils literal notranslate"><span class="pre">Place3D.setPlayMode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.setShowPath"><code class="docutils literal notranslate"><span class="pre">Place3D.setShowPath()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.evolution"><code class="docutils literal notranslate"><span class="pre">Place3D.evolution</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.id"><code class="docutils literal notranslate"><span class="pre">Place3D.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.intensity"><code class="docutils literal notranslate"><span class="pre">Place3D.intensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.lineColor"><code class="docutils literal notranslate"><span class="pre">Place3D.lineColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.lineDrawingMode"><code class="docutils literal notranslate"><span class="pre">Place3D.lineDrawingMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.lineThickness"><code class="docutils literal notranslate"><span class="pre">Place3D.lineThickness</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.name"><code class="docutils literal notranslate"><span class="pre">Place3D.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.osgId"><code class="docutils literal notranslate"><span class="pre">Place3D.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.playMode"><code class="docutils literal notranslate"><span class="pre">Place3D.playMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Place3D.showPath"><code class="docutils literal notranslate"><span class="pre">Place3D.showPath</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.Place3D</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.Place3D.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-place3d">
+<h1>pySkyExplorer.Place3D<a class="headerlink" href="#pyskyexplorer-place3d" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">Place3D</span></span><a class="headerlink" href="#pySkyExplorer.Place3D" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.DrawingMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DrawingMode</span></span><a class="headerlink" href="#pySkyExplorer.Place3D.DrawingMode" title="Permalink to this definition"></a></dt>
+<dd><p>Path drawing mode.</p>
+<p><strong>InvalidDrawingMode</strong></p>
+<p><strong>Default</strong></p>
+<p><strong>Deprecated_Dashes</strong></p>
+<p><strong>Lines</strong></p>
+<p><strong>Deprecated_Points</strong></p>
+<p><strong>Trail</strong></p>
+<p><strong>DrawingModeCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.Place3DName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Place3DName</span></span><a class="headerlink" href="#pySkyExplorer.Place3D.Place3DName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available place2D name.</p>
+<p><strong>InvalidPlace3D</strong></p>
+<p><strong>Place3D001</strong></p>
+<p><strong>Place3D002</strong></p>
+<p><strong>Place3D003</strong></p>
+<p><strong>Place3D004</strong></p>
+<p><strong>Place3D005</strong></p>
+<p><strong>Place3D006</strong></p>
+<p><strong>Place3D007</strong></p>
+<p><strong>Place3D008</strong></p>
+<p><strong>Place3D009</strong></p>
+<p><strong>Place3D010</strong></p>
+<p><strong>Place3D011</strong></p>
+<p><strong>Place3D012</strong></p>
+<p><strong>Place3D013</strong></p>
+<p><strong>Place3D014</strong></p>
+<p><strong>Place3D015</strong></p>
+<p><strong>Place3D016</strong></p>
+<p><strong>Place3D017</strong></p>
+<p><strong>Place3D018</strong></p>
+<p><strong>Place3D019</strong></p>
+<p><strong>Place3D020</strong></p>
+<p><strong>Place3D021</strong></p>
+<p><strong>Place3D022</strong></p>
+<p><strong>Place3D023</strong></p>
+<p><strong>Place3D024</strong></p>
+<p><strong>Place3D025</strong></p>
+<p><strong>Place3D026</strong></p>
+<p><strong>Place3D027</strong></p>
+<p><strong>Place3D028</strong></p>
+<p><strong>Place3D029</strong></p>
+<p><strong>Place3D030</strong></p>
+<p><strong>Place3D031</strong></p>
+<p><strong>Place3D032</strong></p>
+<p><strong>Place3D033</strong></p>
+<p><strong>Place3D034</strong></p>
+<p><strong>Place3D035</strong></p>
+<p><strong>Place3D036</strong></p>
+<p><strong>Place3D037</strong></p>
+<p><strong>Place3D038</strong></p>
+<p><strong>Place3D039</strong></p>
+<p><strong>Place3D040</strong></p>
+<p><strong>Place3D041</strong></p>
+<p><strong>Place3D042</strong></p>
+<p><strong>Place3D043</strong></p>
+<p><strong>Place3D044</strong></p>
+<p><strong>Place3D045</strong></p>
+<p><strong>Place3D046</strong></p>
+<p><strong>Place3D047</strong></p>
+<p><strong>Place3D048</strong></p>
+<p><strong>Place3D049</strong></p>
+<p><strong>Place3D050</strong></p>
+<p><strong>Place3DCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.PlayMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PlayMode</span></span><a class="headerlink" href="#pySkyExplorer.Place3D.PlayMode" title="Permalink to this definition"></a></dt>
+<dd><p>Path play mode.</p>
+<p><strong>InvalidPlayMode</strong></p>
+<p><strong>Simulation</strong></p>
+<p><strong>Live</strong></p>
+<p><strong>Play</strong></p>
+<p><strong>ConstantSpeed</strong></p>
+<p><strong>PlayModeCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)file</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place3D.load" title="Permalink to this definition"></a></dt>
+<dd><p>Load Path.
+PARAMETERS:
+file : str</p>
+<blockquote>
+<div><p>TSV File</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.setEvolution">
+<span class="sig-name descname"><span class="pre">setEvolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)evolution</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place3D.setEvolution" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+evolution : double
+Path evolution (with Live play mode).
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.setIntensity">
+<span class="sig-name descname"><span class="pre">setIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place3D.setIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+intensity : double
+Global intensity (path, position keys, orientation keys).
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.setLineColor">
+<span class="sig-name descname"><span class="pre">setLineColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)lineColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place3D.setLineColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+lineColor : Vec
+Path Color.
+Values are (red, green, blue).
+Each value must be in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.setLineDrawingMode">
+<span class="sig-name descname"><span class="pre">setLineDrawingMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(DrawingMode)lineDrawingMode</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place3D.setLineDrawingMode" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+lineDrawingMode : DrawingMode
+Path drawing mode
+{Default, Line, Trail}.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.setLineThickness">
+<span class="sig-name descname"><span class="pre">setLineThickness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)lineThickness</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place3D.setLineThickness" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+lineThickness : double
+Path thickness (in pixels).
+Must be a positive number.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.setPlayMode">
+<span class="sig-name descname"><span class="pre">setPlayMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PlayMode)playMode</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place3D.setPlayMode" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+playMode : PlayMode
+Path play mode
+{Simulation, Live, Play, ConstantSpeed}.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.setShowPath">
+<span class="sig-name descname"><span class="pre">setShowPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Place3D)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)showPath</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Place3D.setShowPath" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+showPath : bool
+Show/Hide path.
+{True, False}.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.evolution">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evolution</span></span><a class="headerlink" href="#pySkyExplorer.Place3D.evolution" title="Permalink to this definition"></a></dt>
+<dd><p>Path evolution (with Live play mode).
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.Place3D.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pySkyExplorer.Place3D.intensity" title="Permalink to this definition"></a></dt>
+<dd><p>Global intensity (path, position keys, orientation keys).
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.lineColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lineColor</span></span><a class="headerlink" href="#pySkyExplorer.Place3D.lineColor" title="Permalink to this definition"></a></dt>
+<dd><p>Path Color.
+Values are (red, green, blue).
+Each value must be in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.lineDrawingMode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lineDrawingMode</span></span><a class="headerlink" href="#pySkyExplorer.Place3D.lineDrawingMode" title="Permalink to this definition"></a></dt>
+<dd><p>Path drawing mode
+{Default, Line, Trail}.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.lineThickness">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lineThickness</span></span><a class="headerlink" href="#pySkyExplorer.Place3D.lineThickness" title="Permalink to this definition"></a></dt>
+<dd><p>Path thickness (in pixels).
+Must be a positive number.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.Place3D.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.Place3D.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.playMode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">playMode</span></span><a class="headerlink" href="#pySkyExplorer.Place3D.playMode" title="Permalink to this definition"></a></dt>
+<dd><p>Path play mode
+{Simulation, Live, Play, ConstantSpeed}.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Place3D.showPath">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">showPath</span></span><a class="headerlink" href="#pySkyExplorer.Place3D.showPath" title="Permalink to this definition"></a></dt>
+<dd><p>Show/Hide path.
+{True, False}.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.Place2D.html" class="btn btn-neutral float-left" title="pySkyExplorer.Place2D" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.Planet.html" class="btn btn-neutral float-right" title="pySkyExplorer.Planet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

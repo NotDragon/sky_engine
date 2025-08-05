@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.Constellation &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.DMX512" href="pySkyExplorer.DMX512.html" />
+    <link rel="prev" title="pySkyExplorer.Comment" href="pySkyExplorer.Comment.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.Constellation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.Constellation"><code class="docutils literal notranslate"><span class="pre">Constellation</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.ConstellationName"><code class="docutils literal notranslate"><span class="pre">Constellation.ConstellationName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.setArtHybridRatio"><code class="docutils literal notranslate"><span class="pre">Constellation.setArtHybridRatio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.setArtIntensity"><code class="docutils literal notranslate"><span class="pre">Constellation.setArtIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.setArtUseHybridRatio"><code class="docutils literal notranslate"><span class="pre">Constellation.setArtUseHybridRatio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.setLabelIntensity"><code class="docutils literal notranslate"><span class="pre">Constellation.setLabelIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.setLimitsIntensity"><code class="docutils literal notranslate"><span class="pre">Constellation.setLimitsIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.setLinesGap"><code class="docutils literal notranslate"><span class="pre">Constellation.setLinesGap()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.setLinesIntensity"><code class="docutils literal notranslate"><span class="pre">Constellation.setLinesIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.artHybridRatio"><code class="docutils literal notranslate"><span class="pre">Constellation.artHybridRatio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.artIntensity"><code class="docutils literal notranslate"><span class="pre">Constellation.artIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.artUseHybridRatio"><code class="docutils literal notranslate"><span class="pre">Constellation.artUseHybridRatio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.id"><code class="docutils literal notranslate"><span class="pre">Constellation.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.labelIntensity"><code class="docutils literal notranslate"><span class="pre">Constellation.labelIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.limitsIntensity"><code class="docutils literal notranslate"><span class="pre">Constellation.limitsIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.linesGap"><code class="docutils literal notranslate"><span class="pre">Constellation.linesGap</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.linesIntensity"><code class="docutils literal notranslate"><span class="pre">Constellation.linesIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.name"><code class="docutils literal notranslate"><span class="pre">Constellation.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Constellation.osgId"><code class="docutils literal notranslate"><span class="pre">Constellation.osgId</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.Constellation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.Constellation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-constellation">
+<h1>pySkyExplorer.Constellation<a class="headerlink" href="#pyskyexplorer-constellation" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">Constellation</span></span><a class="headerlink" href="#pySkyExplorer.Constellation" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.ConstellationName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ConstellationName</span></span><a class="headerlink" href="#pySkyExplorer.Constellation.ConstellationName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available contellation name.</p>
+<p><strong>InvalidConstellation</strong></p>
+<p><strong>And</strong></p>
+<p><strong>Ant</strong></p>
+<p><strong>Aps</strong></p>
+<p><strong>Aqr</strong></p>
+<p><strong>Aql</strong></p>
+<p><strong>Ara</strong></p>
+<p><strong>Ari</strong></p>
+<p><strong>Aur</strong></p>
+<p><strong>Boo</strong></p>
+<p><strong>Cae</strong></p>
+<p><strong>Cam</strong></p>
+<p><strong>Cnc</strong></p>
+<p><strong>Cvn</strong></p>
+<p><strong>CMa</strong></p>
+<p><strong>CMi</strong></p>
+<p><strong>Cap</strong></p>
+<p><strong>Car</strong></p>
+<p><strong>Cas</strong></p>
+<p><strong>Cen</strong></p>
+<p><strong>Cep</strong></p>
+<p><strong>Cet</strong></p>
+<p><strong>Cha</strong></p>
+<p><strong>Cir</strong></p>
+<p><strong>Col</strong></p>
+<p><strong>Com</strong></p>
+<p><strong>CrA</strong></p>
+<p><strong>CrB</strong></p>
+<p><strong>Crv</strong></p>
+<p><strong>Crt</strong></p>
+<p><strong>Cru</strong></p>
+<p><strong>Cyg</strong></p>
+<p><strong>Del</strong></p>
+<p><strong>Dor</strong></p>
+<p><strong>Dra</strong></p>
+<p><strong>Equ</strong></p>
+<p><strong>Eri</strong></p>
+<p><strong>For</strong></p>
+<p><strong>Gem</strong></p>
+<p><strong>Gru</strong></p>
+<p><strong>Her</strong></p>
+<p><strong>Hor</strong></p>
+<p><strong>Hya</strong></p>
+<p><strong>Hyi</strong></p>
+<p><strong>Ind</strong></p>
+<p><strong>Lac</strong></p>
+<p><strong>Leo</strong></p>
+<p><strong>Lmi</strong></p>
+<p><strong>Lep</strong></p>
+<p><strong>Lib</strong></p>
+<p><strong>Lup</strong></p>
+<p><strong>Lyn</strong></p>
+<p><strong>Lyr</strong></p>
+<p><strong>Men</strong></p>
+<p><strong>Mic</strong></p>
+<p><strong>Mon</strong></p>
+<p><strong>Mus</strong></p>
+<p><strong>Nor</strong></p>
+<p><strong>Oct</strong></p>
+<p><strong>Oph</strong></p>
+<p><strong>Ori</strong></p>
+<p><strong>Pav</strong></p>
+<p><strong>Peg</strong></p>
+<p><strong>Per</strong></p>
+<p><strong>Phe</strong></p>
+<p><strong>Pic</strong></p>
+<p><strong>Psc</strong></p>
+<p><strong>PsA</strong></p>
+<p><strong>Pup</strong></p>
+<p><strong>Pyx</strong></p>
+<p><strong>Ret</strong></p>
+<p><strong>Sge</strong></p>
+<p><strong>Sgr</strong></p>
+<p><strong>Sco</strong></p>
+<p><strong>Scl</strong></p>
+<p><strong>Sct</strong></p>
+<p><strong>Ser</strong></p>
+<p><strong>Sex</strong></p>
+<p><strong>Tau</strong></p>
+<p><strong>Tel</strong></p>
+<p><strong>Tri</strong></p>
+<p><strong>Tra</strong></p>
+<p><strong>Tuc</strong></p>
+<p><strong>UMa</strong></p>
+<p><strong>UMi</strong></p>
+<p><strong>Vel</strong></p>
+<p><strong>Vir</strong></p>
+<p><strong>Vol</strong></p>
+<p><strong>Vul</strong></p>
+<p><strong>ASTERISM_GDi</strong></p>
+<p><strong>ASTERISM_SpT</strong></p>
+<p><strong>ASTERISM_STr</strong></p>
+<p><strong>ASTERISM_GSP</strong></p>
+<p><strong>ASTERISM_WTr</strong></p>
+<p><strong>ASTERISM_WHx</strong></p>
+<p><strong>ASTERISM_NCr</strong></p>
+<p><strong>ASTERISM_WAs</strong></p>
+<p><strong>ASTERISM_KSt</strong></p>
+<p><strong>ASTERISM_Bfl</strong></p>
+<p><strong>ASTERISM_Kit</strong></p>
+<p><strong>ASTERISM_Sal</strong></p>
+<p><strong>ASTERISM_SSR</strong></p>
+<p><strong>ASTERISM_CoH</strong></p>
+<p><strong>ASTERISM_BDr</strong></p>
+<p><strong>ASTERISM_LDr</strong></p>
+<p><strong>ASTERISM_Ptr</strong></p>
+<p><strong>ASTERISM_HDr</strong></p>
+<p><strong>ASTERISM_HMG</strong></p>
+<p><strong>ASTERISM_Goa</strong></p>
+<p><strong>ASTERISM_Urn</strong></p>
+<p><strong>ASTERISM_OrB</strong></p>
+<p><strong>ASTERISM_OrS</strong></p>
+<p><strong>ASTERISM_OSh</strong></p>
+<p><strong>ASTERISM_OrC</strong></p>
+<p><strong>ASTERISM_HWl</strong></p>
+<p><strong>ASTERISM_HSr</strong></p>
+<p><strong>ASTERISM_HHy</strong></p>
+<p><strong>ASTERISM_Tea</strong></p>
+<p><strong>ASTERISM_Ter</strong></p>
+<p><strong>ASTERISM_ECr</strong></p>
+<p><strong>ASTERISM_FCr</strong></p>
+<p><strong>ASTERISM_Sic</strong></p>
+<p><strong>ASTERISM_DCr</strong></p>
+<p><strong>ASTERISM_Cir</strong></p>
+<p><strong>ASTERISM_BA1</strong></p>
+<p><strong>ASTERISM_BA2</strong></p>
+<p><strong>CUSTOM_1001</strong></p>
+<p><strong>CUSTOM_1002</strong></p>
+<p><strong>CUSTOM_1003</strong></p>
+<p><strong>CUSTOM_1004</strong></p>
+<p><strong>CUSTOM_1005</strong></p>
+<p><strong>CUSTOM_1006</strong></p>
+<p><strong>CUSTOM_1007</strong></p>
+<p><strong>CUSTOM_1008</strong></p>
+<p><strong>CUSTOM_1009</strong></p>
+<p><strong>CUSTOM_1010</strong></p>
+<p><strong>CUSTOM_1011</strong></p>
+<p><strong>CUSTOM_1012</strong></p>
+<p><strong>CUSTOM_1013</strong></p>
+<p><strong>CUSTOM_1014</strong></p>
+<p><strong>CUSTOM_1015</strong></p>
+<p><strong>CUSTOM_1016</strong></p>
+<p><strong>CUSTOM_1017</strong></p>
+<p><strong>CUSTOM_1018</strong></p>
+<p><strong>CUSTOM_1019</strong></p>
+<p><strong>CUSTOM_1020</strong></p>
+<p><strong>CUSTOM_1021</strong></p>
+<p><strong>CUSTOM_1022</strong></p>
+<p><strong>CUSTOM_1023</strong></p>
+<p><strong>CUSTOM_1024</strong></p>
+<p><strong>CUSTOM_1025</strong></p>
+<p><strong>CUSTOM_1026</strong></p>
+<p><strong>CUSTOM_1027</strong></p>
+<p><strong>CUSTOM_1028</strong></p>
+<p><strong>CUSTOM_1029</strong></p>
+<p><strong>CUSTOM_1030</strong></p>
+<p><strong>CUSTOM_1031</strong></p>
+<p><strong>CUSTOM_1032</strong></p>
+<p><strong>CUSTOM_1033</strong></p>
+<p><strong>CUSTOM_1034</strong></p>
+<p><strong>CUSTOM_1035</strong></p>
+<p><strong>CUSTOM_1036</strong></p>
+<p><strong>CUSTOM_1037</strong></p>
+<p><strong>CUSTOM_1038</strong></p>
+<p><strong>CUSTOM_1039</strong></p>
+<p><strong>CUSTOM_1040</strong></p>
+<p><strong>CUSTOM_1041</strong></p>
+<p><strong>CUSTOM_1042</strong></p>
+<p><strong>CUSTOM_1043</strong></p>
+<p><strong>CUSTOM_1044</strong></p>
+<p><strong>CUSTOM_1045</strong></p>
+<p><strong>CUSTOM_1046</strong></p>
+<p><strong>CUSTOM_1047</strong></p>
+<p><strong>CUSTOM_1048</strong></p>
+<p><strong>CUSTOM_1049</strong></p>
+<p><strong>CUSTOM_1050</strong></p>
+<p><strong>CUSTOM_1051</strong></p>
+<p><strong>CUSTOM_1052</strong></p>
+<p><strong>CUSTOM_1053</strong></p>
+<p><strong>CUSTOM_1054</strong></p>
+<p><strong>CUSTOM_1055</strong></p>
+<p><strong>CUSTOM_1056</strong></p>
+<p><strong>CUSTOM_1057</strong></p>
+<p><strong>CUSTOM_1058</strong></p>
+<p><strong>CUSTOM_1059</strong></p>
+<p><strong>CUSTOM_1060</strong></p>
+<p><strong>CUSTOM_1061</strong></p>
+<p><strong>CUSTOM_1062</strong></p>
+<p><strong>CUSTOM_1063</strong></p>
+<p><strong>CUSTOM_1064</strong></p>
+<p><strong>CUSTOM_1065</strong></p>
+<p><strong>CUSTOM_1066</strong></p>
+<p><strong>CUSTOM_1067</strong></p>
+<p><strong>CUSTOM_1068</strong></p>
+<p><strong>CUSTOM_1069</strong></p>
+<p><strong>CUSTOM_1070</strong></p>
+<p><strong>CUSTOM_1071</strong></p>
+<p><strong>CUSTOM_1072</strong></p>
+<p><strong>CUSTOM_1073</strong></p>
+<p><strong>CUSTOM_1074</strong></p>
+<p><strong>CUSTOM_1075</strong></p>
+<p><strong>CUSTOM_1076</strong></p>
+<p><strong>CUSTOM_1077</strong></p>
+<p><strong>CUSTOM_1078</strong></p>
+<p><strong>CUSTOM_1079</strong></p>
+<p><strong>CUSTOM_1080</strong></p>
+<p><strong>CUSTOM_1081</strong></p>
+<p><strong>CUSTOM_1082</strong></p>
+<p><strong>CUSTOM_1083</strong></p>
+<p><strong>CUSTOM_1084</strong></p>
+<p><strong>CUSTOM_1085</strong></p>
+<p><strong>CUSTOM_1086</strong></p>
+<p><strong>CUSTOM_1087</strong></p>
+<p><strong>CUSTOM_1088</strong></p>
+<p><strong>CUSTOM_1089</strong></p>
+<p><strong>CUSTOM_1090</strong></p>
+<p><strong>CUSTOM_1091</strong></p>
+<p><strong>CUSTOM_1092</strong></p>
+<p><strong>CUSTOM_1093</strong></p>
+<p><strong>CUSTOM_1094</strong></p>
+<p><strong>CUSTOM_1095</strong></p>
+<p><strong>CUSTOM_1096</strong></p>
+<p><strong>CUSTOM_1097</strong></p>
+<p><strong>CUSTOM_1098</strong></p>
+<p><strong>CUSTOM_1099</strong></p>
+<p><strong>CUSTOM_1100</strong></p>
+<p><strong>CUSTOM_2001</strong></p>
+<p><strong>CUSTOM_2002</strong></p>
+<p><strong>CUSTOM_2003</strong></p>
+<p><strong>CUSTOM_2004</strong></p>
+<p><strong>CUSTOM_2005</strong></p>
+<p><strong>CUSTOM_2006</strong></p>
+<p><strong>CUSTOM_2007</strong></p>
+<p><strong>CUSTOM_2008</strong></p>
+<p><strong>CUSTOM_2009</strong></p>
+<p><strong>CUSTOM_2010</strong></p>
+<p><strong>CUSTOM_2011</strong></p>
+<p><strong>CUSTOM_2012</strong></p>
+<p><strong>CUSTOM_2013</strong></p>
+<p><strong>CUSTOM_2014</strong></p>
+<p><strong>CUSTOM_2015</strong></p>
+<p><strong>CUSTOM_2016</strong></p>
+<p><strong>CUSTOM_2017</strong></p>
+<p><strong>CUSTOM_2018</strong></p>
+<p><strong>CUSTOM_2019</strong></p>
+<p><strong>CUSTOM_2020</strong></p>
+<p><strong>CUSTOM_2021</strong></p>
+<p><strong>CUSTOM_2022</strong></p>
+<p><strong>CUSTOM_2023</strong></p>
+<p><strong>CUSTOM_2024</strong></p>
+<p><strong>CUSTOM_2025</strong></p>
+<p><strong>CUSTOM_2026</strong></p>
+<p><strong>CUSTOM_2027</strong></p>
+<p><strong>CUSTOM_2028</strong></p>
+<p><strong>CUSTOM_2029</strong></p>
+<p><strong>CUSTOM_2030</strong></p>
+<p><strong>CUSTOM_2031</strong></p>
+<p><strong>CUSTOM_2032</strong></p>
+<p><strong>CUSTOM_2033</strong></p>
+<p><strong>CUSTOM_2034</strong></p>
+<p><strong>CUSTOM_2035</strong></p>
+<p><strong>CUSTOM_2036</strong></p>
+<p><strong>CUSTOM_2037</strong></p>
+<p><strong>CUSTOM_2038</strong></p>
+<p><strong>CUSTOM_2039</strong></p>
+<p><strong>CUSTOM_2040</strong></p>
+<p><strong>CUSTOM_2041</strong></p>
+<p><strong>CUSTOM_2042</strong></p>
+<p><strong>CUSTOM_2043</strong></p>
+<p><strong>CUSTOM_2044</strong></p>
+<p><strong>CUSTOM_2045</strong></p>
+<p><strong>CUSTOM_2046</strong></p>
+<p><strong>CUSTOM_2047</strong></p>
+<p><strong>CUSTOM_2048</strong></p>
+<p><strong>CUSTOM_2049</strong></p>
+<p><strong>CUSTOM_2050</strong></p>
+<p><strong>CUSTOM_2051</strong></p>
+<p><strong>CUSTOM_2052</strong></p>
+<p><strong>CUSTOM_2053</strong></p>
+<p><strong>CUSTOM_2054</strong></p>
+<p><strong>CUSTOM_2055</strong></p>
+<p><strong>CUSTOM_2056</strong></p>
+<p><strong>CUSTOM_2057</strong></p>
+<p><strong>CUSTOM_2058</strong></p>
+<p><strong>CUSTOM_2059</strong></p>
+<p><strong>CUSTOM_2060</strong></p>
+<p><strong>CUSTOM_2061</strong></p>
+<p><strong>CUSTOM_2062</strong></p>
+<p><strong>CUSTOM_2063</strong></p>
+<p><strong>CUSTOM_2064</strong></p>
+<p><strong>CUSTOM_2065</strong></p>
+<p><strong>CUSTOM_2066</strong></p>
+<p><strong>CUSTOM_2067</strong></p>
+<p><strong>CUSTOM_2068</strong></p>
+<p><strong>CUSTOM_2069</strong></p>
+<p><strong>CUSTOM_2070</strong></p>
+<p><strong>CUSTOM_2071</strong></p>
+<p><strong>CUSTOM_2072</strong></p>
+<p><strong>CUSTOM_2073</strong></p>
+<p><strong>CUSTOM_2074</strong></p>
+<p><strong>CUSTOM_2075</strong></p>
+<p><strong>CUSTOM_2076</strong></p>
+<p><strong>CUSTOM_2077</strong></p>
+<p><strong>CUSTOM_2078</strong></p>
+<p><strong>CUSTOM_2079</strong></p>
+<p><strong>CUSTOM_2080</strong></p>
+<p><strong>CUSTOM_2081</strong></p>
+<p><strong>CUSTOM_2082</strong></p>
+<p><strong>CUSTOM_2083</strong></p>
+<p><strong>CUSTOM_2084</strong></p>
+<p><strong>CUSTOM_2085</strong></p>
+<p><strong>CUSTOM_2086</strong></p>
+<p><strong>CUSTOM_2087</strong></p>
+<p><strong>CUSTOM_2088</strong></p>
+<p><strong>CUSTOM_2089</strong></p>
+<p><strong>CUSTOM_2090</strong></p>
+<p><strong>CUSTOM_2091</strong></p>
+<p><strong>CUSTOM_2092</strong></p>
+<p><strong>CUSTOM_2093</strong></p>
+<p><strong>CUSTOM_2094</strong></p>
+<p><strong>CUSTOM_2095</strong></p>
+<p><strong>CUSTOM_2096</strong></p>
+<p><strong>CUSTOM_2097</strong></p>
+<p><strong>CUSTOM_2098</strong></p>
+<p><strong>CUSTOM_2099</strong></p>
+<p><strong>CUSTOM_2100</strong></p>
+<p><strong>CUSTOM_3001</strong></p>
+<p><strong>CUSTOM_3002</strong></p>
+<p><strong>CUSTOM_3003</strong></p>
+<p><strong>CUSTOM_3004</strong></p>
+<p><strong>CUSTOM_3005</strong></p>
+<p><strong>CUSTOM_3006</strong></p>
+<p><strong>CUSTOM_3007</strong></p>
+<p><strong>CUSTOM_3008</strong></p>
+<p><strong>CUSTOM_3009</strong></p>
+<p><strong>CUSTOM_3010</strong></p>
+<p><strong>CUSTOM_3011</strong></p>
+<p><strong>CUSTOM_3012</strong></p>
+<p><strong>CUSTOM_3013</strong></p>
+<p><strong>CUSTOM_3014</strong></p>
+<p><strong>CUSTOM_3015</strong></p>
+<p><strong>CUSTOM_3016</strong></p>
+<p><strong>CUSTOM_3017</strong></p>
+<p><strong>CUSTOM_3018</strong></p>
+<p><strong>CUSTOM_3019</strong></p>
+<p><strong>CUSTOM_3020</strong></p>
+<p><strong>CUSTOM_3021</strong></p>
+<p><strong>CUSTOM_3022</strong></p>
+<p><strong>CUSTOM_3023</strong></p>
+<p><strong>CUSTOM_3024</strong></p>
+<p><strong>CUSTOM_3025</strong></p>
+<p><strong>CUSTOM_3026</strong></p>
+<p><strong>CUSTOM_3027</strong></p>
+<p><strong>CUSTOM_3028</strong></p>
+<p><strong>CUSTOM_3029</strong></p>
+<p><strong>CUSTOM_3030</strong></p>
+<p><strong>CUSTOM_3031</strong></p>
+<p><strong>CUSTOM_3032</strong></p>
+<p><strong>CUSTOM_3033</strong></p>
+<p><strong>CUSTOM_3034</strong></p>
+<p><strong>CUSTOM_3035</strong></p>
+<p><strong>CUSTOM_3036</strong></p>
+<p><strong>CUSTOM_3037</strong></p>
+<p><strong>CUSTOM_3038</strong></p>
+<p><strong>CUSTOM_3039</strong></p>
+<p><strong>CUSTOM_3040</strong></p>
+<p><strong>CUSTOM_3041</strong></p>
+<p><strong>CUSTOM_3042</strong></p>
+<p><strong>CUSTOM_3043</strong></p>
+<p><strong>CUSTOM_3044</strong></p>
+<p><strong>CUSTOM_3045</strong></p>
+<p><strong>CUSTOM_3046</strong></p>
+<p><strong>CUSTOM_3047</strong></p>
+<p><strong>CUSTOM_3048</strong></p>
+<p><strong>CUSTOM_3049</strong></p>
+<p><strong>CUSTOM_3050</strong></p>
+<p><strong>CUSTOM_3051</strong></p>
+<p><strong>CUSTOM_3052</strong></p>
+<p><strong>CUSTOM_3053</strong></p>
+<p><strong>CUSTOM_3054</strong></p>
+<p><strong>CUSTOM_3055</strong></p>
+<p><strong>CUSTOM_3056</strong></p>
+<p><strong>CUSTOM_3057</strong></p>
+<p><strong>CUSTOM_3058</strong></p>
+<p><strong>CUSTOM_3059</strong></p>
+<p><strong>CUSTOM_3060</strong></p>
+<p><strong>CUSTOM_3061</strong></p>
+<p><strong>CUSTOM_3062</strong></p>
+<p><strong>CUSTOM_3063</strong></p>
+<p><strong>CUSTOM_3064</strong></p>
+<p><strong>CUSTOM_3065</strong></p>
+<p><strong>CUSTOM_3066</strong></p>
+<p><strong>CUSTOM_3067</strong></p>
+<p><strong>CUSTOM_3068</strong></p>
+<p><strong>CUSTOM_3069</strong></p>
+<p><strong>CUSTOM_3070</strong></p>
+<p><strong>CUSTOM_3071</strong></p>
+<p><strong>CUSTOM_3072</strong></p>
+<p><strong>CUSTOM_3073</strong></p>
+<p><strong>CUSTOM_3074</strong></p>
+<p><strong>CUSTOM_3075</strong></p>
+<p><strong>CUSTOM_3076</strong></p>
+<p><strong>CUSTOM_3077</strong></p>
+<p><strong>CUSTOM_3078</strong></p>
+<p><strong>CUSTOM_3079</strong></p>
+<p><strong>CUSTOM_3080</strong></p>
+<p><strong>CUSTOM_3081</strong></p>
+<p><strong>CUSTOM_3082</strong></p>
+<p><strong>CUSTOM_3083</strong></p>
+<p><strong>CUSTOM_3084</strong></p>
+<p><strong>CUSTOM_3085</strong></p>
+<p><strong>CUSTOM_3086</strong></p>
+<p><strong>CUSTOM_3087</strong></p>
+<p><strong>CUSTOM_3088</strong></p>
+<p><strong>CUSTOM_3089</strong></p>
+<p><strong>CUSTOM_3090</strong></p>
+<p><strong>CUSTOM_3091</strong></p>
+<p><strong>CUSTOM_3092</strong></p>
+<p><strong>CUSTOM_3093</strong></p>
+<p><strong>CUSTOM_3094</strong></p>
+<p><strong>CUSTOM_3095</strong></p>
+<p><strong>CUSTOM_3096</strong></p>
+<p><strong>CUSTOM_3097</strong></p>
+<p><strong>CUSTOM_3098</strong></p>
+<p><strong>CUSTOM_3099</strong></p>
+<p><strong>CUSTOM_3100</strong></p>
+<p><strong>CUSTOM_4001</strong></p>
+<p><strong>CUSTOM_4002</strong></p>
+<p><strong>CUSTOM_4003</strong></p>
+<p><strong>CUSTOM_4004</strong></p>
+<p><strong>CUSTOM_4005</strong></p>
+<p><strong>CUSTOM_4006</strong></p>
+<p><strong>CUSTOM_4007</strong></p>
+<p><strong>CUSTOM_4008</strong></p>
+<p><strong>CUSTOM_4009</strong></p>
+<p><strong>CUSTOM_4010</strong></p>
+<p><strong>CUSTOM_4011</strong></p>
+<p><strong>CUSTOM_4012</strong></p>
+<p><strong>CUSTOM_4013</strong></p>
+<p><strong>CUSTOM_4014</strong></p>
+<p><strong>CUSTOM_4015</strong></p>
+<p><strong>CUSTOM_4016</strong></p>
+<p><strong>CUSTOM_4017</strong></p>
+<p><strong>CUSTOM_4018</strong></p>
+<p><strong>CUSTOM_4019</strong></p>
+<p><strong>CUSTOM_4020</strong></p>
+<p><strong>CUSTOM_4021</strong></p>
+<p><strong>CUSTOM_4022</strong></p>
+<p><strong>CUSTOM_4023</strong></p>
+<p><strong>CUSTOM_4024</strong></p>
+<p><strong>CUSTOM_4025</strong></p>
+<p><strong>CUSTOM_4026</strong></p>
+<p><strong>CUSTOM_4027</strong></p>
+<p><strong>CUSTOM_4028</strong></p>
+<p><strong>CUSTOM_4029</strong></p>
+<p><strong>CUSTOM_4030</strong></p>
+<p><strong>CUSTOM_4031</strong></p>
+<p><strong>CUSTOM_4032</strong></p>
+<p><strong>CUSTOM_4033</strong></p>
+<p><strong>CUSTOM_4034</strong></p>
+<p><strong>CUSTOM_4035</strong></p>
+<p><strong>CUSTOM_4036</strong></p>
+<p><strong>CUSTOM_4037</strong></p>
+<p><strong>CUSTOM_4038</strong></p>
+<p><strong>CUSTOM_4039</strong></p>
+<p><strong>CUSTOM_4040</strong></p>
+<p><strong>CUSTOM_4041</strong></p>
+<p><strong>CUSTOM_4042</strong></p>
+<p><strong>CUSTOM_4043</strong></p>
+<p><strong>CUSTOM_4044</strong></p>
+<p><strong>CUSTOM_4045</strong></p>
+<p><strong>CUSTOM_4046</strong></p>
+<p><strong>CUSTOM_4047</strong></p>
+<p><strong>CUSTOM_4048</strong></p>
+<p><strong>CUSTOM_4049</strong></p>
+<p><strong>CUSTOM_4050</strong></p>
+<p><strong>CUSTOM_4051</strong></p>
+<p><strong>CUSTOM_4052</strong></p>
+<p><strong>CUSTOM_4053</strong></p>
+<p><strong>CUSTOM_4054</strong></p>
+<p><strong>CUSTOM_4055</strong></p>
+<p><strong>CUSTOM_4056</strong></p>
+<p><strong>CUSTOM_4057</strong></p>
+<p><strong>CUSTOM_4058</strong></p>
+<p><strong>CUSTOM_4059</strong></p>
+<p><strong>CUSTOM_4060</strong></p>
+<p><strong>CUSTOM_4061</strong></p>
+<p><strong>CUSTOM_4062</strong></p>
+<p><strong>CUSTOM_4063</strong></p>
+<p><strong>CUSTOM_4064</strong></p>
+<p><strong>CUSTOM_4065</strong></p>
+<p><strong>CUSTOM_4066</strong></p>
+<p><strong>CUSTOM_4067</strong></p>
+<p><strong>CUSTOM_4068</strong></p>
+<p><strong>CUSTOM_4069</strong></p>
+<p><strong>CUSTOM_4070</strong></p>
+<p><strong>CUSTOM_4071</strong></p>
+<p><strong>CUSTOM_4072</strong></p>
+<p><strong>CUSTOM_4073</strong></p>
+<p><strong>CUSTOM_4074</strong></p>
+<p><strong>CUSTOM_4075</strong></p>
+<p><strong>CUSTOM_4076</strong></p>
+<p><strong>CUSTOM_4077</strong></p>
+<p><strong>CUSTOM_4078</strong></p>
+<p><strong>CUSTOM_4079</strong></p>
+<p><strong>CUSTOM_4080</strong></p>
+<p><strong>CUSTOM_4081</strong></p>
+<p><strong>CUSTOM_4082</strong></p>
+<p><strong>CUSTOM_4083</strong></p>
+<p><strong>CUSTOM_4084</strong></p>
+<p><strong>CUSTOM_4085</strong></p>
+<p><strong>CUSTOM_4086</strong></p>
+<p><strong>CUSTOM_4087</strong></p>
+<p><strong>CUSTOM_4088</strong></p>
+<p><strong>CUSTOM_4089</strong></p>
+<p><strong>CUSTOM_4090</strong></p>
+<p><strong>CUSTOM_4091</strong></p>
+<p><strong>CUSTOM_4092</strong></p>
+<p><strong>CUSTOM_4093</strong></p>
+<p><strong>CUSTOM_4094</strong></p>
+<p><strong>CUSTOM_4095</strong></p>
+<p><strong>CUSTOM_4096</strong></p>
+<p><strong>CUSTOM_4097</strong></p>
+<p><strong>CUSTOM_4098</strong></p>
+<p><strong>CUSTOM_4099</strong></p>
+<p><strong>CUSTOM_4100</strong></p>
+<p><strong>CUSTOM_5001</strong></p>
+<p><strong>CUSTOM_5002</strong></p>
+<p><strong>CUSTOM_5003</strong></p>
+<p><strong>CUSTOM_5004</strong></p>
+<p><strong>CUSTOM_5005</strong></p>
+<p><strong>CUSTOM_5006</strong></p>
+<p><strong>CUSTOM_5007</strong></p>
+<p><strong>CUSTOM_5008</strong></p>
+<p><strong>CUSTOM_5009</strong></p>
+<p><strong>CUSTOM_5010</strong></p>
+<p><strong>CUSTOM_5011</strong></p>
+<p><strong>CUSTOM_5012</strong></p>
+<p><strong>CUSTOM_5013</strong></p>
+<p><strong>CUSTOM_5014</strong></p>
+<p><strong>CUSTOM_5015</strong></p>
+<p><strong>CUSTOM_5016</strong></p>
+<p><strong>CUSTOM_5017</strong></p>
+<p><strong>CUSTOM_5018</strong></p>
+<p><strong>CUSTOM_5019</strong></p>
+<p><strong>CUSTOM_5020</strong></p>
+<p><strong>CUSTOM_5021</strong></p>
+<p><strong>CUSTOM_5022</strong></p>
+<p><strong>CUSTOM_5023</strong></p>
+<p><strong>CUSTOM_5024</strong></p>
+<p><strong>CUSTOM_5025</strong></p>
+<p><strong>CUSTOM_5026</strong></p>
+<p><strong>CUSTOM_5027</strong></p>
+<p><strong>CUSTOM_5028</strong></p>
+<p><strong>CUSTOM_5029</strong></p>
+<p><strong>CUSTOM_5030</strong></p>
+<p><strong>CUSTOM_5031</strong></p>
+<p><strong>CUSTOM_5032</strong></p>
+<p><strong>CUSTOM_5033</strong></p>
+<p><strong>CUSTOM_5034</strong></p>
+<p><strong>CUSTOM_5035</strong></p>
+<p><strong>CUSTOM_5036</strong></p>
+<p><strong>CUSTOM_5037</strong></p>
+<p><strong>CUSTOM_5038</strong></p>
+<p><strong>CUSTOM_5039</strong></p>
+<p><strong>CUSTOM_5040</strong></p>
+<p><strong>CUSTOM_5041</strong></p>
+<p><strong>CUSTOM_5042</strong></p>
+<p><strong>CUSTOM_5043</strong></p>
+<p><strong>CUSTOM_5044</strong></p>
+<p><strong>CUSTOM_5045</strong></p>
+<p><strong>CUSTOM_5046</strong></p>
+<p><strong>CUSTOM_5047</strong></p>
+<p><strong>CUSTOM_5048</strong></p>
+<p><strong>CUSTOM_5049</strong></p>
+<p><strong>CUSTOM_5050</strong></p>
+<p><strong>CUSTOM_5051</strong></p>
+<p><strong>CUSTOM_5052</strong></p>
+<p><strong>CUSTOM_5053</strong></p>
+<p><strong>CUSTOM_5054</strong></p>
+<p><strong>CUSTOM_5055</strong></p>
+<p><strong>CUSTOM_5056</strong></p>
+<p><strong>CUSTOM_5057</strong></p>
+<p><strong>CUSTOM_5058</strong></p>
+<p><strong>CUSTOM_5059</strong></p>
+<p><strong>CUSTOM_5060</strong></p>
+<p><strong>CUSTOM_5061</strong></p>
+<p><strong>CUSTOM_5062</strong></p>
+<p><strong>CUSTOM_5063</strong></p>
+<p><strong>CUSTOM_5064</strong></p>
+<p><strong>CUSTOM_5065</strong></p>
+<p><strong>CUSTOM_5066</strong></p>
+<p><strong>CUSTOM_5067</strong></p>
+<p><strong>CUSTOM_5068</strong></p>
+<p><strong>CUSTOM_5069</strong></p>
+<p><strong>CUSTOM_5070</strong></p>
+<p><strong>CUSTOM_5071</strong></p>
+<p><strong>CUSTOM_5072</strong></p>
+<p><strong>CUSTOM_5073</strong></p>
+<p><strong>CUSTOM_5074</strong></p>
+<p><strong>CUSTOM_5075</strong></p>
+<p><strong>CUSTOM_5076</strong></p>
+<p><strong>CUSTOM_5077</strong></p>
+<p><strong>CUSTOM_5078</strong></p>
+<p><strong>CUSTOM_5079</strong></p>
+<p><strong>CUSTOM_5080</strong></p>
+<p><strong>CUSTOM_5081</strong></p>
+<p><strong>CUSTOM_5082</strong></p>
+<p><strong>CUSTOM_5083</strong></p>
+<p><strong>CUSTOM_5084</strong></p>
+<p><strong>CUSTOM_5085</strong></p>
+<p><strong>CUSTOM_5086</strong></p>
+<p><strong>CUSTOM_5087</strong></p>
+<p><strong>CUSTOM_5088</strong></p>
+<p><strong>CUSTOM_5089</strong></p>
+<p><strong>CUSTOM_5090</strong></p>
+<p><strong>CUSTOM_5091</strong></p>
+<p><strong>CUSTOM_5092</strong></p>
+<p><strong>CUSTOM_5093</strong></p>
+<p><strong>CUSTOM_5094</strong></p>
+<p><strong>CUSTOM_5095</strong></p>
+<p><strong>CUSTOM_5096</strong></p>
+<p><strong>CUSTOM_5097</strong></p>
+<p><strong>CUSTOM_5098</strong></p>
+<p><strong>CUSTOM_5099</strong></p>
+<p><strong>CUSTOM_5100</strong></p>
+<p><strong>ConstellationCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.setArtHybridRatio">
+<span class="sig-name descname"><span class="pre">setArtHybridRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Constellation)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)artHybridRatio</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Constellation.setArtHybridRatio" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+artHybridRatio : double
+Used to define which device will display the constellation image.
+Set to 0 to use digital device or 1 to use optical device.
+This value musn’t be used on non hybrid system.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.setArtIntensity">
+<span class="sig-name descname"><span class="pre">setArtIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Constellation)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)artIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Constellation.setArtIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+artIntensity : double
+Current intensity of the picture of the constellation.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.setArtUseHybridRatio">
+<span class="sig-name descname"><span class="pre">setArtUseHybridRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Constellation)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)artUseHybridRatio</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Constellation.setArtUseHybridRatio" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+artUseHybridRatio : double
+Used to define how value will be handled.
+Set to 0 to let the system choose the device or to 1 to manually choose the device (using ‘art hybrid ratio’ value).
+This value musn’t be used on non hybrid system.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.setLabelIntensity">
+<span class="sig-name descname"><span class="pre">setLabelIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Constellation)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)labelIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Constellation.setLabelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+labelIntensity : double
+Current intensity of the label of the constellation.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.setLimitsIntensity">
+<span class="sig-name descname"><span class="pre">setLimitsIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Constellation)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)limitsIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Constellation.setLimitsIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+limitsIntensity : double
+Current intensity of the constellation border lines.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.setLinesGap">
+<span class="sig-name descname"><span class="pre">setLinesGap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Constellation)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)linesGap</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Constellation.setLinesGap" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+linesGap : double
+Modify the gap between constellation line and according star.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.setLinesIntensity">
+<span class="sig-name descname"><span class="pre">setLinesIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Constellation)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)linesIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Constellation.setLinesIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+linesIntensity : double
+Current intensity of the constelation lines.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.artHybridRatio">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">artHybridRatio</span></span><a class="headerlink" href="#pySkyExplorer.Constellation.artHybridRatio" title="Permalink to this definition"></a></dt>
+<dd><p>Used to define which device will display the constellation image.
+Set to 0 to use digital device or 1 to use optical device.
+This value musn’t be used on non hybrid system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.artIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">artIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Constellation.artIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Current intensity of the picture of the constellation.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.artUseHybridRatio">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">artUseHybridRatio</span></span><a class="headerlink" href="#pySkyExplorer.Constellation.artUseHybridRatio" title="Permalink to this definition"></a></dt>
+<dd><p>Used to define how value will be handled.
+Set to 0 to let the system choose the device or to 1 to manually choose the device (using ‘art hybrid ratio’ value).
+This value musn’t be used on non hybrid system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.Constellation.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.labelIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">labelIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Constellation.labelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Current intensity of the label of the constellation.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.limitsIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">limitsIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Constellation.limitsIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Current intensity of the constellation border lines.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.linesGap">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">linesGap</span></span><a class="headerlink" href="#pySkyExplorer.Constellation.linesGap" title="Permalink to this definition"></a></dt>
+<dd><p>Modify the gap between constellation line and according star.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.linesIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">linesIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Constellation.linesIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Current intensity of the constelation lines.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.Constellation.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Constellation.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.Constellation.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.Comment.html" class="btn btn-neutral float-left" title="pySkyExplorer.Comment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.DMX512.html" class="btn btn-neutral float-right" title="pySkyExplorer.DMX512" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

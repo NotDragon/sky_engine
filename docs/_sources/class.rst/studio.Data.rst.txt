@@ -1,0 +1,10 @@
+studio.Data
+===========
+
+.. currentmodule:: studio
+    
+.. autoclass:: Data
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

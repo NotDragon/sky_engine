@@ -1,0 +1,4076 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.IndividualStar &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.Insert2D" href="pySkyExplorer.Insert2D.html" />
+    <link rel="prev" title="pySkyExplorer.GlobularCluster" href="pySkyExplorer.GlobularCluster.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.IndividualStar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.IndividualStar"><code class="docutils literal notranslate"><span class="pre">IndividualStar</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.Cycle"><code class="docutils literal notranslate"><span class="pre">IndividualStar.Cycle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.Filter"><code class="docutils literal notranslate"><span class="pre">IndividualStar.Filter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.IndividualStarName"><code class="docutils literal notranslate"><span class="pre">IndividualStar.IndividualStarName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.IndividualStarPort"><code class="docutils literal notranslate"><span class="pre">IndividualStar.IndividualStarPort</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.InternalRepresentation"><code class="docutils literal notranslate"><span class="pre">IndividualStar.InternalRepresentation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.Model"><code class="docutils literal notranslate"><span class="pre">IndividualStar.Model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.addChild"><code class="docutils literal notranslate"><span class="pre">IndividualStar.addChild()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.portId"><code class="docutils literal notranslate"><span class="pre">IndividualStar.portId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setColor"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setCoronaIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setCoronaIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setCycle"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setCycle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setFilter"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setFilter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setGalacticBandIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setGalacticBandIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setGalacticGridIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setGalacticGridIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setGalacticMarkLineIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setGalacticMarkLineIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setHabitableZoneColor"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setHabitableZoneColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setHabitableZoneIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setHabitableZoneIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setHybridRatio"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setHybridRatio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setInternalRepresentation"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setInternalRepresentation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setLabelIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setLabelIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setMagneticLinesIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setMagneticLinesIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setMagnetogramIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setMagnetogramIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setModel"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setModel()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setOpening"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setOpening()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setPhotosphereIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setPhotosphereIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setPointerIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setPointerIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setPointerType"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setPointerType()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setSaturationFactor"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setSaturationFactor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setScale"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setScale()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setTrajectoryIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setTrajectoryIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setUseHybridRatio"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setUseHybridRatio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setZodiacalLightIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setZodiacalLightIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.setZodiacalLightScatteringIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.setZodiacalLightScatteringIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.color"><code class="docutils literal notranslate"><span class="pre">IndividualStar.color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.coronaIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.coronaIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.cycle"><code class="docutils literal notranslate"><span class="pre">IndividualStar.cycle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.filter"><code class="docutils literal notranslate"><span class="pre">IndividualStar.filter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.galacticBandIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.galacticBandIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.galacticGridIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.galacticGridIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.galacticMarkLineIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.galacticMarkLineIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.habitableZoneColor"><code class="docutils literal notranslate"><span class="pre">IndividualStar.habitableZoneColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.habitableZoneIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.habitableZoneIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.height"><code class="docutils literal notranslate"><span class="pre">IndividualStar.height</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.hybridRatio"><code class="docutils literal notranslate"><span class="pre">IndividualStar.hybridRatio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.id"><code class="docutils literal notranslate"><span class="pre">IndividualStar.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.intensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.intensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.internalRepresentation"><code class="docutils literal notranslate"><span class="pre">IndividualStar.internalRepresentation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.labelIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.labelIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.magneticLinesIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.magneticLinesIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.magnetogramIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.magnetogramIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.model"><code class="docutils literal notranslate"><span class="pre">IndividualStar.model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.name"><code class="docutils literal notranslate"><span class="pre">IndividualStar.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.opening"><code class="docutils literal notranslate"><span class="pre">IndividualStar.opening</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.osgId"><code class="docutils literal notranslate"><span class="pre">IndividualStar.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.photosphereIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.photosphereIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.pointerIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.pointerIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.pointerType"><code class="docutils literal notranslate"><span class="pre">IndividualStar.pointerType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.position"><code class="docutils literal notranslate"><span class="pre">IndividualStar.position</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.radiusRatio"><code class="docutils literal notranslate"><span class="pre">IndividualStar.radiusRatio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.saturationFactor"><code class="docutils literal notranslate"><span class="pre">IndividualStar.saturationFactor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.scale"><code class="docutils literal notranslate"><span class="pre">IndividualStar.scale</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.trajectoryIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.trajectoryIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.useHybridRatio"><code class="docutils literal notranslate"><span class="pre">IndividualStar.useHybridRatio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.zodiacalLightIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.zodiacalLightIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.IndividualStar.zodiacalLightScatteringIntensity"><code class="docutils literal notranslate"><span class="pre">IndividualStar.zodiacalLightScatteringIntensity</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.IndividualStar</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.IndividualStar.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-individualstar">
+<h1>pySkyExplorer.IndividualStar<a class="headerlink" href="#pyskyexplorer-individualstar" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">IndividualStar</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.Cycle">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Cycle</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.Cycle" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidCycle</strong></p>
+<p><strong>Cycle_2097</strong></p>
+<p><strong>Cycle_2165</strong></p>
+<p><strong>Cycle_2232</strong></p>
+<p><strong>CycleCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.Filter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Filter</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.Filter" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidFilter</strong></p>
+<p><strong>Filter_Visible</strong></p>
+<p><strong>Filter_304</strong></p>
+<p><strong>Filter_Intensitygram</strong></p>
+<p><strong>FilterCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.IndividualStarName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IndividualStarName</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.IndividualStarName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available individual star name.</p>
+<p><strong>InvalidIndividualStar</strong></p>
+<p><strong>Sun</strong></p>
+<p><strong>CD3715492</strong></p>
+<p><strong>HD142</strong></p>
+<p><strong>Alpheratz</strong></p>
+<p><strong>Caph</strong></p>
+<p><strong>EpsilonPhe</strong></p>
+<p><strong>ThetaScl</strong></p>
+<p><strong>Algenib</strong></p>
+<p><strong>L72222A</strong></p>
+<p><strong>HD1237</strong></p>
+<p><strong>ThetaAnd</strong></p>
+<p><strong>SigmaAnd</strong></p>
+<p><strong>GJ15A</strong></p>
+<p><strong>HD1461</strong></p>
+<p><strong>HD1502</strong></p>
+<p><strong>DenebKaitosShemali</strong></p>
+<p><strong>ZetaTuc</strong></p>
+<p><strong>HD1605</strong></p>
+<p><strong>HD1666</strong></p>
+<p><strong>HD1690</strong></p>
+<p><strong>IotaScl</strong></p>
+<p><strong>HD2039</strong></p>
+<p><strong>BetaHyi</strong></p>
+<p><strong>KappaPhe</strong></p>
+<p><strong>Ankaa</strong></p>
+<p><strong>HIP2247</strong></p>
+<p><strong>HD2638</strong></p>
+<p><strong>BetaTucanaeABCD</strong></p>
+<p><strong>BetaTucanaeC</strong></p>
+<p><strong>BetaTucanaeP</strong></p>
+<p><strong>KappaCas</strong></p>
+<p><strong>HD2952</strong></p>
+<p><strong>PiAnd</strong></p>
+<p><strong>Fulu</strong></p>
+<p><strong>EpsilonAnd</strong></p>
+<p><strong>DeltaAnd</strong></p>
+<p><strong>HD3651</strong></p>
+<p><strong>Schedar</strong></p>
+<p><strong>HD4113</strong></p>
+<p><strong>EtaPhe</strong></p>
+<p><strong>Diphda</strong></p>
+<p><strong>HD4208</strong></p>
+<p><strong>HD4308</strong></p>
+<p><strong>HD4203</strong></p>
+<p><strong>HD4313</strong></p>
+<p><strong>ZetaAnd</strong></p>
+<p><strong>DeltaPsc</strong></p>
+<p><strong>EtaCassiopeiaeA</strong></p>
+<p><strong>vanMaanen2</strong></p>
+<p><strong>HD4732</strong></p>
+<p><strong>NuAnd</strong></p>
+<p><strong>HD5319</strong></p>
+<p><strong>HD5388</strong></p>
+<p><strong>GammaCassiopeiae</strong></p>
+<p><strong>MuAnd</strong></p>
+<p><strong>HD5608</strong></p>
+<p><strong>AlphaScl</strong></p>
+<p><strong>HD5891</strong></p>
+<p><strong>EpsilonPsc</strong></p>
+<p><strong>HD6434</strong></p>
+<p><strong>HIP5158</strong></p>
+<p><strong>HD6654</strong></p>
+<p><strong>HD6718</strong></p>
+<p><strong>MuCassiopeiae</strong></p>
+<p><strong>ZetaPhe</strong></p>
+<p><strong>etaCet</strong></p>
+<p><strong>PhiAnd</strong></p>
+<p><strong>Mirach</strong></p>
+<p><strong>HD7199</strong></p>
+<p><strong>Marfak</strong></p>
+<p><strong>ChiPsc</strong></p>
+<p><strong>TauPsc</strong></p>
+<p><strong>L72532</strong></p>
+<p><strong>Revati</strong></p>
+<p><strong>PhiPsc</strong></p>
+<p><strong>HD7449</strong></p>
+<p><strong>UpsilonPsc</strong></p>
+<p><strong>HD7924</strong></p>
+<p><strong>Adhil</strong></p>
+<p><strong>HD8535</strong></p>
+<p><strong>ThetaCet</strong></p>
+<p><strong>HD8574</strong></p>
+<p><strong>Ruchbah</strong></p>
+<p><strong>GammaPhe</strong></p>
+<p><strong>MuPsc</strong></p>
+<p><strong>DeltaPhe</strong></p>
+<p><strong>AlFarg</strong></p>
+<p><strong>HD9446</strong></p>
+<p><strong>UpsilonAndromedae</strong></p>
+<p><strong>WASP18</strong></p>
+<p><strong>Achernar</strong></p>
+<p><strong>HD10180</strong></p>
+<p><strong>_51And</strong></p>
+<p><strong>NuPsc</strong></p>
+<p><strong>PiScl</strong></p>
+<p><strong>HD10647</strong></p>
+<p><strong>PhiPer</strong></p>
+<p><strong>TauCeti</strong></p>
+<p><strong>HD10697</strong></p>
+<p><strong>TorcularisSeptentrionalis</strong></p>
+<p><strong>BatenKaitos</strong></p>
+<p><strong>HD11506</strong></p>
+<p><strong>Mothallah</strong></p>
+<p><strong>Mesarthim</strong></p>
+<p><strong>PsiPhe</strong></p>
+<p><strong>Segin</strong></p>
+<p><strong>Sheratan</strong></p>
+<p><strong>HD11977</strong></p>
+<p><strong>ChiEri</strong></p>
+<p><strong>HD11964</strong></p>
+<p><strong>AlphaHyi</strong></p>
+<p><strong>HD11755</strong></p>
+<p><strong>UpsilonCet</strong></p>
+<p><strong>Alrescha</strong></p>
+<p><strong>_50Cas</strong></p>
+<p><strong>Almach</strong></p>
+<p><strong>NuFor</strong></p>
+<p><strong>HD12661</strong></p>
+<p><strong>alphaAri</strong></p>
+<p><strong>BetaTri</strong></p>
+<p><strong>GJ86</strong></p>
+<p><strong>EtaArietis</strong></p>
+<p><strong>MuFor</strong></p>
+<p><strong>PhiEri</strong></p>
+<p><strong>HD13931</strong></p>
+<p><strong>GammaTri</strong></p>
+<p><strong>Misam2</strong></p>
+<p><strong>HD13908</strong></p>
+<p><strong>HD12648</strong></p>
+<p><strong>Mira</strong></p>
+<p><strong>DeltaHyi</strong></p>
+<p><strong>WASP33</strong></p>
+<p><strong>KappaEri</strong></p>
+<p><strong>Xi2Cet</strong></p>
+<p><strong>PolarisA</strong></p>
+<p><strong>_75Cet</strong></p>
+<p><strong>OmegaFor</strong></p>
+<p><strong>HD16141</strong></p>
+<p><strong>_30AriB</strong></p>
+<p><strong>HD16417</strong></p>
+<p><strong>HD16175</strong></p>
+<p><strong>EtaHor</strong></p>
+<p><strong>_81Cet</strong></p>
+<p><strong>DeltaCet</strong></p>
+<p><strong>EpsilonCet</strong></p>
+<p><strong>EpsilonHyi</strong></p>
+<p><strong>HD16754</strong></p>
+<p><strong>ZetaHor</strong></p>
+<p><strong>IotaEri</strong></p>
+<p><strong>HD16760</strong></p>
+<p><strong>IotaHor</strong></p>
+<p><strong>Kaffaljidhma</strong></p>
+<p><strong>PiCet</strong></p>
+<p><strong>ThetaPer</strong></p>
+<p><strong>MuCet</strong></p>
+<p><strong>Tau1Eri</strong></p>
+<p><strong>HIP12961</strong></p>
+<p><strong>BetaFor</strong></p>
+<p><strong>HD17156</strong></p>
+<p><strong>Bharani</strong></p>
+<p><strong>_16Per</strong></p>
+<p><strong>Miram</strong></p>
+<p><strong>Angetenar</strong></p>
+<p><strong>_20Per</strong></p>
+<p><strong>TauPer</strong></p>
+<p><strong>Azha</strong></p>
+<p><strong>Acamar</strong></p>
+<p><strong>GorgoneaSecunda</strong></p>
+<p><strong>BetaHor</strong></p>
+<p><strong>EpsilonAri</strong></p>
+<p><strong>Menkar</strong></p>
+<p><strong>HD18742</strong></p>
+<p><strong>Menkar2</strong></p>
+<p><strong>Tau3Eri</strong></p>
+<p><strong>MuHor</strong></p>
+<p><strong>GammaPer</strong></p>
+<p><strong>GorgoneaTertia</strong></p>
+<p><strong>Algol</strong></p>
+<p><strong>IotaPer</strong></p>
+<p><strong>Misam</strong></p>
+<p><strong>HIP14810</strong></p>
+<p><strong>GorgoneaQuarta</strong></p>
+<p><strong>Botein</strong></p>
+<p><strong>AlphaFor</strong></p>
+<p><strong>HD19994</strong></p>
+<p><strong>Zibal</strong></p>
+<p><strong>Tau4Eri</strong></p>
+<p><strong>_82GEridani</strong></p>
+<p><strong>HD20782</strong></p>
+<p><strong>HD20868</strong></p>
+<p><strong>_32Per</strong></p>
+<p><strong>Mirfak</strong></p>
+<p><strong>OmicronTau</strong></p>
+<p><strong>XiTauriA</strong></p>
+<p><strong>HD21203</strong></p>
+<p><strong>_5Tau</strong></p>
+<p><strong>epsilonEri</strong></p>
+<p><strong>HD139691CD</strong></p>
+<p><strong>Tau5Eri</strong></p>
+<p><strong>PsiPer</strong></p>
+<p><strong>_10Tau</strong></p>
+<p><strong>HD22663</strong></p>
+<p><strong>HD23127</strong></p>
+<p><strong>HD23079</strong></p>
+<p><strong>HD22781</strong></p>
+<p><strong>DeltaFor</strong></p>
+<p><strong>DeltaPer</strong></p>
+<p><strong>Rana</strong></p>
+<p><strong>BetaRet</strong></p>
+<p><strong>Atik</strong></p>
+<p><strong>Celaeno</strong></p>
+<p><strong>Electra</strong></p>
+<p><strong>NuPer</strong></p>
+<p><strong>Taygeta</strong></p>
+<p><strong>Maia</strong></p>
+<p><strong>Asterope</strong></p>
+<p><strong>SteropeII</strong></p>
+<p><strong>Merope</strong></p>
+<p><strong>Tau6Eri</strong></p>
+<p><strong>GammaHyi</strong></p>
+<p><strong>Alcyone</strong></p>
+<p><strong>HD23596</strong></p>
+<p><strong>HD24071</strong></p>
+<p><strong>Atlas</strong></p>
+<p><strong>Pleione</strong></p>
+<p><strong>HD24160</strong></p>
+<p><strong>GammaCam</strong></p>
+<p><strong>HD24040</strong></p>
+<p><strong>ZetaPersei</strong></p>
+<p><strong>HD25171</strong></p>
+<p><strong>HD24064</strong></p>
+<p><strong>EpsilonPer</strong></p>
+<p><strong>Zaurak</strong></p>
+<p><strong>DeltaRet</strong></p>
+<p><strong>Menkib</strong></p>
+<p><strong>Tau9Eri</strong></p>
+<p><strong>LamdaTau</strong></p>
+<p><strong>GammaRet</strong></p>
+<p><strong>NuTau</strong></p>
+<p><strong>_37Tau</strong></p>
+<p><strong>LamdaPer</strong></p>
+<p><strong>HD285507</strong></p>
+<p><strong>_48Per</strong></p>
+<p><strong>GJ163</strong></p>
+<p><strong>Beid</strong></p>
+<p><strong>AlphaHor</strong></p>
+<p><strong>AlphaRet</strong></p>
+<p><strong>MuPer</strong></p>
+<p><strong>OmicronEridaniA</strong></p>
+<p><strong>MuTau</strong></p>
+<p><strong>GammaDor</strong></p>
+<p><strong>epsilonRet</strong></p>
+<p><strong>Upsilon4Eri</strong></p>
+<p><strong>HyadumI</strong></p>
+<p><strong>HD27894</strong></p>
+<p><strong>HyadumII</strong></p>
+<p><strong>_66Tau</strong></p>
+<p><strong>Beemim</strong></p>
+<p><strong>HD28254</strong></p>
+<p><strong>KappaTau</strong></p>
+<p><strong>Delta3Tau</strong></p>
+<p><strong>HD28185</strong></p>
+<p><strong>Theta1Tau</strong></p>
+<p><strong>epsilonTau</strong></p>
+<p><strong>Theta2Tau</strong></p>
+<p><strong>DeltaCae</strong></p>
+<p><strong>Stein2051A</strong></p>
+<p><strong>HD28678</strong></p>
+<p><strong>Upsilon1Eri</strong></p>
+<p><strong>AlphaDor</strong></p>
+<p><strong>Theemin</strong></p>
+<p><strong>_88Tau</strong></p>
+<p><strong>Aldebaran</strong></p>
+<p><strong>NuEri</strong></p>
+<p><strong>_58Per</strong></p>
+<p><strong>RDoradus</strong></p>
+<p><strong>_51Eri</strong></p>
+<p><strong>_90Tau</strong></p>
+<p><strong>Sceptrum</strong></p>
+<p><strong>AlphaCae</strong></p>
+<p><strong>HD30177</strong></p>
+<p><strong>BetaCae</strong></p>
+<p><strong>TauTau</strong></p>
+<p><strong>GJ176</strong></p>
+<p><strong>MuEri</strong></p>
+<p><strong>HD30562</strong></p>
+<p><strong>Tabit</strong></p>
+<p><strong>HD30856</strong></p>
+<p><strong>Pi2Ori</strong></p>
+<p><strong>Pi4Ori</strong></p>
+<p><strong>GJ179</strong></p>
+<p><strong>OmegaEri</strong></p>
+<p><strong>HD30555</strong></p>
+<p><strong>Pi5Ori</strong></p>
+<p><strong>HD31253</strong></p>
+<p><strong>Pi1Ori</strong></p>
+<p><strong>EtaMen</strong></p>
+<p><strong>Omicron2Ori</strong></p>
+<p><strong>Hassaleh</strong></p>
+<p><strong>_7Cam</strong></p>
+<p><strong>Pi6Ori</strong></p>
+<p><strong>EpsilonAurigae</strong></p>
+<p><strong>Saclateni</strong></p>
+<p><strong>BetaMen</strong></p>
+<p><strong>BetaCam</strong></p>
+<p><strong>GammaCae</strong></p>
+<p><strong>Eta2Pic</strong></p>
+<p><strong>EpsilonLep</strong></p>
+<p><strong>ZetaDor</strong></p>
+<p><strong>Haedus</strong></p>
+<p><strong>HD33142</strong></p>
+<p><strong>Cursa</strong></p>
+<p><strong>HD32963</strong></p>
+<p><strong>HD33283</strong></p>
+<p><strong>LamdaEri</strong></p>
+<p><strong>HD32518</strong></p>
+<p><strong>KapteynsStar</strong></p>
+<p><strong>HD33636</strong></p>
+<p><strong>IotaLep</strong></p>
+<p><strong>HD33844</strong></p>
+<p><strong>MuLep</strong></p>
+<p><strong>KELT7</strong></p>
+<p><strong>KappaLep</strong></p>
+<p><strong>Rigel</strong></p>
+<p><strong>Capella</strong></p>
+<p><strong>TauOri</strong></p>
+<p><strong>HD34445</strong></p>
+<p><strong>LamdaLep</strong></p>
+<p><strong>HD33564</strong></p>
+<p><strong>HD290327</strong></p>
+<p><strong>EtaOri</strong></p>
+<p><strong>Bellatrix</strong></p>
+<p><strong>Elnath</strong></p>
+<p><strong>BetaLeporis</strong></p>
+<p><strong>EpsilonCol</strong></p>
+<p><strong>Wolf1453</strong></p>
+<p><strong>GammaMen</strong></p>
+<p><strong>Thabit</strong></p>
+<p><strong>MintakaAB</strong></p>
+<p><strong>Arneb</strong></p>
+<p><strong>BetaDor</strong></p>
+<p><strong>Meissa</strong></p>
+<p><strong>Hatysa</strong></p>
+<p><strong>Alnilam</strong></p>
+<p><strong>HD38283</strong></p>
+<p><strong>HD37124</strong></p>
+<p><strong>HD39091</strong></p>
+<p><strong>Tianguan</strong></p>
+<p><strong>SigmaOri</strong></p>
+<p><strong>_49Ori</strong></p>
+<p><strong>Phact</strong></p>
+<p><strong>HD37605</strong></p>
+<p><strong>Alnitak</strong></p>
+<p><strong>Ross47</strong></p>
+<p><strong>GammaLep</strong></p>
+<p><strong>DeltaDor</strong></p>
+<p><strong>HD38529</strong></p>
+<p><strong>ZetaLep</strong></p>
+<p><strong>betaPic</strong></p>
+<p><strong>Saiph</strong></p>
+<p><strong>HD38801</strong></p>
+<p><strong>GammaPic</strong></p>
+<p><strong>KappaMen</strong></p>
+<p><strong>Wazn</strong></p>
+<p><strong>DeltaLep</strong></p>
+<p><strong>HD40307</strong></p>
+<p><strong>HD40409</strong></p>
+<p><strong>Chi1Ori</strong></p>
+<p><strong>Betelgueuse</strong></p>
+<p><strong>EtaLep</strong></p>
+<p><strong>GammaCol</strong></p>
+<p><strong>EtaCol</strong></p>
+<p><strong>DeltaAur</strong></p>
+<p><strong>Menkalinan</strong></p>
+<p><strong>Mahasim</strong></p>
+<p><strong>MuOri</strong></p>
+<p><strong>HD40981</strong></p>
+<p><strong>Propus3</strong></p>
+<p><strong>HD40979</strong></p>
+<p><strong>NuOri</strong></p>
+<p><strong>AlphaMensae</strong></p>
+<p><strong>L66821A</strong></p>
+<p><strong>KELT2A</strong></p>
+<p><strong>XiOri</strong></p>
+<p><strong>HD43197</strong></p>
+<p><strong>GammaMon</strong></p>
+<p><strong>Propus</strong></p>
+<p><strong>KappaCol</strong></p>
+<p><strong>HD42818</strong></p>
+<p><strong>HD43691</strong></p>
+<p><strong>_2Lyn</strong></p>
+<p><strong>HD44219</strong></p>
+<p><strong>Furud</strong></p>
+<p><strong>DeltaCol</strong></p>
+<p><strong>Mirzam</strong></p>
+<p><strong>Tejat</strong></p>
+<p><strong>EpsilonMon</strong></p>
+<p><strong>Canopus</strong></p>
+<p><strong>HD45364</strong></p>
+<p><strong>LambdaCMa</strong></p>
+<p><strong>HD45350</strong></p>
+<p><strong>BetaMon</strong></p>
+<p><strong>NuGem</strong></p>
+<p><strong>HD45652</strong></p>
+<p><strong>Ross614A</strong></p>
+<p><strong>_6Lyn</strong></p>
+<p><strong>Ksi1CMa</strong></p>
+<p><strong>_13Mon</strong></p>
+<p><strong>HD46375</strong></p>
+<p><strong>HD47186</strong></p>
+<p><strong>_7CMa</strong></p>
+<p><strong>Alhena</strong></p>
+<p><strong>NuPup</strong></p>
+<p><strong>HD48265</strong></p>
+<p><strong>Mebsuta</strong></p>
+<p><strong>Sirius</strong></p>
+<p><strong>Alzirr</strong></p>
+<p><strong>_18Mon</strong></p>
+<p><strong>AlphaPic</strong></p>
+<p><strong>KappaCMa</strong></p>
+<p><strong>TauPup</strong></p>
+<p><strong>HD49674</strong></p>
+<p><strong>HD50499</strong></p>
+<p><strong>ThetaGem</strong></p>
+<p><strong>Omicron1CMa</strong></p>
+<p><strong>ThetaCMa</strong></p>
+<p><strong>HD50554</strong></p>
+<p><strong>Wolf294</strong></p>
+<p><strong>Isida</strong></p>
+<p><strong>IotaCMa</strong></p>
+<p><strong>ThetaMen</strong></p>
+<p><strong>_15Lyn</strong></p>
+<p><strong>Adhara</strong></p>
+<p><strong>HD49878</strong></p>
+<p><strong>HD52265</strong></p>
+<p><strong>SigmaCMa</strong></p>
+<p><strong>Omicron2CMa</strong></p>
+<p><strong>Muliphein</strong></p>
+<p><strong>Mekbuda</strong></p>
+<p><strong>Wezen</strong></p>
+<p><strong>Gamma2Vol</strong></p>
+<p><strong>TauGem</strong></p>
+<p><strong>DeltaMon</strong></p>
+<p><strong>_71Pup</strong></p>
+<p><strong>HD56022</strong></p>
+<p><strong>L2Puppis</strong></p>
+<p><strong>OmegaCMa</strong></p>
+<p><strong>DeltaVol</strong></p>
+<p><strong>PiPup</strong></p>
+<p><strong>LamdaGem</strong></p>
+<p><strong>TauCMa</strong></p>
+<p><strong>Wasat</strong></p>
+<p><strong>EtaCanisMajoris</strong></p>
+<p><strong>Propus2</strong></p>
+<p><strong>_21Lyn</strong></p>
+<p><strong>Gomeisa</strong></p>
+<p><strong>LuytensStar</strong></p>
+<p><strong>RhoGem</strong></p>
+<p><strong>SigmaPup</strong></p>
+<p><strong>HD59890</strong></p>
+<p><strong>HD60532</strong></p>
+<p><strong>Castor</strong></p>
+<p><strong>HD60863</strong></p>
+<p><strong>UpsilonGem</strong></p>
+<p><strong>Markeb2</strong></p>
+<p><strong>Jishui</strong></p>
+<p><strong>Procyon</strong></p>
+<p><strong>HD63454</strong></p>
+<p><strong>AlphaMon</strong></p>
+<p><strong>ZetaVol</strong></p>
+<p><strong>KappaGem</strong></p>
+<p><strong>Ross882</strong></p>
+<p><strong>HD63032</strong></p>
+<p><strong>Pollux</strong></p>
+<p><strong>HD63765</strong></p>
+<p><strong>HD63922</strong></p>
+<p><strong>Azmidiske</strong></p>
+<p><strong>HD64440</strong></p>
+<p><strong>HD64760</strong></p>
+<p><strong>HD65216</strong></p>
+<p><strong>ChiCar</strong></p>
+<p><strong>_11Pup</strong></p>
+<p><strong>_27Mon</strong></p>
+<p><strong>HD66428</strong></p>
+<p><strong>NaosZetaPuppis</strong></p>
+<p><strong>Tureis</strong></p>
+<p><strong>HD67087</strong></p>
+<p><strong>EpsilonVol</strong></p>
+<p><strong>ZetaMon</strong></p>
+<p><strong>_16Pup</strong></p>
+<p><strong>GammaVelorum</strong></p>
+<p><strong>_19Pup</strong></p>
+<p><strong>Tegmine</strong></p>
+<p><strong>betCnc</strong></p>
+<p><strong>HD68988</strong></p>
+<p><strong>HD69830</strong></p>
+<p><strong>AlphaCha</strong></p>
+<p><strong>ThetaCha</strong></p>
+<p><strong>HD70642</strong></p>
+<p><strong>Avior</strong></p>
+<p><strong>Alsciaukat</strong></p>
+<p><strong>HD71155</strong></p>
+<p><strong>BetaVol</strong></p>
+<p><strong>omicronUMa</strong></p>
+<p><strong>ThetaCnc</strong></p>
+<p><strong>EtaCnc</strong></p>
+<p><strong>HD72659</strong></p>
+<p><strong>HD73267</strong></p>
+<p><strong>HD73256</strong></p>
+<p><strong>HD73526</strong></p>
+<p><strong>HD73634</strong></p>
+<p><strong>DeltaHya</strong></p>
+<p><strong>AlMinliaralShuja</strong></p>
+<p><strong>Muscida</strong></p>
+<p><strong>HD73534</strong></p>
+<p><strong>BetaPyx</strong></p>
+<p><strong>_4UMa</strong></p>
+<p><strong>OmicronVel</strong></p>
+<p><strong>Praesepe</strong></p>
+<p><strong>HD74180</strong></p>
+<p><strong>HD74156</strong></p>
+<p><strong>EtaHya</strong></p>
+<p><strong>AsellusBorealis</strong></p>
+<p><strong>AlphaPyx</strong></p>
+<p><strong>HD74772</strong></p>
+<p><strong>AsellusAustralis</strong></p>
+<p><strong>DeltaVel</strong></p>
+<p><strong>HD75063</strong></p>
+<p><strong>iotaCancriB</strong></p>
+<p><strong>iotaCancriA</strong></p>
+<p><strong>EpsilonHya</strong></p>
+<p><strong>HD75289</strong></p>
+<p><strong>RhoHya</strong></p>
+<p><strong>GammaPyx</strong></p>
+<p><strong>HD75784</strong></p>
+<p><strong>_55Cancri</strong></p>
+<p><strong>HD75898</strong></p>
+<p><strong>HD76700</strong></p>
+<p><strong>HD76728</strong></p>
+<p><strong>GJ328</strong></p>
+<p><strong>ZetaHya</strong></p>
+<p><strong>Acubens</strong></p>
+<p><strong>Talitha</strong></p>
+<p><strong>HD76943</strong></p>
+<p><strong>HD77338</strong></p>
+<p><strong>AlphaVol</strong></p>
+<p><strong>KappaUMa</strong></p>
+<p><strong>HD78004</strong></p>
+<p><strong>HD77912</strong></p>
+<p><strong>Suhail</strong></p>
+<p><strong>Sigma2UMa</strong></p>
+<p><strong>HD79351</strong></p>
+<p><strong>HD79447</strong></p>
+<p><strong>Miaplacidus</strong></p>
+<p><strong>ThetaHya</strong></p>
+<p><strong>HD79498</strong></p>
+<p><strong>Markeb</strong></p>
+<p><strong>Aspidiske</strong></p>
+<p><strong>_38Lyn</strong></p>
+<p><strong>AlphaLyn</strong></p>
+<p><strong>KappaVel</strong></p>
+<p><strong>HD80606</strong></p>
+<p><strong>HD81040</strong></p>
+<p><strong>AlMinliaralAsad</strong></p>
+<p><strong>Alphard</strong></p>
+<p><strong>HD81688</strong></p>
+<p><strong>EpsilonAnt</strong></p>
+<p><strong>PsiVel</strong></p>
+<p><strong>HD82668</strong></p>
+<p><strong>_23UMa</strong></p>
+<p><strong>Alterf</strong></p>
+<p><strong>ThetaUMa</strong></p>
+<p><strong>_10LMi</strong></p>
+<p><strong>HD82943</strong></p>
+<p><strong>HD82886</strong></p>
+<p><strong>HD83443</strong></p>
+<p><strong>IotaHya</strong></p>
+<p><strong>Subra</strong></p>
+<p><strong>ThetaAnt</strong></p>
+<p><strong>HD84810</strong></p>
+<p><strong>RasElasedAustralis</strong></p>
+<p><strong>UpsilonCar</strong></p>
+<p><strong>HD85390</strong></p>
+<p><strong>UpsilonUMa</strong></p>
+<p><strong>HD85512</strong></p>
+<p><strong>Zhang</strong></p>
+<p><strong>PhiUMa</strong></p>
+<p><strong>GammaSex</strong></p>
+<p><strong>muLeo</strong></p>
+<p><strong>HD86081</strong></p>
+<p><strong>PhiVel</strong></p>
+<p><strong>HD86264</strong></p>
+<p><strong>EtaAnt</strong></p>
+<p><strong>BD082823</strong></p>
+<p><strong>Upsilon2Hya</strong></p>
+<p><strong>Aldzhabkhakh</strong></p>
+<p><strong>_21LMi</strong></p>
+<p><strong>_31Leo</strong></p>
+<p><strong>AlphaSex</strong></p>
+<p><strong>Regulus</strong></p>
+<p><strong>HD87883</strong></p>
+<p><strong>HD88133</strong></p>
+<p><strong>LamdaHya</strong></p>
+<p><strong>Groombridge1618</strong></p>
+<p><strong>OmegaCar</strong></p>
+<p><strong>HD88955</strong></p>
+<p><strong>Adhafera</strong></p>
+<p><strong>HD89388</strong></p>
+<p><strong>TaniaBorealis</strong></p>
+<p><strong>HD89307</strong></p>
+<p><strong>gammaLeoA</strong></p>
+<p><strong>HD89744</strong></p>
+<p><strong>TaniaAustralis</strong></p>
+<p><strong>_24Sex</strong></p>
+<p><strong>HD90156</strong></p>
+<p><strong>MuHya</strong></p>
+<p><strong>AlphaAnt</strong></p>
+<p><strong>HD90853</strong></p>
+<p><strong>BetaLMi</strong></p>
+<p><strong>DeltaSex</strong></p>
+<p><strong>BetaSex</strong></p>
+<p><strong>HD91465</strong></p>
+<p><strong>HD91233</strong></p>
+<p><strong>GammaCha</strong></p>
+<p><strong>HD92139</strong></p>
+<p><strong>HD92788</strong></p>
+<p><strong>ThetaCar</strong></p>
+<p><strong>HD93083</strong></p>
+<p><strong>Delta2Cha</strong></p>
+<p><strong>MuVel</strong></p>
+<p><strong>NuHya</strong></p>
+<p><strong>Praecipua</strong></p>
+<p><strong>HD94510</strong></p>
+<p><strong>IotaAnt</strong></p>
+<p><strong>HD95086</strong></p>
+<p><strong>HD95089</strong></p>
+<p><strong>UrsaeMajoris</strong></p>
+<p><strong>HD95127</strong></p>
+<p><strong>Alkes</strong></p>
+<p><strong>Merak</strong></p>
+<p><strong>Lalande21185</strong></p>
+<p><strong>Dubhe</strong></p>
+<p><strong>HD96063</strong></p>
+<p><strong>HD96167</strong></p>
+<p><strong>Chi01Hya</strong></p>
+<p><strong>Lalande21258A</strong></p>
+<p><strong>HD96127</strong></p>
+<p><strong>V382Carinae</strong></p>
+<p><strong>PsiUMa</strong></p>
+<p><strong>BetaCrt</strong></p>
+<p><strong>Zosma</strong></p>
+<p><strong>Chertan</strong></p>
+<p><strong>HD97658</strong></p>
+<p><strong>HD98219</strong></p>
+<p><strong>AlulaBorealis</strong></p>
+<p><strong>Labr</strong></p>
+<p><strong>PiCen</strong></p>
+<p><strong>SigmaLeo</strong></p>
+<p><strong>TVCraterisA</strong></p>
+<p><strong>IotaLeo</strong></p>
+<p><strong>HD99109</strong></p>
+<p><strong>EpsilonCrt</strong></p>
+<p><strong>GammaCrt</strong></p>
+<p><strong>HD99492</strong></p>
+<p><strong>HD99706</strong></p>
+<p><strong>Giausar</strong></p>
+<p><strong>XiHya</strong></p>
+<p><strong>HD100655</strong></p>
+<p><strong>GJ433</strong></p>
+<p><strong>LamdaCen</strong></p>
+<p><strong>HD100777</strong></p>
+<p><strong>ThetaCrt</strong></p>
+<p><strong>UPsilonLeo</strong></p>
+<p><strong>HIP57050</strong></p>
+<p><strong>GJ436</strong></p>
+<p><strong>HD101930</strong></p>
+<p><strong>HIP57274</strong></p>
+<p><strong>ZetaCrt</strong></p>
+<p><strong>HD102117</strong></p>
+<p><strong>LamdaMus</strong></p>
+<p><strong>L145141</strong></p>
+<p><strong>HD102195</strong></p>
+<p><strong>NuVir</strong></p>
+<p><strong>Taiyangshou</strong></p>
+<p><strong>HD102272</strong></p>
+<p><strong>HD102350</strong></p>
+<p><strong>HD102365</strong></p>
+<p><strong>HD102329</strong></p>
+<p><strong>G25429</strong></p>
+<p><strong>Ross128</strong></p>
+<p><strong>Denebola</strong></p>
+<p><strong>Zavijava</strong></p>
+<p><strong>HD102956</strong></p>
+<p><strong>HD103197</strong></p>
+<p><strong>BetaHya</strong></p>
+<p><strong>ArgelandersStar</strong></p>
+<p><strong>Phecda</strong></p>
+<p><strong>EtaCrt</strong></p>
+<p><strong>HD103774</strong></p>
+<p><strong>HD104067</strong></p>
+<p><strong>OmicronVir</strong></p>
+<p><strong>HD104985</strong></p>
+<p><strong>DeltaCen</strong></p>
+<p><strong>Alchiba</strong></p>
+<p><strong>Minkar</strong></p>
+<p><strong>RhoCen</strong></p>
+<p><strong>HD106252</strong></p>
+<p><strong>HD106270</strong></p>
+<p><strong>DeltaCru</strong></p>
+<p><strong>Megrez</strong></p>
+<p><strong>Gienah</strong></p>
+<p><strong>EpsilonMus</strong></p>
+<p><strong>BetaCha</strong></p>
+<p><strong>HD107148</strong></p>
+<p><strong>Zaniah</strong></p>
+<p><strong>_11Com</strong></p>
+<p><strong>EpsilonCru</strong></p>
+<p><strong>HD108147</strong></p>
+<p><strong>Acrux</strong></p>
+<p><strong>GammaCom</strong></p>
+<p><strong>HD108341</strong></p>
+<p><strong>SigmaCen</strong></p>
+<p><strong>Algorab</strong></p>
+<p><strong>HD108863</strong></p>
+<p><strong>HD108874</strong></p>
+<p><strong>Gacrux</strong></p>
+<p><strong>EtaCrv</strong></p>
+<p><strong>HD109246</strong></p>
+<p><strong>GammaMus</strong></p>
+<p><strong>KappaDra</strong></p>
+<p><strong>Chara</strong></p>
+<p><strong>Kraz</strong></p>
+<p><strong>AlphaMus</strong></p>
+<p><strong>HD109749</strong></p>
+<p><strong>TauCen</strong></p>
+<p><strong>GammaCen</strong></p>
+<p><strong>Porrima</strong></p>
+<p><strong>RhoVir</strong></p>
+<p><strong>BetaMus</strong></p>
+<p><strong>Tianyi</strong></p>
+<p><strong>Mimosa</strong></p>
+<p><strong>HD111232</strong></p>
+<p><strong>HD112028</strong></p>
+<p><strong>HD111915</strong></p>
+<p><strong>HD111968</strong></p>
+<p><strong>Alioth</strong></p>
+<p><strong>Taiyi</strong></p>
+<p><strong>Minelauva</strong></p>
+<p><strong>CorCaroli</strong></p>
+<p><strong>HD113337</strong></p>
+<p><strong>Vindemiatrix</strong></p>
+<p><strong>DeltaMus</strong></p>
+<p><strong>HD113703</strong></p>
+<p><strong>ThetaVir</strong></p>
+<p><strong>Diadem</strong></p>
+<p><strong>HD114386</strong></p>
+<p><strong>BetaCom</strong></p>
+<p><strong>HD114613</strong></p>
+<p><strong>HD114762</strong></p>
+<p><strong>HD114783</strong></p>
+<p><strong>HD114729</strong></p>
+<p><strong>GJ504</strong></p>
+<p><strong>_61Virginis</strong></p>
+<p><strong>GammaHya</strong></p>
+<p><strong>IotaCen</strong></p>
+<p><strong>HD116029</strong></p>
+<p><strong>MizarAlcorABMizar</strong></p>
+<p><strong>Spica</strong></p>
+<p><strong>MizarAlcorCAlcor</strong></p>
+<p><strong>_70Vir</strong></p>
+<p><strong>HD117207</strong></p>
+<p><strong>HD117440</strong></p>
+<p><strong>HD117618</strong></p>
+<p><strong>HD118203</strong></p>
+<p><strong>Heze</strong></p>
+<p><strong>EpsilonCen</strong></p>
+<p><strong>HD120084</strong></p>
+<p><strong>Lalande25372</strong></p>
+<p><strong>tauBoo</strong></p>
+<p><strong>Alkaid</strong></p>
+<p><strong>_2Cen</strong></p>
+<p><strong>UpsilonBoo</strong></p>
+<p><strong>NuCen</strong></p>
+<p><strong>MuCen</strong></p>
+<p><strong>HIP67851</strong></p>
+<p><strong>Muphrid</strong></p>
+<p><strong>ZetaCen</strong></p>
+<p><strong>HD121504</strong></p>
+<p><strong>PhiCen</strong></p>
+<p><strong>Upsilon1Cen</strong></p>
+<p><strong>TauVir</strong></p>
+<p><strong>UPsilon2Cen</strong></p>
+<p><strong>BetaCentauri</strong></p>
+<p><strong>Thuban</strong></p>
+<p><strong>ChiCen</strong></p>
+<p><strong>PiHya</strong></p>
+<p><strong>Menkent</strong></p>
+<p><strong>Kang</strong></p>
+<p><strong>AsellusTertius</strong></p>
+<p><strong>Arcturus</strong></p>
+<p><strong>Syrma</strong></p>
+<p><strong>AsellusSecondus</strong></p>
+<p><strong>Xuange</strong></p>
+<p><strong>Kkhambaliya</strong></p>
+<p><strong>IotaLup</strong></p>
+<p><strong>PsiCen</strong></p>
+<p><strong>HD125612</strong></p>
+<p><strong>HD125595</strong></p>
+<p><strong>HD125823</strong></p>
+<p><strong>AsellusPrimus</strong></p>
+<p><strong>HD126614A</strong></p>
+<p><strong>DeltaOct</strong></p>
+<p><strong>AlphaCentauriC</strong></p>
+<p><strong>RhoBoo</strong></p>
+<p><strong>Seginus</strong></p>
+<p><strong>Wolf1481</strong></p>
+<p><strong>EtaCen</strong></p>
+<p><strong>HD128311</strong></p>
+<p><strong>RhoLup</strong></p>
+<p><strong>AlphaCentauriB</strong></p>
+<p><strong>AlphaCentauriA</strong></p>
+<p><strong>Pi1Boo</strong></p>
+<p><strong>ZetaBoo</strong></p>
+<p><strong>Men</strong></p>
+<p><strong>HD129116</strong></p>
+<p><strong>AlphaCir</strong></p>
+<p><strong>RijlalAwwa</strong></p>
+<p><strong>HD129456</strong></p>
+<p><strong>Izar</strong></p>
+<p><strong>_109Vir</strong></p>
+<p><strong>HD130322</strong></p>
+<p><strong>AlphaAps</strong></p>
+<p><strong>Merga</strong></p>
+<p><strong>_58Hya</strong></p>
+<p><strong>Alpha1Lib</strong></p>
+<p><strong>betUMi</strong></p>
+<p><strong>Zubenelgenubi</strong></p>
+<p><strong>HD131496</strong></p>
+<p><strong>_8UMi</strong></p>
+<p><strong>HD132406</strong></p>
+<p><strong>Lalande27173B</strong></p>
+<p><strong>Lalande27173A</strong></p>
+<p><strong>HD132563B</strong></p>
+<p><strong>BetaLup</strong></p>
+<p><strong>KappaCen</strong></p>
+<p><strong>HD131664</strong></p>
+<p><strong>ZubenElakribi</strong></p>
+<p><strong>Nekkar</strong></p>
+<p><strong>Brachium</strong></p>
+<p><strong>PiLup</strong></p>
+<p><strong>ZubenHakrabi</strong></p>
+<p><strong>Kappa1Lup</strong></p>
+<p><strong>IotaLib</strong></p>
+<p><strong>ZetaLup</strong></p>
+<p><strong>HD134987</strong></p>
+<p><strong>Printseps</strong></p>
+<p><strong>Zubeneschamali</strong></p>
+<p><strong>_11UMi</strong></p>
+<p><strong>BetaCir</strong></p>
+<p><strong>_2Lup</strong></p>
+<p><strong>MuLup</strong></p>
+<p><strong>GammaTrA</strong></p>
+<p><strong>HD136118</strong></p>
+<p><strong>HD136418</strong></p>
+<p><strong>Gliese581</strong></p>
+<p><strong>omicronCrB</strong></p>
+<p><strong>Pherkad</strong></p>
+<p><strong>DeltaLup</strong></p>
+<p><strong>Phi1Lup</strong></p>
+<p><strong>EpsilonLup</strong></p>
+<p><strong>GammaCir</strong></p>
+<p><strong>Alkalurops</strong></p>
+<p><strong>IotaDra</strong></p>
+<p><strong>Nusakan</strong></p>
+<p><strong>CD409712</strong></p>
+<p><strong>ThetaCrB</strong></p>
+<p><strong>Alphecca</strong></p>
+<p><strong>DeltaSer</strong></p>
+<p><strong>GammaLup</strong></p>
+<p><strong>HD139357</strong></p>
+<p><strong>ZubenElakrab</strong></p>
+<p><strong>HD137388</strong></p>
+<p><strong>UpsilonLib</strong></p>
+<p><strong>Ceginus</strong></p>
+<p><strong>OmegaLup</strong></p>
+<p><strong>HD139691AB</strong></p>
+<p><strong>TauLib</strong></p>
+<p><strong>GammaCrB</strong></p>
+<p><strong>ZetaUMi</strong></p>
+<p><strong>EtaLib</strong></p>
+<p><strong>Unukalhai</strong></p>
+<p><strong>BetaSer</strong></p>
+<p><strong>LambdaSer</strong></p>
+<p><strong>KappaSer</strong></p>
+<p><strong>DeltaCrB</strong></p>
+<p><strong>MuSer</strong></p>
+<p><strong>HD330075</strong></p>
+<p><strong>omegaSer</strong></p>
+<p><strong>EpsilonSer</strong></p>
+<p><strong>ChiLup</strong></p>
+<p><strong>kappaCrB</strong></p>
+<p><strong>HD141937</strong></p>
+<p><strong>ChiHer</strong></p>
+<p><strong>HD142245</strong></p>
+<p><strong>ThetaLib</strong></p>
+<p><strong>BetaTrA</strong></p>
+<p><strong>GammaSer</strong></p>
+<p><strong>RhoSco</strong></p>
+<p><strong>epsilonCrB</strong></p>
+<p><strong>HD142415</strong></p>
+<p><strong>_48Lib</strong></p>
+<p><strong>Fang</strong></p>
+<p><strong>EtaLup</strong></p>
+<p><strong>Dschubba</strong></p>
+<p><strong>rhoCrB</strong></p>
+<p><strong>IotaCrB</strong></p>
+<p><strong>HD143361</strong></p>
+<p><strong>ThetaDra</strong></p>
+<p><strong>EtaNor</strong></p>
+<p><strong>Iota1Nor</strong></p>
+<p><strong>Acrab</strong></p>
+<p><strong>DeltaNor</strong></p>
+<p><strong>ThetaLup</strong></p>
+<p><strong>Omega1Sco</strong></p>
+<p><strong>_11Sco</strong></p>
+<p><strong>Marsic</strong></p>
+<p><strong>PhiHer</strong></p>
+<p><strong>HD145457</strong></p>
+<p><strong>HD142022</strong></p>
+<p><strong>_14Her</strong></p>
+<p><strong>HD145377</strong></p>
+<p><strong>NuScorpiiAB</strong></p>
+<p><strong>HIP79431</strong></p>
+<p><strong>KappaNor</strong></p>
+<p><strong>YedPrior</strong></p>
+<p><strong>DeltaTrA</strong></p>
+<p><strong>EtaUMi</strong></p>
+<p><strong>YedPosterior</strong></p>
+<p><strong>TauHer</strong></p>
+<p><strong>Gamma2Nor</strong></p>
+<p><strong>Delta1Aps</strong></p>
+<p><strong>Delta2Aps</strong></p>
+<p><strong>HATP2</strong></p>
+<p><strong>OmicronScorpii</strong></p>
+<p><strong>Alniyat</strong></p>
+<p><strong>GammaHer</strong></p>
+<p><strong>HD147018</strong></p>
+<p><strong>EtaDra</strong></p>
+<p><strong>HD147513</strong></p>
+<p><strong>Cujam</strong></p>
+<p><strong>EpsilonNor</strong></p>
+<p><strong>HD148349</strong></p>
+<p><strong>HD148156</strong></p>
+<p><strong>HD148427</strong></p>
+<p><strong>Antares</strong></p>
+<p><strong>Kornephoros</strong></p>
+<p><strong>Wolf1061</strong></p>
+<p><strong>HD149026</strong></p>
+<p><strong>Marfik</strong></p>
+<p><strong>PhiOph</strong></p>
+<p><strong>OmegaOph</strong></p>
+<p><strong>HD149143</strong></p>
+<p><strong>GammaAps</strong></p>
+<p><strong>SigmaHer</strong></p>
+<p><strong>HD149382</strong></p>
+<p><strong>Alniyat2</strong></p>
+<p><strong>Khan</strong></p>
+<p><strong>ZetaHer</strong></p>
+<p><strong>EtaHer</strong></p>
+<p><strong>BetaAps</strong></p>
+<p><strong>EpsilonUMi</strong></p>
+<p><strong>Atria</strong></p>
+<p><strong>EtaAra</strong></p>
+<p><strong>EpsilonSco</strong></p>
+<p><strong>Mu1Sco</strong></p>
+<p><strong>Mu2Sco</strong></p>
+<p><strong>HD152581</strong></p>
+<p><strong>Grafias</strong></p>
+<p><strong>KappaOph</strong></p>
+<p><strong>GJ649</strong></p>
+<p><strong>ZetaAra</strong></p>
+<p><strong>Epsilon1Ara</strong></p>
+<p><strong>EpsilonHer</strong></p>
+<p><strong>HD154345</strong></p>
+<p><strong>HD153950</strong></p>
+<p><strong>Alrakis</strong></p>
+<p><strong>Aldhibah</strong></p>
+<p><strong>HD155358</strong></p>
+<p><strong>HD154672</strong></p>
+<p><strong>Sabik</strong></p>
+<p><strong>HD155233</strong></p>
+<p><strong>HD154857</strong></p>
+<p><strong>EtaSco</strong></p>
+<p><strong>HD156279</strong></p>
+<p><strong>Rasalgethi</strong></p>
+<p><strong>Sarin</strong></p>
+<p><strong>PiHer</strong></p>
+<p><strong>_36OphiuchiA</strong></p>
+<p><strong>_36OphiuchiC</strong></p>
+<p><strong>HD156668</strong></p>
+<p><strong>Gliese667AB</strong></p>
+<p><strong>HD156411</strong></p>
+<p><strong>HD156846</strong></p>
+<p><strong>NuSer</strong></p>
+<p><strong>XiOph</strong></p>
+<p><strong>ThetaOph</strong></p>
+<p><strong>RhoHer</strong></p>
+<p><strong>BetaAra</strong></p>
+<p><strong>GammaAra</strong></p>
+<p><strong>HD158038</strong></p>
+<p><strong>_44Oph</strong></p>
+<p><strong>_45Oph</strong></p>
+<p><strong>GJ674</strong></p>
+<p><strong>GJ676A</strong></p>
+<p><strong>Rastaban</strong></p>
+<p><strong>Maasym</strong></p>
+<p><strong>Lesath</strong></p>
+<p><strong>DeltaAra</strong></p>
+<p><strong>AlphaAra</strong></p>
+<p><strong>Kuma2</strong></p>
+<p><strong>Yildun</strong></p>
+<p><strong>Kuma</strong></p>
+<p><strong>HD159243</strong></p>
+<p><strong>Shaula</strong></p>
+<p><strong>Rasalhague</strong></p>
+<p><strong>GJ687</strong></p>
+<p><strong>CD4411909</strong></p>
+<p><strong>Sargas</strong></p>
+<p><strong>XiSer</strong></p>
+<p><strong>MuOph</strong></p>
+<p><strong>HD159868</strong></p>
+<p><strong>IotaHer</strong></p>
+<p><strong>OmicronSer</strong></p>
+<p><strong>Dziban</strong></p>
+<p><strong>KappaSco</strong></p>
+<p><strong>Cebalrai</strong></p>
+<p><strong>MuArae</strong></p>
+<p><strong>EtaPav</strong></p>
+<p><strong>MuHer</strong></p>
+<p><strong>L205128</strong></p>
+<p><strong>_3Sgr</strong></p>
+<p><strong>Iota1Sco</strong></p>
+<p><strong>GammaOph</strong></p>
+<p><strong>Fuyue</strong></p>
+<p><strong>HD162020</strong></p>
+<p><strong>Grumium</strong></p>
+<p><strong>HD163607</strong></p>
+<p><strong>ThetaHer</strong></p>
+<p><strong>Eltanin</strong></p>
+<p><strong>XiHer</strong></p>
+<p><strong>BarnardsStar</strong></p>
+<p><strong>NuHer</strong></p>
+<p><strong>Sinistra</strong></p>
+<p><strong>_67Oph</strong></p>
+<p><strong>HD164509</strong></p>
+<p><strong>HD164922</strong></p>
+<p><strong>HD164604</strong></p>
+<p><strong>Nash</strong></p>
+<p><strong>_70OphiuchiA</strong></p>
+<p><strong>Alnasl</strong></p>
+<p><strong>ThetaAra</strong></p>
+<p><strong>_72Oph</strong></p>
+<p><strong>OmicronHer</strong></p>
+<p><strong>PiPav</strong></p>
+<p><strong>_102Her</strong></p>
+<p><strong>HD167042</strong></p>
+<p><strong>EpsilonTel</strong></p>
+<p><strong>HD167225</strong></p>
+<p><strong>EtaSgr</strong></p>
+<p><strong>HD168443</strong></p>
+<p><strong>PhiDra</strong></p>
+<p><strong>KausMedia</strong></p>
+<p><strong>ChiDra</strong></p>
+<p><strong>EtaSer</strong></p>
+<p><strong>HD168746</strong></p>
+<p><strong>XiPav</strong></p>
+<p><strong>ZetaSct</strong></p>
+<p><strong>_109Her</strong></p>
+<p><strong>KausAustralis</strong></p>
+<p><strong>Alathfar</strong></p>
+<p><strong>_42Dra</strong></p>
+<p><strong>AlphaTel</strong></p>
+<p><strong>HD169830</strong></p>
+<p><strong>KausBorealis</strong></p>
+<p><strong>ZetaTel</strong></p>
+<p><strong>HD170469</strong></p>
+<p><strong>GammaSct</strong></p>
+<p><strong>HD171238</strong></p>
+<p><strong>AlphaSct</strong></p>
+<p><strong>HIP91258</strong></p>
+<p><strong>Vega</strong></p>
+<p><strong>DeltaSct</strong></p>
+<p><strong>Struve2398A</strong></p>
+<p><strong>Struve2398B</strong></p>
+<p><strong>ZetaPav</strong></p>
+<p><strong>HD173416</strong></p>
+<p><strong>LambdaCrA</strong></p>
+<p><strong>Epsilon1LyraeA</strong></p>
+<p><strong>Epsilon2LyraeC</strong></p>
+<p><strong>Zeta1Lyr</strong></p>
+<p><strong>PhiSgr</strong></p>
+<p><strong>_110Her</strong></p>
+<p><strong>_111Her</strong></p>
+<p><strong>BetaSct</strong></p>
+<p><strong>Ross154</strong></p>
+<p><strong>Sheliak</strong></p>
+<p><strong>LamdaPav</strong></p>
+<p><strong>AinAlRami</strong></p>
+<p><strong>Delta2Lyr</strong></p>
+<p><strong>Nunki</strong></p>
+<p><strong>HD175541</strong></p>
+<p><strong>Alya</strong></p>
+<p><strong>Xi2Sgr</strong></p>
+<p><strong>EpsilonCrA</strong></p>
+<p><strong>Sulafat</strong></p>
+<p><strong>DenebelOkab</strong></p>
+<p><strong>HD175167</strong></p>
+<p><strong>_12Aql</strong></p>
+<p><strong>Ascella</strong></p>
+<p><strong>ZetaCrA</strong></p>
+<p><strong>Manubrij</strong></p>
+<p><strong>HD177830</strong></p>
+<p><strong>DenebelOkab2</strong></p>
+<p><strong>LamdaAql</strong></p>
+<p><strong>GammaCrA</strong></p>
+<p><strong>TauSgr</strong></p>
+<p><strong>DeltaCrA</strong></p>
+<p><strong>HD178911B</strong></p>
+<p><strong>Kepler21</strong></p>
+<p><strong>AlfeccaMeridiana</strong></p>
+<p><strong>Albaldah</strong></p>
+<p><strong>BetaCrA</strong></p>
+<p><strong>HD179079</strong></p>
+<p><strong>Altais</strong></p>
+<p><strong>Aladfar</strong></p>
+<p><strong>HD180314</strong></p>
+<p><strong>HD179949</strong></p>
+<p><strong>TauDra</strong></p>
+<p><strong>_1Vul</strong></p>
+<p><strong>Wolf1055A</strong></p>
+<p><strong>KappaCyg</strong></p>
+<p><strong>_43Sgr</strong></p>
+<p><strong>Kepler444</strong></p>
+<p><strong>HD180902</strong></p>
+<p><strong>HD181342</strong></p>
+<p><strong>Rho1Sgr</strong></p>
+<p><strong>ArkabPrior</strong></p>
+<p><strong>EtaTel</strong></p>
+<p><strong>HD181720</strong></p>
+<p><strong>ArkabPosterior</strong></p>
+<p><strong>Rukbat</strong></p>
+<p><strong>HD181433</strong></p>
+<p><strong>DenebOkab</strong></p>
+<p><strong>HD183263</strong></p>
+<p><strong>Anser</strong></p>
+<p><strong>Iota2Cyg</strong></p>
+<p><strong>Albireo</strong></p>
+<p><strong>AlbireoB</strong></p>
+<p><strong>HD231701</strong></p>
+<p><strong>SigmaDraconis</strong></p>
+<p><strong>MuAql</strong></p>
+<p><strong>ThetaCyg</strong></p>
+<p><strong>_52Sgr</strong></p>
+<p><strong>IotaAql</strong></p>
+<p><strong>HD185269</strong></p>
+<p><strong>PhiCyg</strong></p>
+<p><strong>Sham</strong></p>
+<p><strong>BetaSge</strong></p>
+<p><strong>_16CygB</strong></p>
+<p><strong>DeltaCyg</strong></p>
+<p><strong>HIP97233</strong></p>
+<p><strong>Tarazed</strong></p>
+<p><strong>HD187123</strong></p>
+<p><strong>DeltaSge</strong></p>
+<p><strong>Tyl</strong></p>
+<p><strong>HD187085</strong></p>
+<p><strong>ChiCyg</strong></p>
+<p><strong>Altair</strong></p>
+<p><strong>HATP11</strong></p>
+<p><strong>HD188015</strong></p>
+<p><strong>EtaAquilae</strong></p>
+<p><strong>_13Vul</strong></p>
+<p><strong>xiAql</strong></p>
+<p><strong>HIP98001A</strong></p>
+<p><strong>IotaSgr</strong></p>
+<p><strong>Alshain</strong></p>
+<p><strong>Terebellum2</strong></p>
+<p><strong>PhiAql</strong></p>
+<p><strong>EtaCyg</strong></p>
+<p><strong>Terebellum3</strong></p>
+<p><strong>GammaSge</strong></p>
+<p><strong>Terebellum4</strong></p>
+<p><strong>Theta1Sgr</strong></p>
+<p><strong>EpsilonPav</strong></p>
+<p><strong>HD189733</strong></p>
+<p><strong>Terebellum</strong></p>
+<p><strong>HD190228</strong></p>
+<p><strong>HD190360</strong></p>
+<p><strong>HD190647</strong></p>
+<p><strong>KsiTel</strong></p>
+<p><strong>DeltaPavonis</strong></p>
+<p><strong>KappaCep</strong></p>
+<p><strong>CD3613940A</strong></p>
+<p><strong>ThetaAql</strong></p>
+<p><strong>_31Cyg</strong></p>
+<p><strong>HD192263</strong></p>
+<p><strong>RhoAql</strong></p>
+<p><strong>RDelphini</strong></p>
+<p><strong>HD192310</strong></p>
+<p><strong>_32Cyg</strong></p>
+<p><strong>HD192699</strong></p>
+<p><strong>PrimaGiedi</strong></p>
+<p><strong>Algedi</strong></p>
+<p><strong>Alshat</strong></p>
+<p><strong>Dabih</strong></p>
+<p><strong>GammaCygni</strong></p>
+<p><strong>Peacock</strong></p>
+<p><strong>Okul</strong></p>
+<p><strong>HD195019</strong></p>
+<p><strong>ThetaCep</strong></p>
+<p><strong>Ruchba</strong></p>
+<p><strong>Ruchba2</strong></p>
+<p><strong>DenebDulfim</strong></p>
+<p><strong>Rotanev</strong></p>
+<p><strong>AlphaInd</strong></p>
+<p><strong>HD196050</strong></p>
+<p><strong>HD197037</strong></p>
+<p><strong>Sualocin</strong></p>
+<p><strong>HD196885</strong></p>
+<p><strong>Deneb</strong></p>
+<p><strong>DeltaDel</strong></p>
+<p><strong>EtaInd</strong></p>
+<p><strong>BetaPav</strong></p>
+<p><strong>EtaCep</strong></p>
+<p><strong>PsiCap</strong></p>
+<p><strong>Aljanah</strong></p>
+<p><strong>Gamma1delphini</strong></p>
+<p><strong>Gamma2delphini</strong></p>
+<p><strong>Albali</strong></p>
+<p><strong>IotaMic</strong></p>
+<p><strong>AlphaMic</strong></p>
+<p><strong>OmegaCap</strong></p>
+<p><strong>_31Vul</strong></p>
+<p><strong>LP81660</strong></p>
+<p><strong>MuAqr</strong></p>
+<p><strong>BetaInd</strong></p>
+<p><strong>NuCyg</strong></p>
+<p><strong>_18Del</strong></p>
+<p><strong>GammaMic</strong></p>
+<p><strong>Arm</strong></p>
+<p><strong>XiCyg</strong></p>
+<p><strong>ThetaCap</strong></p>
+<p><strong>HD200964</strong></p>
+<p><strong>_61CygniA</strong></p>
+<p><strong>_61CygniB</strong></p>
+<p><strong>_24Cap</strong></p>
+<p><strong>SigmaOctantis</strong></p>
+<p><strong>GammaEqu</strong></p>
+<p><strong>ZetaCyg</strong></p>
+<p><strong>BD144559</strong></p>
+<p><strong>DeltaEqu</strong></p>
+<p><strong>TauCyg</strong></p>
+<p><strong>HD202206</strong></p>
+<p><strong>Kitalpha</strong></p>
+<p><strong>Lacaille8760</strong></p>
+<p><strong>EpsilonMic</strong></p>
+<p><strong>Alderamin</strong></p>
+<p><strong>ThetaInd</strong></p>
+<p><strong>Theta1Mic</strong></p>
+<p><strong>_1Peg</strong></p>
+<p><strong>IotaCap</strong></p>
+<p><strong>BetaEqu</strong></p>
+<p><strong>HIP105854</strong></p>
+<p><strong>GammaPav</strong></p>
+<p><strong>ZetaCap</strong></p>
+<p><strong>HD204313</strong></p>
+<p><strong>Alfirk</strong></p>
+<p><strong>Sadalsuud</strong></p>
+<p><strong>HD204941</strong></p>
+<p><strong>GJ832</strong></p>
+<p><strong>Kastra</strong></p>
+<p><strong>HD205739</strong></p>
+<p><strong>Nashira</strong></p>
+<p><strong>NuOct</strong></p>
+<p><strong>Azelfafage</strong></p>
+<p><strong>HD206610</strong></p>
+<p><strong>Erakis</strong></p>
+<p><strong>Enif</strong></p>
+<p><strong>_9Peg</strong></p>
+<p><strong>KappaPeg</strong></p>
+<p><strong>IotaPsA</strong></p>
+<p><strong>NuCephei</strong></p>
+<p><strong>DenebAlgedi</strong></p>
+<p><strong>ThetaPsA</strong></p>
+<p><strong>HD207832</strong></p>
+<p><strong>AlDanab</strong></p>
+<p><strong>HD208527</strong></p>
+<p><strong>HD208487</strong></p>
+<p><strong>DeltaInd</strong></p>
+<p><strong>EtaPsA</strong></p>
+<p><strong>HD209458</strong></p>
+<p><strong>EpsilonIndiA</strong></p>
+<p><strong>Kurhah</strong></p>
+<p><strong>Sadalmelik</strong></p>
+<p><strong>LamdaGru</strong></p>
+<p><strong>IotaAqr</strong></p>
+<p><strong>IotaPeg</strong></p>
+<p><strong>Alnair</strong></p>
+<p><strong>MuPsA</strong></p>
+<p><strong>HD210277</strong></p>
+<p><strong>GJ849</strong></p>
+<p><strong>PiPeg</strong></p>
+<p><strong>Biham</strong></p>
+<p><strong>_38Aqr</strong></p>
+<p><strong>ZetaCep</strong></p>
+<p><strong>HD210702</strong></p>
+<p><strong>HD211073</strong></p>
+<p><strong>LamdaPsA</strong></p>
+<p><strong>EpsilonCep</strong></p>
+<p><strong>Mu1Gru</strong></p>
+<p><strong>_1Lac</strong></p>
+<p><strong>Mu2Gru</strong></p>
+<p><strong>Ancha</strong></p>
+<p><strong>AlphaTuc</strong></p>
+<p><strong>_2Lac</strong></p>
+<p><strong>Sadachbia</strong></p>
+<p><strong>RWCephei</strong></p>
+<p><strong>BetaLac</strong></p>
+<p><strong>_4Lac</strong></p>
+<p><strong>PiAqr</strong></p>
+<p><strong>HD212771</strong></p>
+<p><strong>DeltaTuc</strong></p>
+<p><strong>HD212301</strong></p>
+<p><strong>Kruger60A</strong></p>
+<p><strong>Zeta1Aqr</strong></p>
+<p><strong>DeltaCephei</strong></p>
+<p><strong>Delta1Gru</strong></p>
+<p><strong>_5Lac</strong></p>
+<p><strong>Delta2Gru</strong></p>
+<p><strong>AlKalbalRai</strong></p>
+<p><strong>_6Lac</strong></p>
+<p><strong>HD213240</strong></p>
+<p><strong>AlphaLac</strong></p>
+<p><strong>BetaPsA</strong></p>
+<p><strong>EtaAqr</strong></p>
+<p><strong>Situla</strong></p>
+<p><strong>_11Lac</strong></p>
+<p><strong>EpsilonPsA</strong></p>
+<p><strong>Homam</strong></p>
+<p><strong>BetaGru</strong></p>
+<p><strong>Matar</strong></p>
+<p><strong>BetaOct</strong></p>
+<p><strong>LamdaPeg</strong></p>
+<p><strong>HD215497</strong></p>
+<p><strong>XiPeg</strong></p>
+<p><strong>BD434305</strong></p>
+<p><strong>EpsilonGru</strong></p>
+<p><strong>Tau2Aqr</strong></p>
+<p><strong>IotaCep</strong></p>
+<p><strong>Sadalbari</strong></p>
+<p><strong>GammaPsA</strong></p>
+<p><strong>LamdaAqr</strong></p>
+<p><strong>Gliese876</strong></p>
+<p><strong>tauGru</strong></p>
+<p><strong>Skat</strong></p>
+<p><strong>HD216437</strong></p>
+<p><strong>HD216770</strong></p>
+<p><strong>DeltaPsA</strong></p>
+<p><strong>_51Peg</strong></p>
+<p><strong>Fomalhaut</strong></p>
+<p><strong>HD217107</strong></p>
+<p><strong>ZetaGru</strong></p>
+<p><strong>OmicronAnd</strong></p>
+<p><strong>HD217786</strong></p>
+<p><strong>Scheat</strong></p>
+<p><strong>FumAlSamakah</strong></p>
+<p><strong>Markab</strong></p>
+<p><strong>Lacaille9352</strong></p>
+<p><strong>_86Aqr</strong></p>
+<p><strong>ThetaGru</strong></p>
+<p><strong>HR8799</strong></p>
+<p><strong>HD218566</strong></p>
+<p><strong>_88Aqr</strong></p>
+<p><strong>IotaGru</strong></p>
+<p><strong>PhiAqr</strong></p>
+<p><strong>_91Aqr</strong></p>
+<p><strong>GammaPsc</strong></p>
+<p><strong>GammaTuc</strong></p>
+<p><strong>HD219828</strong></p>
+<p><strong>GammaScl</strong></p>
+<p><strong>HD220074</strong></p>
+<p><strong>_7Psc</strong></p>
+<p><strong>Kerb</strong></p>
+<p><strong>_98Aqr</strong></p>
+<p><strong>_99Aqr</strong></p>
+<p><strong>HD220773</strong></p>
+<p><strong>KappaPsc</strong></p>
+<p><strong>ThetaPsc</strong></p>
+<p><strong>_14And</strong></p>
+<p><strong>HD221287</strong></p>
+<p><strong>BetaScl</strong></p>
+<p><strong>IotaPhe</strong></p>
+<p><strong>HIP116454</strong></p>
+<p><strong>LamdaAnd</strong></p>
+<p><strong>HD222095</strong></p>
+<p><strong>HD222155</strong></p>
+<p><strong>IotaAnd</strong></p>
+<p><strong>gammaCep</strong></p>
+<p><strong>IotaPsc</strong></p>
+<p><strong>KappaAnd</strong></p>
+<p><strong>HD222582</strong></p>
+<p><strong>LambdaPsc</strong></p>
+<p><strong>Omega2Aqr</strong></p>
+<p><strong>_19Psc</strong></p>
+<p><strong>DeltaScl</strong></p>
+<p><strong>Lalande46650</strong></p>
+<p><strong>PiPhe</strong></p>
+<p><strong>OmegaPsc</strong></p>
+<p><strong>HD224693</strong></p>
+<p><strong>EpsilonTuc</strong></p>
+<p><strong>NGC4349127</strong></p>
+<p><strong>BD202457</strong></p>
+<p><strong>HD13189</strong></p>
+<p><strong>NGC24233</strong></p>
+<p><strong>M67SAND364</strong></p>
+<p><strong>HD240210</strong></p>
+<p><strong>HD216536</strong></p>
+<p><strong>HD17092</strong></p>
+<p><strong>BD48738</strong></p>
+<p><strong>TYC14226141</strong></p>
+<p><strong>Kepler432</strong></p>
+<p><strong>Kepler815</strong></p>
+<p><strong>Kepler1004</strong></p>
+<p><strong>HD10442</strong></p>
+<p><strong>Kepler1270</strong></p>
+<p><strong>Kepler435</strong></p>
+<p><strong>Kepler278</strong></p>
+<p><strong>Kepler637</strong></p>
+<p><strong>Kepler1394</strong></p>
+<p><strong>Kepler643</strong></p>
+<p><strong>Kepler774</strong></p>
+<p><strong>WASP71</strong></p>
+<p><strong>Kepler433</strong></p>
+<p><strong>HATP40</strong></p>
+<p><strong>WASP78</strong></p>
+<p><strong>WASP82</strong></p>
+<p><strong>Kepler1274</strong></p>
+<p><strong>Kepler1580</strong></p>
+<p><strong>HD171028</strong></p>
+<p><strong>Kepler40</strong></p>
+<p><strong>WASP88</strong></p>
+<p><strong>XO3</strong></p>
+<p><strong>WASP73</strong></p>
+<p><strong>Kepler541</strong></p>
+<p><strong>Kepler1452</strong></p>
+<p><strong>Kepler14</strong></p>
+<p><strong>Kepler462</strong></p>
+<p><strong>Kepler1434</strong></p>
+<p><strong>Kepler959</strong></p>
+<p><strong>Kepler516</strong></p>
+<p><strong>WASP100</strong></p>
+<p><strong>Kepler1298</strong></p>
+<p><strong>Kepler911</strong></p>
+<p><strong>Kepler522</strong></p>
+<p><strong>HATP7</strong></p>
+<p><strong>Kepler1158</strong></p>
+<p><strong>Kepler1517</strong></p>
+<p><strong>Kepler1171</strong></p>
+<p><strong>Kepler1219</strong></p>
+<p><strong>Kepler1518</strong></p>
+<p><strong>Kepler50</strong></p>
+<p><strong>WASP63</strong></p>
+<p><strong>Kepler1626</strong></p>
+<p><strong>Kepler1137</strong></p>
+<p><strong>HATP49</strong></p>
+<p><strong>WASP54</strong></p>
+<p><strong>Kepler33</strong></p>
+<p><strong>Kepler1360</strong></p>
+<p><strong>TrES4</strong></p>
+<p><strong>Kepler644</strong></p>
+<p><strong>Kepler1015</strong></p>
+<p><strong>Kepler471</strong></p>
+<p><strong>CoRoT26</strong></p>
+<p><strong>Kepler1300</strong></p>
+<p><strong>Kepler1375</strong></p>
+<p><strong>Kepler1364</strong></p>
+<p><strong>CoRoT28</strong></p>
+<p><strong>Kepler1244</strong></p>
+<p><strong>WASP99</strong></p>
+<p><strong>PH1</strong></p>
+<p><strong>Kepler1586</strong></p>
+<p><strong>WASP48</strong></p>
+<p><strong>WASP66</strong></p>
+<p><strong>Kepler1326</strong></p>
+<p><strong>Kepler880</strong></p>
+<p><strong>Kepler338</strong></p>
+<p><strong>Kepler1502</strong></p>
+<p><strong>Kepler1115</strong></p>
+<p><strong>Kepler1051</strong></p>
+<p><strong>Kepler1382</strong></p>
+<p><strong>WASP72</strong></p>
+<p><strong>Kepler812</strong></p>
+<p><strong>KOI13</strong></p>
+<p><strong>WASP68</strong></p>
+<p><strong>HATP41</strong></p>
+<p><strong>Kepler470</strong></p>
+<p><strong>Kepler1543</strong></p>
+<p><strong>Kepler1618</strong></p>
+<p><strong>Kepler642</strong></p>
+<p><strong>Kepler805</strong></p>
+<p><strong>CoRoT19</strong></p>
+<p><strong>WASP74</strong></p>
+<p><strong>Kepler129</strong></p>
+<p><strong>WASP79</strong></p>
+<p><strong>Kepler849</strong></p>
+<p><strong>HATP33</strong></p>
+<p><strong>WASP12</strong></p>
+<p><strong>Kepler36</strong></p>
+<p><strong>Kepler1487</strong></p>
+<p><strong>HATP39</strong></p>
+<p><strong>Kepler448</strong></p>
+<p><strong>CoRoT23</strong></p>
+<p><strong>Kepler1121</strong></p>
+<p><strong>HATP4</strong></p>
+<p><strong>Kepler464</strong></p>
+<p><strong>KELT6</strong></p>
+<p><strong>HATP8</strong></p>
+<p><strong>WASP13</strong></p>
+<p><strong>Kepler1002</strong></p>
+<p><strong>Kepler381</strong></p>
+<p><strong>Kepler1239</strong></p>
+<p><strong>HATP13</strong></p>
+<p><strong>CoRoT3</strong></p>
+<p><strong>Kepler1345</strong></p>
+<p><strong>Kepler853</strong></p>
+<p><strong>Kepler997</strong></p>
+<p><strong>Kepler1112</strong></p>
+<p><strong>Kepler493</strong></p>
+<p><strong>Kepler44</strong></p>
+<p><strong>WASP1</strong></p>
+<p><strong>Kepler289</strong></p>
+<p><strong>CoRoT17</strong></p>
+<p><strong>Kepler1533</strong></p>
+<p><strong>Kepler74</strong></p>
+<p><strong>Kepler635</strong></p>
+<p><strong>Kepler1000</strong></p>
+<p><strong>HATS9</strong></p>
+<p><strong>HATP57</strong></p>
+<p><strong>Kepler910</strong></p>
+<p><strong>Kepler1622</strong></p>
+<p><strong>Kepler627</strong></p>
+<p><strong>Kepler100</strong></p>
+<p><strong>Kepler8</strong></p>
+<p><strong>Kepler4</strong></p>
+<p><strong>Kepler12</strong></p>
+<p><strong>KELT3</strong></p>
+<p><strong>Kepler1238</strong></p>
+<p><strong>WASP15</strong></p>
+<p><strong>HATP14</strong></p>
+<p><strong>Kepler483</strong></p>
+<p><strong>Kepler117</strong></p>
+<p><strong>Kepler791</strong></p>
+<p><strong>HATP6</strong></p>
+<p><strong>Kepler521</strong></p>
+<p><strong>Kepler527</strong></p>
+<p><strong>Kepler1442</strong></p>
+<p><strong>Kepler103</strong></p>
+<p><strong>Kepler514</strong></p>
+<p><strong>Kepler1383</strong></p>
+<p><strong>WASP103</strong></p>
+<p><strong>HATP35</strong></p>
+<p><strong>HATP56</strong></p>
+<p><strong>Kepler1421</strong></p>
+<p><strong>Kepler1640</strong></p>
+<p><strong>Kepler1154</strong></p>
+<p><strong>Kepler1340</strong></p>
+<p><strong>Kepler758</strong></p>
+<p><strong>Kepler43</strong></p>
+<p><strong>Kepler510</strong></p>
+<p><strong>Kepler1515</strong></p>
+<p><strong>Kepler79</strong></p>
+<p><strong>Kepler1104</strong></p>
+<p><strong>HATS3</strong></p>
+<p><strong>Kepler1311</strong></p>
+<p><strong>Kepler1483</strong></p>
+<p><strong>Kepler1597</strong></p>
+<p><strong>Kepler1571</strong></p>
+<p><strong>HATP46</strong></p>
+<p><strong>Kepler1569</strong></p>
+<p><strong>Kepler1323</strong></p>
+<p><strong>Kepler930</strong></p>
+<p><strong>WASP106</strong></p>
+<p><strong>WASP20</strong></p>
+<p><strong>Kepler39</strong></p>
+<p><strong>Kepler907</strong></p>
+<p><strong>Kepler794</strong></p>
+<p><strong>Kepler915</strong></p>
+<p><strong>Kepler434</strong></p>
+<p><strong>Kepler1209</strong></p>
+<p><strong>Kepler467</strong></p>
+<p><strong>CoRoT11</strong></p>
+<p><strong>Kepler1256</strong></p>
+<p><strong>WASP94A</strong></p>
+<p><strong>HATP31</strong></p>
+<p><strong>Kepler1275</strong></p>
+<p><strong>Kepler820</strong></p>
+<p><strong>Kepler1602</strong></p>
+<p><strong>Kepler1079</strong></p>
+<p><strong>OGLETR56</strong></p>
+<p><strong>Kepler1428</strong></p>
+<p><strong>WASP61</strong></p>
+<p><strong>Kepler127</strong></p>
+<p><strong>Kepler126</strong></p>
+<p><strong>Kepler410A</strong></p>
+<p><strong>Kepler1163</strong></p>
+<p><strong>Kepler650</strong></p>
+<p><strong>Kepler136</strong></p>
+<p><strong>Kepler104</strong></p>
+<p><strong>Kepler885</strong></p>
+<p><strong>Kepler427</strong></p>
+<p><strong>WASP94B</strong></p>
+<p><strong>WASP38</strong></p>
+<p><strong>WASP26</strong></p>
+<p><strong>Kepler480</strong></p>
+<p><strong>Kepler1373</strong></p>
+<p><strong>Kepler1100</strong></p>
+<p><strong>Kepler473</strong></p>
+<p><strong>Kepler1054</strong></p>
+<p><strong>Kepler1616</strong></p>
+<p><strong>Kepler1279</strong></p>
+<p><strong>WASP24</strong></p>
+<p><strong>Kepler631</strong></p>
+<p><strong>Kepler1435</strong></p>
+<p><strong>OGLETR132</strong></p>
+<p><strong>Kepler1527</strong></p>
+<p><strong>Kepler1633</strong></p>
+<p><strong>Kepler1072</strong></p>
+<p><strong>Kepler1070</strong></p>
+<p><strong>Kepler784</strong></p>
+<p><strong>Kepler1280</strong></p>
+<p><strong>Kepler596</strong></p>
+<p><strong>Kepler507</strong></p>
+<p><strong>HATP9</strong></p>
+<p><strong>Kepler109</strong></p>
+<p><strong>HATP45</strong></p>
+<p><strong>HATP24</strong></p>
+<p><strong>Kepler25</strong></p>
+<p><strong>WASP3</strong></p>
+<p><strong>WASP14</strong></p>
+<p><strong>Kepler1488</strong></p>
+<p><strong>Kepler1603</strong></p>
+<p><strong>Kepler839</strong></p>
+<p><strong>Kepler718</strong></p>
+<p><strong>Kepler887</strong></p>
+<p><strong>Kepler1370</strong></p>
+<p><strong>Kepler1385</strong></p>
+<p><strong>Kepler1336</strong></p>
+<p><strong>Kepler798</strong></p>
+<p><strong>Kepler512</strong></p>
+<p><strong>Kepler639</strong></p>
+<p><strong>Kepler1288</strong></p>
+<p><strong>Kepler1501</strong></p>
+<p><strong>Kepler1181</strong></p>
+<p><strong>Kepler1511</strong></p>
+<p><strong>Kepler1493</strong></p>
+<p><strong>Kepler982</strong></p>
+<p><strong>Kepler465</strong></p>
+<p><strong>WASP101</strong></p>
+<p><strong>Kepler412</strong></p>
+<p><strong>Kepler135</strong></p>
+<p><strong>Kepler1159</strong></p>
+<p><strong>Kepler769</strong></p>
+<p><strong>Kepler1592</strong></p>
+<p><strong>Kepler1475</strong></p>
+<p><strong>WASP62</strong></p>
+<p><strong>Kepler1249</strong></p>
+<p><strong>Kepler1285</strong></p>
+<p><strong>Kepler1349</strong></p>
+<p><strong>Kepler1293</strong></p>
+<p><strong>Kepler1084</strong></p>
+<p><strong>Kepler1510</strong></p>
+<p><strong>Kepler628</strong></p>
+<p><strong>Kepler1443</strong></p>
+<p><strong>Kepler923</strong></p>
+<p><strong>Kepler1609</strong></p>
+<p><strong>Kepler1412</strong></p>
+<p><strong>Kepler535</strong></p>
+<p><strong>Kepler1496</strong></p>
+<p><strong>Kepler854</strong></p>
+<p><strong>Kepler1445</strong></p>
+<p><strong>Kepler873</strong></p>
+<p><strong>Kepler1531</strong></p>
+<p><strong>Kepler703</strong></p>
+<p><strong>Kepler1396</strong></p>
+<p><strong>Kepler494</strong></p>
+<p><strong>WASP75</strong></p>
+<p><strong>WASP31</strong></p>
+<p><strong>Kepler1283</strong></p>
+<p><strong>Kepler1524</strong></p>
+<p><strong>Kepler508</strong></p>
+<p><strong>Kepler904</strong></p>
+<p><strong>Kepler1589</strong></p>
+<p><strong>Kepler1472</strong></p>
+<p><strong>Kepler1233</strong></p>
+<p><strong>Kepler889</strong></p>
+<p><strong>Kepler68</strong></p>
+<p><strong>WASP7</strong></p>
+<p><strong>Kepler1620</strong></p>
+<p><strong>Kepler750</strong></p>
+<p><strong>Kepler1354</strong></p>
+<p><strong>Kepler1581</strong></p>
+<p><strong>Kepler1271</strong></p>
+<p><strong>Kepler144</strong></p>
+<p><strong>Kepler788</strong></p>
+<p><strong>Kepler741</strong></p>
+<p><strong>Kepler1422</strong></p>
+<p><strong>HATP16</strong></p>
+<p><strong>Kepler924</strong></p>
+<p><strong>Kepler655</strong></p>
+<p><strong>Kepler1621</strong></p>
+<p><strong>Kepler1201</strong></p>
+<p><strong>Kepler584</strong></p>
+<p><strong>Kepler634</strong></p>
+<p><strong>Kepler811</strong></p>
+<p><strong>Kepler1169</strong></p>
+<p><strong>Kepler1395</strong></p>
+<p><strong>Kepler909</strong></p>
+<p><strong>HATP29</strong></p>
+<p><strong>Kepler937</strong></p>
+<p><strong>Kepler814</strong></p>
+<p><strong>Kepler502</strong></p>
+<p><strong>Kepler972</strong></p>
+<p><strong>Kepler606</strong></p>
+<p><strong>Kepler1617</strong></p>
+<p><strong>Kepler1551</strong></p>
+<p><strong>Kepler1587</strong></p>
+<p><strong>Kepler620</strong></p>
+<p><strong>Kepler824</strong></p>
+<p><strong>Kepler1508</strong></p>
+<p><strong>Kepler1514</strong></p>
+<p><strong>Kepler544</strong></p>
+<p><strong>Kepler1224</strong></p>
+<p><strong>HATP32</strong></p>
+<p><strong>HATP30</strong></p>
+<p><strong>WASP70A</strong></p>
+<p><strong>Kepler1213</strong></p>
+<p><strong>CoRoT14</strong></p>
+<p><strong>Kepler1276</strong></p>
+<p><strong>Kepler1248</strong></p>
+<p><strong>Kepler1346</strong></p>
+<p><strong>Kepler645</strong></p>
+<p><strong>Kepler1193</strong></p>
+<p><strong>Kepler1607</strong></p>
+<p><strong>Kepler919</strong></p>
+<p><strong>Kepler1094</strong></p>
+<p><strong>HATP23</strong></p>
+<p><strong>KIC11442793</strong></p>
+<p><strong>Kepler509</strong></p>
+<p><strong>WASP17</strong></p>
+<p><strong>HATP34</strong></p>
+<p><strong>Kepler653</strong></p>
+<p><strong>Kepler1641</strong></p>
+<p><strong>Kepler1632</strong></p>
+<p><strong>Kepler1267</strong></p>
+<p><strong>Kepler1433</strong></p>
+<p><strong>Kepler1093</strong></p>
+<p><strong>Kepler848</strong></p>
+<p><strong>Kepler669</strong></p>
+<p><strong>Kepler511</strong></p>
+<p><strong>Kepler1568</strong></p>
+<p><strong>Kepler1225</strong></p>
+<p><strong>Kepler1056</strong></p>
+<p><strong>CoRoT25</strong></p>
+<p><strong>CoRoT16</strong></p>
+<p><strong>Kepler506</strong></p>
+<p><strong>CoRoT5</strong></p>
+<p><strong>Kepler1547</strong></p>
+<p><strong>Kepler624</strong></p>
+<p><strong>Kepler998</strong></p>
+<p><strong>Kepler132</strong></p>
+<p><strong>Kepler1639</strong></p>
+<p><strong>Kepler1398</strong></p>
+<p><strong>Kepler1165</strong></p>
+<p><strong>WASP58</strong></p>
+<p><strong>OGLETR10</strong></p>
+<p><strong>WASP117</strong></p>
+<p><strong>Kepler1289</strong></p>
+<p><strong>Kepler1189</strong></p>
+<p><strong>Kepler105</strong></p>
+<p><strong>Kepler685</strong></p>
+<p><strong>Kepler1278</strong></p>
+<p><strong>Kepler1119</strong></p>
+<p><strong>Kepler1113</strong></p>
+<p><strong>Kepler1591</strong></p>
+<p><strong>Kepler1557</strong></p>
+<p><strong>Kepler1590</strong></p>
+<p><strong>Kepler1106</strong></p>
+<p><strong>Kepler1003</strong></p>
+<p><strong>HATP5</strong></p>
+<p><strong>Kepler1080</strong></p>
+<p><strong>Kepler1199</strong></p>
+<p><strong>Kepler886</strong></p>
+<p><strong>Kepler1352</strong></p>
+<p><strong>Kepler806</strong></p>
+<p><strong>Kepler690</strong></p>
+<p><strong>Kepler557</strong></p>
+<p><strong>Kepler852</strong></p>
+<p><strong>Kepler914</strong></p>
+<p><strong>Kepler956</strong></p>
+<p><strong>WASP47</strong></p>
+<p><strong>Kepler766</strong></p>
+<p><strong>Kepler633</strong></p>
+<p><strong>Kepler1407</strong></p>
+<p><strong>Kepler1403</strong></p>
+<p><strong>WTS1</strong></p>
+<p><strong>Kepler1103</strong></p>
+<p><strong>Kepler826</strong></p>
+<p><strong>Kepler525</strong></p>
+<p><strong>Kepler1212</strong></p>
+<p><strong>Kepler590</strong></p>
+<p><strong>Kepler965</strong></p>
+<p><strong>Kepler1269</strong></p>
+<p><strong>Kepler1416</strong></p>
+<p><strong>Kepler546</strong></p>
+<p><strong>Kepler1111</strong></p>
+<p><strong>Kepler526</strong></p>
+<p><strong>WASP60</strong></p>
+<p><strong>Kepler1085</strong></p>
+<p><strong>OGLETR182</strong></p>
+<p><strong>Kepler602</strong></p>
+<p><strong>Kepler641</strong></p>
+<p><strong>Kepler1063</strong></p>
+<p><strong>Kepler1082</strong></p>
+<p><strong>CoRoT22</strong></p>
+<p><strong>Kepler1584</strong></p>
+<p><strong>Kepler890</strong></p>
+<p><strong>Kepler996</strong></p>
+<p><strong>Kepler1344</strong></p>
+<p><strong>Kepler1050</strong></p>
+<p><strong>Kepler1147</strong></p>
+<p><strong>Kepler1432</strong></p>
+<p><strong>Kepler529</strong></p>
+<p><strong>Kepler874</strong></p>
+<p><strong>Kepler757</strong></p>
+<p><strong>Kepler610</strong></p>
+<p><strong>Kepler918</strong></p>
+<p><strong>Kepler609</strong></p>
+<p><strong>Kepler1025</strong></p>
+<p><strong>Kepler1180</strong></p>
+<p><strong>Kepler871</strong></p>
+<p><strong>HATP1</strong></p>
+<p><strong>Pr201</strong></p>
+<p><strong>Kepler420</strong></p>
+<p><strong>Kepler1047</strong></p>
+<p><strong>WASP95</strong></p>
+<p><strong>WASP22</strong></p>
+<p><strong>Kepler130</strong></p>
+<p><strong>Kepler1255</strong></p>
+<p><strong>Kepler714</strong></p>
+<p><strong>Kepler1031</strong></p>
+<p><strong>Kepler1613</strong></p>
+<p><strong>Kepler803</strong></p>
+<p><strong>Kepler1486</strong></p>
+<p><strong>Kepler792</strong></p>
+<p><strong>Kepler1316</strong></p>
+<p><strong>Kepler490</strong></p>
+<p><strong>Kepler1406</strong></p>
+<p><strong>Kepler1397</strong></p>
+<p><strong>Kepler197</strong></p>
+<p><strong>Kepler1485</strong></p>
+<p><strong>Kepler908</strong></p>
+<p><strong>CoRoT12</strong></p>
+<p><strong>WASP56</strong></p>
+<p><strong>CoRoT1</strong></p>
+<p><strong>Kepler1535</strong></p>
+<p><strong>Kepler619</strong></p>
+<p><strong>Kepler912</strong></p>
+<p><strong>Kepler1449</strong></p>
+<p><strong>Kepler680</strong></p>
+<p><strong>Kepler1401</strong></p>
+<p><strong>Kepler1391</strong></p>
+<p><strong>Kepler1253</strong></p>
+<p><strong>Kepler497</strong></p>
+<p><strong>Kepler748</strong></p>
+<p><strong>Kepler1550</strong></p>
+<p><strong>Kepler654</strong></p>
+<p><strong>Kepler593</strong></p>
+<p><strong>Kepler1057</strong></p>
+<p><strong>Kepler835</strong></p>
+<p><strong>Kepler830</strong></p>
+<p><strong>Kepler1044</strong></p>
+<p><strong>Kepler1561</strong></p>
+<p><strong>Kepler772</strong></p>
+<p><strong>Kepler875</strong></p>
+<p><strong>HATS10</strong></p>
+<p><strong>HATP21</strong></p>
+<p><strong>HATP28</strong></p>
+<p><strong>Kepler524</strong></p>
+<p><strong>Kepler1218</strong></p>
+<p><strong>HATP36</strong></p>
+<p><strong>WASP28</strong></p>
+<p><strong>Kepler488</strong></p>
+<p><strong>Kepler796</strong></p>
+<p><strong>Kepler978</strong></p>
+<p><strong>Kepler1272</strong></p>
+<p><strong>Kepler850</strong></p>
+<p><strong>Kepler431</strong></p>
+<p><strong>Kepler1187</strong></p>
+<p><strong>Kepler1598</strong></p>
+<p><strong>Kepler481</strong></p>
+<p><strong>Kepler1436</strong></p>
+<p><strong>Kepler476</strong></p>
+<p><strong>Kepler1252</strong></p>
+<p><strong>Kepler1268</strong></p>
+<p><strong>Kepler485</strong></p>
+<p><strong>Kepler881</strong></p>
+<p><strong>WASP32</strong></p>
+<p><strong>Kepler520</strong></p>
+<p><strong>WASP35</strong></p>
+<p><strong>Kepler1473</strong></p>
+<p><strong>Kepler883</strong></p>
+<p><strong>Kepler983</strong></p>
+<p><strong>HATP15</strong></p>
+<p><strong>Kepler1088</strong></p>
+<p><strong>Kepler618</strong></p>
+<p><strong>Kepler990</strong></p>
+<p><strong>Kepler696</strong></p>
+<p><strong>Kepler1230</strong></p>
+<p><strong>Kepler540</strong></p>
+<p><strong>Kepler754</strong></p>
+<p><strong>Kepler762</strong></p>
+<p><strong>Kepler822</strong></p>
+<p><strong>Kepler1307</strong></p>
+<p><strong>Kepler825</strong></p>
+<p><strong>Kepler1368</strong></p>
+<p><strong>Kepler474</strong></p>
+<p><strong>CoRoT27</strong></p>
+<p><strong>Kepler1594</strong></p>
+<p><strong>Kepler1041</strong></p>
+<p><strong>Kepler1260</strong></p>
+<p><strong>Kepler872</strong></p>
+<p><strong>Kepler1574</strong></p>
+<p><strong>Kepler1217</strong></p>
+<p><strong>Kepler1061</strong></p>
+<p><strong>Kepler647</strong></p>
+<p><strong>Kepler1424</strong></p>
+<p><strong>Kepler545</strong></p>
+<p><strong>Kepler454</strong></p>
+<p><strong>Kepler1576</strong></p>
+<p><strong>Kepler1405</strong></p>
+<p><strong>Kepler513</strong></p>
+<p><strong>Kepler1429</strong></p>
+<p><strong>Kepler1601</strong></p>
+<p><strong>Kepler860</strong></p>
+<p><strong>Kepler1184</strong></p>
+<p><strong>Kepler765</strong></p>
+<p><strong>Kepler1005</strong></p>
+<p><strong>Kepler1516</strong></p>
+<p><strong>Kepler1141</strong></p>
+<p><strong>Kepler840</strong></p>
+<p><strong>Kepler1188</strong></p>
+<p><strong>Kepler891</strong></p>
+<p><strong>Kepler731</strong></p>
+<p><strong>Kepler807</strong></p>
+<p><strong>Kepler1207</strong></p>
+<p><strong>Kepler1109</strong></p>
+<p><strong>Kepler1478</strong></p>
+<p><strong>Kepler1555</strong></p>
+<p><strong>Kepler528</strong></p>
+<p><strong>WASP55</strong></p>
+<p><strong>WASP97</strong></p>
+<p><strong>Kepler980</strong></p>
+<p><strong>WASP21</strong></p>
+<p><strong>WASP64</strong></p>
+<p><strong>Kepler10</strong></p>
+<p><strong>XO5</strong></p>
+<p><strong>Kepler804</strong></p>
+<p><strong>Kepler1182</strong></p>
+<p><strong>Kepler722</strong></p>
+<p><strong>Kepler1615</strong></p>
+<p><strong>Kepler1444</strong></p>
+<p><strong>Kepler1468</strong></p>
+<p><strong>Kepler626</strong></p>
+<p><strong>Kepler466</strong></p>
+<p><strong>WASP83</strong></p>
+<p><strong>Kepler1365</strong></p>
+<p><strong>Kepler666</strong></p>
+<p><strong>WASP96</strong></p>
+<p><strong>Kepler1338</strong></p>
+<p><strong>Kepler771</strong></p>
+<p><strong>Kepler17</strong></p>
+<p><strong>Kepler1562</strong></p>
+<p><strong>Kepler1525</strong></p>
+<p><strong>Kepler1046</strong></p>
+<p><strong>HATP22</strong></p>
+<p><strong>Kepler630</strong></p>
+<p><strong>HATS1</strong></p>
+<p><strong>Kepler106</strong></p>
+<p><strong>Kepler1202</strong></p>
+<p><strong>Kepler1431</strong></p>
+<p><strong>Kepler855</strong></p>
+<p><strong>Kepler1174</strong></p>
+<p><strong>Kepler1495</strong></p>
+<p><strong>Kepler1386</strong></p>
+<p><strong>Kepler745</strong></p>
+<p><strong>Kepler1474</strong></p>
+<p><strong>Kepler715</strong></p>
+<p><strong>Kepler1091</strong></p>
+<p><strong>Kepler843</strong></p>
+<p><strong>Kepler1538</strong></p>
+<p><strong>Kepler810</strong></p>
+<p><strong>Kepler759</strong></p>
+<p><strong>Kepler836</strong></p>
+<p><strong>Kepler555</strong></p>
+<p><strong>Kepler817</strong></p>
+<p><strong>Kepler1052</strong></p>
+<p><strong>Kepler1204</strong></p>
+<p><strong>Kepler1327</strong></p>
+<p><strong>Kepler1348</strong></p>
+<p><strong>Kepler897</strong></p>
+<p><strong>Kepler501</strong></p>
+<p><strong>Kepler1155</strong></p>
+<p><strong>Kepler604</strong></p>
+<p><strong>Kepler592</strong></p>
+<p><strong>Kepler552</strong></p>
+<p><strong>Kepler1528</strong></p>
+<p><strong>Kepler1131</strong></p>
+<p><strong>Kepler131</strong></p>
+<p><strong>Kepler500</strong></p>
+<p><strong>Kepler491</strong></p>
+<p><strong>WASP5</strong></p>
+<p><strong>CoRoT6</strong></p>
+<p><strong>Kepler1417</strong></p>
+<p><strong>Kepler223</strong></p>
+<p><strong>Kepler789</strong></p>
+<p><strong>Kepler1560</strong></p>
+<p><strong>Kepler1637</strong></p>
+<p><strong>Kepler1645</strong></p>
+<p><strong>Kepler879</strong></p>
+<p><strong>Kepler1226</strong></p>
+<p><strong>Kepler929</strong></p>
+<p><strong>Kepler1176</strong></p>
+<p><strong>Kepler664</strong></p>
+<p><strong>Kepler1636</strong></p>
+<p><strong>Kepler1077</strong></p>
+<p><strong>Kepler950</strong></p>
+<p><strong>Kepler1466</strong></p>
+<p><strong>Kepler870</strong></p>
+<p><strong>Kepler1426</strong></p>
+<p><strong>Kepler966</strong></p>
+<p><strong>Kepler906</strong></p>
+<p><strong>CoRoT20</strong></p>
+<p><strong>Kepler780</strong></p>
+<p><strong>Kepler96</strong></p>
+<p><strong>Kepler573</strong></p>
+<p><strong>XO2S</strong></p>
+<p><strong>M67YBP1194</strong></p>
+<p><strong>Kepler782</strong></p>
+<p><strong>CoRoT13</strong></p>
+<p><strong>Kepler773</strong></p>
+<p><strong>Kepler603</strong></p>
+<p><strong>Kepler1129</strong></p>
+<p><strong>Kepler581</strong></p>
+<p><strong>Kepler1092</strong></p>
+<p><strong>Kepler657</strong></p>
+<p><strong>Kepler1427</strong></p>
+<p><strong>Kepler154</strong></p>
+<p><strong>Kepler1016</strong></p>
+<p><strong>Kepler1623</strong></p>
+<p><strong>Kepler864</strong></p>
+<p><strong>Kepler1149</strong></p>
+<p><strong>Kepler611</strong></p>
+<p><strong>Kepler1303</strong></p>
+<p><strong>Kepler588</strong></p>
+<p><strong>Kepler608</strong></p>
+<p><strong>Kepler1573</strong></p>
+<p><strong>Kepler1619</strong></p>
+<p><strong>Kepler1419</strong></p>
+<p><strong>Kepler1068</strong></p>
+<p><strong>Kepler1073</strong></p>
+<p><strong>Kepler1462</strong></p>
+<p><strong>Kepler1464</strong></p>
+<p><strong>Kepler730</strong></p>
+<p><strong>Kepler926</strong></p>
+<p><strong>Kepler1231</strong></p>
+<p><strong>Kepler1500</strong></p>
+<p><strong>Kepler503</strong></p>
+<p><strong>Kepler1629</strong></p>
+<p><strong>Kepler1441</strong></p>
+<p><strong>Kepler1457</strong></p>
+<p><strong>TrES2</strong></p>
+<p><strong>WASP37</strong></p>
+<p><strong>Kepler1099</strong></p>
+<p><strong>CoRoT18</strong></p>
+<p><strong>Kepler1156</strong></p>
+<p><strong>HD95872</strong></p>
+<p><strong>Kepler1098</strong></p>
+<p><strong>Kepler857</strong></p>
+<p><strong>Kepler927</strong></p>
+<p><strong>Kepler1328</strong></p>
+<p><strong>Kepler1060</strong></p>
+<p><strong>Kepler1369</strong></p>
+<p><strong>Kepler1509</strong></p>
+<p><strong>Kepler1220</strong></p>
+<p><strong>Kepler1297</strong></p>
+<p><strong>Kepler670</strong></p>
+<p><strong>Kepler677</strong></p>
+<p><strong>Kepler1451</strong></p>
+<p><strong>Kepler952</strong></p>
+<p><strong>Kepler713</strong></p>
+<p><strong>Kepler1491</strong></p>
+<p><strong>Kepler1183</strong></p>
+<p><strong>Kepler1258</strong></p>
+<p><strong>Kepler893</strong></p>
+<p><strong>Kepler1563</strong></p>
+<p><strong>Kepler1599</strong></p>
+<p><strong>Kepler77</strong></p>
+<p><strong>Kepler953</strong></p>
+<p><strong>Kepler1542</strong></p>
+<p><strong>Kepler537</strong></p>
+<p><strong>Kepler423</strong></p>
+<p><strong>Kepler1588</strong></p>
+<p><strong>WASP19</strong></p>
+<p><strong>Kepler517</strong></p>
+<p><strong>Kepler986</strong></p>
+<p><strong>Kepler534</strong></p>
+<p><strong>Kepler648</strong></p>
+<p><strong>Kepler556</strong></p>
+<p><strong>Kepler1250</strong></p>
+<p><strong>Kepler1264</strong></p>
+<p><strong>Kepler719</strong></p>
+<p><strong>Kepler1069</strong></p>
+<p><strong>Kepler1479</strong></p>
+<p><strong>Kepler1262</strong></p>
+<p><strong>Kepler1286</strong></p>
+<p><strong>Kepler809</strong></p>
+<p><strong>Kepler1066</strong></p>
+<p><strong>Kepler1216</strong></p>
+<p><strong>Kepler1390</strong></p>
+<p><strong>WASP49</strong></p>
+<p><strong>Kepler616</strong></p>
+<p><strong>XO2</strong></p>
+<p><strong>Kepler831</strong></p>
+<p><strong>Kepler1177</strong></p>
+<p><strong>Kepler41</strong></p>
+<p><strong>Kepler1438</strong></p>
+<p><strong>Kepler708</strong></p>
+<p><strong>Kepler1035</strong></p>
+<p><strong>Kepler1142</strong></p>
+<p><strong>Kepler1294</strong></p>
+<p><strong>Kepler1399</strong></p>
+<p><strong>Kepler1196</strong></p>
+<p><strong>Kepler1548</strong></p>
+<p><strong>Kepler1306</strong></p>
+<p><strong>Kepler704</strong></p>
+<p><strong>Kepler1523</strong></p>
+<p><strong>Kepler199</strong></p>
+<p><strong>Kepler1118</strong></p>
+<p><strong>Kepler945</strong></p>
+<p><strong>Kepler829</strong></p>
+<p><strong>Kepler903</strong></p>
+<p><strong>Kepler576</strong></p>
+<p><strong>Kepler823</strong></p>
+<p><strong>Kepler613</strong></p>
+<p><strong>WASP104</strong></p>
+<p><strong>Kepler1240</strong></p>
+<p><strong>Kepler612</strong></p>
+<p><strong>Kepler498</strong></p>
+<p><strong>Kepler1513</strong></p>
+<p><strong>Kepler1440</strong></p>
+<p><strong>Kepler700</strong></p>
+<p><strong>Kepler688</strong></p>
+<p><strong>Kepler1476</strong></p>
+<p><strong>Kepler579</strong></p>
+<p><strong>Kepler1372</strong></p>
+<p><strong>Kepler793</strong></p>
+<p><strong>Kepler1305</strong></p>
+<p><strong>Kepler1376</strong></p>
+<p><strong>Kepler625</strong></p>
+<p><strong>WASP135</strong></p>
+<p><strong>Kepler795</strong></p>
+<p><strong>Kepler1144</strong></p>
+<p><strong>Kepler838</strong></p>
+<p><strong>Kepler940</strong></p>
+<p><strong>Kepler981</strong></p>
+<p><strong>Kepler1040</strong></p>
+<p><strong>HATP25</strong></p>
+<p><strong>WASP77A</strong></p>
+<p><strong>Kepler46</strong></p>
+<p><strong>Kepler694</strong></p>
+<p><strong>Kepler1631</strong></p>
+<p><strong>Kepler565</strong></p>
+<p><strong>Kepler597</strong></p>
+<p><strong>Kepler539</strong></p>
+<p><strong>Kepler575</strong></p>
+<p><strong>HATP44</strong></p>
+<p><strong>Kepler1572</strong></p>
+<p><strong>Kepler1463</strong></p>
+<p><strong>Kepler1556</strong></p>
+<p><strong>Kepler1447</strong></p>
+<p><strong>Kepler1497</strong></p>
+<p><strong>Kepler869</strong></p>
+<p><strong>Kepler1425</strong></p>
+<p><strong>Kepler671</strong></p>
+<p><strong>Kepler559</strong></p>
+<p><strong>Kepler1227</strong></p>
+<p><strong>Kepler683</strong></p>
+<p><strong>Kepler863</strong></p>
+<p><strong>Kepler797</strong></p>
+<p><strong>Kepler1638</strong></p>
+<p><strong>Kepler1127</strong></p>
+<p><strong>WASP16</strong></p>
+<p><strong>WASP8</strong></p>
+<p><strong>WASP45</strong></p>
+<p><strong>WASP36</strong></p>
+<p><strong>Kepler1055</strong></p>
+<p><strong>Kepler591</strong></p>
+<p><strong>Kepler1625</strong></p>
+<p><strong>Kepler767</strong></p>
+<p><strong>Kepler1102</strong></p>
+<p><strong>Kepler649</strong></p>
+<p><strong>Kepler424</strong></p>
+<p><strong>Kepler1287</strong></p>
+<p><strong>Kepler1381</strong></p>
+<p><strong>Kepler1494</strong></p>
+<p><strong>Kepler884</strong></p>
+<p><strong>Kepler1211</strong></p>
+<p><strong>Kepler640</strong></p>
+<p><strong>Kepler1458</strong></p>
+<p><strong>CoRoT9</strong></p>
+<p><strong>Kepler1546</strong></p>
+<p><strong>Kepler1186</strong></p>
+<p><strong>Kepler1125</strong></p>
+<p><strong>XO1</strong></p>
+<p><strong>Kepler1116</strong></p>
+<p><strong>Kepler1065</strong></p>
+<p><strong>Kepler1243</strong></p>
+<p><strong>Kepler948</strong></p>
+<p><strong>Kepler1067</strong></p>
+<p><strong>Kepler1087</strong></p>
+<p><strong>Kepler69</strong></p>
+<p><strong>Kepler946</strong></p>
+<p><strong>Kepler585</strong></p>
+<p><strong>Kepler561</strong></p>
+<p><strong>Kepler308</strong></p>
+<p><strong>Kepler1135</strong></p>
+<p><strong>Kepler1330</strong></p>
+<p><strong>Kepler638</strong></p>
+<p><strong>Kepler1612</strong></p>
+<p><strong>Kepler1380</strong></p>
+<p><strong>Kepler1453</strong></p>
+<p><strong>Kepler1611</strong></p>
+<p><strong>HATS14</strong></p>
+<p><strong>Kepler799</strong></p>
+<p><strong>Kepler1215</strong></p>
+<p><strong>Kepler1126</strong></p>
+<p><strong>Kepler744</strong></p>
+<p><strong>Kepler984</strong></p>
+<p><strong>Kepler902</strong></p>
+<p><strong>Kepler761</strong></p>
+<p><strong>Kepler1339</strong></p>
+<p><strong>Kepler1117</strong></p>
+<p><strong>Kepler1343</strong></p>
+<p><strong>Kepler1471</strong></p>
+<p><strong>Kepler1522</strong></p>
+<p><strong>Kepler1448</strong></p>
+<p><strong>Kepler1506</strong></p>
+<p><strong>Kepler569</strong></p>
+<p><strong>Kepler746</strong></p>
+<p><strong>Kepler728</strong></p>
+<p><strong>WASP34</strong></p>
+<p><strong>Kepler1290</strong></p>
+<p><strong>Kepler1292</strong></p>
+<p><strong>Kepler856</strong></p>
+<p><strong>Kepler922</strong></p>
+<p><strong>Kepler1567</strong></p>
+<p><strong>Kepler813</strong></p>
+<p><strong>WASP44</strong></p>
+<p><strong>HATS4</strong></p>
+<p><strong>HATP38</strong></p>
+<p><strong>Kepler554</strong></p>
+<p><strong>Kepler1596</strong></p>
+<p><strong>Kepler93</strong></p>
+<p><strong>Kepler1138</strong></p>
+<p><strong>Kepler1312</strong></p>
+<p><strong>Kepler1277</strong></p>
+<p><strong>Kepler1411</strong></p>
+<p><strong>Kepler1575</strong></p>
+<p><strong>Kepler686</strong></p>
+<p><strong>Kepler865</strong></p>
+<p><strong>Kepler1033</strong></p>
+<p><strong>Kepler770</strong></p>
+<p><strong>Kepler426</strong></p>
+<p><strong>Kepler586</strong></p>
+<p><strong>Kepler1393</strong></p>
+<p><strong>Kepler1078</strong></p>
+<p><strong>Kepler818</strong></p>
+<p><strong>Kepler1095</strong></p>
+<p><strong>Kepler564</strong></p>
+<p><strong>Kepler1484</strong></p>
+<p><strong>Kepler672</strong></p>
+<p><strong>Kepler1194</strong></p>
+<p><strong>Kepler720</strong></p>
+<p><strong>Kepler1333</strong></p>
+<p><strong>WASP25</strong></p>
+<p><strong>Kepler1210</strong></p>
+<p><strong>WASP46</strong></p>
+<p><strong>WASP4</strong></p>
+<p><strong>Kepler1583</strong></p>
+<p><strong>Kepler867</strong></p>
+<p><strong>Kepler582</strong></p>
+<p><strong>Kepler1585</strong></p>
+<p><strong>Kepler943</strong></p>
+<p><strong>Kepler646</strong></p>
+<p><strong>Kepler1101</strong></p>
+<p><strong>Kepler1334</strong></p>
+<p><strong>Kepler1325</strong></p>
+<p><strong>Kepler729</strong></p>
+<p><strong>Kepler574</strong></p>
+<p><strong>Kepler492</strong></p>
+<p><strong>Kepler1139</strong></p>
+<p><strong>Kepler827</strong></p>
+<p><strong>Kepler987</strong></p>
+<p><strong>Kepler678</strong></p>
+<p><strong>Kepler461</strong></p>
+<p><strong>Kepler1273</strong></p>
+<p><strong>Kepler583</strong></p>
+<p><strong>Kepler710</strong></p>
+<p><strong>Kepler1519</strong></p>
+<p><strong>Kepler1012</strong></p>
+<p><strong>Kepler1128</strong></p>
+<p><strong>Kepler921</strong></p>
+<p><strong>Kepler1299</strong></p>
+<p><strong>Kepler846</strong></p>
+<p><strong>Kepler858</strong></p>
+<p><strong>Kepler698</strong></p>
+<p><strong>Kepler899</strong></p>
+<p><strong>Kepler548</strong></p>
+<p><strong>CoRoT2</strong></p>
+<p><strong>Kepler63</strong></p>
+<p><strong>Kepler1437</strong></p>
+<p><strong>Kepler1133</strong></p>
+<p><strong>Kepler1332</strong></p>
+<p><strong>Kepler739</strong></p>
+<p><strong>Kepler1342</strong></p>
+<p><strong>Kepler888</strong></p>
+<p><strong>Kepler802</strong></p>
+<p><strong>Kepler571</strong></p>
+<p><strong>Kepler961</strong></p>
+<p><strong>Kepler1198</strong></p>
+<p><strong>CoRoT29</strong></p>
+<p><strong>Kepler1489</strong></p>
+<p><strong>Kepler463</strong></p>
+<p><strong>Kepler1235</strong></p>
+<p><strong>Kepler832</strong></p>
+<p><strong>Kepler1357</strong></p>
+<p><strong>Kepler1043</strong></p>
+<p><strong>Kepler542</strong></p>
+<p><strong>Kepler538</strong></p>
+<p><strong>Kepler1123</strong></p>
+<p><strong>Kepler562</strong></p>
+<p><strong>Kepler1564</strong></p>
+<p><strong>Kepler1237</strong></p>
+<p><strong>Kepler570</strong></p>
+<p><strong>HATS2</strong></p>
+<p><strong>WASP39</strong></p>
+<p><strong>Kepler1570</strong></p>
+<p><strong>Kepler1023</strong></p>
+<p><strong>Kepler723</strong></p>
+<p><strong>Kepler1282</strong></p>
+<p><strong>Kepler536</strong></p>
+<p><strong>Kepler1634</strong></p>
+<p><strong>Kepler1469</strong></p>
+<p><strong>Kepler1036</strong></p>
+<p><strong>Kepler936</strong></p>
+<p><strong>Kepler1160</strong></p>
+<p><strong>Kepler868</strong></p>
+<p><strong>Kepler1295</strong></p>
+<p><strong>Kepler530</strong></p>
+<p><strong>Kepler1251</strong></p>
+<p><strong>Kepler764</strong></p>
+<p><strong>Kepler938</strong></p>
+<p><strong>Kepler1122</strong></p>
+<p><strong>Kepler783</strong></p>
+<p><strong>Kepler1172</strong></p>
+<p><strong>Kepler587</strong></p>
+<p><strong>Kepler1232</strong></p>
+<p><strong>Kepler682</strong></p>
+<p><strong>HATS13</strong></p>
+<p><strong>Kepler1018</strong></p>
+<p><strong>Kepler75</strong></p>
+<p><strong>Kepler652</strong></p>
+<p><strong>Kepler1532</strong></p>
+<p><strong>Kepler487</strong></p>
+<p><strong>Kepler697</strong></p>
+<p><strong>WASP89</strong></p>
+<p><strong>Kepler1310</strong></p>
+<p><strong>Kepler1011</strong></p>
+<p><strong>Kepler1153</strong></p>
+<p><strong>Kepler1001</strong></p>
+<p><strong>Kepler605</strong></p>
+<p><strong>Kepler518</strong></p>
+<p><strong>Kepler1643</strong></p>
+<p><strong>Kepler689</strong></p>
+<p><strong>Kepler1530</strong></p>
+<p><strong>HATP37</strong></p>
+<p><strong>HATS5</strong></p>
+<p><strong>WASP67</strong></p>
+<p><strong>WASP41</strong></p>
+<p><strong>Kepler594</strong></p>
+<p><strong>Kepler947</strong></p>
+<p><strong>Kepler1402</strong></p>
+<p><strong>Kepler740</strong></p>
+<p><strong>Kepler1610</strong></p>
+<p><strong>Kepler1185</strong></p>
+<p><strong>Kepler1017</strong></p>
+<p><strong>Kepler1490</strong></p>
+<p><strong>Kepler963</strong></p>
+<p><strong>Kepler882</strong></p>
+<p><strong>Kepler1257</strong></p>
+<p><strong>WASP6</strong></p>
+<p><strong>CoRoT7</strong></p>
+<p><strong>Kepler468</strong></p>
+<p><strong>Kepler484</strong></p>
+<p><strong>Kepler667</strong></p>
+<p><strong>Kepler1322</strong></p>
+<p><strong>Kepler1028</strong></p>
+<p><strong>Kepler651</strong></p>
+<p><strong>HATP27</strong></p>
+<p><strong>Pr211</strong></p>
+<p><strong>TrES5</strong></p>
+<p><strong>Kepler439</strong></p>
+<p><strong>M67YBP1514</strong></p>
+<p><strong>Kepler1175</strong></p>
+<p><strong>Kepler1644</strong></p>
+<p><strong>Kepler425</strong></p>
+<p><strong>Kepler684</strong></p>
+<p><strong>Kepler941</strong></p>
+<p><strong>Kepler1454</strong></p>
+<p><strong>Kepler598</strong></p>
+<p><strong>Kepler1578</strong></p>
+<p><strong>Kepler1021</strong></p>
+<p><strong>Kepler949</strong></p>
+<p><strong>Kepler523</strong></p>
+<p><strong>Kepler958</strong></p>
+<p><strong>Kepler724</strong></p>
+<p><strong>Kepler1534</strong></p>
+<p><strong>Kepler623</strong></p>
+<p><strong>Kepler1505</strong></p>
+<p><strong>Kepler727</strong></p>
+<p><strong>Kepler1606</strong></p>
+<p><strong>Kepler733</strong></p>
+<p><strong>Kepler962</strong></p>
+<p><strong>Kepler692</strong></p>
+<p><strong>Kepler1166</strong></p>
+<p><strong>Kepler905</strong></p>
+<p><strong>Kepler702</strong></p>
+<p><strong>Kepler920</strong></p>
+<p><strong>Kepler1507</strong></p>
+<p><strong>Kepler760</strong></p>
+<p><strong>Kepler851</strong></p>
+<p><strong>Kepler816</strong></p>
+<p><strong>Kepler894</strong></p>
+<p><strong>Kepler743</strong></p>
+<p><strong>Kepler717</strong></p>
+<p><strong>Kepler19</strong></p>
+<p><strong>Kepler1392</strong></p>
+<p><strong>Kepler553</strong></p>
+<p><strong>Kepler726</strong></p>
+<p><strong>Kepler1313</strong></p>
+<p><strong>Kepler971</strong></p>
+<p><strong>Kepler939</strong></p>
+<p><strong>Kepler1151</strong></p>
+<p><strong>WASP42</strong></p>
+<p><strong>Kepler985</strong></p>
+<p><strong>Kepler1635</strong></p>
+<p><strong>WASP50</strong></p>
+<p><strong>Kepler629</strong></p>
+<p><strong>Kepler1162</strong></p>
+<p><strong>Kepler775</strong></p>
+<p><strong>Kepler955</strong></p>
+<p><strong>Kepler1014</strong></p>
+<p><strong>Kepler549</strong></p>
+<p><strong>Kepler701</strong></p>
+<p><strong>Kepler1108</strong></p>
+<p><strong>Kepler862</strong></p>
+<p><strong>Kepler1642</strong></p>
+<p><strong>Kepler751</strong></p>
+<p><strong>Kepler673</strong></p>
+<p><strong>Kepler1482</strong></p>
+<p><strong>Kepler679</strong></p>
+<p><strong>Kepler632</strong></p>
+<p><strong>Kepler964</strong></p>
+<p><strong>Kepler1549</strong></p>
+<p><strong>Kepler1415</strong></p>
+<p><strong>WASP2</strong></p>
+<p><strong>Kepler725</strong></p>
+<p><strong>Kepler1627</strong></p>
+<p><strong>Kepler1081</strong></p>
+<p><strong>Kepler932</strong></p>
+<p><strong>Kepler933</strong></p>
+<p><strong>Kepler706</strong></p>
+<p><strong>HATP17</strong></p>
+<p><strong>WASP57</strong></p>
+<p><strong>HATP3</strong></p>
+<p><strong>OGLETR111</strong></p>
+<p><strong>Kepler248</strong></p>
+<p><strong>Kepler1281</strong></p>
+<p><strong>Kepler1114</strong></p>
+<p><strong>Kepler979</strong></p>
+<p><strong>Kepler1038</strong></p>
+<p><strong>Kepler515</strong></p>
+<p><strong>Kepler589</strong></p>
+<p><strong>Kepler499</strong></p>
+<p><strong>Kepler1371</strong></p>
+<p><strong>Kepler1245</strong></p>
+<p><strong>Kepler752</strong></p>
+<p><strong>Kepler944</strong></p>
+<p><strong>Kepler977</strong></p>
+<p><strong>Kepler1132</strong></p>
+<p><strong>Kepler1296</strong></p>
+<p><strong>Kepler1192</strong></p>
+<p><strong>Kepler578</strong></p>
+<p><strong>Kepler1355</strong></p>
+<p><strong>Kepler550</strong></p>
+<p><strong>Kepler495</strong></p>
+<p><strong>Kepler595</strong></p>
+<p><strong>Kepler976</strong></p>
+<p><strong>Qatar1</strong></p>
+<p><strong>Kepler969</strong></p>
+<p><strong>Kepler1467</strong></p>
+<p><strong>Kepler1600</strong></p>
+<p><strong>Kepler663</strong></p>
+<p><strong>Kepler1168</strong></p>
+<p><strong>Kepler668</strong></p>
+<p><strong>Kepler1377</strong></p>
+<p><strong>Kepler1236</strong></p>
+<p><strong>Kepler1090</strong></p>
+<p><strong>Kepler1221</strong></p>
+<p><strong>Kepler1302</strong></p>
+<p><strong>Kepler1173</strong></p>
+<p><strong>HATP19</strong></p>
+<p><strong>Kepler496</strong></p>
+<p><strong>Kepler1107</strong></p>
+<p><strong>Kepler1027</strong></p>
+<p><strong>Kepler656</strong></p>
+<p><strong>Kepler1559</strong></p>
+<p><strong>Kepler800</strong></p>
+<p><strong>Kepler738</strong></p>
+<p><strong>Kepler1605</strong></p>
+<p><strong>Kepler1010</strong></p>
+<p><strong>Kepler1045</strong></p>
+<p><strong>Kepler1247</strong></p>
+<p><strong>WASP69</strong></p>
+<p><strong>TrES3</strong></p>
+<p><strong>Kepler1130</strong></p>
+<p><strong>Kepler1304</strong></p>
+<p><strong>Kepler819</strong></p>
+<p><strong>Kepler1134</strong></p>
+<p><strong>Kepler614</strong></p>
+<p><strong>Kepler1554</strong></p>
+<p><strong>Kepler1205</strong></p>
+<p><strong>Kepler600</strong></p>
+<p><strong>Kepler1566</strong></p>
+<p><strong>Kepler931</strong></p>
+<p><strong>Kepler479</strong></p>
+<p><strong>Kepler1498</strong></p>
+<p><strong>Kepler1301</strong></p>
+<p><strong>Kepler1071</strong></p>
+<p><strong>Kepler896</strong></p>
+<p><strong>Kepler841</strong></p>
+<p><strong>Kepler1504</strong></p>
+<p><strong>Kepler1553</strong></p>
+<p><strong>Kepler837</strong></p>
+<p><strong>Kepler736</strong></p>
+<p><strong>Kepler558</strong></p>
+<p><strong>Kepler1480</strong></p>
+<p><strong>Kepler1191</strong></p>
+<p><strong>Kepler1374</strong></p>
+<p><strong>Kepler1541</strong></p>
+<p><strong>Kepler916</strong></p>
+<p><strong>Kepler1179</strong></p>
+<p><strong>Kepler877</strong></p>
+<p><strong>WASP29</strong></p>
+<p><strong>TrES1</strong></p>
+<p><strong>Kepler519</strong></p>
+<p><strong>Kepler607</strong></p>
+<p><strong>Kepler1214</strong></p>
+<p><strong>Kepler995</strong></p>
+<p><strong>Kepler735</strong></p>
+<p><strong>Kepler1404</strong></p>
+<p><strong>Kepler636</strong></p>
+<p><strong>Kepler821</strong></p>
+<p><strong>Kepler967</strong></p>
+<p><strong>Kepler1545</strong></p>
+<p><strong>Kepler711</strong></p>
+<p><strong>Kepler1595</strong></p>
+<p><strong>Kepler1020</strong></p>
+<p><strong>Kepler1413</strong></p>
+<p><strong>Kepler1241</strong></p>
+<p><strong>Kepler1263</strong></p>
+<p><strong>Kepler1309</strong></p>
+<p><strong>Kepler790</strong></p>
+<p><strong>Kepler695</strong></p>
+<p><strong>Kepler1291</strong></p>
+<p><strong>Kepler1034</strong></p>
+<p><strong>Kepler428</strong></p>
+<p><strong>Kepler1539</strong></p>
+<p><strong>Kepler478</strong></p>
+<p><strong>Kepler1222</strong></p>
+<p><strong>Kepler763</strong></p>
+<p><strong>Kepler1317</strong></p>
+<p><strong>WASP52</strong></p>
+<p><strong>Kepler566</strong></p>
+<p><strong>Kepler411</strong></p>
+<p><strong>Kepler1347</strong></p>
+<p><strong>Kepler1064</strong></p>
+<p><strong>Kepler1097</strong></p>
+<p><strong>Kepler532</strong></p>
+<p><strong>Kepler1358</strong></p>
+<p><strong>Kepler572</strong></p>
+<p><strong>Kepler1164</strong></p>
+<p><strong>Kepler1558</strong></p>
+<p><strong>CoRoT10</strong></p>
+<p><strong>Kepler1379</strong></p>
+<p><strong>Kepler1409</strong></p>
+<p><strong>Kepler477</strong></p>
+<p><strong>Kepler756</strong></p>
+<p><strong>Kepler599</strong></p>
+<p><strong>Kepler475</strong></p>
+<p><strong>Kepler1420</strong></p>
+<p><strong>Kepler601</strong></p>
+<p><strong>Kepler1361</strong></p>
+<p><strong>Kepler567</strong></p>
+<p><strong>Kepler1284</strong></p>
+<p><strong>HATP26</strong></p>
+<p><strong>Kepler712</strong></p>
+<p><strong>Kepler1477</strong></p>
+<p><strong>Kepler721</strong></p>
+<p><strong>Kepler699</strong></p>
+<p><strong>Kepler781</strong></p>
+<p><strong>Kepler768</strong></p>
+<p><strong>Kepler989</strong></p>
+<p><strong>Kepler1024</strong></p>
+<p><strong>Kepler1400</strong></p>
+<p><strong>Kepler747</strong></p>
+<p><strong>Kepler734</strong></p>
+<p><strong>Kepler1037</strong></p>
+<p><strong>Kepler1552</strong></p>
+<p><strong>Kepler1008</strong></p>
+<p><strong>Kepler776</strong></p>
+<p><strong>Kepler1356</strong></p>
+<p><strong>Kepler716</strong></p>
+<p><strong>Kepler973</strong></p>
+<p><strong>Kepler861</strong></p>
+<p><strong>Kepler1499</strong></p>
+<p><strong>Kepler472</strong></p>
+<p><strong>OGLETR113</strong></p>
+<p><strong>Kepler1529</strong></p>
+<p><strong>Kepler1261</strong></p>
+<p><strong>CoRoT8</strong></p>
+<p><strong>Kepler1259</strong></p>
+<p><strong>Kepler1537</strong></p>
+<p><strong>Kepler1029</strong></p>
+<p><strong>Kepler778</strong></p>
+<p><strong>Kepler563</strong></p>
+<p><strong>Kepler1143</strong></p>
+<p><strong>Kepler755</strong></p>
+<p><strong>Kepler1593</strong></p>
+<p><strong>Kepler878</strong></p>
+<p><strong>Kepler1083</strong></p>
+<p><strong>Kepler37</strong></p>
+<p><strong>Kepler934</strong></p>
+<p><strong>Kepler859</strong></p>
+<p><strong>Kepler828</strong></p>
+<p><strong>Kepler876</strong></p>
+<p><strong>Kepler847</strong></p>
+<p><strong>Kepler1148</strong></p>
+<p><strong>Kepler709</strong></p>
+<p><strong>Kepler1387</strong></p>
+<p><strong>WASP23</strong></p>
+<p><strong>Kepler1521</strong></p>
+<p><strong>Kepler954</strong></p>
+<p><strong>Kepler1013</strong></p>
+<p><strong>Kepler1266</strong></p>
+<p><strong>Kepler917</strong></p>
+<p><strong>Kepler1604</strong></p>
+<p><strong>Kepler1030</strong></p>
+<p><strong>WTS2</strong></p>
+<p><strong>Kepler1208</strong></p>
+<p><strong>Kepler1170</strong></p>
+<p><strong>Kepler681</strong></p>
+<p><strong>Kepler489</strong></p>
+<p><strong>Kepler707</strong></p>
+<p><strong>Kepler1614</strong></p>
+<p><strong>Kepler1470</strong></p>
+<p><strong>Kepler1234</strong></p>
+<p><strong>Kepler421</strong></p>
+<p><strong>Kepler1254</strong></p>
+<p><strong>Kepler531</strong></p>
+<p><strong>Kepler1167</strong></p>
+<p><strong>Kepler1026</strong></p>
+<p><strong>Kepler675</strong></p>
+<p><strong>Kepler749</strong></p>
+<p><strong>Kepler1423</strong></p>
+<p><strong>Kepler957</strong></p>
+<p><strong>Kepler1481</strong></p>
+<p><strong>Kepler845</strong></p>
+<p><strong>Kepler1315</strong></p>
+<p><strong>Kepler1206</strong></p>
+<p><strong>Kepler975</strong></p>
+<p><strong>Kepler1145</strong></p>
+<p><strong>Kepler942</strong></p>
+<p><strong>Kepler1223</strong></p>
+<p><strong>Kepler1414</strong></p>
+<p><strong>Kepler486</strong></p>
+<p><strong>Kepler1178</strong></p>
+<p><strong>Kepler1446</strong></p>
+<p><strong>HATP18</strong></p>
+<p><strong>WASP84</strong></p>
+<p><strong>BD103166</strong></p>
+<p><strong>Kepler102</strong></p>
+<p><strong>Kepler1228</strong></p>
+<p><strong>Kepler1362</strong></p>
+<p><strong>Kepler1320</strong></p>
+<p><strong>Kepler1384</strong></p>
+<p><strong>Kepler659</strong></p>
+<p><strong>Kepler1335</strong></p>
+<p><strong>Kepler78</strong></p>
+<p><strong>Kepler1120</strong></p>
+<p><strong>Kepler662</strong></p>
+<p><strong>Kepler1242</strong></p>
+<p><strong>Kepler1039</strong></p>
+<p><strong>WASP11</strong></p>
+<p><strong>Kepler1544</strong></p>
+<p><strong>Kepler1577</strong></p>
+<p><strong>Kepler1459</strong></p>
+<p><strong>Kepler1389</strong></p>
+<p><strong>Kepler665</strong></p>
+<p><strong>Kepler1076</strong></p>
+<p><strong>Kepler992</strong></p>
+<p><strong>Kepler1461</strong></p>
+<p><strong>Kepler1503</strong></p>
+<p><strong>Kepler1006</strong></p>
+<p><strong>Kepler786</strong></p>
+<p><strong>Kepler1324</strong></p>
+<p><strong>Kepler1565</strong></p>
+<p><strong>Kepler1140</strong></p>
+<p><strong>Kepler842</strong></p>
+<p><strong>Kepler547</strong></p>
+<p><strong>Kepler951</strong></p>
+<p><strong>Kepler935</strong></p>
+<p><strong>Kepler577</strong></p>
+<p><strong>Kepler900</strong></p>
+<p><strong>Kepler687</strong></p>
+<p><strong>Kepler167</strong></p>
+<p><strong>Kepler1059</strong></p>
+<p><strong>Kepler1430</strong></p>
+<p><strong>Kepler693</strong></p>
+<p><strong>Kepler482</strong></p>
+<p><strong>Kepler1150</strong></p>
+<p><strong>Kepler1363</strong></p>
+<p><strong>Kepler892</strong></p>
+<p><strong>Kepler1353</strong></p>
+<p><strong>Kepler533</strong></p>
+<p><strong>Kepler960</strong></p>
+<p><strong>Kepler1608</strong></p>
+<p><strong>Kepler925</strong></p>
+<p><strong>Kepler1418</strong></p>
+<p><strong>Kepler1190</strong></p>
+<p><strong>Kepler1492</strong></p>
+<p><strong>Kepler1341</strong></p>
+<p><strong>Kepler1359</strong></p>
+<p><strong>Kepler1042</strong></p>
+<p><strong>Kepler1197</strong></p>
+<p><strong>Qatar2</strong></p>
+<p><strong>Kepler1465</strong></p>
+<p><strong>Kepler660</strong></p>
+<p><strong>Kepler1032</strong></p>
+<p><strong>Kepler866</strong></p>
+<p><strong>Kepler742</strong></p>
+<p><strong>Kepler1520</strong></p>
+<p><strong>Kepler1195</strong></p>
+<p><strong>Kepler808</strong></p>
+<p><strong>Kepler785</strong></p>
+<p><strong>Kepler1157</strong></p>
+<p><strong>Kepler443</strong></p>
+<p><strong>HATP12</strong></p>
+<p><strong>WASP98</strong></p>
+<p><strong>Kepler1007</strong></p>
+<p><strong>Kepler436</strong></p>
+<p><strong>Kepler1146</strong></p>
+<p><strong>Kepler1110</strong></p>
+<p><strong>Kepler968</strong></p>
+<p><strong>Kepler928</strong></p>
+<p><strong>Kepler1318</strong></p>
+<p><strong>Kepler1048</strong></p>
+<p><strong>Kepler1200</strong></p>
+<p><strong>Kepler1579</strong></p>
+<p><strong>Kepler1062</strong></p>
+<p><strong>WASP10</strong></p>
+<p><strong>HATP20</strong></p>
+<p><strong>Kepler1329</strong></p>
+<p><strong>Kepler1540</strong></p>
+<p><strong>Kepler1526</strong></p>
+<p><strong>Kepler1246</strong></p>
+<p><strong>Kepler1058</strong></p>
+<p><strong>Kepler1053</strong></p>
+<p><strong>Kepler1265</strong></p>
+<p><strong>Kepler1331</strong></p>
+<p><strong>Kepler615</strong></p>
+<p><strong>Kepler621</strong></p>
+<p><strong>Kepler1105</strong></p>
+<p><strong>Kepler437</strong></p>
+<p><strong>Kepler1136</strong></p>
+<p><strong>Kepler1450</strong></p>
+<p><strong>Kepler1022</strong></p>
+<p><strong>Kepler1460</strong></p>
+<p><strong>Kepler543</strong></p>
+<p><strong>Kepler1536</strong></p>
+<p><strong>Kepler1351</strong></p>
+<p><strong>Kepler1337</strong></p>
+<p><strong>Kepler1378</strong></p>
+<p><strong>Kepler1019</strong></p>
+<p><strong>Kepler661</strong></p>
+<p><strong>Kepler970</strong></p>
+<p><strong>Kepler1512</strong></p>
+<p><strong>Kepler1086</strong></p>
+<p><strong>Kepler834</strong></p>
+<p><strong>Kepler753</strong></p>
+<p><strong>Kepler62</strong></p>
+<p><strong>Kepler580</strong></p>
+<p><strong>Kepler801</strong></p>
+<p><strong>Kepler551</strong></p>
+<p><strong>Kepler1630</strong></p>
+<p><strong>Kepler1096</strong></p>
+<p><strong>Kepler898</strong></p>
+<p><strong>Kepler833</strong></p>
+<p><strong>Kepler61</strong></p>
+<p><strong>Kepler1456</strong></p>
+<p><strong>Kepler787</strong></p>
+<p><strong>HATP54</strong></p>
+<p><strong>WASP59</strong></p>
+<p><strong>Kepler913</strong></p>
+<p><strong>Kepler622</strong></p>
+<p><strong>Kepler1388</strong></p>
+<p><strong>Kepler991</strong></p>
+<p><strong>Kepler1203</strong></p>
+<p><strong>Kepler895</strong></p>
+<p><strong>Kepler1455</strong></p>
+<p><strong>K221</strong></p>
+<p><strong>Kepler1366</strong></p>
+<p><strong>Kepler1367</strong></p>
+<p><strong>Kepler658</strong></p>
+<p><strong>Kepler1410</strong></p>
+<p><strong>Kepler442</strong></p>
+<p><strong>WASP43</strong></p>
+<p><strong>Kepler1314</strong></p>
+<p><strong>WASP80</strong></p>
+<p><strong>HATS6</strong></p>
+<p><strong>K222</strong></p>
+<p><strong>Kepler844</strong></p>
+<p><strong>Kepler1161</strong></p>
+<p><strong>Kepler901</strong></p>
+<p><strong>Kepler1074</strong></p>
+<p><strong>Kepler1009</strong></p>
+<p><strong>Kepler674</strong></p>
+<p><strong>K23</strong></p>
+<p><strong>Kepler777</strong></p>
+<p><strong>Kepler440</strong></p>
+<p><strong>Kepler441</strong></p>
+<p><strong>Kepler45</strong></p>
+<p><strong>Kepler994</strong></p>
+<p><strong>Kepler1075</strong></p>
+<p><strong>Kepler1319</strong></p>
+<p><strong>Kepler993</strong></p>
+<p><strong>Kepler32</strong></p>
+<p><strong>Kepler505</strong></p>
+<p><strong>Kepler568</strong></p>
+<p><strong>Kepler1152</strong></p>
+<p><strong>Kepler1350</strong></p>
+<p><strong>Kepler988</strong></p>
+<p><strong>Kepler1321</strong></p>
+<p><strong>Kepler438</strong></p>
+<p><strong>Kepler1628</strong></p>
+<p><strong>Kepler1229</strong></p>
+<p><strong>Kepler705</strong></p>
+<p><strong>KOI4427</strong></p>
+<p><strong>GJ3470</strong></p>
+<p><strong>Kepler691</strong></p>
+<p><strong>Kepler974</strong></p>
+<p><strong>Kepler676</strong></p>
+<p><strong>Kepler1089</strong></p>
+<p><strong>Kepler1049</strong></p>
+<p><strong>Kepler617</strong></p>
+<p><strong>Kepler737</strong></p>
+<p><strong>Kepler186</strong></p>
+<p><strong>Kepler1624</strong></p>
+<p><strong>Kepler732</strong></p>
+<p><strong>Kepler779</strong></p>
+<p><strong>GJ3341</strong></p>
+<p><strong>GJ3634</strong></p>
+<p><strong>Kepler1439</strong></p>
+<p><strong>GJ3293</strong></p>
+<p><strong>Kepler1308</strong></p>
+<p><strong>Kepler1124</strong></p>
+<p><strong>Kepler504</strong></p>
+<p><strong>Kepler560</strong></p>
+<p><strong>Kepler1582</strong></p>
+<p><strong>K225</strong></p>
+<p><strong>Kepler1646</strong></p>
+<p><strong>Kepler446</strong></p>
+<p><strong>GJ1214</strong></p>
+<p><strong>Kepler445</strong></p>
+<p><strong>Kepler42</strong></p>
+<p><strong>Kepler1408</strong></p>
+<p><strong>GJ317</strong></p>
+<p><strong>XO4</strong></p>
+<p><strong>OGLE05169L</strong></p>
+<p><strong>BetaPhe</strong></p>
+<p><strong>HD21291</strong></p>
+<p><strong>AlphaCam</strong></p>
+<p><strong>_3Pup</strong></p>
+<p><strong>RhoLeo</strong></p>
+<p><strong>KsiUMa</strong></p>
+<p><strong>Zeta1Sco</strong></p>
+<p><strong>MuSgr</strong></p>
+<p><strong>SiriusA</strong></p>
+<p><strong>SiriusB</strong></p>
+<p><strong>CastorA</strong></p>
+<p><strong>CastorB</strong></p>
+<p><strong>CastorAa</strong></p>
+<p><strong>CastorAb</strong></p>
+<p><strong>CastorBa</strong></p>
+<p><strong>CastorBb</strong></p>
+<p><strong>Kepler16</strong></p>
+<p><strong>Kepler16A</strong></p>
+<p><strong>Kepler16B</strong></p>
+<p><strong>ProcyonA</strong></p>
+<p><strong>ProcyonB</strong></p>
+<p><strong>MiraA</strong></p>
+<p><strong>MiraB</strong></p>
+<p><strong>EpsilonAurigaeA</strong></p>
+<p><strong>EpsilonAurigaeB</strong></p>
+<p><strong>Polaris</strong></p>
+<p><strong>PolarisB</strong></p>
+<p><strong>PolarisAa</strong></p>
+<p><strong>PolarisAb</strong></p>
+<p><strong>Gliese667</strong></p>
+<p><strong>Gliese667C</strong></p>
+<p><strong>Gliese667A</strong></p>
+<p><strong>Gliese667B</strong></p>
+<p><strong>AlphaCentauri</strong></p>
+<p><strong>AlphaCentauriAB</strong></p>
+<p><strong>HIP98001</strong></p>
+<p><strong>HIP98001B</strong></p>
+<p><strong>HIP98001Aa</strong></p>
+<p><strong>HIP98001Ab</strong></p>
+<p><strong>XiTauri</strong></p>
+<p><strong>XiTauriB</strong></p>
+<p><strong>XiTauriAab</strong></p>
+<p><strong>XiTauriAc</strong></p>
+<p><strong>XiTauriAa</strong></p>
+<p><strong>XiTauriAb</strong></p>
+<p><strong>MizarAlcor</strong></p>
+<p><strong>MizarAlcorABMizarA</strong></p>
+<p><strong>MizarAlcorABMizarB</strong></p>
+<p><strong>MizarAlcorABMizarAa</strong></p>
+<p><strong>MizarAlcorABMizarAb</strong></p>
+<p><strong>MizarAlcorABMizarBa</strong></p>
+<p><strong>MizarAlcorABMizarBb</strong></p>
+<p><strong>MizarAlcorCaAlcor</strong></p>
+<p><strong>MizarAlcorCbAlcor</strong></p>
+<p><strong>TVCrateris</strong></p>
+<p><strong>TVCraterisB</strong></p>
+<p><strong>TVCraterisAa</strong></p>
+<p><strong>TVCraterisAb</strong></p>
+<p><strong>TVCraterisBa</strong></p>
+<p><strong>TVCraterisBb</strong></p>
+<p><strong>Mintaka</strong></p>
+<p><strong>MintakaC</strong></p>
+<p><strong>MintakaA</strong></p>
+<p><strong>MintakaB</strong></p>
+<p><strong>MintakaCa</strong></p>
+<p><strong>MintakaCb</strong></p>
+<p><strong>MintakaAa</strong></p>
+<p><strong>MintakaAb</strong></p>
+<p><strong>BetaTucanae</strong></p>
+<p><strong>BetaTucanaeAB</strong></p>
+<p><strong>BetaTucanaeCD</strong></p>
+<p><strong>BetaTucanaeA</strong></p>
+<p><strong>BetaTucanaeB</strong></p>
+<p><strong>BetaTucanaeD</strong></p>
+<p><strong>BetaTucanaeQ</strong></p>
+<p><strong>HD139691</strong></p>
+<p><strong>HD139691A</strong></p>
+<p><strong>HD139691B</strong></p>
+<p><strong>HD139691Aa</strong></p>
+<p><strong>HD139691Ab</strong></p>
+<p><strong>HD139691C</strong></p>
+<p><strong>HD139691D</strong></p>
+<p><strong>HD139691CDa</strong></p>
+<p><strong>HD139691Db</strong></p>
+<p><strong>NuScorpii</strong></p>
+<p><strong>NuScorpiiCD</strong></p>
+<p><strong>NuScorpiiA</strong></p>
+<p><strong>NuScorpiiB</strong></p>
+<p><strong>NuScorpiiAab</strong></p>
+<p><strong>NuScorpiiAc</strong></p>
+<p><strong>NuScorpiiAa</strong></p>
+<p><strong>NuScorpiiAb</strong></p>
+<p><strong>NuScorpiiC</strong></p>
+<p><strong>NuScorpiiD</strong></p>
+<p><strong>NuScorpiiDa</strong></p>
+<p><strong>NuScorpiiDb</strong></p>
+<p><strong>BetaTucanaePQ</strong></p>
+<p><strong>CastorAB</strong></p>
+<p><strong>CastorC</strong></p>
+<p><strong>CastorCa</strong></p>
+<p><strong>CastorCb</strong></p>
+<p><strong>Kepler20</strong></p>
+<p><strong>Kepler22</strong></p>
+<p><strong>Kepler11</strong></p>
+<p><strong>Trappist1</strong></p>
+<p><strong>HR9088</strong></p>
+<p><strong>HR9088A</strong></p>
+<p><strong>HR9088B</strong></p>
+<p><strong>HR9091</strong></p>
+<p><strong>HR9091A</strong></p>
+<p><strong>HR9091B</strong></p>
+<p><strong>HR24</strong></p>
+<p><strong>HR24A</strong></p>
+<p><strong>HR24B</strong></p>
+<p><strong>HR159</strong></p>
+<p><strong>HR159A</strong></p>
+<p><strong>HR159B</strong></p>
+<p><strong>HR193</strong></p>
+<p><strong>HR193A</strong></p>
+<p><strong>HR193B</strong></p>
+<p><strong>HR219</strong></p>
+<p><strong>HR219A</strong></p>
+<p><strong>HR219B</strong></p>
+<p><strong>HR258</strong></p>
+<p><strong>HR258A</strong></p>
+<p><strong>HR258B</strong></p>
+<p><strong>HR321</strong></p>
+<p><strong>HR321A</strong></p>
+<p><strong>HR321B</strong></p>
+<p><strong>HR391</strong></p>
+<p><strong>HR391A</strong></p>
+<p><strong>HR391B</strong></p>
+<p><strong>HR404</strong></p>
+<p><strong>HR404A</strong></p>
+<p><strong>HR404B</strong></p>
+<p><strong>HR563</strong></p>
+<p><strong>HR563A</strong></p>
+<p><strong>HR563B</strong></p>
+<p><strong>GJ9071</strong></p>
+<p><strong>GJ9071A</strong></p>
+<p><strong>GJ9071B</strong></p>
+<p><strong>GJ91_1</strong></p>
+<p><strong>GJ91_1A</strong></p>
+<p><strong>GJ91_1B</strong></p>
+<p><strong>GJ98</strong></p>
+<p><strong>GJ98A</strong></p>
+<p><strong>GJ98B</strong></p>
+<p><strong>HR731</strong></p>
+<p><strong>HR731A</strong></p>
+<p><strong>HR731B</strong></p>
+<p><strong>HR788</strong></p>
+<p><strong>HR788A</strong></p>
+<p><strong>HR788B</strong></p>
+<p><strong>GJ125</strong></p>
+<p><strong>GJ125A</strong></p>
+<p><strong>GJ125B</strong></p>
+<p><strong>GJ130_1</strong></p>
+<p><strong>GJ130_1A</strong></p>
+<p><strong>GJ130_1B</strong></p>
+<p><strong>HR1175</strong></p>
+<p><strong>HR1175A</strong></p>
+<p><strong>HR1175B</strong></p>
+<p><strong>GJ9127</strong></p>
+<p><strong>GJ9127A</strong></p>
+<p><strong>GJ9127B</strong></p>
+<p><strong>HR1199</strong></p>
+<p><strong>HR1199A</strong></p>
+<p><strong>HR1199B</strong></p>
+<p><strong>HR1331</strong></p>
+<p><strong>HR1331A</strong></p>
+<p><strong>HR1331B</strong></p>
+<p><strong>HR1394</strong></p>
+<p><strong>HR1394A</strong></p>
+<p><strong>HR1394B</strong></p>
+<p><strong>HR2282</strong></p>
+<p><strong>HR2282A</strong></p>
+<p><strong>HR2282B</strong></p>
+<p><strong>HR2372</strong></p>
+<p><strong>HR2372A</strong></p>
+<p><strong>HR2372B</strong></p>
+<p><strong>HR2392</strong></p>
+<p><strong>HR2392A</strong></p>
+<p><strong>HR2392B</strong></p>
+<p><strong>HR2439</strong></p>
+<p><strong>HR2439A</strong></p>
+<p><strong>HR2439B</strong></p>
+<p><strong>HR2560</strong></p>
+<p><strong>HR2560A</strong></p>
+<p><strong>HR2560B</strong></p>
+<p><strong>GJ282C</strong></p>
+<p><strong>GJ282CA</strong></p>
+<p><strong>GJ282CB</strong></p>
+<p><strong>GJ301A</strong></p>
+<p><strong>GJ301AA</strong></p>
+<p><strong>GJ301AB</strong></p>
+<p><strong>HR3627</strong></p>
+<p><strong>HR3627A</strong></p>
+<p><strong>HR3627B</strong></p>
+<p><strong>HR4100</strong></p>
+<p><strong>HR4100A</strong></p>
+<p><strong>HR4100B</strong></p>
+<p><strong>GJ400</strong></p>
+<p><strong>GJ400A</strong></p>
+<p><strong>GJ400B</strong></p>
+<p><strong>GJ9372</strong></p>
+<p><strong>GJ9372A</strong></p>
+<p><strong>GJ9372B</strong></p>
+<p><strong>HR4819</strong></p>
+<p><strong>HR4819A</strong></p>
+<p><strong>HR4819B</strong></p>
+<p><strong>GJ3761</strong></p>
+<p><strong>GJ3761A</strong></p>
+<p><strong>GJ3761B</strong></p>
+<p><strong>GJ509_1</strong></p>
+<p><strong>GJ509_1A</strong></p>
+<p><strong>GJ509_1B</strong></p>
+<p><strong>GJ3788</strong></p>
+<p><strong>GJ3788A</strong></p>
+<p><strong>GJ3788B</strong></p>
+<p><strong>HR5209</strong></p>
+<p><strong>HR5209A</strong></p>
+<p><strong>HR5209B</strong></p>
+<p><strong>GJ533</strong></p>
+<p><strong>GJ533A</strong></p>
+<p><strong>GJ533B</strong></p>
+<p><strong>HR5273</strong></p>
+<p><strong>HR5273A</strong></p>
+<p><strong>HR5273B</strong></p>
+<p><strong>HR5544</strong></p>
+<p><strong>HR5544A</strong></p>
+<p><strong>HR5544B</strong></p>
+<p><strong>HR5633</strong></p>
+<p><strong>HR5633A</strong></p>
+<p><strong>HR5633B</strong></p>
+<p><strong>GJ609_2</strong></p>
+<p><strong>GJ609_2A</strong></p>
+<p><strong>GJ609_2B</strong></p>
+<p><strong>GJ616_2</strong></p>
+<p><strong>GJ616_2A</strong></p>
+<p><strong>GJ616_2B</strong></p>
+<p><strong>GJ623</strong></p>
+<p><strong>GJ623A</strong></p>
+<p><strong>GJ623B</strong></p>
+<p><strong>GJ629_2A</strong></p>
+<p><strong>GJ629_2AA</strong></p>
+<p><strong>GJ629_2AB</strong></p>
+<p><strong>HR6247</strong></p>
+<p><strong>HR6247A</strong></p>
+<p><strong>HR6247B</strong></p>
+<p><strong>HR6516</strong></p>
+<p><strong>HR6516A</strong></p>
+<p><strong>HR6516B</strong></p>
+<p><strong>GJ4024</strong></p>
+<p><strong>GJ4024A</strong></p>
+<p><strong>GJ4024B</strong></p>
+<p><strong>HR6752</strong></p>
+<p><strong>HR6752A</strong></p>
+<p><strong>HR6752B</strong></p>
+<p><strong>HR6775</strong></p>
+<p><strong>HR6775A</strong></p>
+<p><strong>HR6775B</strong></p>
+<p><strong>GJ9624</strong></p>
+<p><strong>GJ9624A</strong></p>
+<p><strong>GJ9624B</strong></p>
+<p><strong>HR6901</strong></p>
+<p><strong>HR6901A</strong></p>
+<p><strong>HR6901B</strong></p>
+<p><strong>HR6890</strong></p>
+<p><strong>HR6890A</strong></p>
+<p><strong>HR6890B</strong></p>
+<p><strong>GJ725A</strong></p>
+<p><strong>GJ725AA</strong></p>
+<p><strong>GJ725AB</strong></p>
+<p><strong>HR7041</strong></p>
+<p><strong>HR7041A</strong></p>
+<p><strong>HR7041B</strong></p>
+<p><strong>HR7261</strong></p>
+<p><strong>HR7261A</strong></p>
+<p><strong>HR7261B</strong></p>
+<p><strong>HR7637</strong></p>
+<p><strong>HR7637A</strong></p>
+<p><strong>HR7637B</strong></p>
+<p><strong>GJ791_2</strong></p>
+<p><strong>GJ791_2A</strong></p>
+<p><strong>GJ791_2B</strong></p>
+<p><strong>GJ802</strong></p>
+<p><strong>GJ802A</strong></p>
+<p><strong>GJ802B</strong></p>
+<p><strong>HR8246</strong></p>
+<p><strong>HR8246A</strong></p>
+<p><strong>HR8246B</strong></p>
+<p><strong>HR8264</strong></p>
+<p><strong>HR8264A</strong></p>
+<p><strong>HR8264B</strong></p>
+<p><strong>HR8384</strong></p>
+<p><strong>HR8384A</strong></p>
+<p><strong>HR8384B</strong></p>
+<p><strong>Epsilon1Lyrae</strong></p>
+<p><strong>Epsilon1LyraeB</strong></p>
+<p><strong>Epsilon2Lyrae</strong></p>
+<p><strong>Epsilon2LyraeD</strong></p>
+<p><strong>IndividualStarCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.IndividualStarPort">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IndividualStarPort</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.IndividualStarPort" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available ports on individual star</p>
+<p><strong>InvalidIndividualStarPort</strong></p>
+<p><strong>Ecliptic</strong></p>
+<p><strong>IndividualStarPortCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.InternalRepresentation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InternalRepresentation</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.InternalRepresentation" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidInternalRepresentation</strong></p>
+<p><strong>IR_Zones</strong></p>
+<p><strong>IR_Layers</strong></p>
+<p><strong>InternalRepresentationCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.Model">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Model</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.Model" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available modelset on individual star</p>
+<p><strong>InvalidModel</strong></p>
+<p><strong>DefaultModel</strong></p>
+<p><strong>Did_Sliced</strong></p>
+<p><strong>HDR</strong></p>
+<p><strong>Photosphere</strong></p>
+<p><strong>RAW</strong></p>
+<p><strong>Visible</strong></p>
+<p><strong>Internal</strong></p>
+<p><strong>SDO</strong></p>
+<p><strong>SDOStatic</strong></p>
+<p><strong>ModelCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.addChild">
+<span class="sig-name descname"><span class="pre">addChild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)child</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(IndividualStarPort)port</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.addChild" title="Permalink to this definition"></a></dt>
+<dd><p>Add a child object to the individual star scene graph.
+PARAMETERS:
+child : int</p>
+<blockquote>
+<div><p>Id of the child object to add.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>port<span class="classifier">IndividualStarPort</span></dt><dd><p>Coordinate system to use for adding child. See IndividualStarPort documentation for more information.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.portId">
+<span class="sig-name descname"><span class="pre">portId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(IndividualStarPort)portName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.portId" title="Permalink to this definition"></a></dt>
+<dd><p>Return the id of the given port
+PARAMETERS:
+portName : IndividualStarPort</p>
+<blockquote>
+<div><p>Name of the port. See ‘IndividualStarPort’ documentation for more information.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setColor">
+<span class="sig-name descname"><span class="pre">setColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)color</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+color : Vec
+Actual color of the star.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setCoronaIntensity">
+<span class="sig-name descname"><span class="pre">setCoronaIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)coronaIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setCoronaIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+coronaIntensity : double
+Intensity of the star’s corona.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setCycle">
+<span class="sig-name descname"><span class="pre">setCycle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Cycle)cycle</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setCycle" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+cycle : Cycle</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setFilter">
+<span class="sig-name descname"><span class="pre">setFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Filter)filter</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setFilter" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+filter : Filter</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setGalacticBandIntensity">
+<span class="sig-name descname"><span class="pre">setGalacticBandIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)galacticBandIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setGalacticBandIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+galacticBandIntensity : double
+Intensity of the galactic mark band.
+Usually in range [0;1]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setGalacticGridIntensity">
+<span class="sig-name descname"><span class="pre">setGalacticGridIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)galacticGridIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setGalacticGridIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+galacticGridIntensity : double
+Intensity of the galactic mark grid.
+Usually in range [0;1]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setGalacticMarkLineIntensity">
+<span class="sig-name descname"><span class="pre">setGalacticMarkLineIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)galacticMarkLineIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setGalacticMarkLineIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+galacticMarkLineIntensity : double
+Intensity of the galactic mark line.
+Usually in range [0;1]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setHabitableZoneColor">
+<span class="sig-name descname"><span class="pre">setHabitableZoneColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)habitableZoneColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setHabitableZoneColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+habitableZoneColor : Vec
+Color of the habitable zone of the star.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setHabitableZoneIntensity">
+<span class="sig-name descname"><span class="pre">setHabitableZoneIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)habitableZoneIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setHabitableZoneIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+habitableZoneIntensity : double
+Intensity of the habitable zone of the star.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setHybridRatio">
+<span class="sig-name descname"><span class="pre">setHybridRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)hybridRatio</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setHybridRatio" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+hybridRatio : double
+Used to define which device will display the individual star.
+Set to 0 to use digital device or 1 to use optical device.
+This value musn’t be used on non hybrid system.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setIntensity">
+<span class="sig-name descname"><span class="pre">setIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+intensity : double
+Intensity of the star.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setInternalRepresentation">
+<span class="sig-name descname"><span class="pre">setInternalRepresentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(InternalRepresentation)internalRepresentation</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setInternalRepresentation" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+internalRepresentation : InternalRepresentation</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setLabelIntensity">
+<span class="sig-name descname"><span class="pre">setLabelIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)labelIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setLabelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+labelIntensity : double
+Intensity of the label of the star.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setMagneticLinesIntensity">
+<span class="sig-name descname"><span class="pre">setMagneticLinesIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)magneticLinesIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setMagneticLinesIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+magneticLinesIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setMagnetogramIntensity">
+<span class="sig-name descname"><span class="pre">setMagnetogramIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)magnetogramIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setMagnetogramIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+magnetogramIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setModel">
+<span class="sig-name descname"><span class="pre">setModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Model)model</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setModel" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+model : Model</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setOpening">
+<span class="sig-name descname"><span class="pre">setOpening</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)opening</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setOpening" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+opening : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setPhotosphereIntensity">
+<span class="sig-name descname"><span class="pre">setPhotosphereIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)photosphereIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setPhotosphereIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+photosphereIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setPointerIntensity">
+<span class="sig-name descname"><span class="pre">setPointerIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)pointerIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setPointerIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+pointerIntensity : double
+Intensity of the pointer of the star.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setPointerType">
+<span class="sig-name descname"><span class="pre">setPointerType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PointerType)pointerType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setPointerType" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+pointerType : PointerType
+Current individual star pointer type. See ‘Body.PointerType’ documentation for vailable values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setSaturationFactor">
+<span class="sig-name descname"><span class="pre">setSaturationFactor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)saturationFactor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setSaturationFactor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+saturationFactor : double
+Saturation factor of the star.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setScale">
+<span class="sig-name descname"><span class="pre">setScale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)scale</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setScale" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+scale : double
+Scale factor of the star. 
+It can be used to enlarge apparent size of the star.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setTrajectoryIntensity">
+<span class="sig-name descname"><span class="pre">setTrajectoryIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)trajectoryIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setTrajectoryIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+trajectoryIntensity : double
+Intensity of the trajectory of the star. 
+Usually in range [0;1].
+If set to positive value, the star will draw a line according to it’s movement on the dome.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setUseHybridRatio">
+<span class="sig-name descname"><span class="pre">setUseHybridRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)useHybridRatio</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setUseHybridRatio" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+useHybridRatio : double
+Used to define how value will be handled.
+Set to 0 to let the system choose the device or to 1 to manually choose the device (using ‘hybrid ratio’ value).
+This value musn’t be used on non hybrid system.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setZodiacalLightIntensity">
+<span class="sig-name descname"><span class="pre">setZodiacalLightIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)zodiacalLightIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setZodiacalLightIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+zodiacalLightIntensity : double
+Intensity of the star’s zodiacal light.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.setZodiacalLightScatteringIntensity">
+<span class="sig-name descname"><span class="pre">setZodiacalLightScatteringIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(IndividualStar)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)zodiacalLightScatteringIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.setZodiacalLightScatteringIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+zodiacalLightScatteringIntensity : double
+Scattering intensity of the star’s zodiacal light.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.color">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.color" title="Permalink to this definition"></a></dt>
+<dd><p>Actual color of the star.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.coronaIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">coronaIntensity</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.coronaIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the star’s corona.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.cycle">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cycle</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.cycle" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.filter">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filter</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.filter" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.galacticBandIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">galacticBandIntensity</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.galacticBandIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the galactic mark band.
+Usually in range [0;1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.galacticGridIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">galacticGridIntensity</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.galacticGridIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the galactic mark grid.
+Usually in range [0;1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.galacticMarkLineIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">galacticMarkLineIntensity</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.galacticMarkLineIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the galactic mark line.
+Usually in range [0;1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.habitableZoneColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">habitableZoneColor</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.habitableZoneColor" title="Permalink to this definition"></a></dt>
+<dd><p>Color of the habitable zone of the star.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.habitableZoneIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">habitableZoneIntensity</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.habitableZoneIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the habitable zone of the star.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.height">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">height</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.height" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Return height of star on dome in degrees.
+Available only for Sun Star.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.hybridRatio">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hybridRatio</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.hybridRatio" title="Permalink to this definition"></a></dt>
+<dd><p>Used to define which device will display the individual star.
+Set to 0 to use digital device or 1 to use optical device.
+This value musn’t be used on non hybrid system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.intensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the star.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.internalRepresentation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">internalRepresentation</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.internalRepresentation" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.labelIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">labelIntensity</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.labelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the label of the star.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.magneticLinesIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">magneticLinesIntensity</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.magneticLinesIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.magnetogramIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">magnetogramIntensity</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.magnetogramIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.model">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.opening">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">opening</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.opening" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.photosphereIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">photosphereIntensity</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.photosphereIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.pointerIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pointerIntensity</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.pointerIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the pointer of the star.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.pointerType">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pointerType</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.pointerType" title="Permalink to this definition"></a></dt>
+<dd><p>Current individual star pointer type. See ‘Body.PointerType’ documentation for vailable values.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.position">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.position" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Position of the star in the ICRF coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.radiusRatio">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">radiusRatio</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.radiusRatio" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Radius ratio of the star according to the unit of it’s coordinate system. In most case, value is 1.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.saturationFactor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">saturationFactor</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.saturationFactor" title="Permalink to this definition"></a></dt>
+<dd><p>Saturation factor of the star.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.scale">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scale</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.scale" title="Permalink to this definition"></a></dt>
+<dd><p>Scale factor of the star. 
+It can be used to enlarge apparent size of the star.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.trajectoryIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trajectoryIntensity</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.trajectoryIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the trajectory of the star. 
+Usually in range [0;1].
+If set to positive value, the star will draw a line according to it’s movement on the dome.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.useHybridRatio">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">useHybridRatio</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.useHybridRatio" title="Permalink to this definition"></a></dt>
+<dd><p>Used to define how value will be handled.
+Set to 0 to let the system choose the device or to 1 to manually choose the device (using ‘hybrid ratio’ value).
+This value musn’t be used on non hybrid system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.zodiacalLightIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">zodiacalLightIntensity</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.zodiacalLightIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the star’s zodiacal light.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.IndividualStar.zodiacalLightScatteringIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">zodiacalLightScatteringIntensity</span></span><a class="headerlink" href="#pySkyExplorer.IndividualStar.zodiacalLightScatteringIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Scattering intensity of the star’s zodiacal light.
+Usually in range [0;1].</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.GlobularCluster.html" class="btn btn-neutral float-left" title="pySkyExplorer.GlobularCluster" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.Insert2D.html" class="btn btn-neutral float-right" title="pySkyExplorer.Insert2D" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

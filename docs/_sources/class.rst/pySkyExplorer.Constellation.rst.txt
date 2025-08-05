@@ -1,0 +1,10 @@
+pySkyExplorer.Constellation
+===========================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Constellation
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

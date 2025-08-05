@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>studio.Action &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="studio.AdvancedCamera" href="studio.AdvancedCamera.html" />
+    <link rel="prev" title="studio" href="studio.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="studio.html">studio</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">studio.Action</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#studio.Action"><code class="docutils literal notranslate"><span class="pre">Action</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#studio.Action.Type"><code class="docutils literal notranslate"><span class="pre">Action.Type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#studio.Action.trigger"><code class="docutils literal notranslate"><span class="pre">Action.trigger()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="studio.AdvancedCamera.html">studio.AdvancedCamera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.AudienceResponseSystem.html">studio.AudienceResponseSystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.Configuration.html">studio.Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.Data.html">studio.Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.DataManager.html">studio.DataManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.QObject.html">studio.QObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.ShowMonitor.html">studio.ShowMonitor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.Vec2.html">studio.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.VotingDevice.html">studio.VotingDevice</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="studio.html">studio</a></li>
+      <li class="breadcrumb-item active">studio.Action</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/studio.Action.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="studio-action">
+<h1>studio.Action<a class="headerlink" href="#studio-action" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="studio.Action">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">studio.</span></span><span class="sig-name descname"><span class="pre">Action</span></span><a class="headerlink" href="#studio.Action" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="studio.Action.Type">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#studio.Action.Type" title="Permalink to this definition"></a></dt>
+<dd><p><strong>Invalid</strong></p>
+<p><strong>Properties</strong></p>
+<p><strong>Clear</strong></p>
+<p><strong>Add</strong></p>
+<p><strong>Remove</strong></p>
+<p><strong>Tag</strong></p>
+<p><strong>Untag</strong></p>
+<p><strong>Export</strong></p>
+<p><strong>Share</strong></p>
+<p><strong>Unshare</strong></p>
+<p><strong>ShowInFolder</strong></p>
+<p><strong>OpenFile</strong></p>
+<p><strong>Activate</strong></p>
+<p><strong>Load</strong></p>
+<p><strong>Apply</strong></p>
+<p><strong>Edit</strong></p>
+<p><strong>EditStart</strong></p>
+<p><strong>EditStop</strong></p>
+<p><strong>GoTo</strong></p>
+<p><strong>FadeTo</strong></p>
+<p><strong>StraightGoTo</strong></p>
+<p><strong>ConnectTo</strong></p>
+<p><strong>LookAt</strong></p>
+<p><strong>GoToPlace</strong></p>
+<p><strong>FadeToPlace</strong></p>
+<p><strong>FadeToObservation</strong></p>
+<p><strong>FadeToDate</strong></p>
+<p><strong>FadeToParent</strong></p>
+<p><strong>OnOff</strong></p>
+<p><strong>On</strong></p>
+<p><strong>Off</strong></p>
+<p><strong>OrbitOnOff</strong></p>
+<p><strong>OrbitOn</strong></p>
+<p><strong>OrbitOff</strong></p>
+<p><strong>LabelOnOff</strong></p>
+<p><strong>LabelOn</strong></p>
+<p><strong>LabelOff</strong></p>
+<p><strong>PointerOnOff</strong></p>
+<p><strong>PointerOn</strong></p>
+<p><strong>PointerOff</strong></p>
+<p><strong>LineOnOff</strong></p>
+<p><strong>LineOn</strong></p>
+<p><strong>LineOff</strong></p>
+<p><strong>PictureOnOff</strong></p>
+<p><strong>PictureOn</strong></p>
+<p><strong>PictureOff</strong></p>
+<p><strong>BoundaryOnOff</strong></p>
+<p><strong>BoundaryOn</strong></p>
+<p><strong>BoundaryOff</strong></p>
+<p><strong>TrajectoryOnOff</strong></p>
+<p><strong>TrajectoryOn</strong></p>
+<p><strong>TrajectoryOff</strong></p>
+<p><strong>PlayPause</strong></p>
+<p><strong>PlayStop</strong></p>
+<p><strong>Play</strong></p>
+<p><strong>PlayInstant</strong></p>
+<p><strong>PlayLoop</strong></p>
+<p><strong>PlayAdvanced</strong></p>
+<p><strong>Pause</strong></p>
+<p><strong>Stop</strong></p>
+<p><strong>ScaleUpDown</strong></p>
+<p><strong>ScaleUp</strong></p>
+<p><strong>ScaleDown</strong></p>
+<p><strong>Model_Basic</strong></p>
+<p><strong>Model_veRTIGE</strong></p>
+<p><strong>Model_veRTIGE_APOD</strong></p>
+<p><strong>Model_veRTIGE_Hubble_IR</strong></p>
+<p><strong>Model_veRTIGE_RGB_UV</strong></p>
+<p><strong>Model_veRTIGE_UV</strong></p>
+<p><strong>Model_veRTIGE_Visible</strong></p>
+<p><strong>Model_veRTIGE_Near_Infrared</strong></p>
+<p><strong>Model_veRTIGE_Local_HD</strong></p>
+<p><strong>Model_veRTIGE_Blackhole_HD</strong></p>
+<p><strong>Model_Infrared</strong></p>
+<p><strong>Model_Default</strong></p>
+<p><strong>SOS_Update</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="studio.Action.trigger">
+<span class="sig-name descname"><span class="pre">trigger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Action)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#studio.Action.trigger" title="Permalink to this definition"></a></dt>
+<dd><p>Launch corresponding action.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="studio.html" class="btn btn-neutral float-left" title="studio" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="studio.AdvancedCamera.html" class="btn btn-neutral float-right" title="studio.AdvancedCamera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

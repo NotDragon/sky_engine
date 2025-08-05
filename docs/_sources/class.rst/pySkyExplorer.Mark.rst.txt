@@ -1,0 +1,10 @@
+pySkyExplorer.Mark
+==================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Mark
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

@@ -1,0 +1,10 @@
+pySkyExplorer.Clock
+===================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Clock
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

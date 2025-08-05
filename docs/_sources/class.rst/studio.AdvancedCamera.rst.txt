@@ -1,0 +1,10 @@
+studio.AdvancedCamera
+=====================
+
+.. currentmodule:: studio
+    
+.. autoclass:: AdvancedCamera
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

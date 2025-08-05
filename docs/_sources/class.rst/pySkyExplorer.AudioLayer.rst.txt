@@ -1,0 +1,10 @@
+pySkyExplorer.AudioLayer
+========================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: AudioLayer
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

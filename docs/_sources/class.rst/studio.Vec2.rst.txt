@@ -1,0 +1,10 @@
+studio.Vec2
+===========
+
+.. currentmodule:: studio
+    
+.. autoclass:: Vec2
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

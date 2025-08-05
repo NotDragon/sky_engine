@@ -1,0 +1,10 @@
+pySkyExplorer.ParameterizationLut
+=================================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: ParameterizationLut
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.DwarfPlanet &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.Ephemeris" href="pySkyExplorer.Ephemeris.html" />
+    <link rel="prev" title="pySkyExplorer.DrawableInsert" href="pySkyExplorer.DrawableInsert.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.DwarfPlanet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.DwarfPlanetName"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.DwarfPlanetName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.DwarfPlanetPort"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.DwarfPlanetPort</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.PatchLayer"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.PatchLayer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.TerrainModel"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.TerrainModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.addChild"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.addChild()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.patchLayerAdd"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.patchLayerAdd()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.patchLayerClear"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.patchLayerClear()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.portId"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.portId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setFlatteningFactor"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setFlatteningFactor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setIntensity"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setLabelIntensity"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setLabelIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setLivePatchBottomLeft"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setLivePatchBottomLeft()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setLivePatchGamma"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setLivePatchGamma()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setLivePatchHsv"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setLivePatchHsv()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setLivePatchIntensity"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setLivePatchIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setLivePatchKeyColor"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setLivePatchKeyColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setLivePatchRotation"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setLivePatchRotation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setLivePatchTexture"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setLivePatchTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setLivePatchTopRight"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setLivePatchTopRight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setLivePatchVibrance"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setLivePatchVibrance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setOrbitIntensity"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setOrbitIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setPatchLayerGamma"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setPatchLayerGamma()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setPatchLayerHsv"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setPatchLayerHsv()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setPatchLayerKeyColor"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setPatchLayerKeyColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setPatchLayerOpacity"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setPatchLayerOpacity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setPatchLayerVibrance"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setPatchLayerVibrance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setPointerIntensity"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setPointerIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setPointerType"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setPointerType()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setShadowContrast"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setShadowContrast()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setShadowStrength"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setShadowStrength()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setTerrainModel"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setTerrainModel()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.setTrajectoryIntensity"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.setTrajectoryIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.flatteningFactor"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.flatteningFactor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.flatteningOriginal"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.flatteningOriginal</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.id"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.intensity"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.intensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.labelIntensity"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.labelIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.livePatchBottomLeft"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.livePatchBottomLeft</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.livePatchGamma"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.livePatchGamma</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.livePatchHsv"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.livePatchHsv</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.livePatchIntensity"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.livePatchIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.livePatchKeyColor"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.livePatchKeyColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.livePatchRotation"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.livePatchRotation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.livePatchTexture"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.livePatchTexture</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.livePatchTopRight"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.livePatchTopRight</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.livePatchVibrance"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.livePatchVibrance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.name"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.orbitIntensity"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.orbitIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.osgId"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.pointerIntensity"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.pointerIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.pointerType"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.pointerType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.position"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.position</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.shadowContrast"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.shadowContrast</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.shadowStrength"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.shadowStrength</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.terrainModel"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.terrainModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DwarfPlanet.trajectoryIntensity"><code class="docutils literal notranslate"><span class="pre">DwarfPlanet.trajectoryIntensity</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.DwarfPlanet</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.DwarfPlanet.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-dwarfplanet">
+<h1>pySkyExplorer.DwarfPlanet<a class="headerlink" href="#pyskyexplorer-dwarfplanet" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">DwarfPlanet</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.DwarfPlanetName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DwarfPlanetName</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.DwarfPlanetName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available dwarf planet name.</p>
+<p><strong>InvalidDwarfPlanet</strong></p>
+<p><strong>Pluton</strong></p>
+<p><strong>Ceres</strong></p>
+<p><strong>Eris</strong></p>
+<p><strong>Haumea</strong></p>
+<p><strong>Makemake</strong></p>
+<p><strong>DwarfPlanetCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.DwarfPlanetPort">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DwarfPlanetPort</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.DwarfPlanetPort" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available ports on dwarf planet.</p>
+<p><strong>InvalidDwarfPlanetPort</strong></p>
+<p><strong>Ecliptic</strong></p>
+<p><strong>Equatorial</strong></p>
+<p><strong>EquatorialSynchronous</strong></p>
+<p><strong>Galactic</strong></p>
+<p><strong>OrbitalMeanEquinox</strong></p>
+<p><strong>EquatorialJ2000</strong></p>
+<p><strong>NoonEcliptic</strong></p>
+<p><strong>NoonEquatorial</strong></p>
+<p><strong>DwarfPlanetPortCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.PatchLayer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PatchLayer</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.PatchLayer" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available dwarf planet’s patch layer</p>
+<p><strong>InvalidPatchLayer</strong></p>
+<p><strong>Layer_01</strong></p>
+<p><strong>Layer_02</strong></p>
+<p><strong>PatchLayerCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.TerrainModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TerrainModel</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.TerrainModel" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available dwarf planet’s modelSet</p>
+<p><strong>InvalidTerrainModel</strong></p>
+<p><strong>DefaultTerrain</strong></p>
+<p><strong>Basic</strong></p>
+<p><strong>NewHorizons</strong></p>
+<p><strong>DawnHamo</strong></p>
+<p><strong>DawnLamo</strong></p>
+<p><strong>TerrainModelCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.addChild">
+<span class="sig-name descname"><span class="pre">addChild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)child</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(DwarfPlanetPort)port</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.addChild" title="Permalink to this definition"></a></dt>
+<dd><p>Add a child object to the dwarf planet scene graph.
+PARAMETERS:
+child : int</p>
+<blockquote>
+<div><p>Id of the child object to add.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>port<span class="classifier">DwarfPlanetPort</span></dt><dd><p>Coordinate system to use for adding child. See ‘DwarfPlanetPort’ documentation for available ports.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.patchLayerAdd">
+<span class="sig-name descname"><span class="pre">patchLayerAdd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PatchLayer)layerId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)patchId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.patchLayerAdd" title="Permalink to this definition"></a></dt>
+<dd><p>Add a layer to planet patch
+PARAMETERS:
+layerId : PatchLayer</p>
+<p>patchId : int</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.patchLayerClear">
+<span class="sig-name descname"><span class="pre">patchLayerClear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PatchLayer)layerId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.patchLayerClear" title="Permalink to this definition"></a></dt>
+<dd><p>Remove all patch layer from planet
+PARAMETERS:
+layerId : PatchLayer</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.portId">
+<span class="sig-name descname"><span class="pre">portId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(DwarfPlanetPort)portName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.portId" title="Permalink to this definition"></a></dt>
+<dd><p>Return the id of the given port
+PARAMETERS:
+portName : DwarfPlanetPort</p>
+<blockquote>
+<div><p>Name of the port. See ‘DwarfPlanetPort’ documentation for more information.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setFlatteningFactor">
+<span class="sig-name descname"><span class="pre">setFlatteningFactor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)flatteningFactor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setFlatteningFactor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+flatteningFactor : double
+Flattening factor of the dwarf planet.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setIntensity">
+<span class="sig-name descname"><span class="pre">setIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+intensity : double
+Intensity of the dwarf planet.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setLabelIntensity">
+<span class="sig-name descname"><span class="pre">setLabelIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)labelIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setLabelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+labelIntensity : double
+Intensity of the dwarf planet’s label.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setLivePatchBottomLeft">
+<span class="sig-name descname"><span class="pre">setLivePatchBottomLeft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)livePatchBottomLeft</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setLivePatchBottomLeft" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchBottomLeft : Vec
+South west LBR point of the patch. Unit : degrees.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setLivePatchGamma">
+<span class="sig-name descname"><span class="pre">setLivePatchGamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)livePatchGamma</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setLivePatchGamma" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchGamma : Vec
+Gamma correction for the patch.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setLivePatchHsv">
+<span class="sig-name descname"><span class="pre">setLivePatchHsv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)livePatchHsv</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setLivePatchHsv" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchHsv : Vec
+Hue, Saturation and Lightness value used for the patch.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setLivePatchIntensity">
+<span class="sig-name descname"><span class="pre">setLivePatchIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)livePatchIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setLivePatchIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchIntensity : double
+Intensity of the live patch. Usually in range [0;1]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setLivePatchKeyColor">
+<span class="sig-name descname"><span class="pre">setLivePatchKeyColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec4)livePatchKeyColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setLivePatchKeyColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchKeyColor : Vec4
+Color to remove from patch texture (RGB + tolerance).</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setLivePatchRotation">
+<span class="sig-name descname"><span class="pre">setLivePatchRotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)livePatchRotation</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setLivePatchRotation" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchRotation : double
+Rotation of the patch around center point in degrees.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setLivePatchTexture">
+<span class="sig-name descname"><span class="pre">setLivePatchTexture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)livePatchTexture</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setLivePatchTexture" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchTexture : str
+Texture to apply on the live patch.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setLivePatchTopRight">
+<span class="sig-name descname"><span class="pre">setLivePatchTopRight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)livePatchTopRight</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setLivePatchTopRight" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchTopRight : Vec
+North east LBR point of the patch. Unit : degrees.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setLivePatchVibrance">
+<span class="sig-name descname"><span class="pre">setLivePatchVibrance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)livePatchVibrance</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setLivePatchVibrance" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+livePatchVibrance : double
+Vibrance value used in coordination with HSV value.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setOrbitIntensity">
+<span class="sig-name descname"><span class="pre">setOrbitIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)orbitIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setOrbitIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+orbitIntensity : double
+Intensity of the dwarf planet’s orbit.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setPatchLayerGamma">
+<span class="sig-name descname"><span class="pre">setPatchLayerGamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PatchLayer)layerId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setPatchLayerGamma" title="Permalink to this definition"></a></dt>
+<dd><p>Gamma correction for the patc layerh.
+PARAMETERS:
+layerId : PatchLayer</p>
+<p>gamma : Vec</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setPatchLayerHsv">
+<span class="sig-name descname"><span class="pre">setPatchLayerHsv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PatchLayer)layerId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)hsv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setPatchLayerHsv" title="Permalink to this definition"></a></dt>
+<dd><p>Hue, Saturation and Lightness value used for the patch layer.
+PARAMETERS:
+layerId : PatchLayer</p>
+<p>hsv : Vec</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setPatchLayerKeyColor">
+<span class="sig-name descname"><span class="pre">setPatchLayerKeyColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PatchLayer)layerId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec4)keColor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setPatchLayerKeyColor" title="Permalink to this definition"></a></dt>
+<dd><p>Color to remove from patch texture (RGB + tolerance).
+PARAMETERS:
+layerId : PatchLayer</p>
+<p>keColor : Vec4</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setPatchLayerOpacity">
+<span class="sig-name descname"><span class="pre">setPatchLayerOpacity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PatchLayer)layerId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)opacity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setPatchLayerOpacity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the patch layer. Usually in range [0;1]
+PARAMETERS:
+layerId : PatchLayer</p>
+<p>opacity : double</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setPatchLayerVibrance">
+<span class="sig-name descname"><span class="pre">setPatchLayerVibrance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PatchLayer)layerId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)vibrance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setPatchLayerVibrance" title="Permalink to this definition"></a></dt>
+<dd><p>Vibrance value used in coordination with HSV value of the patch layer.
+PARAMETERS:
+layerId : PatchLayer</p>
+<p>vibrance : double</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setPointerIntensity">
+<span class="sig-name descname"><span class="pre">setPointerIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)pointerIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setPointerIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+pointerIntensity : double
+Intensity of the dwarf planet’s pointer.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setPointerType">
+<span class="sig-name descname"><span class="pre">setPointerType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PointerType)pointerType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setPointerType" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+pointerType : PointerType
+Current dwarf planet pointer type. See ‘Body.PointerType’ documentation for vailable values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setShadowContrast">
+<span class="sig-name descname"><span class="pre">setShadowContrast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)shadowContrast</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setShadowContrast" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+shadowContrast : double
+Contrast of the planet’s shadow.
+Usually in range [0;1]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setShadowStrength">
+<span class="sig-name descname"><span class="pre">setShadowStrength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)shadowStrength</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setShadowStrength" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+shadowStrength : double
+Strength of the planet’s shadow.
+Usually in range [0;1]</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setTerrainModel">
+<span class="sig-name descname"><span class="pre">setTerrainModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(TerrainModel)terrainModel</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setTerrainModel" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+terrainModel : TerrainModel</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.setTrajectoryIntensity">
+<span class="sig-name descname"><span class="pre">setTrajectoryIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DwarfPlanet)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)trajectoryIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.setTrajectoryIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+trajectoryIntensity : double
+Intensity of dwarf planet’s trajectory. 
+Usually in range [0;1].
+If set to positive value, the dwarf planet will draw a line according to it’s movement on the dome.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.flatteningFactor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">flatteningFactor</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.flatteningFactor" title="Permalink to this definition"></a></dt>
+<dd><p>Flattening factor of the dwarf planet.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.flatteningOriginal">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">flatteningOriginal</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.flatteningOriginal" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Read-only original flattening (0 means no flattening).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.intensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the dwarf planet.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.labelIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">labelIntensity</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.labelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the dwarf planet’s label.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.livePatchBottomLeft">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchBottomLeft</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.livePatchBottomLeft" title="Permalink to this definition"></a></dt>
+<dd><p>South west LBR point of the patch. Unit : degrees.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.livePatchGamma">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchGamma</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.livePatchGamma" title="Permalink to this definition"></a></dt>
+<dd><p>Gamma correction for the patch.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.livePatchHsv">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchHsv</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.livePatchHsv" title="Permalink to this definition"></a></dt>
+<dd><p>Hue, Saturation and Lightness value used for the patch.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.livePatchIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchIntensity</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.livePatchIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the live patch. Usually in range [0;1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.livePatchKeyColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchKeyColor</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.livePatchKeyColor" title="Permalink to this definition"></a></dt>
+<dd><p>Color to remove from patch texture (RGB + tolerance).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.livePatchRotation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchRotation</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.livePatchRotation" title="Permalink to this definition"></a></dt>
+<dd><p>Rotation of the patch around center point in degrees.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.livePatchTexture">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchTexture</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.livePatchTexture" title="Permalink to this definition"></a></dt>
+<dd><p>Texture to apply on the live patch.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.livePatchTopRight">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchTopRight</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.livePatchTopRight" title="Permalink to this definition"></a></dt>
+<dd><p>North east LBR point of the patch. Unit : degrees.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.livePatchVibrance">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">livePatchVibrance</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.livePatchVibrance" title="Permalink to this definition"></a></dt>
+<dd><p>Vibrance value used in coordination with HSV value.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.orbitIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orbitIntensity</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.orbitIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the dwarf planet’s orbit.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.pointerIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pointerIntensity</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.pointerIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the dwarf planet’s pointer.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.pointerType">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pointerType</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.pointerType" title="Permalink to this definition"></a></dt>
+<dd><p>Current dwarf planet pointer type. See ‘Body.PointerType’ documentation for vailable values.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.position">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.position" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Position of the body in ICRF coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.shadowContrast">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shadowContrast</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.shadowContrast" title="Permalink to this definition"></a></dt>
+<dd><p>Contrast of the planet’s shadow.
+Usually in range [0;1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.shadowStrength">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shadowStrength</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.shadowStrength" title="Permalink to this definition"></a></dt>
+<dd><p>Strength of the planet’s shadow.
+Usually in range [0;1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.terrainModel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">terrainModel</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.terrainModel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.DwarfPlanet.trajectoryIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trajectoryIntensity</span></span><a class="headerlink" href="#pySkyExplorer.DwarfPlanet.trajectoryIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of dwarf planet’s trajectory. 
+Usually in range [0;1].
+If set to positive value, the dwarf planet will draw a line according to it’s movement on the dome.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.DrawableInsert.html" class="btn btn-neutral float-left" title="pySkyExplorer.DrawableInsert" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.Ephemeris.html" class="btn btn-neutral float-right" title="pySkyExplorer.Ephemeris" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

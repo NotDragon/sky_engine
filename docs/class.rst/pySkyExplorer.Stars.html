@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.Stars &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.Universe" href="pySkyExplorer.Universe.html" />
+    <link rel="prev" title="pySkyExplorer.SlideShowHandler" href="pySkyExplorer.SlideShowHandler.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.Stars</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.Stars"><code class="docutils literal notranslate"><span class="pre">Stars</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.Catalog"><code class="docutils literal notranslate"><span class="pre">Stars.Catalog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.Comparator"><code class="docutils literal notranslate"><span class="pre">Stars.Comparator</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.Filter"><code class="docutils literal notranslate"><span class="pre">Stars.Filter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.LogicOperator"><code class="docutils literal notranslate"><span class="pre">Stars.LogicOperator</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.LuminosityClass"><code class="docutils literal notranslate"><span class="pre">Stars.LuminosityClass</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.Modelset"><code class="docutils literal notranslate"><span class="pre">Stars.Modelset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.SpectralType"><code class="docutils literal notranslate"><span class="pre">Stars.SpectralType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.StarsName"><code class="docutils literal notranslate"><span class="pre">Stars.StarsName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.StarsPort"><code class="docutils literal notranslate"><span class="pre">Stars.StarsPort</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.addChild"><code class="docutils literal notranslate"><span class="pre">Stars.addChild()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.assignLut"><code class="docutils literal notranslate"><span class="pre">Stars.assignLut()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.filterAdd"><code class="docutils literal notranslate"><span class="pre">Stars.filterAdd()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.filterCatalogAdd"><code class="docutils literal notranslate"><span class="pre">Stars.filterCatalogAdd()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.filterClear"><code class="docutils literal notranslate"><span class="pre">Stars.filterClear()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.filterEvaluate"><code class="docutils literal notranslate"><span class="pre">Stars.filterEvaluate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.filterLuminosityClassAdd"><code class="docutils literal notranslate"><span class="pre">Stars.filterLuminosityClassAdd()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.filterSpectralTypeAdd"><code class="docutils literal notranslate"><span class="pre">Stars.filterSpectralTypeAdd()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.portId"><code class="docutils literal notranslate"><span class="pre">Stars.portId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.setContrast"><code class="docutils literal notranslate"><span class="pre">Stars.setContrast()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.setDefaultLabelIntensity"><code class="docutils literal notranslate"><span class="pre">Stars.setDefaultLabelIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.setExposure"><code class="docutils literal notranslate"><span class="pre">Stars.setExposure()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.setFilterHighlight"><code class="docutils literal notranslate"><span class="pre">Stars.setFilterHighlight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.setHybridRatio"><code class="docutils literal notranslate"><span class="pre">Stars.setHybridRatio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.setIntensity"><code class="docutils literal notranslate"><span class="pre">Stars.setIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.setModelset"><code class="docutils literal notranslate"><span class="pre">Stars.setModelset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.setPointSaturation"><code class="docutils literal notranslate"><span class="pre">Stars.setPointSaturation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.setProperMotion"><code class="docutils literal notranslate"><span class="pre">Stars.setProperMotion()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.setProperMotionOffset"><code class="docutils literal notranslate"><span class="pre">Stars.setProperMotionOffset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.setProperMotionOffsetInYears"><code class="docutils literal notranslate"><span class="pre">Stars.setProperMotionOffsetInYears()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.setRealTwinklingAmplitude"><code class="docutils literal notranslate"><span class="pre">Stars.setRealTwinklingAmplitude()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.setTwinklingAmplitude"><code class="docutils literal notranslate"><span class="pre">Stars.setTwinklingAmplitude()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.setUseHybridRatio"><code class="docutils literal notranslate"><span class="pre">Stars.setUseHybridRatio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.setVariability"><code class="docutils literal notranslate"><span class="pre">Stars.setVariability()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.contrast"><code class="docutils literal notranslate"><span class="pre">Stars.contrast</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.defaultLabelIntensity"><code class="docutils literal notranslate"><span class="pre">Stars.defaultLabelIntensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.exposure"><code class="docutils literal notranslate"><span class="pre">Stars.exposure</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.filterHighlight"><code class="docutils literal notranslate"><span class="pre">Stars.filterHighlight</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.hybridRatio"><code class="docutils literal notranslate"><span class="pre">Stars.hybridRatio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.id"><code class="docutils literal notranslate"><span class="pre">Stars.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.intensity"><code class="docutils literal notranslate"><span class="pre">Stars.intensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.isProperMotionActive"><code class="docutils literal notranslate"><span class="pre">Stars.isProperMotionActive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.isTwinklingActive"><code class="docutils literal notranslate"><span class="pre">Stars.isTwinklingActive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.modelset"><code class="docutils literal notranslate"><span class="pre">Stars.modelset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.name"><code class="docutils literal notranslate"><span class="pre">Stars.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.osgId"><code class="docutils literal notranslate"><span class="pre">Stars.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.pointSaturation"><code class="docutils literal notranslate"><span class="pre">Stars.pointSaturation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.position"><code class="docutils literal notranslate"><span class="pre">Stars.position</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.properMotion"><code class="docutils literal notranslate"><span class="pre">Stars.properMotion</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.properMotionOffset"><code class="docutils literal notranslate"><span class="pre">Stars.properMotionOffset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.properMotionOffsetInYears"><code class="docutils literal notranslate"><span class="pre">Stars.properMotionOffsetInYears</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.realTwinklingAmplitude"><code class="docutils literal notranslate"><span class="pre">Stars.realTwinklingAmplitude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.twinklingAmplitude"><code class="docutils literal notranslate"><span class="pre">Stars.twinklingAmplitude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.useHybridRatio"><code class="docutils literal notranslate"><span class="pre">Stars.useHybridRatio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Stars.variability"><code class="docutils literal notranslate"><span class="pre">Stars.variability</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.Stars</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.Stars.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-stars">
+<h1>pySkyExplorer.Stars<a class="headerlink" href="#pyskyexplorer-stars" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">Stars</span></span><a class="headerlink" href="#pySkyExplorer.Stars" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.Catalog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Catalog</span></span><a class="headerlink" href="#pySkyExplorer.Stars.Catalog" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidCatalog</strong></p>
+<p><strong>GJ</strong></p>
+<p><strong>HD</strong></p>
+<p><strong>HIP</strong></p>
+<p><strong>HR</strong></p>
+<p><strong>TYC</strong></p>
+<p><strong>CatalogCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.Comparator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Comparator</span></span><a class="headerlink" href="#pySkyExplorer.Stars.Comparator" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidComparator</strong></p>
+<p><strong>EqualTo</strong></p>
+<p><strong>NotEqualTo</strong></p>
+<p><strong>LessThanOrEqualTo</strong></p>
+<p><strong>LessThan</strong></p>
+<p><strong>GreatherThanOrEqualTo</strong></p>
+<p><strong>GreatherThan</strong></p>
+<p><strong>ComparatorCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.Filter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Filter</span></span><a class="headerlink" href="#pySkyExplorer.Stars.Filter" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidFilter</strong></p>
+<p><strong>Distance</strong></p>
+<p><strong>AbsoluteMagnitude</strong></p>
+<p><strong>ApparentMagnitude</strong></p>
+<p><strong>ProperMotion</strong></p>
+<p><strong>EffectiveTemperature</strong></p>
+<p><strong>RightAscension</strong></p>
+<p><strong>Declination</strong></p>
+<p><strong>Radius</strong></p>
+<p><strong>FilterCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.LogicOperator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LogicOperator</span></span><a class="headerlink" href="#pySkyExplorer.Stars.LogicOperator" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidLogicOperator</strong></p>
+<p><strong>And</strong></p>
+<p><strong>Or</strong></p>
+<p><strong>LogicOperatorCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.LuminosityClass">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LuminosityClass</span></span><a class="headerlink" href="#pySkyExplorer.Stars.LuminosityClass" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidLuminosityClass</strong></p>
+<p><strong>I</strong></p>
+<p><strong>II</strong></p>
+<p><strong>III</strong></p>
+<p><strong>IV</strong></p>
+<p><strong>V</strong></p>
+<p><strong>VI</strong></p>
+<p><strong>VII</strong></p>
+<p><strong>LuminosityClassCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.Modelset">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Modelset</span></span><a class="headerlink" href="#pySkyExplorer.Stars.Modelset" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidModelset</strong></p>
+<p><strong>Hipparcos</strong></p>
+<p><strong>GaiaDR2</strong></p>
+<p><strong>ModelsetCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.SpectralType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SpectralType</span></span><a class="headerlink" href="#pySkyExplorer.Stars.SpectralType" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidSpectralType</strong></p>
+<p><strong>M</strong></p>
+<p><strong>K</strong></p>
+<p><strong>G</strong></p>
+<p><strong>F</strong></p>
+<p><strong>A</strong></p>
+<p><strong>B</strong></p>
+<p><strong>O</strong></p>
+<p><strong>Other</strong></p>
+<p><strong>SpectralTypeCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.StarsName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StarsName</span></span><a class="headerlink" href="#pySkyExplorer.Stars.StarsName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available bodies.</p>
+<p><strong>InvalidStars</strong></p>
+<p><strong>StarrySky</strong></p>
+<p><strong>StarsCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.StarsPort">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StarsPort</span></span><a class="headerlink" href="#pySkyExplorer.Stars.StarsPort" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available ports on starry sky.</p>
+<p><strong>InvalidStarsPort</strong></p>
+<p><strong>Ecliptic</strong></p>
+<p><strong>TerrestrialEquatorialJ2000</strong></p>
+<p><strong>StarsPortCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.addChild">
+<span class="sig-name descname"><span class="pre">addChild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)child</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(StarsPort)port</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.addChild" title="Permalink to this definition"></a></dt>
+<dd><p>Add a child object to the stars scene graph.
+PARAMETERS:
+child : int</p>
+<blockquote>
+<div><p>Id of the child object to add.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>port<span class="classifier">StarsPort</span></dt><dd><p>Coordinate system to use for adding child. See StarsPort documentation for more information.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.assignLut">
+<span class="sig-name descname"><span class="pre">assignLut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)lutId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.assignLut" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+lutId : int</p>
+<p>animator : Animator default value : Animator()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.filterAdd">
+<span class="sig-name descname"><span class="pre">filterAdd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Filter)filter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Comparator)comp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(LogicOperator)op</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.filterAdd" title="Permalink to this definition"></a></dt>
+<dd><p>Add filter. Only with Gaia DR2
+PARAMETERS:
+filter : Filter</p>
+<p>value : double</p>
+<p>comp : Comparator</p>
+<p>op : LogicOperator</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.filterCatalogAdd">
+<span class="sig-name descname"><span class="pre">filterCatalogAdd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Catalog)catalog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Comparator)comp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(LogicOperator)op</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.filterCatalogAdd" title="Permalink to this definition"></a></dt>
+<dd><p>Add filter. Only with Gaia DR2
+PARAMETERS:
+catalog : Catalog</p>
+<p>comp : Comparator</p>
+<p>op : LogicOperator</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.filterClear">
+<span class="sig-name descname"><span class="pre">filterClear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.filterClear" title="Permalink to this definition"></a></dt>
+<dd><p>Clear all filters. Only with Gaia DR2</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.filterEvaluate">
+<span class="sig-name descname"><span class="pre">filterEvaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.filterEvaluate" title="Permalink to this definition"></a></dt>
+<dd><p>Evaluate/Apply all filters. Only with Gaia DR2</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.filterLuminosityClassAdd">
+<span class="sig-name descname"><span class="pre">filterLuminosityClassAdd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(LuminosityClass)luminosityClass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Comparator)comp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(LogicOperator)op</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.filterLuminosityClassAdd" title="Permalink to this definition"></a></dt>
+<dd><p>Add filter. Only with Gaia DR2
+PARAMETERS:
+luminosityClass : LuminosityClass</p>
+<p>comp : Comparator</p>
+<p>op : LogicOperator</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.filterSpectralTypeAdd">
+<span class="sig-name descname"><span class="pre">filterSpectralTypeAdd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(SpectralType)spectralType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)subType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Comparator)comp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(LogicOperator)op</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.filterSpectralTypeAdd" title="Permalink to this definition"></a></dt>
+<dd><p>Add filter. Only with Gaia DR2
+PARAMETERS:
+spectralType : SpectralType</p>
+<p>subType : double</p>
+<p>comp : Comparator</p>
+<p>op : LogicOperator</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.portId">
+<span class="sig-name descname"><span class="pre">portId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(StarsPort)portName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.portId" title="Permalink to this definition"></a></dt>
+<dd><p>Return the id of the given port
+PARAMETERS:
+portName : StarsPort</p>
+<blockquote>
+<div><p>Name of the port. See ‘StarsPort’ documentation for more information.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.setContrast">
+<span class="sig-name descname"><span class="pre">setContrast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)contrast</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.setContrast" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+contrast : double
+Contrast. Only with Gaia DR2</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.setDefaultLabelIntensity">
+<span class="sig-name descname"><span class="pre">setDefaultLabelIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)defaultLabelIntensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.setDefaultLabelIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+defaultLabelIntensity : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.setExposure">
+<span class="sig-name descname"><span class="pre">setExposure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)exposure</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.setExposure" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+exposure : double
+Exposure. Only with Gaia DR2</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.setFilterHighlight">
+<span class="sig-name descname"><span class="pre">setFilterHighlight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)filterHighlight</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.setFilterHighlight" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+filterHighlight : bool
+ON: higlight stars passing filter. OFF: hide stars not passing filter. Only with Gaia DR2</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.setHybridRatio">
+<span class="sig-name descname"><span class="pre">setHybridRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)hybridRatio</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.setHybridRatio" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+hybridRatio : double
+Used to define which device will display the star catalog.
+Set to 0 to use digital device or 1 to use optical device.
+This value musn’t be used on non hybrid system.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.setIntensity">
+<span class="sig-name descname"><span class="pre">setIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.setIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+intensity : double
+Intensity of the star catalog.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.setModelset">
+<span class="sig-name descname"><span class="pre">setModelset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Modelset)modelset</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.setModelset" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+modelset : Modelset
+Modelset (Hipparcos, GaiaDR2).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.setPointSaturation">
+<span class="sig-name descname"><span class="pre">setPointSaturation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)pointSaturation</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.setPointSaturation" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+pointSaturation : double
+Change start dot saturation.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.setProperMotion">
+<span class="sig-name descname"><span class="pre">setProperMotion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)properMotion</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.setProperMotion" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+properMotion : bool
+Set up the proper motion On/Off (in years).</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.setProperMotionOffset">
+<span class="sig-name descname"><span class="pre">setProperMotionOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)properMotionOffset</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.setProperMotionOffset" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+properMotionOffset : double
+Set up the time offset of proper motion (in years).</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.setProperMotionOffsetInYears">
+<span class="sig-name descname"><span class="pre">setProperMotionOffsetInYears</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)properMotionOffsetInYears</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.setProperMotionOffsetInYears" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+properMotionOffsetInYears : double
+Set up the proper motion On/Off (in years) without use star static.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.setRealTwinklingAmplitude">
+<span class="sig-name descname"><span class="pre">setRealTwinklingAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)realTwinklingAmplitude</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.setRealTwinklingAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+realTwinklingAmplitude : double
+Real twinkling amplitude of stars without pre-treatment.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.setTwinklingAmplitude">
+<span class="sig-name descname"><span class="pre">setTwinklingAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)twinklingAmplitude</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.setTwinklingAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+twinklingAmplitude : double
+Twinkling amplitude of stars.
+Be carefull, if set to 0, stars will stop twinkling immediatly.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.setUseHybridRatio">
+<span class="sig-name descname"><span class="pre">setUseHybridRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)useHybridRatio</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.setUseHybridRatio" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+useHybridRatio : double
+Used to define how value will be handled.
+Set to 0 to let the system choose the device or to 1 to manually choose the device (using ‘hybrid ratio’ value).
+This value musn’t be used on non hybrid system.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.setVariability">
+<span class="sig-name descname"><span class="pre">setVariability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Stars)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)variability</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Stars.setVariability" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+variability : bool
+Activate or not the variability of stars.</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.contrast">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">contrast</span></span><a class="headerlink" href="#pySkyExplorer.Stars.contrast" title="Permalink to this definition"></a></dt>
+<dd><p>Contrast. Only with Gaia DR2</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.defaultLabelIntensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">defaultLabelIntensity</span></span><a class="headerlink" href="#pySkyExplorer.Stars.defaultLabelIntensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.exposure">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">exposure</span></span><a class="headerlink" href="#pySkyExplorer.Stars.exposure" title="Permalink to this definition"></a></dt>
+<dd><p>Exposure. Only with Gaia DR2</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.filterHighlight">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filterHighlight</span></span><a class="headerlink" href="#pySkyExplorer.Stars.filterHighlight" title="Permalink to this definition"></a></dt>
+<dd><p>ON: higlight stars passing filter. OFF: hide stars not passing filter. Only with Gaia DR2</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.hybridRatio">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hybridRatio</span></span><a class="headerlink" href="#pySkyExplorer.Stars.hybridRatio" title="Permalink to this definition"></a></dt>
+<dd><p>Used to define which device will display the star catalog.
+Set to 0 to use digital device or 1 to use optical device.
+This value musn’t be used on non hybrid system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.Stars.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pySkyExplorer.Stars.intensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the star catalog.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.isProperMotionActive">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isProperMotionActive</span></span><a class="headerlink" href="#pySkyExplorer.Stars.isProperMotionActive" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Flag use to know if stars proper motion is currently activated.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.isTwinklingActive">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isTwinklingActive</span></span><a class="headerlink" href="#pySkyExplorer.Stars.isTwinklingActive" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Flag use to know if stars twinkling is enabled</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.modelset">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">modelset</span></span><a class="headerlink" href="#pySkyExplorer.Stars.modelset" title="Permalink to this definition"></a></dt>
+<dd><p>Modelset (Hipparcos, GaiaDR2).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.Stars.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.Stars.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.pointSaturation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pointSaturation</span></span><a class="headerlink" href="#pySkyExplorer.Stars.pointSaturation" title="Permalink to this definition"></a></dt>
+<dd><p>Change start dot saturation.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.position">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#pySkyExplorer.Stars.position" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Position of the star catalog in ICRF coordinate system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.properMotion">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">properMotion</span></span><a class="headerlink" href="#pySkyExplorer.Stars.properMotion" title="Permalink to this definition"></a></dt>
+<dd><p>Set up the proper motion On/Off (in years).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.properMotionOffset">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">properMotionOffset</span></span><a class="headerlink" href="#pySkyExplorer.Stars.properMotionOffset" title="Permalink to this definition"></a></dt>
+<dd><p>Set up the time offset of proper motion (in years).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.properMotionOffsetInYears">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">properMotionOffsetInYears</span></span><a class="headerlink" href="#pySkyExplorer.Stars.properMotionOffsetInYears" title="Permalink to this definition"></a></dt>
+<dd><p>Set up the proper motion On/Off (in years) without use star static.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.realTwinklingAmplitude">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">realTwinklingAmplitude</span></span><a class="headerlink" href="#pySkyExplorer.Stars.realTwinklingAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>Real twinkling amplitude of stars without pre-treatment.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.twinklingAmplitude">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">twinklingAmplitude</span></span><a class="headerlink" href="#pySkyExplorer.Stars.twinklingAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>Twinkling amplitude of stars.
+Be carefull, if set to 0, stars will stop twinkling immediatly.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.useHybridRatio">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">useHybridRatio</span></span><a class="headerlink" href="#pySkyExplorer.Stars.useHybridRatio" title="Permalink to this definition"></a></dt>
+<dd><p>Used to define how value will be handled.
+Set to 0 to let the system choose the device or to 1 to manually choose the device (using ‘hybrid ratio’ value).
+This value musn’t be used on non hybrid system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Stars.variability">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">variability</span></span><a class="headerlink" href="#pySkyExplorer.Stars.variability" title="Permalink to this definition"></a></dt>
+<dd><p>Activate or not the variability of stars.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.SlideShowHandler.html" class="btn btn-neutral float-left" title="pySkyExplorer.SlideShowHandler" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.Universe.html" class="btn btn-neutral float-right" title="pySkyExplorer.Universe" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

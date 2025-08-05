@@ -1,0 +1,10 @@
+pySkyExplorer.DomePointer
+=========================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: DomePointer
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

@@ -1,0 +1,10 @@
+pySkyExplorer.Body
+==================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Body
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

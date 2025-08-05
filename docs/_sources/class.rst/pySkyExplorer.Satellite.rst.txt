@@ -1,0 +1,10 @@
+pySkyExplorer.Satellite
+=======================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Satellite
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

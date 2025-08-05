@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>studio.Data &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="studio.DataManager" href="studio.DataManager.html" />
+    <link rel="prev" title="studio.Configuration" href="studio.Configuration.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="studio.html">studio</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="studio.Action.html">studio.Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.AdvancedCamera.html">studio.AdvancedCamera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.AudienceResponseSystem.html">studio.AudienceResponseSystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.Configuration.html">studio.Configuration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">studio.Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#studio.Data"><code class="docutils literal notranslate"><span class="pre">Data</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#studio.Data.Type"><code class="docutils literal notranslate"><span class="pre">Data.Type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#studio.Data.action"><code class="docutils literal notranslate"><span class="pre">Data.action()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#studio.Data.defaultAction"><code class="docutils literal notranslate"><span class="pre">Data.defaultAction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#studio.Data.id"><code class="docutils literal notranslate"><span class="pre">Data.id</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="studio.DataManager.html">studio.DataManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.QObject.html">studio.QObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.ShowMonitor.html">studio.ShowMonitor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.Vec2.html">studio.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studio.VotingDevice.html">studio.VotingDevice</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="studio.html">studio</a></li>
+      <li class="breadcrumb-item active">studio.Data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/studio.Data.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="studio-data">
+<h1>studio.Data<a class="headerlink" href="#studio-data" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="studio.Data">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">studio.</span></span><span class="sig-name descname"><span class="pre">Data</span></span><a class="headerlink" href="#studio.Data" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="studio.Data.Type">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#studio.Data.Type" title="Permalink to this definition"></a></dt>
+<dd><p><strong>InvalidType</strong></p>
+<p><strong>DatumType</strong></p>
+<p><strong>SdkObjectType</strong></p>
+<p><strong>AstronomicalObjectType</strong></p>
+<p><strong>GalaxyType</strong></p>
+<p><strong>StarType</strong></p>
+<p><strong>PlanetType</strong></p>
+<p><strong>SatelliteType</strong></p>
+<p><strong>DwarfPlanetType</strong></p>
+<p><strong>CometType</strong></p>
+<p><strong>AsteroidType</strong></p>
+<p><strong>NebulaType</strong></p>
+<p><strong>AudioType</strong></p>
+<p><strong>FullDomeVideoType</strong></p>
+<p><strong>MovieType</strong></p>
+<p><strong>TrailerType</strong></p>
+<p><strong>ScriptType</strong></p>
+<p><strong>SpcType</strong></p>
+<p><strong>ConstellationType</strong></p>
+<p><strong>DateType</strong></p>
+<p><strong>FontType</strong></p>
+<p><strong>DeepSkyObjectType</strong></p>
+<p><strong>ImageType</strong></p>
+<p><strong>ImageStandardType</strong></p>
+<p><strong>ImageFisheyeType</strong></p>
+<p><strong>ImagePanoramaType</strong></p>
+<p><strong>Model3DType</strong></p>
+<p><strong>PlaceType</strong></p>
+<p><strong>CityType</strong></p>
+<p><strong>GenericPlaceType</strong></p>
+<p><strong>MountainType</strong></p>
+<p><strong>VolcanoType</strong></p>
+<p><strong>CraterType</strong></p>
+<p><strong>PlanetariumType</strong></p>
+<p><strong>SlideShowType</strong></p>
+<p><strong>GlobularClusterType</strong></p>
+<p><strong>VoteType</strong></p>
+<p><strong>QuestionVoteType</strong></p>
+<p><strong>QuizzVoteType</strong></p>
+<p><strong>Legacy_BuzzerVoteType</strong></p>
+<p><strong>DecisionVoteType</strong></p>
+<p><strong>ManipulatorVoteType</strong></p>
+<p><strong>DatasetType</strong></p>
+<p><strong>PythonScriptType</strong></p>
+<p><strong>BookmarkType</strong></p>
+<p><strong>DrawingType</strong></p>
+<p><strong>MessierType</strong></p>
+<p><strong>NgcType</strong></p>
+<p><strong>GenericGroupType</strong></p>
+<p><strong>PatchType</strong></p>
+<p><strong>AsterismType</strong></p>
+<p><strong>ShootingStarType</strong></p>
+<p><strong>JPLHorizonsType</strong></p>
+<p><strong>SkySurveyType</strong></p>
+<p><strong>DatasetGroupType</strong></p>
+<p><strong>Model3DAstroType</strong></p>
+<p><strong>JsScriptType</strong></p>
+<p><strong>SkyQualityType</strong></p>
+<p><strong>BolideType</strong></p>
+<p><strong>StarColorsType</strong></p>
+<p><strong>StarFiltersType</strong></p>
+<p><strong>LightType</strong></p>
+<p><strong>PluginType</strong></p>
+<p><strong>SOSType</strong></p>
+<p><strong>TypeCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="studio.Data.action">
+<span class="sig-name descname"><span class="pre">action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Data)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Type)arg2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Action</span> <span class="pre">:</span></span></span><a class="headerlink" href="#studio.Data.action" title="Permalink to this definition"></a></dt>
+<dd><p>Return data action according to the action type.
+PARAMETERS:
+actionType : Action::Type Type of the requested action</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="studio.Data.defaultAction">
+<span class="sig-name descname"><span class="pre">defaultAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Data)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Action</span> <span class="pre">:</span></span></span><a class="headerlink" href="#studio.Data.defaultAction" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Default action of the datum.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="studio.Data.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#studio.Data.id" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Id of the data in database</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="studio.Configuration.html" class="btn btn-neutral float-left" title="studio.Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="studio.DataManager.html" class="btn btn-neutral float-right" title="studio.DataManager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

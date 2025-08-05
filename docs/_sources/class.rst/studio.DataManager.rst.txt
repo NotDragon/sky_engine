@@ -1,0 +1,10 @@
+studio.DataManager
+==================
+
+.. currentmodule:: studio
+    
+.. autoclass:: DataManager
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.DMX512 &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.DateManager" href="pySkyExplorer.DateManager.html" />
+    <link rel="prev" title="pySkyExplorer.Constellation" href="pySkyExplorer.Constellation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.DMX512</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.DMX512"><code class="docutils literal notranslate"><span class="pre">DMX512</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DMX512.DMX512Name"><code class="docutils literal notranslate"><span class="pre">DMX512.DMX512Name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.DMX512.setValue"><code class="docutils literal notranslate"><span class="pre">DMX512.setValue()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.DMX512</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.DMX512.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-dmx512">
+<h1>pySkyExplorer.DMX512<a class="headerlink" href="#pyskyexplorer-dmx512" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.DMX512">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">DMX512</span></span><a class="headerlink" href="#pySkyExplorer.DMX512" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.DMX512.DMX512Name">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DMX512Name</span></span><a class="headerlink" href="#pySkyExplorer.DMX512.DMX512Name" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available satellite name.</p>
+<p><strong>InvalidDMX512</strong></p>
+<p><strong>DMX_001</strong></p>
+<p><strong>DMX_002</strong></p>
+<p><strong>DMX_003</strong></p>
+<p><strong>DMX_004</strong></p>
+<p><strong>DMX_005</strong></p>
+<p><strong>DMX_006</strong></p>
+<p><strong>DMX_007</strong></p>
+<p><strong>DMX_008</strong></p>
+<p><strong>DMX_009</strong></p>
+<p><strong>DMX_010</strong></p>
+<p><strong>DMX_011</strong></p>
+<p><strong>DMX_012</strong></p>
+<p><strong>DMX_013</strong></p>
+<p><strong>DMX_014</strong></p>
+<p><strong>DMX_015</strong></p>
+<p><strong>DMX_016</strong></p>
+<p><strong>DMX_017</strong></p>
+<p><strong>DMX_018</strong></p>
+<p><strong>DMX_019</strong></p>
+<p><strong>DMX_020</strong></p>
+<p><strong>DMX_021</strong></p>
+<p><strong>DMX_022</strong></p>
+<p><strong>DMX_023</strong></p>
+<p><strong>DMX_024</strong></p>
+<p><strong>DMX_025</strong></p>
+<p><strong>DMX_026</strong></p>
+<p><strong>DMX_027</strong></p>
+<p><strong>DMX_028</strong></p>
+<p><strong>DMX_029</strong></p>
+<p><strong>DMX_030</strong></p>
+<p><strong>DMX_031</strong></p>
+<p><strong>DMX_032</strong></p>
+<p><strong>DMX_033</strong></p>
+<p><strong>DMX_034</strong></p>
+<p><strong>DMX_035</strong></p>
+<p><strong>DMX_036</strong></p>
+<p><strong>DMX_037</strong></p>
+<p><strong>DMX_038</strong></p>
+<p><strong>DMX_039</strong></p>
+<p><strong>DMX_040</strong></p>
+<p><strong>DMX_041</strong></p>
+<p><strong>DMX_042</strong></p>
+<p><strong>DMX_043</strong></p>
+<p><strong>DMX_044</strong></p>
+<p><strong>DMX_045</strong></p>
+<p><strong>DMX_046</strong></p>
+<p><strong>DMX_047</strong></p>
+<p><strong>DMX_048</strong></p>
+<p><strong>DMX_049</strong></p>
+<p><strong>DMX_050</strong></p>
+<p><strong>DMX_051</strong></p>
+<p><strong>DMX_052</strong></p>
+<p><strong>DMX_053</strong></p>
+<p><strong>DMX_054</strong></p>
+<p><strong>DMX_055</strong></p>
+<p><strong>DMX_056</strong></p>
+<p><strong>DMX_057</strong></p>
+<p><strong>DMX_058</strong></p>
+<p><strong>DMX_059</strong></p>
+<p><strong>DMX_060</strong></p>
+<p><strong>DMX_061</strong></p>
+<p><strong>DMX_062</strong></p>
+<p><strong>DMX_063</strong></p>
+<p><strong>DMX_064</strong></p>
+<p><strong>DMX_065</strong></p>
+<p><strong>DMX_066</strong></p>
+<p><strong>DMX_067</strong></p>
+<p><strong>DMX_068</strong></p>
+<p><strong>DMX_069</strong></p>
+<p><strong>DMX_070</strong></p>
+<p><strong>DMX_071</strong></p>
+<p><strong>DMX_072</strong></p>
+<p><strong>DMX_073</strong></p>
+<p><strong>DMX_074</strong></p>
+<p><strong>DMX_075</strong></p>
+<p><strong>DMX_076</strong></p>
+<p><strong>DMX_077</strong></p>
+<p><strong>DMX_078</strong></p>
+<p><strong>DMX_079</strong></p>
+<p><strong>DMX_080</strong></p>
+<p><strong>DMX_081</strong></p>
+<p><strong>DMX_082</strong></p>
+<p><strong>DMX_083</strong></p>
+<p><strong>DMX_084</strong></p>
+<p><strong>DMX_085</strong></p>
+<p><strong>DMX_086</strong></p>
+<p><strong>DMX_087</strong></p>
+<p><strong>DMX_088</strong></p>
+<p><strong>DMX_089</strong></p>
+<p><strong>DMX_090</strong></p>
+<p><strong>DMX_091</strong></p>
+<p><strong>DMX_092</strong></p>
+<p><strong>DMX_093</strong></p>
+<p><strong>DMX_094</strong></p>
+<p><strong>DMX_095</strong></p>
+<p><strong>DMX_096</strong></p>
+<p><strong>DMX_097</strong></p>
+<p><strong>DMX_098</strong></p>
+<p><strong>DMX_099</strong></p>
+<p><strong>DMX_100</strong></p>
+<p><strong>DMX_101</strong></p>
+<p><strong>DMX_102</strong></p>
+<p><strong>DMX_103</strong></p>
+<p><strong>DMX_104</strong></p>
+<p><strong>DMX_105</strong></p>
+<p><strong>DMX_106</strong></p>
+<p><strong>DMX_107</strong></p>
+<p><strong>DMX_108</strong></p>
+<p><strong>DMX_109</strong></p>
+<p><strong>DMX_110</strong></p>
+<p><strong>DMX_111</strong></p>
+<p><strong>DMX_112</strong></p>
+<p><strong>DMX_113</strong></p>
+<p><strong>DMX_114</strong></p>
+<p><strong>DMX_115</strong></p>
+<p><strong>DMX_116</strong></p>
+<p><strong>DMX_117</strong></p>
+<p><strong>DMX_118</strong></p>
+<p><strong>DMX_119</strong></p>
+<p><strong>DMX_120</strong></p>
+<p><strong>DMX_121</strong></p>
+<p><strong>DMX_122</strong></p>
+<p><strong>DMX_123</strong></p>
+<p><strong>DMX_124</strong></p>
+<p><strong>DMX_125</strong></p>
+<p><strong>DMX_126</strong></p>
+<p><strong>DMX_127</strong></p>
+<p><strong>DMX_128</strong></p>
+<p><strong>DMX_129</strong></p>
+<p><strong>DMX_130</strong></p>
+<p><strong>DMX_131</strong></p>
+<p><strong>DMX_132</strong></p>
+<p><strong>DMX_133</strong></p>
+<p><strong>DMX_134</strong></p>
+<p><strong>DMX_135</strong></p>
+<p><strong>DMX_136</strong></p>
+<p><strong>DMX_137</strong></p>
+<p><strong>DMX_138</strong></p>
+<p><strong>DMX_139</strong></p>
+<p><strong>DMX_140</strong></p>
+<p><strong>DMX_141</strong></p>
+<p><strong>DMX_142</strong></p>
+<p><strong>DMX_143</strong></p>
+<p><strong>DMX_144</strong></p>
+<p><strong>DMX_145</strong></p>
+<p><strong>DMX_146</strong></p>
+<p><strong>DMX_147</strong></p>
+<p><strong>DMX_148</strong></p>
+<p><strong>DMX_149</strong></p>
+<p><strong>DMX_150</strong></p>
+<p><strong>DMX_151</strong></p>
+<p><strong>DMX_152</strong></p>
+<p><strong>DMX_153</strong></p>
+<p><strong>DMX_154</strong></p>
+<p><strong>DMX_155</strong></p>
+<p><strong>DMX_156</strong></p>
+<p><strong>DMX_157</strong></p>
+<p><strong>DMX_158</strong></p>
+<p><strong>DMX_159</strong></p>
+<p><strong>DMX_160</strong></p>
+<p><strong>DMX_161</strong></p>
+<p><strong>DMX_162</strong></p>
+<p><strong>DMX_163</strong></p>
+<p><strong>DMX_164</strong></p>
+<p><strong>DMX_165</strong></p>
+<p><strong>DMX_166</strong></p>
+<p><strong>DMX_167</strong></p>
+<p><strong>DMX_168</strong></p>
+<p><strong>DMX_169</strong></p>
+<p><strong>DMX_170</strong></p>
+<p><strong>DMX_171</strong></p>
+<p><strong>DMX_172</strong></p>
+<p><strong>DMX_173</strong></p>
+<p><strong>DMX_174</strong></p>
+<p><strong>DMX_175</strong></p>
+<p><strong>DMX_176</strong></p>
+<p><strong>DMX_177</strong></p>
+<p><strong>DMX_178</strong></p>
+<p><strong>DMX_179</strong></p>
+<p><strong>DMX_180</strong></p>
+<p><strong>DMX_181</strong></p>
+<p><strong>DMX_182</strong></p>
+<p><strong>DMX_183</strong></p>
+<p><strong>DMX_184</strong></p>
+<p><strong>DMX_185</strong></p>
+<p><strong>DMX_186</strong></p>
+<p><strong>DMX_187</strong></p>
+<p><strong>DMX_188</strong></p>
+<p><strong>DMX_189</strong></p>
+<p><strong>DMX_190</strong></p>
+<p><strong>DMX_191</strong></p>
+<p><strong>DMX_192</strong></p>
+<p><strong>DMX_193</strong></p>
+<p><strong>DMX_194</strong></p>
+<p><strong>DMX_195</strong></p>
+<p><strong>DMX_196</strong></p>
+<p><strong>DMX_197</strong></p>
+<p><strong>DMX_198</strong></p>
+<p><strong>DMX_199</strong></p>
+<p><strong>DMX_200</strong></p>
+<p><strong>DMX_201</strong></p>
+<p><strong>DMX_202</strong></p>
+<p><strong>DMX_203</strong></p>
+<p><strong>DMX_204</strong></p>
+<p><strong>DMX_205</strong></p>
+<p><strong>DMX_206</strong></p>
+<p><strong>DMX_207</strong></p>
+<p><strong>DMX_208</strong></p>
+<p><strong>DMX_209</strong></p>
+<p><strong>DMX_210</strong></p>
+<p><strong>DMX_211</strong></p>
+<p><strong>DMX_212</strong></p>
+<p><strong>DMX_213</strong></p>
+<p><strong>DMX_214</strong></p>
+<p><strong>DMX_215</strong></p>
+<p><strong>DMX_216</strong></p>
+<p><strong>DMX_217</strong></p>
+<p><strong>DMX_218</strong></p>
+<p><strong>DMX_219</strong></p>
+<p><strong>DMX_220</strong></p>
+<p><strong>DMX_221</strong></p>
+<p><strong>DMX_222</strong></p>
+<p><strong>DMX_223</strong></p>
+<p><strong>DMX_224</strong></p>
+<p><strong>DMX_225</strong></p>
+<p><strong>DMX_226</strong></p>
+<p><strong>DMX_227</strong></p>
+<p><strong>DMX_228</strong></p>
+<p><strong>DMX_229</strong></p>
+<p><strong>DMX_230</strong></p>
+<p><strong>DMX_231</strong></p>
+<p><strong>DMX_232</strong></p>
+<p><strong>DMX_233</strong></p>
+<p><strong>DMX_234</strong></p>
+<p><strong>DMX_235</strong></p>
+<p><strong>DMX_236</strong></p>
+<p><strong>DMX_237</strong></p>
+<p><strong>DMX_238</strong></p>
+<p><strong>DMX_239</strong></p>
+<p><strong>DMX_240</strong></p>
+<p><strong>DMX_241</strong></p>
+<p><strong>DMX_242</strong></p>
+<p><strong>DMX_243</strong></p>
+<p><strong>DMX_244</strong></p>
+<p><strong>DMX_245</strong></p>
+<p><strong>DMX_246</strong></p>
+<p><strong>DMX_247</strong></p>
+<p><strong>DMX_248</strong></p>
+<p><strong>DMX_249</strong></p>
+<p><strong>DMX_250</strong></p>
+<p><strong>DMX_251</strong></p>
+<p><strong>DMX_252</strong></p>
+<p><strong>DMX_253</strong></p>
+<p><strong>DMX_254</strong></p>
+<p><strong>DMX_255</strong></p>
+<p><strong>DMX_256</strong></p>
+<p><strong>DMX_257</strong></p>
+<p><strong>DMX_258</strong></p>
+<p><strong>DMX_259</strong></p>
+<p><strong>DMX_260</strong></p>
+<p><strong>DMX_261</strong></p>
+<p><strong>DMX_262</strong></p>
+<p><strong>DMX_263</strong></p>
+<p><strong>DMX_264</strong></p>
+<p><strong>DMX_265</strong></p>
+<p><strong>DMX_266</strong></p>
+<p><strong>DMX_267</strong></p>
+<p><strong>DMX_268</strong></p>
+<p><strong>DMX_269</strong></p>
+<p><strong>DMX_270</strong></p>
+<p><strong>DMX_271</strong></p>
+<p><strong>DMX_272</strong></p>
+<p><strong>DMX_273</strong></p>
+<p><strong>DMX_274</strong></p>
+<p><strong>DMX_275</strong></p>
+<p><strong>DMX_276</strong></p>
+<p><strong>DMX_277</strong></p>
+<p><strong>DMX_278</strong></p>
+<p><strong>DMX_279</strong></p>
+<p><strong>DMX_280</strong></p>
+<p><strong>DMX_281</strong></p>
+<p><strong>DMX_282</strong></p>
+<p><strong>DMX_283</strong></p>
+<p><strong>DMX_284</strong></p>
+<p><strong>DMX_285</strong></p>
+<p><strong>DMX_286</strong></p>
+<p><strong>DMX_287</strong></p>
+<p><strong>DMX_288</strong></p>
+<p><strong>DMX_289</strong></p>
+<p><strong>DMX_290</strong></p>
+<p><strong>DMX_291</strong></p>
+<p><strong>DMX_292</strong></p>
+<p><strong>DMX_293</strong></p>
+<p><strong>DMX_294</strong></p>
+<p><strong>DMX_295</strong></p>
+<p><strong>DMX_296</strong></p>
+<p><strong>DMX_297</strong></p>
+<p><strong>DMX_298</strong></p>
+<p><strong>DMX_299</strong></p>
+<p><strong>DMX_300</strong></p>
+<p><strong>DMX_301</strong></p>
+<p><strong>DMX_302</strong></p>
+<p><strong>DMX_303</strong></p>
+<p><strong>DMX_304</strong></p>
+<p><strong>DMX_305</strong></p>
+<p><strong>DMX_306</strong></p>
+<p><strong>DMX_307</strong></p>
+<p><strong>DMX_308</strong></p>
+<p><strong>DMX_309</strong></p>
+<p><strong>DMX_310</strong></p>
+<p><strong>DMX_311</strong></p>
+<p><strong>DMX_312</strong></p>
+<p><strong>DMX_313</strong></p>
+<p><strong>DMX_314</strong></p>
+<p><strong>DMX_315</strong></p>
+<p><strong>DMX_316</strong></p>
+<p><strong>DMX_317</strong></p>
+<p><strong>DMX_318</strong></p>
+<p><strong>DMX_319</strong></p>
+<p><strong>DMX_320</strong></p>
+<p><strong>DMX_321</strong></p>
+<p><strong>DMX_322</strong></p>
+<p><strong>DMX_323</strong></p>
+<p><strong>DMX_324</strong></p>
+<p><strong>DMX_325</strong></p>
+<p><strong>DMX_326</strong></p>
+<p><strong>DMX_327</strong></p>
+<p><strong>DMX_328</strong></p>
+<p><strong>DMX_329</strong></p>
+<p><strong>DMX_330</strong></p>
+<p><strong>DMX_331</strong></p>
+<p><strong>DMX_332</strong></p>
+<p><strong>DMX_333</strong></p>
+<p><strong>DMX_334</strong></p>
+<p><strong>DMX_335</strong></p>
+<p><strong>DMX_336</strong></p>
+<p><strong>DMX_337</strong></p>
+<p><strong>DMX_338</strong></p>
+<p><strong>DMX_339</strong></p>
+<p><strong>DMX_340</strong></p>
+<p><strong>DMX_341</strong></p>
+<p><strong>DMX_342</strong></p>
+<p><strong>DMX_343</strong></p>
+<p><strong>DMX_344</strong></p>
+<p><strong>DMX_345</strong></p>
+<p><strong>DMX_346</strong></p>
+<p><strong>DMX_347</strong></p>
+<p><strong>DMX_348</strong></p>
+<p><strong>DMX_349</strong></p>
+<p><strong>DMX_350</strong></p>
+<p><strong>DMX_351</strong></p>
+<p><strong>DMX_352</strong></p>
+<p><strong>DMX_353</strong></p>
+<p><strong>DMX_354</strong></p>
+<p><strong>DMX_355</strong></p>
+<p><strong>DMX_356</strong></p>
+<p><strong>DMX_357</strong></p>
+<p><strong>DMX_358</strong></p>
+<p><strong>DMX_359</strong></p>
+<p><strong>DMX_360</strong></p>
+<p><strong>DMX_361</strong></p>
+<p><strong>DMX_362</strong></p>
+<p><strong>DMX_363</strong></p>
+<p><strong>DMX_364</strong></p>
+<p><strong>DMX_365</strong></p>
+<p><strong>DMX_366</strong></p>
+<p><strong>DMX_367</strong></p>
+<p><strong>DMX_368</strong></p>
+<p><strong>DMX_369</strong></p>
+<p><strong>DMX_370</strong></p>
+<p><strong>DMX_371</strong></p>
+<p><strong>DMX_372</strong></p>
+<p><strong>DMX_373</strong></p>
+<p><strong>DMX_374</strong></p>
+<p><strong>DMX_375</strong></p>
+<p><strong>DMX_376</strong></p>
+<p><strong>DMX_377</strong></p>
+<p><strong>DMX_378</strong></p>
+<p><strong>DMX_379</strong></p>
+<p><strong>DMX_380</strong></p>
+<p><strong>DMX_381</strong></p>
+<p><strong>DMX_382</strong></p>
+<p><strong>DMX_383</strong></p>
+<p><strong>DMX_384</strong></p>
+<p><strong>DMX_385</strong></p>
+<p><strong>DMX_386</strong></p>
+<p><strong>DMX_387</strong></p>
+<p><strong>DMX_388</strong></p>
+<p><strong>DMX_389</strong></p>
+<p><strong>DMX_390</strong></p>
+<p><strong>DMX_391</strong></p>
+<p><strong>DMX_392</strong></p>
+<p><strong>DMX_393</strong></p>
+<p><strong>DMX_394</strong></p>
+<p><strong>DMX_395</strong></p>
+<p><strong>DMX_396</strong></p>
+<p><strong>DMX_397</strong></p>
+<p><strong>DMX_398</strong></p>
+<p><strong>DMX_399</strong></p>
+<p><strong>DMX_400</strong></p>
+<p><strong>DMX_401</strong></p>
+<p><strong>DMX_402</strong></p>
+<p><strong>DMX_403</strong></p>
+<p><strong>DMX_404</strong></p>
+<p><strong>DMX_405</strong></p>
+<p><strong>DMX_406</strong></p>
+<p><strong>DMX_407</strong></p>
+<p><strong>DMX_408</strong></p>
+<p><strong>DMX_409</strong></p>
+<p><strong>DMX_410</strong></p>
+<p><strong>DMX_411</strong></p>
+<p><strong>DMX_412</strong></p>
+<p><strong>DMX_413</strong></p>
+<p><strong>DMX_414</strong></p>
+<p><strong>DMX_415</strong></p>
+<p><strong>DMX_416</strong></p>
+<p><strong>DMX_417</strong></p>
+<p><strong>DMX_418</strong></p>
+<p><strong>DMX_419</strong></p>
+<p><strong>DMX_420</strong></p>
+<p><strong>DMX_421</strong></p>
+<p><strong>DMX_422</strong></p>
+<p><strong>DMX_423</strong></p>
+<p><strong>DMX_424</strong></p>
+<p><strong>DMX_425</strong></p>
+<p><strong>DMX_426</strong></p>
+<p><strong>DMX_427</strong></p>
+<p><strong>DMX_428</strong></p>
+<p><strong>DMX_429</strong></p>
+<p><strong>DMX_430</strong></p>
+<p><strong>DMX_431</strong></p>
+<p><strong>DMX_432</strong></p>
+<p><strong>DMX_433</strong></p>
+<p><strong>DMX_434</strong></p>
+<p><strong>DMX_435</strong></p>
+<p><strong>DMX_436</strong></p>
+<p><strong>DMX_437</strong></p>
+<p><strong>DMX_438</strong></p>
+<p><strong>DMX_439</strong></p>
+<p><strong>DMX_440</strong></p>
+<p><strong>DMX_441</strong></p>
+<p><strong>DMX_442</strong></p>
+<p><strong>DMX_443</strong></p>
+<p><strong>DMX_444</strong></p>
+<p><strong>DMX_445</strong></p>
+<p><strong>DMX_446</strong></p>
+<p><strong>DMX_447</strong></p>
+<p><strong>DMX_448</strong></p>
+<p><strong>DMX_449</strong></p>
+<p><strong>DMX_450</strong></p>
+<p><strong>DMX_451</strong></p>
+<p><strong>DMX_452</strong></p>
+<p><strong>DMX_453</strong></p>
+<p><strong>DMX_454</strong></p>
+<p><strong>DMX_455</strong></p>
+<p><strong>DMX_456</strong></p>
+<p><strong>DMX_457</strong></p>
+<p><strong>DMX_458</strong></p>
+<p><strong>DMX_459</strong></p>
+<p><strong>DMX_460</strong></p>
+<p><strong>DMX_461</strong></p>
+<p><strong>DMX_462</strong></p>
+<p><strong>DMX_463</strong></p>
+<p><strong>DMX_464</strong></p>
+<p><strong>DMX_465</strong></p>
+<p><strong>DMX_466</strong></p>
+<p><strong>DMX_467</strong></p>
+<p><strong>DMX_468</strong></p>
+<p><strong>DMX_469</strong></p>
+<p><strong>DMX_470</strong></p>
+<p><strong>DMX_471</strong></p>
+<p><strong>DMX_472</strong></p>
+<p><strong>DMX_473</strong></p>
+<p><strong>DMX_474</strong></p>
+<p><strong>DMX_475</strong></p>
+<p><strong>DMX_476</strong></p>
+<p><strong>DMX_477</strong></p>
+<p><strong>DMX_478</strong></p>
+<p><strong>DMX_479</strong></p>
+<p><strong>DMX_480</strong></p>
+<p><strong>DMX_481</strong></p>
+<p><strong>DMX_482</strong></p>
+<p><strong>DMX_483</strong></p>
+<p><strong>DMX_484</strong></p>
+<p><strong>DMX_485</strong></p>
+<p><strong>DMX_486</strong></p>
+<p><strong>DMX_487</strong></p>
+<p><strong>DMX_488</strong></p>
+<p><strong>DMX_489</strong></p>
+<p><strong>DMX_490</strong></p>
+<p><strong>DMX_491</strong></p>
+<p><strong>DMX_492</strong></p>
+<p><strong>DMX_493</strong></p>
+<p><strong>DMX_494</strong></p>
+<p><strong>DMX_495</strong></p>
+<p><strong>DMX_496</strong></p>
+<p><strong>DMX_497</strong></p>
+<p><strong>DMX_498</strong></p>
+<p><strong>DMX_499</strong></p>
+<p><strong>DMX_500</strong></p>
+<p><strong>DMX_501</strong></p>
+<p><strong>DMX_502</strong></p>
+<p><strong>DMX_503</strong></p>
+<p><strong>DMX_504</strong></p>
+<p><strong>DMX_505</strong></p>
+<p><strong>DMX_506</strong></p>
+<p><strong>DMX_507</strong></p>
+<p><strong>DMX_508</strong></p>
+<p><strong>DMX_509</strong></p>
+<p><strong>DMX_510</strong></p>
+<p><strong>DMX_511</strong></p>
+<p><strong>DMX_512</strong></p>
+<p><strong>DMX512Count</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.DMX512.setValue">
+<span class="sig-name descname"><span class="pre">setValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(DMX512)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.DMX512.setValue" title="Permalink to this definition"></a></dt>
+<dd><p>Set this dmx value.
+PARAMETERS:
+value : double</p>
+<blockquote>
+<div><p>Value to send to dmx.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animation used to change the dmx value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.Constellation.html" class="btn btn-neutral float-left" title="pySkyExplorer.Constellation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.DateManager.html" class="btn btn-neutral float-right" title="pySkyExplorer.DateManager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

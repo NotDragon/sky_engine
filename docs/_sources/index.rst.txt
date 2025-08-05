@@ -1,0 +1,21 @@
+Welcome to Studio's documentation!
+=======================================
+
+.. autosummary:: 
+    :toctree: class.rst
+    :template: Module.rst
+    :recursive:
+
+    studio
+    pySkyExplorer
+      
+.. toctree:: 
+    :maxdepth: 10
+    :caption: Contents:
+       
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`search`

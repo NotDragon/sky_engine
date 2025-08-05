@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.Mark &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.Mat" href="pySkyExplorer.Mat.html" />
+    <link rel="prev" title="pySkyExplorer.Lut" href="pySkyExplorer.Lut.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.Mark</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.Mark"><code class="docutils literal notranslate"><span class="pre">Mark</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.Language"><code class="docutils literal notranslate"><span class="pre">Mark.Language</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.MarkName"><code class="docutils literal notranslate"><span class="pre">Mark.MarkName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.PositionType"><code class="docutils literal notranslate"><span class="pre">Mark.PositionType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.RepresentationType"><code class="docutils literal notranslate"><span class="pre">Mark.RepresentationType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.TextFormat"><code class="docutils literal notranslate"><span class="pre">Mark.TextFormat</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.TextOrientationMode"><code class="docutils literal notranslate"><span class="pre">Mark.TextOrientationMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.TextPosition"><code class="docutils literal notranslate"><span class="pre">Mark.TextPosition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.remove"><code class="docutils literal notranslate"><span class="pre">Mark.remove()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setAzimuth"><code class="docutils literal notranslate"><span class="pre">Mark.setAzimuth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setColor"><code class="docutils literal notranslate"><span class="pre">Mark.setColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setFontFilename"><code class="docutils literal notranslate"><span class="pre">Mark.setFontFilename()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setGraduationSize"><code class="docutils literal notranslate"><span class="pre">Mark.setGraduationSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setIntensity"><code class="docutils literal notranslate"><span class="pre">Mark.setIntensity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setLanguage"><code class="docutils literal notranslate"><span class="pre">Mark.setLanguage()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setLineWidth"><code class="docutils literal notranslate"><span class="pre">Mark.setLineWidth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setMaxAzimuth"><code class="docutils literal notranslate"><span class="pre">Mark.setMaxAzimuth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setMaxHeight"><code class="docutils literal notranslate"><span class="pre">Mark.setMaxHeight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setMeridianCount"><code class="docutils literal notranslate"><span class="pre">Mark.setMeridianCount()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setMeridianGraduationCount"><code class="docutils literal notranslate"><span class="pre">Mark.setMeridianGraduationCount()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setMeridianSubGraduationCount"><code class="docutils literal notranslate"><span class="pre">Mark.setMeridianSubGraduationCount()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setMinAzimuth"><code class="docutils literal notranslate"><span class="pre">Mark.setMinAzimuth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setMinHeight"><code class="docutils literal notranslate"><span class="pre">Mark.setMinHeight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setParallelCount"><code class="docutils literal notranslate"><span class="pre">Mark.setParallelCount()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setParallelGraduationCount"><code class="docutils literal notranslate"><span class="pre">Mark.setParallelGraduationCount()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setParallelSubGraduationCount"><code class="docutils literal notranslate"><span class="pre">Mark.setParallelSubGraduationCount()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setParent"><code class="docutils literal notranslate"><span class="pre">Mark.setParent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setPositionType"><code class="docutils literal notranslate"><span class="pre">Mark.setPositionType()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setRadius"><code class="docutils literal notranslate"><span class="pre">Mark.setRadius()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setRepresentationType"><code class="docutils literal notranslate"><span class="pre">Mark.setRepresentationType()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setSubGraduationSize"><code class="docutils literal notranslate"><span class="pre">Mark.setSubGraduationSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setTextColor"><code class="docutils literal notranslate"><span class="pre">Mark.setTextColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setTextOrientationMode"><code class="docutils literal notranslate"><span class="pre">Mark.setTextOrientationMode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.setTextSize"><code class="docutils literal notranslate"><span class="pre">Mark.setTextSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.azimuth"><code class="docutils literal notranslate"><span class="pre">Mark.azimuth</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.color"><code class="docutils literal notranslate"><span class="pre">Mark.color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.fontFilename"><code class="docutils literal notranslate"><span class="pre">Mark.fontFilename</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.graduationSize"><code class="docutils literal notranslate"><span class="pre">Mark.graduationSize</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.id"><code class="docutils literal notranslate"><span class="pre">Mark.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.intensity"><code class="docutils literal notranslate"><span class="pre">Mark.intensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.lineWidth"><code class="docutils literal notranslate"><span class="pre">Mark.lineWidth</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.maxAzimuth"><code class="docutils literal notranslate"><span class="pre">Mark.maxAzimuth</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.maxHeight"><code class="docutils literal notranslate"><span class="pre">Mark.maxHeight</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.meridianCount"><code class="docutils literal notranslate"><span class="pre">Mark.meridianCount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.meridianGraduationCount"><code class="docutils literal notranslate"><span class="pre">Mark.meridianGraduationCount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.meridianSubGraduationCount"><code class="docutils literal notranslate"><span class="pre">Mark.meridianSubGraduationCount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.minAzimuth"><code class="docutils literal notranslate"><span class="pre">Mark.minAzimuth</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.minHeight"><code class="docutils literal notranslate"><span class="pre">Mark.minHeight</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.name"><code class="docutils literal notranslate"><span class="pre">Mark.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.osgId"><code class="docutils literal notranslate"><span class="pre">Mark.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.parallelCount"><code class="docutils literal notranslate"><span class="pre">Mark.parallelCount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.parallelGraduationCount"><code class="docutils literal notranslate"><span class="pre">Mark.parallelGraduationCount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.parallelSubGraduationCount"><code class="docutils literal notranslate"><span class="pre">Mark.parallelSubGraduationCount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.parent"><code class="docutils literal notranslate"><span class="pre">Mark.parent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.positionType"><code class="docutils literal notranslate"><span class="pre">Mark.positionType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.radius"><code class="docutils literal notranslate"><span class="pre">Mark.radius</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.representationType"><code class="docutils literal notranslate"><span class="pre">Mark.representationType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.subGraduationSize"><code class="docutils literal notranslate"><span class="pre">Mark.subGraduationSize</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.textColor"><code class="docutils literal notranslate"><span class="pre">Mark.textColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.textOrientationMode"><code class="docutils literal notranslate"><span class="pre">Mark.textOrientationMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.Mark.textSize"><code class="docutils literal notranslate"><span class="pre">Mark.textSize</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SlideShowHandler.html">pySkyExplorer.SlideShowHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.Mark</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.Mark.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-mark">
+<h1>pySkyExplorer.Mark<a class="headerlink" href="#pyskyexplorer-mark" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">Mark</span></span><a class="headerlink" href="#pySkyExplorer.Mark" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.Language">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Language</span></span><a class="headerlink" href="#pySkyExplorer.Mark.Language" title="Permalink to this definition"></a></dt>
+<dd><p>Available languages.</p>
+<p><strong>InvalidLanguage</strong></p>
+<p><strong>defaultLanguage</strong></p>
+<p><strong>fr_FR</strong></p>
+<p><strong>en_US</strong></p>
+<p><strong>la_LA</strong></p>
+<p><strong>es_ES</strong></p>
+<p><strong>it_IT</strong></p>
+<p><strong>nl_NL</strong></p>
+<p><strong>el_GR</strong></p>
+<p><strong>ja_JP</strong></p>
+<p><strong>ko_KR</strong></p>
+<p><strong>de_DE</strong></p>
+<p><strong>ro_RO</strong></p>
+<p><strong>ru_RU</strong></p>
+<p><strong>uk_UA</strong></p>
+<p><strong>zh_CN</strong></p>
+<p><strong>ar_EG</strong></p>
+<p><strong>pt_BR</strong></p>
+<p><strong>cs_CZ</strong></p>
+<p><strong>pt_PT</strong></p>
+<p><strong>sk_SK</strong></p>
+<p><strong>hu_HU</strong></p>
+<p><strong>fa_IR</strong></p>
+<p><strong>eu_ES</strong></p>
+<p><strong>tr_TR</strong></p>
+<p><strong>hi_IN</strong></p>
+<p><strong>kn_IN</strong></p>
+<p><strong>ml_IN</strong></p>
+<p><strong>bn_IN</strong></p>
+<p><strong>ta_IN</strong></p>
+<p><strong>pl_PL</strong></p>
+<p><strong>LanguageCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.MarkName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MarkName</span></span><a class="headerlink" href="#pySkyExplorer.Mark.MarkName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available mark name.</p>
+<p><strong>InvalidMark</strong></p>
+<p><strong>Mark001</strong></p>
+<p><strong>Mark002</strong></p>
+<p><strong>Mark003</strong></p>
+<p><strong>Mark004</strong></p>
+<p><strong>Mark005</strong></p>
+<p><strong>Mark006</strong></p>
+<p><strong>Mark007</strong></p>
+<p><strong>Mark008</strong></p>
+<p><strong>Mark009</strong></p>
+<p><strong>Mark010</strong></p>
+<p><strong>Mark011</strong></p>
+<p><strong>Mark012</strong></p>
+<p><strong>Mark013</strong></p>
+<p><strong>Mark014</strong></p>
+<p><strong>Mark015</strong></p>
+<p><strong>Mark016</strong></p>
+<p><strong>Mark017</strong></p>
+<p><strong>Mark018</strong></p>
+<p><strong>Mark019</strong></p>
+<p><strong>Mark020</strong></p>
+<p><strong>Mark021</strong></p>
+<p><strong>Mark022</strong></p>
+<p><strong>Mark023</strong></p>
+<p><strong>Mark024</strong></p>
+<p><strong>Mark025</strong></p>
+<p><strong>Mark026</strong></p>
+<p><strong>Mark027</strong></p>
+<p><strong>Mark028</strong></p>
+<p><strong>Mark029</strong></p>
+<p><strong>Mark030</strong></p>
+<p><strong>Mark031</strong></p>
+<p><strong>Mark032</strong></p>
+<p><strong>Mark033</strong></p>
+<p><strong>Mark034</strong></p>
+<p><strong>Mark035</strong></p>
+<p><strong>Mark036</strong></p>
+<p><strong>Mark037</strong></p>
+<p><strong>Mark038</strong></p>
+<p><strong>Mark039</strong></p>
+<p><strong>Mark040</strong></p>
+<p><strong>Mark041</strong></p>
+<p><strong>Mark042</strong></p>
+<p><strong>Mark043</strong></p>
+<p><strong>Mark044</strong></p>
+<p><strong>Mark045</strong></p>
+<p><strong>Mark046</strong></p>
+<p><strong>Mark047</strong></p>
+<p><strong>Mark048</strong></p>
+<p><strong>Mark049</strong></p>
+<p><strong>Mark050</strong></p>
+<p><strong>Mark_WelcomeGrid1</strong></p>
+<p><strong>Mark_WelcomeGrid2</strong></p>
+<p><strong>Mark_WelcomeGrid3</strong></p>
+<p><strong>MarkCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.PositionType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PositionType</span></span><a class="headerlink" href="#pySkyExplorer.Mark.PositionType" title="Permalink to this definition"></a></dt>
+<dd><p>Position type of the mark.</p>
+<p><strong>InvalidPositionType</strong></p>
+<p><strong>FiniteGrid</strong></p>
+<p><strong>InfiniteGrid</strong></p>
+<p><strong>PositionTypeCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.RepresentationType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RepresentationType</span></span><a class="headerlink" href="#pySkyExplorer.Mark.RepresentationType" title="Permalink to this definition"></a></dt>
+<dd><p>Type of mark representation.</p>
+<p><strong>InvalidRepresentationType</strong></p>
+<p><strong>None</strong></p>
+<p><strong>Grid</strong></p>
+<p><strong>Graduation</strong></p>
+<p><strong>GraduatedGrid</strong></p>
+<p><strong>TextOnly</strong></p>
+<p><strong>GridWithText</strong></p>
+<p><strong>GraduationWithText</strong></p>
+<p><strong>GraduatedGridWithText</strong></p>
+<p><strong>RepresentationTypeCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.TextFormat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TextFormat</span></span><a class="headerlink" href="#pySkyExplorer.Mark.TextFormat" title="Permalink to this definition"></a></dt>
+<dd><p>Format of the text displayed on mark.</p>
+<p><strong>InvalidTextFormat</strong></p>
+<p><strong>FormatManual</strong></p>
+<p><strong>Hour</strong></p>
+<p><strong>Degree</strong></p>
+<p><strong>Year</strong></p>
+<p><strong>Month</strong></p>
+<p><strong>CardinalPoints</strong></p>
+<p><strong>TextFormatCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.TextOrientationMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TextOrientationMode</span></span><a class="headerlink" href="#pySkyExplorer.Mark.TextOrientationMode" title="Permalink to this definition"></a></dt>
+<dd><p>Orientation modes of the text displayed on mark.</p>
+<p><strong>InvalidTextOrientationMode</strong></p>
+<p><strong>OrientationNone</strong></p>
+<p><strong>Auto</strong></p>
+<p><strong>Zenith</strong></p>
+<p><strong>Pole</strong></p>
+<p><strong>Target</strong></p>
+<p><strong>TextOrientationModeCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.TextPosition">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TextPosition</span></span><a class="headerlink" href="#pySkyExplorer.Mark.TextPosition" title="Permalink to this definition"></a></dt>
+<dd><p>Position mode of the text displayed on mark.</p>
+<p><strong>InvalidTextPosition</strong></p>
+<p><strong>PositionNone</strong></p>
+<p><strong>Centered</strong></p>
+<p><strong>Min</strong></p>
+<p><strong>Max</strong></p>
+<p><strong>Manual</strong></p>
+<p><strong>TextPositionCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.remove" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the mark from the scene graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setAzimuth">
+<span class="sig-name descname"><span class="pre">setAzimuth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)azimuth</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setAzimuth" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+azimuth : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setColor">
+<span class="sig-name descname"><span class="pre">setColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)color</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+color : Vec</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setFontFilename">
+<span class="sig-name descname"><span class="pre">setFontFilename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)fontFilename</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setFontFilename" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+fontFilename : str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setGraduationSize">
+<span class="sig-name descname"><span class="pre">setGraduationSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)graduationSize</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setGraduationSize" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+graduationSize : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setIntensity">
+<span class="sig-name descname"><span class="pre">setIntensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)intensity</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setIntensity" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+intensity : double
+Intensity of the mark.
+Usually in range [0;1].</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setLanguage">
+<span class="sig-name descname"><span class="pre">setLanguage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Language)language</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setLanguage" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+language : Language</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setLineWidth">
+<span class="sig-name descname"><span class="pre">setLineWidth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)lineWidth</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setLineWidth" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+lineWidth : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setMaxAzimuth">
+<span class="sig-name descname"><span class="pre">setMaxAzimuth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)maxAzimuth</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setMaxAzimuth" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+maxAzimuth : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setMaxHeight">
+<span class="sig-name descname"><span class="pre">setMaxHeight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)maxHeight</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setMaxHeight" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+maxHeight : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setMeridianCount">
+<span class="sig-name descname"><span class="pre">setMeridianCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)meridianCount</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setMeridianCount" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+meridianCount : int
+Number of meridian of the mark geometry.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setMeridianGraduationCount">
+<span class="sig-name descname"><span class="pre">setMeridianGraduationCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)meridianGraduationCount</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setMeridianGraduationCount" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+meridianGraduationCount : int
+Number of graduation per meridian of the mark geometry.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setMeridianSubGraduationCount">
+<span class="sig-name descname"><span class="pre">setMeridianSubGraduationCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)meridianSubGraduationCount</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setMeridianSubGraduationCount" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+meridianSubGraduationCount : int</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setMinAzimuth">
+<span class="sig-name descname"><span class="pre">setMinAzimuth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)minAzimuth</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setMinAzimuth" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+minAzimuth : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setMinHeight">
+<span class="sig-name descname"><span class="pre">setMinHeight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)minHeight</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setMinHeight" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+minHeight : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setParallelCount">
+<span class="sig-name descname"><span class="pre">setParallelCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)parallelCount</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setParallelCount" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+parallelCount : int
+Number of parallel of the mark geometry.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setParallelGraduationCount">
+<span class="sig-name descname"><span class="pre">setParallelGraduationCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)parallelGraduationCount</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setParallelGraduationCount" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+parallelGraduationCount : int
+Number of graduation per parralel of the mark geometry.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setParallelSubGraduationCount">
+<span class="sig-name descname"><span class="pre">setParallelSubGraduationCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)parallelSubGraduationCount</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setParallelSubGraduationCount" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+parallelSubGraduationCount : int</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setParent">
+<span class="sig-name descname"><span class="pre">setParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)parent</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setParent" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+parent : int
+Id of the mark’s parent port in database.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setPositionType">
+<span class="sig-name descname"><span class="pre">setPositionType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(PositionType)positionType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setPositionType" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+positionType : PositionType</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setRadius">
+<span class="sig-name descname"><span class="pre">setRadius</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)radius</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setRadius" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+radius : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setRepresentationType">
+<span class="sig-name descname"><span class="pre">setRepresentationType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(RepresentationType)representationType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setRepresentationType" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+representationType : RepresentationType</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setSubGraduationSize">
+<span class="sig-name descname"><span class="pre">setSubGraduationSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)subGraduationSize</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setSubGraduationSize" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+subGraduationSize : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setTextColor">
+<span class="sig-name descname"><span class="pre">setTextColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(Vec)textColor</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setTextColor" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+textColor : Vec</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setTextOrientationMode">
+<span class="sig-name descname"><span class="pre">setTextOrientationMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(TextOrientationMode)textOrientationMode</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setTextOrientationMode" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+textOrientationMode : TextOrientationMode</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.setTextSize">
+<span class="sig-name descname"><span class="pre">setTextSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(Mark)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)textSize</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">(Animator)animator</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.Mark.setTextSize" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+textSize : double</p>
+<dl class="simple">
+<dt>animator<span class="classifier">Animator default value</span><span class="classifier">Animator()</span></dt><dd><p>Animator used for property interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.azimuth">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">azimuth</span></span><a class="headerlink" href="#pySkyExplorer.Mark.azimuth" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.color">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#pySkyExplorer.Mark.color" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.fontFilename">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fontFilename</span></span><a class="headerlink" href="#pySkyExplorer.Mark.fontFilename" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.graduationSize">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">graduationSize</span></span><a class="headerlink" href="#pySkyExplorer.Mark.graduationSize" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.Mark.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pySkyExplorer.Mark.intensity" title="Permalink to this definition"></a></dt>
+<dd><p>Intensity of the mark.
+Usually in range [0;1].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.lineWidth">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lineWidth</span></span><a class="headerlink" href="#pySkyExplorer.Mark.lineWidth" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.maxAzimuth">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">maxAzimuth</span></span><a class="headerlink" href="#pySkyExplorer.Mark.maxAzimuth" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.maxHeight">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">maxHeight</span></span><a class="headerlink" href="#pySkyExplorer.Mark.maxHeight" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.meridianCount">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">meridianCount</span></span><a class="headerlink" href="#pySkyExplorer.Mark.meridianCount" title="Permalink to this definition"></a></dt>
+<dd><p>Number of meridian of the mark geometry.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.meridianGraduationCount">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">meridianGraduationCount</span></span><a class="headerlink" href="#pySkyExplorer.Mark.meridianGraduationCount" title="Permalink to this definition"></a></dt>
+<dd><p>Number of graduation per meridian of the mark geometry.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.meridianSubGraduationCount">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">meridianSubGraduationCount</span></span><a class="headerlink" href="#pySkyExplorer.Mark.meridianSubGraduationCount" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.minAzimuth">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">minAzimuth</span></span><a class="headerlink" href="#pySkyExplorer.Mark.minAzimuth" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.minHeight">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">minHeight</span></span><a class="headerlink" href="#pySkyExplorer.Mark.minHeight" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.Mark.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.Mark.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.parallelCount">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parallelCount</span></span><a class="headerlink" href="#pySkyExplorer.Mark.parallelCount" title="Permalink to this definition"></a></dt>
+<dd><p>Number of parallel of the mark geometry.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.parallelGraduationCount">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parallelGraduationCount</span></span><a class="headerlink" href="#pySkyExplorer.Mark.parallelGraduationCount" title="Permalink to this definition"></a></dt>
+<dd><p>Number of graduation per parralel of the mark geometry.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.parallelSubGraduationCount">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parallelSubGraduationCount</span></span><a class="headerlink" href="#pySkyExplorer.Mark.parallelSubGraduationCount" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.parent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#pySkyExplorer.Mark.parent" title="Permalink to this definition"></a></dt>
+<dd><p>Id of the mark’s parent port in database.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.positionType">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positionType</span></span><a class="headerlink" href="#pySkyExplorer.Mark.positionType" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.radius">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">radius</span></span><a class="headerlink" href="#pySkyExplorer.Mark.radius" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.representationType">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">representationType</span></span><a class="headerlink" href="#pySkyExplorer.Mark.representationType" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.subGraduationSize">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subGraduationSize</span></span><a class="headerlink" href="#pySkyExplorer.Mark.subGraduationSize" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.textColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">textColor</span></span><a class="headerlink" href="#pySkyExplorer.Mark.textColor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.textOrientationMode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">textOrientationMode</span></span><a class="headerlink" href="#pySkyExplorer.Mark.textOrientationMode" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.Mark.textSize">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">textSize</span></span><a class="headerlink" href="#pySkyExplorer.Mark.textSize" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.Lut.html" class="btn btn-neutral float-left" title="pySkyExplorer.Lut" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.Mat.html" class="btn btn-neutral float-right" title="pySkyExplorer.Mat" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

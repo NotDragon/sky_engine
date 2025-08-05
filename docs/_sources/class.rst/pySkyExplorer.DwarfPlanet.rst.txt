@@ -1,0 +1,10 @@
+pySkyExplorer.DwarfPlanet
+=========================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: DwarfPlanet
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

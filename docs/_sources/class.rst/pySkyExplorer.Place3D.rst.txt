@@ -1,0 +1,10 @@
+pySkyExplorer.Place3D
+=====================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: Place3D
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

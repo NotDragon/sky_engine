@@ -1,0 +1,10 @@
+pySkyExplorer.SlideShowHandler
+==============================
+
+.. currentmodule:: pySkyExplorer
+    
+.. autoclass:: SlideShowHandler
+    :members:
+    :exclude-members: names, values
+    :undoc-members:
+    :member-order: groupwise

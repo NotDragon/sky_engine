@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySkyExplorer.SlideShowHandler &mdash; SkyExplorer 2025 2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/Property.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pySkyExplorer.Stars" href="pySkyExplorer.Stars.html" />
+    <link rel="prev" title="pySkyExplorer.SkySurvey" href="pySkyExplorer.SkySurvey.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SkyExplorer 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="studio.html">studio</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pySkyExplorer.html">pySkyExplorer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Animator.html">pySkyExplorer.Animator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Asteroid.html">pySkyExplorer.Asteroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Audio.html">pySkyExplorer.Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLayer.html">pySkyExplorer.AudioLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioLite.html">pySkyExplorer.AudioLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.AudioPlayer.html">pySkyExplorer.AudioPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Body.html">pySkyExplorer.Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Bolide.html">pySkyExplorer.Bolide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Camera.html">pySkyExplorer.Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Chart2D.html">pySkyExplorer.Chart2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Clock.html">pySkyExplorer.Clock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comet.html">pySkyExplorer.Comet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Comment.html">pySkyExplorer.Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Constellation.html">pySkyExplorer.Constellation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DMX512.html">pySkyExplorer.DMX512</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DateManager.html">pySkyExplorer.DateManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DomePointer.html">pySkyExplorer.DomePointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DrawableInsert.html">pySkyExplorer.DrawableInsert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.DwarfPlanet.html">pySkyExplorer.DwarfPlanet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Ephemeris.html">pySkyExplorer.Ephemeris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Galaxy.html">pySkyExplorer.Galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.GlobularCluster.html">pySkyExplorer.GlobularCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.IndividualStar.html">pySkyExplorer.IndividualStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert2D.html">pySkyExplorer.Insert2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Insert3D.html">pySkyExplorer.Insert3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.InsertText.html">pySkyExplorer.InsertText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Light.html">pySkyExplorer.Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Line.html">pySkyExplorer.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Lut.html">pySkyExplorer.Lut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mark.html">pySkyExplorer.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Mat.html">pySkyExplorer.Mat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Messier.html">pySkyExplorer.Messier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.NGC.html">pySkyExplorer.NGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Nebula.html">pySkyExplorer.Nebula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.OrbitalPlace.html">pySkyExplorer.OrbitalPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ParameterizationLut.html">pySkyExplorer.ParameterizationLut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Patch.html">pySkyExplorer.Patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place2D.html">pySkyExplorer.Place2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Place3D.html">pySkyExplorer.Place3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Planet.html">pySkyExplorer.Planet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.RemoteShow.html">pySkyExplorer.RemoteShow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Satellite.html">pySkyExplorer.Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SceneGraph.html">pySkyExplorer.SceneGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShootingStar.html">pySkyExplorer.ShootingStar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.ShowEngineManager.html">pySkyExplorer.ShowEngineManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.SkySurvey.html">pySkyExplorer.SkySurvey</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pySkyExplorer.SlideShowHandler</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySkyExplorer.SlideShowHandler"><code class="docutils literal notranslate"><span class="pre">SlideShowHandler</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.SlideShowHandler.SlideShowHandlerName"><code class="docutils literal notranslate"><span class="pre">SlideShowHandler.SlideShowHandlerName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.SlideShowHandler.UserAction"><code class="docutils literal notranslate"><span class="pre">SlideShowHandler.UserAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.SlideShowHandler.setLoad"><code class="docutils literal notranslate"><span class="pre">SlideShowHandler.setLoad()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.SlideShowHandler.setPause"><code class="docutils literal notranslate"><span class="pre">SlideShowHandler.setPause()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.SlideShowHandler.setStop"><code class="docutils literal notranslate"><span class="pre">SlideShowHandler.setStop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.SlideShowHandler.setUserAction"><code class="docutils literal notranslate"><span class="pre">SlideShowHandler.setUserAction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.SlideShowHandler.beginningOfSlideShow"><code class="docutils literal notranslate"><span class="pre">SlideShowHandler.beginningOfSlideShow</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.SlideShowHandler.currentLoadedSlideShow"><code class="docutils literal notranslate"><span class="pre">SlideShowHandler.currentLoadedSlideShow</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.SlideShowHandler.endOfSlideShow"><code class="docutils literal notranslate"><span class="pre">SlideShowHandler.endOfSlideShow</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.SlideShowHandler.id"><code class="docutils literal notranslate"><span class="pre">SlideShowHandler.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.SlideShowHandler.name"><code class="docutils literal notranslate"><span class="pre">SlideShowHandler.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.SlideShowHandler.osgId"><code class="docutils literal notranslate"><span class="pre">SlideShowHandler.osgId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pySkyExplorer.SlideShowHandler.pause"><code class="docutils literal notranslate"><span class="pre">SlideShowHandler.pause</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Stars.html">pySkyExplorer.Stars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Universe.html">pySkyExplorer.Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec.html">pySkyExplorer.Vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec2.html">pySkyExplorer.Vec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.Vec4.html">pySkyExplorer.Vec4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pySkyExplorer.VideoPlayer.html">pySkyExplorer.VideoPlayer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SkyExplorer 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pySkyExplorer.html">pySkyExplorer</a></li>
+      <li class="breadcrumb-item active">pySkyExplorer.SlideShowHandler</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/class.rst/pySkyExplorer.SlideShowHandler.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyskyexplorer-slideshowhandler">
+<h1>pySkyExplorer.SlideShowHandler<a class="headerlink" href="#pyskyexplorer-slideshowhandler" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.SlideShowHandler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySkyExplorer.</span></span><span class="sig-name descname"><span class="pre">SlideShowHandler</span></span><a class="headerlink" href="#pySkyExplorer.SlideShowHandler" title="Permalink to this definition"></a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.SlideShowHandler.SlideShowHandlerName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SlideShowHandlerName</span></span><a class="headerlink" href="#pySkyExplorer.SlideShowHandler.SlideShowHandlerName" title="Permalink to this definition"></a></dt>
+<dd><p>List of all available slide show handler name.</p>
+<p><strong>InvalidSlideShowHandler</strong></p>
+<p><strong>MainSlideShowHandler</strong></p>
+<p><strong>SlideShowHandlerCount</strong></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pySkyExplorer.SlideShowHandler.UserAction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UserAction</span></span><a class="headerlink" href="#pySkyExplorer.SlideShowHandler.UserAction" title="Permalink to this definition"></a></dt>
+<dd><p>List of available actions in play mode.</p>
+<p><strong>InvalidUserAction</strong></p>
+<p><strong>NO_ACTION</strong></p>
+<p><strong>PREVIOUS</strong></p>
+<p><strong>NEXT</strong></p>
+<p><strong>PAUSE</strong></p>
+<p><strong>UserActionCount</strong></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.SlideShowHandler.setLoad">
+<span class="sig-name descname"><span class="pre">setLoad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(SlideShowHandler)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)load</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.SlideShowHandler.setLoad" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+load : str
+Load an XML file representing a slide show. Path must be relative to user folder.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.SlideShowHandler.setPause">
+<span class="sig-name descname"><span class="pre">setPause</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(SlideShowHandler)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)pause</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.SlideShowHandler.setPause" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+pause : bool
+Pause current playing slide show.
+If no slide show currently playing, it has no effect.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.SlideShowHandler.setStop">
+<span class="sig-name descname"><span class="pre">setStop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(SlideShowHandler)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)stop</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.SlideShowHandler.setStop" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+stop : int
+Stop current playing slide show.
+If no slide show currently playing, it has no effect.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySkyExplorer.SlideShowHandler.setUserAction">
+<span class="sig-name descname"><span class="pre">setUserAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(SlideShowHandler)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(UserAction)userAction</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#pySkyExplorer.SlideShowHandler.setUserAction" title="Permalink to this definition"></a></dt>
+<dd><p>PARAMETERS:
+userAction : UserAction
+Trigger a user action, see ‘UserAction’ documentation for available values.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.SlideShowHandler.beginningOfSlideShow">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">beginningOfSlideShow</span></span><a class="headerlink" href="#pySkyExplorer.SlideShowHandler.beginningOfSlideShow" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+True if the first animation of slide show has not been played and False else.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.SlideShowHandler.currentLoadedSlideShow">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">currentLoadedSlideShow</span></span><a class="headerlink" href="#pySkyExplorer.SlideShowHandler.currentLoadedSlideShow" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+Path to the current loaded slide show. If no slide showLoaded, it will contains an empty string</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.SlideShowHandler.endOfSlideShow">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">endOfSlideShow</span></span><a class="headerlink" href="#pySkyExplorer.SlideShowHandler.endOfSlideShow" title="Permalink to this definition"></a></dt>
+<dd><p>[Read-only]
+True if the last animation of slide show has been played and False else.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.SlideShowHandler.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pySkyExplorer.SlideShowHandler.id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId. DEPRECATED: please use osgId instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.SlideShowHandler.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pySkyExplorer.SlideShowHandler.name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.SlideShowHandler.osgId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">osgId</span></span><a class="headerlink" href="#pySkyExplorer.SlideShowHandler.osgId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the osgId.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySkyExplorer.SlideShowHandler.pause">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pause</span></span><a class="headerlink" href="#pySkyExplorer.SlideShowHandler.pause" title="Permalink to this definition"></a></dt>
+<dd><p>Pause current playing slide show.
+If no slide show currently playing, it has no effect.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pySkyExplorer.SkySurvey.html" class="btn btn-neutral float-left" title="pySkyExplorer.SkySurvey" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pySkyExplorer.Stars.html" class="btn btn-neutral float-right" title="pySkyExplorer.Stars" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RSA Cosmos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
