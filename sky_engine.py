@@ -917,7 +917,14 @@ class TextComponent(Component):
 class GameObject:
     """Game object - can have components and children"""
     
+    # Class variable to track next available ID
+    _next_id = 1
+    
     def __init__(self, name: str = "GameObject", sky_engine = None):
+        # Assign unique ID
+        self.id = GameObject._next_id
+        GameObject._next_id += 1
+        
         self.name = name
         self.sky_engine = sky_engine
         self.components: Dict[str, Component] = {}
@@ -933,6 +940,8 @@ class GameObject:
         self.local_position = Vec(0, 0, 0)
         self.local_rotation = Vec(0, 0, 0)
         self.local_scale = Vec(1, 1, 1)
+        
+        print(f"Created GameObject '{self.name}' with ID: {self.id}")
         
     def add_component(self, component: Component):
         """Add a component to this object"""
@@ -1126,6 +1135,42 @@ class GameObject:
             component.stop()
             
         print(f"Destroyed {self.name}")
+    
+    def get_sky_object_id(self) -> Optional[int]:
+        """Get the ID of the underlying skyExplorer object from components"""
+        for component in self.components.values():
+            if hasattr(component, 'sky_object') and component.sky_object:
+                if hasattr(component.sky_object, 'id'):
+                    return component.sky_object.id
+        return None
+    
+    def get_first_sky_object(self):
+        """Get the first skyExplorer object from components"""
+        for component in self.components.values():
+            if hasattr(component, 'sky_object') and component.sky_object:
+                return component.sky_object
+        return None
+    
+    def has_component_type(self, component_type: str) -> bool:
+        """Check if object has a component of the given type"""
+        return component_type in self.components
+    
+    def get_info(self) -> Dict[str, Any]:
+        """Get comprehensive information about this GameObject"""
+        sky_object_id = self.get_sky_object_id()
+        return {
+            'id': self.id,
+            'name': self.name,
+            'sky_object_id': sky_object_id,
+            'components': list(self.components.keys()),
+            'component_count': len(self.components),
+            'children_ids': [child.id for child in self.children],
+            'children_count': len(self.children),
+            'parent_id': self.parent.id if self.parent else None,
+            'has_sky_object': sky_object_id is not None,
+            'position': {'x': self.position.x, 'y': self.position.y, 'z': self.position.z} if hasattr(self, 'position') else None,
+            'local_position': {'x': self.local_position.x, 'y': self.local_position.y, 'z': self.local_position.z} if hasattr(self, 'local_position') else None
+        }
 
 class SkyEngine:
     """Main engine class"""
@@ -1180,6 +1225,40 @@ class SkyEngine:
             return None
             
         return search_objects(self.root_objects)
+    
+    def get_object_by_id(self, object_id: int) -> Optional[GameObject]:
+        """Find object by ID (searches all objects)"""
+        def search_objects(objects):
+            for obj in objects:
+                if obj.id == object_id:
+                    return obj
+                result = search_objects(obj.children)
+                if result:
+                    return result
+            return None
+            
+        return search_objects(self.root_objects)
+    
+    def get_all_object_ids(self) -> List[int]:
+        """Get list of all object IDs in the scene"""
+        all_objects = self._get_all_objects()
+        return [obj.id for obj in all_objects]
+    
+    def get_object_info(self, object_id: int) -> Optional[Dict[str, Any]]:
+        """Get information about an object by ID"""
+        obj = self.get_object_by_id(object_id)
+        if obj:
+            return {
+                'id': obj.id,
+                'name': obj.name,
+                'components': list(obj.components.keys()),
+                'children_count': len(obj.children),
+                'has_parent': obj.parent is not None,
+                'position': obj.position,
+                'rotation': obj.rotation,
+                'scale': obj.scale
+            }
+        return None
     
     def get_global_animator(self) -> Animator:
         """Get the global animator for animations"""
@@ -1539,11 +1618,31 @@ class SkyEngine:
             planet = Planet(planet_name)
             if hasattr(planet, 'id'):
                 self.go_to_object(planet.id, Action.Type.GoToPlace)
-                print(f"Going to planet: {planet_name}")
+                print(f"Going to planet: {planet_name} (ID: {planet.id})")
             else:
                 print(f"Warning: Could not get ID for planet {planet_name}")
         except Exception as e:
             print(f"Error going to planet: {e}")
+    
+    def go_to_game_object(self, game_object: GameObject):
+        """Go to a specific GameObject (uses its sky object ID)"""
+        try:
+            sky_object_id = game_object.get_sky_object_id()
+            if sky_object_id:
+                self.go_to_object(sky_object_id, Action.Type.GoToPlace)
+                print(f"Going to GameObject '{game_object.name}' (Sky Object ID: {sky_object_id})")
+            else:
+                print(f"Warning: GameObject '{game_object.name}' has no sky object with ID")
+        except Exception as e:
+            print(f"Error going to GameObject: {e}")
+    
+    def go_to_game_object_by_id(self, object_id: int):
+        """Go to a GameObject by its ID"""
+        obj = self.get_object_by_id(object_id)
+        if obj:
+            self.go_to_game_object(obj)
+        else:
+            print(f"Warning: No GameObject found with ID {object_id}")
     
     def go_to_star(self, star_name: IndividualStar.IndividualStarName):
         """Go to a specific star"""
@@ -1825,6 +1924,43 @@ class SkyEngine:
         except Exception as e:
             print(f"Error getting Constellation names: {e}")
             return []
+    
+    def list_all_objects(self):
+        """Print information about all objects in the scene"""
+        all_objects = self._get_all_objects()
+        print(f"\n=== Scene Objects ({len(all_objects)} total) ===")
+        for obj in all_objects:
+            sky_id = obj.get_sky_object_id()
+            print(f"  ID: {obj.id} | Name: '{obj.name}' | Components: {list(obj.components.keys())} | Sky ID: {sky_id}")
+    
+    def clear_all_objects(self):
+        """Remove all objects from the scene"""
+        for obj in self.root_objects[:]:  # Copy list to avoid modification during iteration
+            obj.destroy()
+        self.root_objects.clear()
+        print("All objects cleared from scene")
+    
+    @staticmethod
+    def reset_object_id_counter():
+        """Reset the GameObject ID counter (useful for testing)"""
+        GameObject._next_id = 1
+        print("GameObject ID counter reset to 1")
+    
+    def get_objects_by_component_type(self, component_type: str) -> List[GameObject]:
+        """Get all objects that have a specific component type"""
+        matching_objects = []
+        for obj in self._get_all_objects():
+            if obj.has_component_type(component_type):
+                matching_objects.append(obj)
+        return matching_objects
+    
+    def count_objects_by_type(self) -> Dict[str, int]:
+        """Get count of objects by component type"""
+        type_counts = {}
+        for obj in self._get_all_objects():
+            for component_type in obj.components.keys():
+                type_counts[component_type] = type_counts.get(component_type, 0) + 1
+        return type_counts
 
 class AudioComponent(Component):
     """Component for audio playback"""
@@ -2896,6 +3032,44 @@ def test_sky_engine():
     print("  • Check available constellations: engine.get_available_constellation_names()")
     print("  • Stars auto-detect: StarsComponent() uses first available name")
     print("  • Robust error handling for missing enum values")
+    
+    print("\nID Management Features:")
+    print("  • Every GameObject has unique ID: obj.id")
+    print("  • Find by ID: engine.get_object_by_id(id)")
+    print("  • Get all IDs: engine.get_all_object_ids()")
+    print("  • Object info: obj.get_info() or engine.get_object_info(id)")
+    print("  • Navigate to GameObjects: engine.go_to_game_object(obj)")
+    
+    # Demonstrate ID features
+    print(f"\n=== ID Management Demo ===")
+    all_ids = engine.get_all_object_ids()
+    print(f"Created {len(all_ids)} objects with IDs: {all_ids}")
+    
+    # Show info for first object
+    if all_ids:
+        first_id = all_ids[0]
+        obj_info = engine.get_object_info(first_id)
+        print(f"First object info: {obj_info}")
+        
+        # Try to navigate to first object if it has a sky object  
+        first_obj = engine.get_object_by_id(first_id)
+        if first_obj and first_obj.get_sky_object_id():
+            print(f"Navigating to first object: {first_obj.name}")
+            engine.go_to_game_object(first_obj)
+    
+    # Show object type counts
+    type_counts = engine.count_objects_by_type()
+    print(f"Objects by type: {type_counts}")
+    
+    # List all objects in scene
+    engine.list_all_objects()
+    
+    # Find objects by component type
+    planet_objects = engine.get_objects_by_component_type("Planet")
+    print(f"Found {len(planet_objects)} planet objects")
+    
+    constellation_objects = engine.get_objects_by_component_type("Constellation")
+    print(f"Found {len(constellation_objects)} constellation objects")
 
 if __name__ == "__main__":
     test_sky_engine() 
