@@ -1,4 +1,6 @@
 from skyExplorer import *
+from skyExplorer import Vec4
+from studio import Action, Data
 from time import sleep
 from typing import Dict, List, Optional, Any
 import math
@@ -459,7 +461,7 @@ class PlanetComponent(Component):
             self.sky_object.setLivePatchKeyColor(color)
 
 class ConstellationComponent(Component):
-    """Component for constellations"""
+    """Component for constellations with full control over lines, art, and labels"""
     
     def __init__(self, constellation_enum: Constellation.ConstellationName = Constellation.ConstellationName.UMa):
         super().__init__("Constellation")
@@ -467,25 +469,129 @@ class ConstellationComponent(Component):
         self.lines_intensity = 1.0
         self.art_intensity = 0.5
         self.label_intensity = 1.0
+        
+        # Additional constellation properties
+        self.boundary_intensity = 0.0
+        self.pointer_intensity = 0.0
+        self.trajectory_intensity = 0.0
+        
         self.sky_object = Constellation(constellation_enum)
+        self._apply_all_properties()
+        
+    def _apply_all_properties(self):
+        """Apply all stored properties to the sky object"""
+        if not self.sky_object:
+            return
+            
+        if hasattr(self.sky_object, 'setLinesIntensity'):
+            self.sky_object.setLinesIntensity(self.lines_intensity)
+        if hasattr(self.sky_object, 'setArtIntensity'):
+            self.sky_object.setArtIntensity(self.art_intensity)
+        if hasattr(self.sky_object, 'setLabelIntensity'):
+            self.sky_object.setLabelIntensity(self.label_intensity)
+        if hasattr(self.sky_object, 'setBoundaryIntensity'):
+            self.sky_object.setBoundaryIntensity(self.boundary_intensity)
+        if hasattr(self.sky_object, 'setPointerIntensity'):
+            self.sky_object.setPointerIntensity(self.pointer_intensity)
+        if hasattr(self.sky_object, 'setTrajectoryIntensity'):
+            self.sky_object.setTrajectoryIntensity(self.trajectory_intensity)
         
     def set_lines_intensity(self, intensity: float):
-        """Set constellation lines intensity"""
+        """Set constellation lines intensity (0=off, 1=full)"""
         self.lines_intensity = intensity
-        if self.sky_object:
+        if self.sky_object and hasattr(self.sky_object, 'setLinesIntensity'):
             self.sky_object.setLinesIntensity(intensity)
+        print(f"Constellation {self.constellation_enum} lines intensity: {intensity}")
+        return self
             
     def set_art_intensity(self, intensity: float):
-        """Set constellation art intensity"""
+        """Set constellation art/drawings intensity (0=off, 1=full)"""
         self.art_intensity = intensity
-        if self.sky_object:
+        if self.sky_object and hasattr(self.sky_object, 'setArtIntensity'):
             self.sky_object.setArtIntensity(intensity)
+        print(f"Constellation {self.constellation_enum} art intensity: {intensity}")
+        return self
             
     def set_label_intensity(self, intensity: float):
-        """Set constellation label intensity"""
+        """Set constellation label intensity (0=off, 1=full)"""
         self.label_intensity = intensity
-        if self.sky_object:
+        if self.sky_object and hasattr(self.sky_object, 'setLabelIntensity'):
             self.sky_object.setLabelIntensity(intensity)
+        print(f"Constellation {self.constellation_enum} label intensity: {intensity}")
+        return self
+    
+    def set_boundary_intensity(self, intensity: float):
+        """Set constellation boundary intensity (0=off, 1=full)"""
+        self.boundary_intensity = intensity
+        if self.sky_object and hasattr(self.sky_object, 'setBoundaryIntensity'):
+            self.sky_object.setBoundaryIntensity(intensity)
+        return self
+    
+    def set_pointer_intensity(self, intensity: float):
+        """Set constellation pointer intensity (0=off, 1=full)"""
+        self.pointer_intensity = intensity
+        if self.sky_object and hasattr(self.sky_object, 'setPointerIntensity'):
+            self.sky_object.setPointerIntensity(intensity)
+        return self
+    
+    # Convenience methods for turning features on/off
+    def turn_lines_on(self):
+        """Turn on constellation lines"""
+        return self.set_lines_intensity(1.0)
+    
+    def turn_lines_off(self):
+        """Turn off constellation lines"""
+        return self.set_lines_intensity(0.0)
+    
+    def turn_art_on(self):
+        """Turn on constellation art/drawings"""
+        return self.set_art_intensity(1.0)
+    
+    def turn_art_off(self):
+        """Turn off constellation art/drawings"""
+        return self.set_art_intensity(0.0)
+    
+    def turn_labels_on(self):
+        """Turn on constellation labels"""
+        return self.set_label_intensity(1.0)
+    
+    def turn_labels_off(self):
+        """Turn off constellation labels"""
+        return self.set_label_intensity(0.0)
+    
+    def turn_boundaries_on(self):
+        """Turn on constellation boundaries"""
+        return self.set_boundary_intensity(1.0)
+    
+    def turn_boundaries_off(self):
+        """Turn off constellation boundaries"""
+        return self.set_boundary_intensity(0.0)
+    
+    def turn_all_on(self):
+        """Turn on all constellation features"""
+        self.turn_lines_on()
+        self.turn_art_on()
+        self.turn_labels_on()
+        return self
+    
+    def turn_all_off(self):
+        """Turn off all constellation features"""
+        self.turn_lines_off()
+        self.turn_art_off()
+        self.turn_labels_off()
+        return self
+    
+    def set_all_intensities(self, lines: float = None, art: float = None, labels: float = None, boundaries: float = None):
+        """Set multiple intensities at once"""
+        if lines is not None:
+            self.set_lines_intensity(lines)
+        if art is not None:
+            self.set_art_intensity(art)
+        if labels is not None:
+            self.set_label_intensity(labels)
+        if boundaries is not None:
+            self.set_boundary_intensity(boundaries)
+        return self
 
 class SunComponent(Component):
     """Component for the Sun with advanced features"""
@@ -1529,7 +1635,18 @@ class SkyEngine:
         try:
             # Create a global Stars object if it doesn't exist
             if not hasattr(self, '_stars_object'):
-                self._stars_object = Stars(Stars.StarsName.Stars001)
+                try:
+                    # Try to get the first available StarsName enum value
+                    available_names = list(Stars.StarsName)
+                    if available_names:
+                        self._stars_object = Stars(available_names[0])
+                        print(f"Created Stars object using: {available_names[0]}")
+                    else:
+                        print("Error: No StarsName enum values available")
+                        return
+                except Exception as enum_error:
+                    print(f"Error accessing Stars.StarsName enum: {enum_error}")
+                    return
             
             self._stars_object.setIntensity(intensity)
             print(f"Stars intensity set to: {intensity}")
@@ -1544,12 +1661,170 @@ class SkyEngine:
         """Turn off the starry sky"""
         self.set_stars_intensity(0.0)
     
-    def create_stars_object(self, name: str = "Stars") -> GameObject:
+    def create_stars_object(self, name: str = "Stars", stars_name: Stars.StarsName = None) -> GameObject:
         """Create a game object with a stars component"""
         stars_obj = self.create_object(name)
-        stars_comp = StarsComponent()
+        stars_comp = StarsComponent(stars_name)
         stars_obj.add_component(stars_comp)
         return stars_obj
+    
+    def get_available_stars_names(self):
+        """Get list of available StarsName enum values"""
+        try:
+            available_names = list(Stars.StarsName)
+            print("Available Stars names:")
+            for i, name in enumerate(available_names):
+                print(f"  {i}: {name}")
+            return available_names
+        except Exception as e:
+            print(f"Error getting Stars names: {e}")
+            return []
+    
+    # Constellation Control Methods
+    def create_constellation_object(self, constellation_name: Constellation.ConstellationName, object_name: str = None) -> GameObject:
+        """Create a game object with a constellation component"""
+        if object_name is None:
+            object_name = f"Constellation_{constellation_name.name}"
+        
+        constellation_obj = self.create_object(object_name)
+        constellation_comp = ConstellationComponent(constellation_name)
+        constellation_obj.add_component(constellation_comp)
+        return constellation_obj
+    
+    def set_all_constellation_lines(self, intensity: float):
+        """Set lines intensity for all constellation objects in the scene"""
+        count = 0
+        for obj in self._get_all_objects():
+            constellation_comp = obj.get_component("Constellation")
+            if constellation_comp:
+                constellation_comp.set_lines_intensity(intensity)
+                count += 1
+        print(f"Set lines intensity to {intensity} for {count} constellations")
+    
+    def set_all_constellation_art(self, intensity: float):
+        """Set art intensity for all constellation objects in the scene"""
+        count = 0
+        for obj in self._get_all_objects():
+            constellation_comp = obj.get_component("Constellation")
+            if constellation_comp:
+                constellation_comp.set_art_intensity(intensity)
+                count += 1
+        print(f"Set art intensity to {intensity} for {count} constellations")
+    
+    def set_all_constellation_labels(self, intensity: float):
+        """Set labels intensity for all constellation objects in the scene"""
+        count = 0
+        for obj in self._get_all_objects():
+            constellation_comp = obj.get_component("Constellation")
+            if constellation_comp:
+                constellation_comp.set_label_intensity(intensity)
+                count += 1
+        print(f"Set labels intensity to {intensity} for {count} constellations")
+    
+    def set_all_constellation_boundaries(self, intensity: float):
+        """Set boundaries intensity for all constellation objects in the scene"""
+        count = 0
+        for obj in self._get_all_objects():
+            constellation_comp = obj.get_component("Constellation")
+            if constellation_comp:
+                constellation_comp.set_boundary_intensity(intensity)
+                count += 1
+        print(f"Set boundaries intensity to {intensity} for {count} constellations")
+    
+    def turn_all_constellation_lines_on(self):
+        """Turn on lines for all constellations"""
+        self.set_all_constellation_lines(1.0)
+    
+    def turn_all_constellation_lines_off(self):
+        """Turn off lines for all constellations"""
+        self.set_all_constellation_lines(0.0)
+    
+    def turn_all_constellation_art_on(self):
+        """Turn on art/drawings for all constellations"""
+        self.set_all_constellation_art(1.0)
+    
+    def turn_all_constellation_art_off(self):
+        """Turn off art/drawings for all constellations"""
+        self.set_all_constellation_art(0.0)
+    
+    def turn_all_constellation_labels_on(self):
+        """Turn on labels for all constellations"""
+        self.set_all_constellation_labels(1.0)
+    
+    def turn_all_constellation_labels_off(self):
+        """Turn off labels for all constellations"""
+        self.set_all_constellation_labels(0.0)
+    
+    def turn_all_constellation_boundaries_on(self):
+        """Turn on boundaries for all constellations"""
+        self.set_all_constellation_boundaries(1.0)
+    
+    def turn_all_constellation_boundaries_off(self):
+        """Turn off boundaries for all constellations"""
+        self.set_all_constellation_boundaries(0.0)
+    
+    def turn_all_constellations_on(self):
+        """Turn on all constellation features (lines, art, labels)"""
+        self.turn_all_constellation_lines_on()
+        self.turn_all_constellation_art_on()
+        self.turn_all_constellation_labels_on()
+        print("All constellation features turned ON")
+    
+    def turn_all_constellations_off(self):
+        """Turn off all constellation features (lines, art, labels)"""
+        self.turn_all_constellation_lines_off()
+        self.turn_all_constellation_art_off()
+        self.turn_all_constellation_labels_off()
+        print("All constellation features turned OFF")
+    
+    def set_constellation_display_mode(self, mode: str):
+        """Set constellation display mode
+        
+        Args:
+            mode: 'lines_only', 'art_only', 'labels_only', 'all', 'none'
+        """
+        if mode == 'lines_only':
+            self.turn_all_constellation_lines_on()
+            self.turn_all_constellation_art_off()
+            self.turn_all_constellation_labels_off()
+        elif mode == 'art_only':
+            self.turn_all_constellation_lines_off()
+            self.turn_all_constellation_art_on()
+            self.turn_all_constellation_labels_off()
+        elif mode == 'labels_only':
+            self.turn_all_constellation_lines_off()
+            self.turn_all_constellation_art_off()
+            self.turn_all_constellation_labels_on()
+        elif mode == 'all':
+            self.turn_all_constellations_on()
+        elif mode == 'none':
+            self.turn_all_constellations_off()
+        else:
+            print(f"Unknown mode: {mode}. Use 'lines_only', 'art_only', 'labels_only', 'all', or 'none'")
+    
+    def _get_all_objects(self) -> List[GameObject]:
+        """Get all objects in the scene (root + children)"""
+        all_objects = []
+        
+        def collect_objects(objects):
+            for obj in objects:
+                all_objects.append(obj)
+                collect_objects(obj.children)
+        
+        collect_objects(self.root_objects)
+        return all_objects
+    
+    def get_available_constellation_names(self):
+        """Get list of available Constellation enum values"""
+        try:
+            available_names = list(Constellation.ConstellationName)
+            print("Available Constellation names:")
+            for i, name in enumerate(available_names):
+                print(f"  {i}: {name}")
+            return available_names
+        except Exception as e:
+            print(f"Error getting Constellation names: {e}")
+            return []
 
 class AudioComponent(Component):
     """Component for audio playback"""
@@ -2070,9 +2345,18 @@ class SatelliteComponent(Component):
 class StarsComponent(Component):
     """Component for controlling the starry sky/star field"""
     
-    def __init__(self, stars_name: Stars.StarsName = Stars.StarsName.Stars001):
+    def __init__(self, stars_name: Stars.StarsName = None):
         super().__init__("Stars")
-        self.stars_name = stars_name
+        # Use the first available stars name if none provided
+        if stars_name is None:
+            try:
+                # Try to get the first available StarsName enum value
+                available_names = list(Stars.StarsName)
+                self.stars_name = available_names[0] if available_names else None
+            except:
+                self.stars_name = None
+        else:
+            self.stars_name = stars_name
         self.intensity = 1.0
         self.exposure = 1.0
         self.contrast = 1.0
@@ -2096,8 +2380,11 @@ class StarsComponent(Component):
         
     def initialize(self, sky_engine):
         """Initialize the stars object"""
-        self.sky_object = Stars(self.stars_name)
-        self._apply_all_properties()
+        if self.stars_name:
+            self.sky_object = Stars(self.stars_name)
+            self._apply_all_properties()
+        else:
+            print("Warning: No valid StarsName available, cannot initialize Stars object")
         
     def _apply_all_properties(self):
         """Apply all stored properties to the sky object"""
@@ -2445,6 +2732,12 @@ def test_sky_engine():
     
     # Test Stars Control
     print("\n=== Testing Stars Control ===")
+    
+    # Show available stars names for debugging
+    print("Checking available Stars names...")
+    available_stars = engine.get_available_stars_names()
+    
+    # Create stars object (will use first available name automatically)
     stars_obj = engine.create_stars_object("Starry Sky")
     stars_comp = stars_obj.get_component("Stars")
     
@@ -2488,12 +2781,70 @@ def test_sky_engine():
     planet_comp.set_clouds_intensity(0.8)
     # planet_comp.set_atmosphere_intensity(0.5)  # Will implement if needed
     
-    # Create a constellation
-    constellation_obj = engine.create_object("Ursa Major")
-    constellation_comp = ConstellationComponent(Constellation.ConstellationName.UMa)
-    constellation_obj.add_component(constellation_comp)
-    constellation_comp.set_lines_intensity(1.0)
-    constellation_comp.set_art_intensity(0.7)
+    # Test Constellation Control
+    print("\n=== Testing Constellation Control ===")
+    
+    # Show available constellation names for debugging
+    print("Checking available Constellation names...")
+    available_constellations = engine.get_available_constellation_names()
+    
+    # Create multiple constellations using first few available names
+    try:
+        if len(available_constellations) >= 3:
+            constellation1 = engine.create_constellation_object(available_constellations[0], "Constellation_1")
+            constellation2 = engine.create_constellation_object(available_constellations[1], "Constellation_2") 
+            constellation3 = engine.create_constellation_object(available_constellations[2], "Constellation_3")
+            print(f"Created 3 constellations: {available_constellations[0]}, {available_constellations[1]}, {available_constellations[2]}")
+        else:
+            print(f"Warning: Only {len(available_constellations)} constellation names available")
+    except Exception as e:
+        print(f"Error creating constellations: {e}")
+        # Try with specific names as fallback
+        try:
+            orion = engine.create_constellation_object(Constellation.ConstellationName.Ori, "Orion")
+            ursa_major = engine.create_constellation_object(Constellation.ConstellationName.UMa, "Ursa Major")
+            cassiopeia = engine.create_constellation_object(Constellation.ConstellationName.Cas, "Cassiopeia")
+            print("Created 3 constellations using fallback names: Orion, Ursa Major, Cassiopeia")
+        except Exception as fallback_error:
+            print(f"Fallback constellation creation also failed: {fallback_error}")
+    
+    sleep(2)
+    
+    print("Testing individual constellation control...")
+    # Try to get the first constellation for individual testing
+    try:
+        if len(available_constellations) >= 1:
+            first_constellation_comp = constellation1.get_component("Constellation")
+            first_constellation_comp.turn_all_on()
+            sleep(1)
+            
+            print(f"Turning off {available_constellations[0]} art, keeping lines and labels...")
+            first_constellation_comp.turn_art_off()
+        else:
+            print("No constellations available for individual testing")
+    except:
+        print("Individual constellation control test skipped")
+    sleep(2)
+    
+    print("Testing global constellation control...")
+    print("Turn off all constellation lines...")
+    engine.turn_all_constellation_lines_off()
+    sleep(2)
+    
+    print("Turn off all constellation labels...")
+    engine.turn_all_constellation_labels_off()
+    sleep(2)
+    
+    print("Show only constellation art...")
+    engine.set_constellation_display_mode('art_only')
+    sleep(2)
+    
+    print("Show only constellation lines...")
+    engine.set_constellation_display_mode('lines_only')
+    sleep(2)
+    
+    print("Turn everything back on...")
+    engine.turn_all_constellations_on()
     
     # Create text
     text_obj = engine.create_object("Navigation Demo")
@@ -2527,9 +2878,24 @@ def test_sky_engine():
     print("Sky Engine now supports:")
     print("✓ Stars on/off control")
     print("✓ Navigation to planets, stars, constellations")
+    print("✓ Full constellation control (lines, art, labels, boundaries)")
+    print("✓ Individual and global constellation management") 
+    print("✓ Constellation display modes")
     print("✓ Component-based architecture")
     print("✓ Animation and keyframe system")
     print("✓ Camera controls")
+    
+    print("\nConstellation Features:")
+    print("  • Individual control: constellation_comp.turn_lines_on/off()")
+    print("  • Global control: engine.turn_all_constellation_lines_on/off()")
+    print("  • Display modes: engine.set_constellation_display_mode('lines_only')")
+    print("  • Supported modes: 'lines_only', 'art_only', 'labels_only', 'all', 'none'")
+    
+    print("\nDebugging Features:")
+    print("  • Check available stars: engine.get_available_stars_names()")
+    print("  • Check available constellations: engine.get_available_constellation_names()")
+    print("  • Stars auto-detect: StarsComponent() uses first available name")
+    print("  • Robust error handling for missing enum values")
 
 if __name__ == "__main__":
     test_sky_engine() 
