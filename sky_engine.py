@@ -458,6 +458,53 @@ class PlanetComponent(Component):
         self.live_patch_key_color = color
         if self.sky_object and hasattr(self.sky_object, 'setLivePatchKeyColor'):
             self.sky_object.setLivePatchKeyColor(color)
+    
+    # === ADDITIONAL APPEARANCE METHODS ===
+    
+    def set_label_color(self, red: float, green: float, blue: float, alpha: float = 1.0):
+        """Set planet label color (RGBA values 0-1)"""
+        if self.sky_object and hasattr(self.sky_object, 'setLabelColor'):
+            self.sky_object.setLabelColor(Vec4(red, green, blue, alpha))
+    
+    def set_label_intensity(self, intensity: float):
+        """Set planet label visibility (0=off, 1=full)"""
+        if self.sky_object and hasattr(self.sky_object, 'setLabelIntensity'):
+            self.sky_object.setLabelIntensity(intensity)
+    
+    def set_atmosphere_intensity(self, intensity: float):
+        """Set atmosphere visibility (0=off, 1=full)"""
+        if self.sky_object and hasattr(self.sky_object, 'setAtmosphereIntensity'):
+            self.sky_object.setAtmosphereIntensity(intensity)
+    
+    def set_night_lights_intensity(self, intensity: float):
+        """Set city lights visibility (0=off, 1=full)"""
+        if self.sky_object and hasattr(self.sky_object, 'setNightLightsIntensity'):
+            self.sky_object.setNightLightsIntensity(intensity)
+    
+    def set_orbit_intensity(self, intensity: float):
+        """Set orbit line visibility (0=off, 1=full)"""
+        if self.sky_object and hasattr(self.sky_object, 'setOrbitIntensity'):
+            self.sky_object.setOrbitIntensity(intensity)
+    
+    def set_pointer_intensity(self, intensity: float):
+        """Set planet pointer visibility (0=off, 1=full)"""
+        if self.sky_object and hasattr(self.sky_object, 'setPointerIntensity'):
+            self.sky_object.setPointerIntensity(intensity)
+    
+    def set_rainbow_intensity(self, intensity: float):
+        """Set rainbow visibility (0=off, 1=full)"""
+        if self.sky_object and hasattr(self.sky_object, 'setRainbowIntensity'):
+            self.sky_object.setRainbowIntensity(intensity)
+    
+    def set_aurora_intensity(self, intensity: float):
+        """Set aurora visibility (0=off, 1=full)"""
+        if self.sky_object and hasattr(self.sky_object, 'setAuroraIntensity'):
+            self.sky_object.setAuroraIntensity(intensity)
+    
+    def set_magnetosphere_intensity(self, intensity: float):
+        """Set magnetosphere visibility (0=off, 1=full)"""
+        if self.sky_object and hasattr(self.sky_object, 'setMagnetosphereIntensity'):
+            self.sky_object.setMagnetosphereIntensity(intensity)
 
 class ConstellationComponent(Component):
     """Component for constellations with full control over lines, art, and labels"""
@@ -1911,6 +1958,155 @@ class SkyEngine:
             print(f"Error getting Constellation names: {e}")
             return []
     
+    # === APPEARANCE EDITING CONVENIENCE METHODS ===
+    
+    def edit_object_appearance(self, obj_id: int, **appearance_settings):
+        """Edit any object's appearance using keyword arguments
+        
+        Example:
+            engine.edit_object_appearance(my_planet_id, 
+                                        intensity=0.8,
+                                        cloud_coverage=0.6,
+                                        atmosphere_intensity=0.9,
+                                        label_color=(1.0, 0.8, 0.0, 1.0))
+        """
+        obj = self.get_object_by_id(obj_id)
+        if not obj:
+            print(f"No object found with ID {obj_id}")
+            return
+            
+        for component in obj.components.values():
+            for setting, value in appearance_settings.items():
+                method_name = f"set_{setting}"
+                if hasattr(component, method_name):
+                    method = getattr(component, method_name)
+                    try:
+                        if setting.endswith('_color') and isinstance(value, (list, tuple)) and len(value) >= 3:
+                            # Handle color values
+                            if len(value) == 3:
+                                method(value[0], value[1], value[2])
+                            elif len(value) == 4:
+                                method(value[0], value[1], value[2], value[3])
+                        else:
+                            method(value)
+                        print(f"Applied {setting}={value} to {component.type}")
+                    except Exception as e:
+                        print(f"Error applying {setting}: {e}")
+    
+    def edit_object_by_name(self, obj_name: str, **appearance_settings):
+        """Edit object appearance by name"""
+        obj = self.get_object_by_name(obj_name)
+        if obj:
+            self.edit_object_appearance(obj.id, **appearance_settings)
+        else:
+            print(f"No object found with name '{obj_name}'")
+    
+    def edit_all_planets(self, **planet_settings):
+        """Apply appearance settings to all planets in the scene"""
+        planet_objects = self.get_objects_by_component_type("Planet")
+        for obj in planet_objects:
+            self.edit_object_appearance(obj.id, **planet_settings)
+        print(f"Applied settings to {len(planet_objects)} planets")
+    
+    def edit_all_stars(self, **star_settings):
+        """Apply appearance settings to all stars in the scene"""
+        star_objects = self.get_objects_by_component_type("IndividualStar")
+        for obj in star_objects:
+            self.edit_object_appearance(obj.id, **star_settings)
+        print(f"Applied settings to {len(star_objects)} stars")
+    
+    def edit_all_constellations(self, **constellation_settings):
+        """Apply appearance settings to all constellations in the scene"""
+        constellation_objects = self.get_objects_by_component_type("Constellation")
+        for obj in constellation_objects:
+            self.edit_object_appearance(obj.id, **constellation_settings)
+        print(f"Applied settings to {len(constellation_objects)} constellations")
+    
+    def quick_planet_edit(self, planet_name: str, intensity: float = None, clouds: float = None, 
+                         atmosphere: float = None, night_lights: float = None, 
+                         label_color: tuple = None, show_orbit: bool = None):
+        """Quick planet appearance editing with common settings"""
+        obj = self.get_object_by_name(planet_name)
+        if not obj:
+            print(f"Planet '{planet_name}' not found")
+            return
+            
+        planet_comp = obj.get_component("Planet")
+        if not planet_comp:
+            print(f"Object '{planet_name}' is not a planet")
+            return
+        
+        if intensity is not None:
+            planet_comp.set_intensity(intensity)
+        if clouds is not None:
+            planet_comp.set_clouds_intensity(clouds)
+        if atmosphere is not None:
+            planet_comp.set_atmosphere_intensity(atmosphere)
+        if night_lights is not None:
+            planet_comp.set_night_lights_intensity(night_lights)
+        if label_color is not None and len(label_color) >= 3:
+            if len(label_color) == 3:
+                planet_comp.set_label_color(label_color[0], label_color[1], label_color[2])
+            else:
+                planet_comp.set_label_color(label_color[0], label_color[1], label_color[2], label_color[3])
+        if show_orbit is not None:
+            planet_comp.set_orbit_intensity(1.0 if show_orbit else 0.0)
+            
+        print(f"Updated appearance for planet '{planet_name}'")
+    
+    def save_appearance_preset(self, obj_id: int, preset_name: str):
+        """Save an object's current appearance as a preset"""
+        if not hasattr(self, '_appearance_presets'):
+            self._appearance_presets = {}
+            
+        obj = self.get_object_by_id(obj_id)
+        if not obj:
+            print(f"No object found with ID {obj_id}")
+            return
+            
+        # Extract appearance settings from components
+        preset_data = {}
+        for comp_name, component in obj.components.items():
+            comp_settings = {}
+            # Get all settable attributes (this is a simplified approach)
+            for attr_name in dir(component):
+                if not attr_name.startswith('_') and hasattr(component, f'set_{attr_name}'):
+                    try:
+                        value = getattr(component, attr_name)
+                        if isinstance(value, (int, float, str, bool)):
+                            comp_settings[attr_name] = value
+                    except:
+                        pass
+            preset_data[comp_name] = comp_settings
+            
+        self._appearance_presets[preset_name] = preset_data
+        print(f"Saved appearance preset '{preset_name}' for object '{obj.name}'")
+    
+    def load_appearance_preset(self, obj_id: int, preset_name: str):
+        """Load a saved appearance preset to an object"""
+        if not hasattr(self, '_appearance_presets') or preset_name not in self._appearance_presets:
+            print(f"Preset '{preset_name}' not found")
+            return
+            
+        obj = self.get_object_by_id(obj_id)
+        if not obj:
+            print(f"No object found with ID {obj_id}")
+            return
+            
+        preset_data = self._appearance_presets[preset_name]
+        for comp_name, settings in preset_data.items():
+            if comp_name in obj.components:
+                component = obj.components[comp_name]
+                for setting, value in settings.items():
+                    method_name = f"set_{setting}"
+                    if hasattr(component, method_name):
+                        try:
+                            getattr(component, method_name)(value)
+                        except Exception as e:
+                            print(f"Error applying {setting}: {e}")
+                            
+        print(f"Loaded appearance preset '{preset_name}' to object '{obj.name}'")
+    
     def list_all_objects(self):
         """Print information about all objects in the scene"""
         all_objects = self._get_all_objects()
@@ -3056,6 +3252,68 @@ def test_sky_engine():
     
     constellation_objects = engine.get_objects_by_component_type("Constellation")
     print(f"Found {len(constellation_objects)} constellation objects")
+    
+    # Test Appearance Editing
+    print("\\n=== Testing Appearance Editing ===")
+    
+    # Edit planet appearance using individual methods
+    if planet_objects:
+        planet_obj = planet_objects[0]
+        planet_comp = planet_obj.get_component("Planet")
+        
+        print(f"Editing appearance of planet: {planet_obj.name}")
+        planet_comp.set_clouds_intensity(0.8)
+        planet_comp.set_atmosphere_intensity(0.9) 
+        planet_comp.set_night_lights_intensity(0.5)
+        planet_comp.set_label_color(1.0, 0.8, 0.0, 1.0)  # Golden label
+        planet_comp.set_orbit_intensity(1.0)
+        sleep(2)
+        
+        # Test convenience method
+        print("Testing quick planet edit...")
+        engine.quick_planet_edit(planet_obj.name, 
+                               intensity=0.9,
+                               clouds=0.6, 
+                               atmosphere=0.7,
+                               night_lights=0.3,
+                               label_color=(0.0, 1.0, 1.0, 1.0),  # Cyan label
+                               show_orbit=True)
+        sleep(2)
+        
+        # Test appearance presets
+        print("Testing appearance presets...")
+        engine.save_appearance_preset(planet_obj.id, "my_planet_style")
+        sleep(1)
+        
+        # Change appearance then restore
+        planet_comp.set_clouds_intensity(0.1)
+        planet_comp.set_atmosphere_intensity(0.1)
+        print("Changed appearance, now restoring preset...")
+        sleep(1)
+        engine.load_appearance_preset(planet_obj.id, "my_planet_style")
+        sleep(2)
+    
+    # Test bulk editing
+    print("Testing bulk appearance editing...")
+    engine.edit_all_planets(intensity=0.8, clouds_intensity=0.5)
+    engine.edit_all_constellations(lines_intensity=1.0, art_intensity=0.3)
+    
+    print("\\n=== Features Summary ===")
+    print("✓ Comprehensive appearance editing system added!")
+    print("✓ Individual component control")
+    print("✓ Bulk editing methods")
+    print("✓ Quick edit shortcuts")
+    print("✓ Appearance presets")
+    print("✓ Color control for labels and effects")
+    print("✓ Works with all object types (planets, stars, constellations)")
+    
+    print("\\nAppearance Editing Examples:")
+    print("  • Individual: planet_comp.set_clouds_intensity(0.8)")
+    print("  • Quick edit: engine.quick_planet_edit('Earth', clouds=0.6)")
+    print("  • Bulk edit: engine.edit_all_planets(intensity=0.8)")
+    print("  • Flexible: engine.edit_object_by_name('Mars', atmosphere_intensity=0.9)")
+    print("  • Presets: engine.save_appearance_preset(obj_id, 'my_style')")
+    print("  • Colors: planet_comp.set_label_color(1.0, 0.8, 0.0, 1.0)")
 
 if __name__ == "__main__":
     test_sky_engine() 

@@ -14,7 +14,7 @@ def create_global_objects(engine):
 	sun_comp.set_intensity(300.0)
 	sun_comp.set_photosphere_intensity(1.0)
  
-	engine.go_to_object(sun_obj.id)
+	engine.go_to_object(sun_obj)
 
 def usra_story():
 
