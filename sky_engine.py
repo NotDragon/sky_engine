@@ -1,6 +1,5 @@
 from skyExplorer import *
 from skyExplorer import Vec4
-from studio import Action, Data
 from time import sleep
 from typing import Dict, List, Optional, Any
 import math
@@ -1592,47 +1591,55 @@ class SkyEngine:
             'zoom': self.camera_zoom
         }
     
-    # Navigation Methods
-    def go_to_object(self, obj_id: int, action_type: Action.Type = Action.Type.GoTo):
-        """Go to a specific object using its ID and Action system"""
+    # Navigation Methods (Camera-based since studio library not available)
+    def go_to_object(self, target_object, distance: float = 10.0):
+        """Navigate camera to look at a specific object"""
         try:
-            # Create a Data object for the target
-            data = Data()
-            data.id = obj_id
-            
-            # Get the appropriate action
-            action = data.action(action_type)
-            
-            # Trigger the action
-            if action:
-                action.trigger()
-                print(f"Navigating to object ID {obj_id} using {action_type}")
+            if hasattr(target_object, 'sky_object') and target_object.sky_object:
+                # Try to get object position and point camera at it
+                target_pos = target_object.get_world_position()
+                self.look_at_position(target_pos, distance)
+                print(f"Camera looking at object: {target_object.name}")
+            elif hasattr(target_object, 'get_world_position'):
+                # Direct skyExplorer object
+                target_pos = target_object.get_world_position()
+                self.look_at_position(target_pos, distance)
+                print(f"Camera looking at skyExplorer object")
             else:
-                print(f"Warning: Could not create action for object ID {obj_id}")
+                print(f"Warning: Cannot navigate to object - no position available")
         except Exception as e:
             print(f"Error navigating to object: {e}")
     
-    def go_to_planet(self, planet_name: Planet.PlanetName):
+    def look_at_position(self, position: Vec, distance: float = 10.0):
+        """Point camera at a specific position"""
+        try:
+            # Calculate camera position offset from target
+            camera_offset = Vec(0, 0, distance)
+            new_camera_pos = Vec(position.x + camera_offset.x, 
+                               position.y + camera_offset.y, 
+                               position.z + camera_offset.z)
+            
+            # Update camera position and look at target
+            self.set_camera_position(new_camera_pos)
+            # Note: Camera rotation to look at target would require more complex math
+            print(f"Camera positioned at distance {distance} from target")
+        except Exception as e:
+            print(f"Error positioning camera: {e}")
+    
+    def go_to_planet(self, planet_name: Planet.PlanetName, distance: float = 15.0):
         """Go to a specific planet"""
         try:
             planet = Planet(planet_name)
-            if hasattr(planet, 'id'):
-                self.go_to_object(planet.id, Action.Type.GoToPlace)
-                print(f"Going to planet: {planet_name} (ID: {planet.id})")
-            else:
-                print(f"Warning: Could not get ID for planet {planet_name}")
+            self.go_to_object(planet, distance)
+            print(f"Going to planet: {planet_name}")
         except Exception as e:
             print(f"Error going to planet: {e}")
     
-    def go_to_game_object(self, game_object: GameObject):
-        """Go to a specific GameObject (uses its sky object ID)"""
+    def go_to_game_object(self, game_object: GameObject, distance: float = 10.0):
+        """Go to a specific GameObject"""
         try:
-            sky_object_id = game_object.get_sky_object_id()
-            if sky_object_id:
-                self.go_to_object(sky_object_id, Action.Type.GoToPlace)
-                print(f"Going to GameObject '{game_object.name}' (Sky Object ID: {sky_object_id})")
-            else:
-                print(f"Warning: GameObject '{game_object.name}' has no sky object with ID")
+            self.go_to_object(game_object, distance)
+            print(f"Going to GameObject '{game_object.name}'")
         except Exception as e:
             print(f"Error going to GameObject: {e}")
     
@@ -1644,87 +1651,66 @@ class SkyEngine:
         else:
             print(f"Warning: No GameObject found with ID {object_id}")
     
-    def go_to_star(self, star_name: IndividualStar.IndividualStarName):
+    def go_to_star(self, star_name: IndividualStar.IndividualStarName, distance: float = 20.0):
         """Go to a specific star"""
         try:
             star = IndividualStar(star_name)
-            if hasattr(star, 'id'):
-                self.go_to_object(star.id, Action.Type.GoToPlace)
-                print(f"Going to star: {star_name}")
-            else:
-                print(f"Warning: Could not get ID for star {star_name}")
+            self.go_to_object(star, distance)
+            print(f"Going to star: {star_name}")
         except Exception as e:
             print(f"Error going to star: {e}")
     
-    def go_to_constellation(self, constellation_name: Constellation.ConstellationName):
+    def go_to_constellation(self, constellation_name: Constellation.ConstellationName, distance: float = 25.0):
         """Go to a specific constellation"""
         try:
             constellation = Constellation(constellation_name)
-            if hasattr(constellation, 'id'):
-                self.go_to_object(constellation.id, Action.Type.GoToPlace)
-                print(f"Going to constellation: {constellation_name}")
-            else:
-                print(f"Warning: Could not get ID for constellation {constellation_name}")
+            self.go_to_object(constellation, distance)
+            print(f"Going to constellation: {constellation_name}")
         except Exception as e:
             print(f"Error going to constellation: {e}")
     
-    def go_to_comet(self, comet_name: Comet.CometName):
+    def go_to_comet(self, comet_name: Comet.CometName, distance: float = 12.0):
         """Go to a specific comet"""
         try:
             comet = Comet(comet_name)
-            if hasattr(comet, 'id'):
-                self.go_to_object(comet.id, Action.Type.GoToPlace)
-                print(f"Going to comet: {comet_name}")
-            else:
-                print(f"Warning: Could not get ID for comet {comet_name}")
+            self.go_to_object(comet, distance)
+            print(f"Going to comet: {comet_name}")
         except Exception as e:
             print(f"Error going to comet: {e}")
     
-    def go_to_asteroid(self, asteroid_name: Asteroid.AsteroidName):
+    def go_to_asteroid(self, asteroid_name: Asteroid.AsteroidName, distance: float = 8.0):
         """Go to a specific asteroid"""
         try:
             asteroid = Asteroid(asteroid_name)
-            if hasattr(asteroid, 'id'):
-                self.go_to_object(asteroid.id, Action.Type.GoToPlace)
-                print(f"Going to asteroid: {asteroid_name}")
-            else:
-                print(f"Warning: Could not get ID for asteroid {asteroid_name}")
+            self.go_to_object(asteroid, distance)
+            print(f"Going to asteroid: {asteroid_name}")
         except Exception as e:
             print(f"Error going to asteroid: {e}")
     
-    def go_to_satellite(self, satellite_name: Satellite.SatelliteName):
+    def go_to_satellite(self, satellite_name: Satellite.SatelliteName, distance: float = 6.0):
         """Go to a specific satellite"""
         try:
             satellite = Satellite(satellite_name)
-            if hasattr(satellite, 'id'):
-                self.go_to_object(satellite.id, Action.Type.GoToPlace)
-                print(f"Going to satellite: {satellite_name}")
-            else:
-                print(f"Warning: Could not get ID for satellite {satellite_name}")
+            self.go_to_object(satellite, distance)
+            print(f"Going to satellite: {satellite_name}")
         except Exception as e:
             print(f"Error going to satellite: {e}")
     
-    def go_to_galaxy(self, galaxy_name: Galaxy.GalaxyName):
+    def go_to_galaxy(self, galaxy_name: Galaxy.GalaxyName, distance: float = 50.0):
         """Go to a specific galaxy"""
         try:
             galaxy = Galaxy(galaxy_name)
-            if hasattr(galaxy, 'id'):
-                self.go_to_object(galaxy.id, Action.Type.GoToPlace)
-                print(f"Going to galaxy: {galaxy_name}")
-            else:
-                print(f"Warning: Could not get ID for galaxy {galaxy_name}")
+            self.go_to_object(galaxy, distance)
+            print(f"Going to galaxy: {galaxy_name}")
         except Exception as e:
             print(f"Error going to galaxy: {e}")
     
-    def go_to_nebula(self, nebula_name: Nebula.NebulaName):
+    def go_to_nebula(self, nebula_name: Nebula.NebulaName, distance: float = 30.0):
         """Go to a specific nebula"""
         try:
             nebula = Nebula(nebula_name)
-            if hasattr(nebula, 'id'):
-                self.go_to_object(nebula.id, Action.Type.GoToPlace)
-                print(f"Going to nebula: {nebula_name}")
-            else:
-                print(f"Warning: Could not get ID for nebula {nebula_name}")
+            self.go_to_object(nebula, distance)
+            print(f"Going to nebula: {nebula_name}")
         except Exception as e:
             print(f"Error going to nebula: {e}")
     
